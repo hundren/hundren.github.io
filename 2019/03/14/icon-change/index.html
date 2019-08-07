@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="填坑,JS填坑,">
+  <meta name="keywords" content="填坑,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="个人理解定义‘TypeScript’-顾名思义，就是有Type的Script">
-<meta name="keywords" content="填坑,JS填坑">
+<meta name="description" content="想必很多前端现在都是用别人的组件库，ant-design、element-ui或者vant等，那么当组件上的icon和我们美丽动人的UI小姐姐画出的UI稿不一样的时候，你们会怎么做呢？">
+<meta name="keywords" content="填坑">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TypeScript学习笔记">
-<meta property="og:url" content="http://yoursite.com/2019/05/19/typescript-note/index.html">
+<meta property="og:title" content="怎样更改组件库的图标？">
+<meta property="og:url" content="http://yoursite.com/2019/03/14/icon-change/index.html">
 <meta property="og:site_name" content="Zgh">
-<meta property="og:description" content="个人理解定义‘TypeScript’-顾名思义，就是有Type的Script">
+<meta property="og:description" content="想必很多前端现在都是用别人的组件库，ant-design、element-ui或者vant等，那么当组件上的icon和我们美丽动人的UI小姐姐画出的UI稿不一样的时候，你们会怎么做呢？">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-13T15:17:42.268Z">
+<meta property="og:updated_time" content="2019-08-07T07:00:59.647Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TypeScript学习笔记">
-<meta name="twitter:description" content="个人理解定义‘TypeScript’-顾名思义，就是有Type的Script">
+<meta name="twitter:title" content="怎样更改组件库的图标？">
+<meta name="twitter:description" content="想必很多前端现在都是用别人的组件库，ant-design、element-ui或者vant等，那么当组件上的icon和我们美丽动人的UI小姐姐画出的UI稿不一样的时候，你们会怎么做呢？">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/05/19/typescript-note/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/14/icon-change/">
 
 
 
 
 
-  <title>TypeScript学习笔记 | Zgh</title>
+  <title>怎样更改组件库的图标？ | Zgh</title>
   
 
 
@@ -291,7 +291,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/19/typescript-note/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/14/icon-change/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zgh">
@@ -308,7 +308,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">TypeScript学习笔记</h1>
+          <h1 class="post-title" itemprop="name headline">怎样更改组件库的图标？</h1>
         
 
         <div class="post-meta">
@@ -320,8 +320,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-19T23:00:46+08:00">
-                2019-05-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-14T23:09:37+08:00">
+                2019-03-14
               </time>
             
 
@@ -361,8 +361,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/05/19/typescript-note/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/19/typescript-note/" itemprop="commentCount"></span>
+                <a href="/2019/03/14/icon-change/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/14/icon-change/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -390,20 +390,24 @@
       
 
       
-        <h1 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>‘TypeScript’-顾名思义，就是有Type的Script<br><a id="more"></a></p>
+        <p>想必很多前端现在都是用别人的组件库，ant-design、element-ui或者vant等，那么当组件上的icon和我们美丽动人的UI小姐姐画出的UI稿不一样的时候，你们会怎么做呢？<br><a id="more"></a></p>
+<h2 id="组件api替换大法"><a href="#组件api替换大法" class="headerlink" title="组件api替换大法"></a>组件api替换大法</h2><p>1、组件本身提供api给你更换icon，换之则可<br>2、但每次使用都要替换也是挺麻烦的，可以尝试先封装一下，使用高阶组件</p>
+<blockquote>
+<p>可行性高，操作容易、略麻烦</p>
+</blockquote>
+<h2 id="源码copy大法"><a href="#源码copy大法" class="headerlink" title="源码copy大法"></a>源码copy大法</h2><p>1、不使用传统的npm install的包安装方法<br>2、将组件库的源码copy下来单独一个文件<br>3、修改源码组件对应的图标<br>4、或者自己建立一个私有的npm库将整个组件库推上去</p>
+<blockquote>
+<p>1、一次操作到位<br>2、但是组件库版本滞后</p>
+</blockquote>
+<h2 id="webpack修改大法"><a href="#webpack修改大法" class="headerlink" title="webpack修改大法"></a>webpack修改大法</h2><p>以ant-design为例子</p>
+<h3 id="webpack上的resolve路径"><a href="#webpack上的resolve路径" class="headerlink" title="webpack上的resolve路径"></a>webpack上的resolve路径</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">  extensions: [<span class="string">'.ts'</span>, <span class="string">'.tsx'</span>, <span class="string">'.js'</span>, <span class="string">'.jsx'</span>, <span class="string">'.less'</span>, <span class="string">'.css'</span>, <span class="string">'.json'</span>],</span><br><span class="line">  <span class="built_in">alias</span>: &#123;</span><br><span class="line">    <span class="string">'@src'</span>: path.resolve(__dirname, <span class="string">'../'</span>, <span class="string">'./src'</span>),</span><br><span class="line">    <span class="string">'@package'</span>: path.resolve(__dirname, <span class="string">'../'</span>, <span class="string">'src'</span>, <span class="string">'package'</span>),</span><br><span class="line">    <span class="string">'@libs'</span>: path.resolve(__dirname, <span class="string">'../'</span>, <span class="string">'src'</span>, <span class="string">'libs'</span>),</span><br><span class="line">    <span class="string">'@assets'</span>: path.resolve(__dirname, <span class="string">'../'</span>, <span class="string">'src'</span>, <span class="string">'assets'</span>),</span><br><span class="line">    <span class="string">'@ant-design/icons/lib/dist$'</span>: path.resolve(__dirname, <span class="string">'../'</span>, <span class="string">'src'</span>, <span class="string">'icon.js'</span>),</span><br><span class="line">    <span class="string">'vue'</span>: <span class="string">'vue/dist/vue.esm.js'</span>,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>主要就是改变这个打包路径 ‘@ant-design/icons/lib/dist$’</p>
+<h3 id="icon-js的文件"><a href="#icon-js的文件" class="headerlink" title="icon.js的文件"></a>icon.js的文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CloseOutline</span><br><span class="line">&#125; from <span class="string">'@libs/components/icons/CloseOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CheckOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/CheckOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as LoadingOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/LoadingOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CheckCircleOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/CheckCircleOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as InfoCircleOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/InfoCircleOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CloseCircleOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/CloseCircleOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as ExclamationCircleOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/ExclamationCircleOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CheckCircleFill</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/fill/CheckCircleFill'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as InfoCircleFill</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/fill/InfoCircleFill'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CloseCircleFill</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/fill/CloseCircleFill'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as ExclamationCircleFill</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/fill/ExclamationCircleFill'</span></span><br><span class="line"><span class="built_in">export</span> &#123; default as UpOutline &#125; from <span class="string">'@ant-design/icons/lib/outline/UpOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as DownOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/DownOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as LeftOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/LeftOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as RightOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/RightOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as RedoOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/RedoOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CalendarOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/CalendarOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as SearchOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/SearchOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as BarsOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/BarsOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as StarFill</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/fill/StarFill'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as FilterOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/FilterOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CaretUpFill</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/fill/CaretUpFill'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CaretDownFill</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/fill/CaretDownFill'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CaretUpOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/CaretUpOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CaretDownOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/CaretDownOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as PlusOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/PlusOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as FileOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/FileOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as FolderOpenOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/FolderOpenOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as FolderOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/FolderOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as PaperClipOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/PaperClipOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as PictureOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/PictureOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as EyeOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/EyeOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as DeleteOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/DeleteOutline'</span></span><br></pre></td></tr></table></figure>
+<p>就是将你需要更改的图标的地址改为你本地的<br>而且这里可以只引入一些你需要的图标，会减少一些icon库的打包大小</p>
+<h3 id="本地的图标"><a href="#本地的图标" class="headerlink" title="本地的图标"></a>本地的图标</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"use strict"</span></span><br><span class="line">Object.defineProperty(exports, <span class="string">"__esModule"</span>, &#123; value: <span class="literal">true</span> &#125;)</span><br><span class="line">var CloseOutline = &#123;</span><br><span class="line">  name: <span class="string">'close'</span>,</span><br><span class="line">  theme: <span class="string">'outline'</span>,</span><br><span class="line">  icon: &#123;</span><br><span class="line">    tag: <span class="string">'svg'</span>,</span><br><span class="line">    attrs: &#123; version: <span class="string">'1.0'</span>, viewBox: <span class="string">'0 0 16 16'</span>, focusable: <span class="literal">false</span> &#125;,</span><br><span class="line">    children: [</span><br><span class="line">      &#123;</span><br><span class="line">        tag: <span class="string">'path'</span>,</span><br><span class="line">        attrs: &#123;</span><br><span class="line">          <span class="string">'fill-rule'</span>: <span class="string">'evenodd'</span>,</span><br><span class="line">          d: <span class="string">'M10.17 7.72l5.63-5.67a.63.63 0 000-.9l-.86-.91a.63.63 0 00-.91 0L8.35 5.9a.42.42 0 01-.61 0L2.06.2a.63.63 0 00-.91 0l-.91.9a.63.63 0 000 .91l5.68 5.67c.17.17.17.43 0 .6L.2 13.98a.63.63 0 000 .92l.9.9c.27.26.66.26.92 0l5.68-5.66a.42.42 0 01.6 0l5.68 5.67c.26.25.65.25.91 0l.91-.91a.63.63 0 000-.91l-5.63-5.67a.42.42 0 010-.6'</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">exports.default = CloseOutline</span><br></pre></td></tr></table></figure>
+<p>使用ant-design-icons的库做转换<br><a href="https://github.com/ant-design/ant-design-icons" target="_blank" rel="noopener">https://github.com/ant-design/ant-design-icons</a></p>
 <hr>
-<p>那么它和没有Type的Script有什么不一样呢，例如某Java前缀的Script<br>举个例子：实际开发需求中我们要定义一个商品名称的变量为goodsName(<font color="red">ps:众所周知商品名称都必须是要字符串的</font>)<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// js中定义一个变量,先赋值一个字符串</span></span><br><span class="line"><span class="keyword">let</span> goodsName = <span class="string">'apple'</span> <span class="comment">// 很好，看起来都一起正常</span></span><br><span class="line"><span class="comment">// 然鹅，一位刚失恋的程序员哥哥，不小心把它改成一个数字（说笑，程序员哪会有女朋友）</span></span><br><span class="line">goodsName = <span class="number">520</span> <span class="comment">// 这时候程序也没有阻止小哥哥这种赤裸裸的示爱行为</span></span><br><span class="line"><span class="comment">// 甚至可以改成布尔值</span></span><br><span class="line">goodsName = <span class="literal">true</span></span><br><span class="line"><span class="comment">// -----------------</span></span><br><span class="line"><span class="comment">// 可以想想刚失恋的小哥哥，把这个变量提交给后端的接口</span></span><br><span class="line"><span class="comment">// 最后给产品发现了</span></span><br><span class="line"><span class="comment">// 后端调查发现是前端提交的数据类型错误</span></span><br><span class="line"><span class="comment">// 顺利摔锅给前端</span></span><br><span class="line"><span class="comment">// 从此小哥哥就步入了人生的低谷，情场事业双失😔</span></span><br></pre></td></tr></table></figure></p>
-<p>然而如果这时候这位程序员小哥哥用上了TypeScript<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 同上也先定义一个变量</span></span><br><span class="line"><span class="keyword">let</span> goodsName: string = <span class="string">'apple'</span> <span class="comment">// 看看有什么不同？没错，就是多了个string</span></span><br><span class="line">goodsName = <span class="number">520</span> <span class="comment">//这时候就会有一条红线在变量下方</span></span><br><span class="line"><span class="comment">// Error, number不是string类型</span></span><br><span class="line"><span class="comment">// -----------------</span></span><br><span class="line"><span class="comment">// 看到这条提示的红线，小哥哥也终于意识到了</span></span><br><span class="line"><span class="comment">// 他的爱情也像这条红线那样</span></span><br><span class="line"><span class="comment">// 已经到了高亮的结束边缘</span></span><br><span class="line"><span class="comment">// 最后小哥哥看着那条红线</span></span><br><span class="line"><span class="comment">// 突然对爱情重拾希望，然后不顾红线的错误提示，提交给后端</span></span><br><span class="line"><span class="comment">// 结局同上</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="一些踩过的坑"><a href="#一些踩过的坑" class="headerlink" title="一些踩过的坑"></a>一些踩过的坑</h2><h3 id="可选属性"><a href="#可选属性" class="headerlink" title="可选属性"></a>可选属性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">interface SquareConfig &#123;</span><br><span class="line">  color?: string;</span><br><span class="line">  width?: number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="任意数量的其它属性"><a href="#任意数量的其它属性" class="headerlink" title="任意数量的其它属性"></a>任意数量的其它属性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">interface SquareConfig &#123;</span><br><span class="line"> [propName: string]: any;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="只读属性"><a href="#只读属性" class="headerlink" title="只读属性"></a>只读属性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">interface Point &#123;</span><br><span class="line">    <span class="built_in">readonly</span> x: number;</span><br><span class="line">    <span class="built_in">readonly</span> y: number;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> p1: Point = &#123; x: 10, y: 20 &#125;;</span><br><span class="line">p1.x = 5; // error!</span><br></pre></td></tr></table></figure>
-<h3 id="函数类型"><a href="#函数类型" class="headerlink" title="函数类型"></a>函数类型</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//方法1</span><br><span class="line"><span class="keyword">function</span> add(x: number, y: number): number &#123;</span><br><span class="line">    <span class="built_in">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//方法2</span><br><span class="line"><span class="built_in">let</span> myAdd = <span class="keyword">function</span>(x: number, y: number): number &#123; <span class="built_in">return</span> x + y; &#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="把类当做接口使用"><a href="#把类当做接口使用" class="headerlink" title="把类当做接口使用"></a>把类当做接口使用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Point &#123;</span><br><span class="line">    x: number;</span><br><span class="line">    y: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface Point3d extends Point &#123;</span><br><span class="line">    z: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> point3d: Point3d = &#123;x: 1, y: 2, z: 3&#125;;</span><br></pre></td></tr></table></figure>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
-<li>提示真的很爽</li>
-<li>会增加写类型的时间</li>
-<li>大型项目来说上面花的时间是值得的，后期维护时间会变少</li>
-</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>各有利弊,欢迎补充</p>
 
       
     </div>
@@ -452,8 +456,6 @@
           
             <a href="/tags/填坑/" rel="tag"># 填坑</a>
           
-            <a href="/tags/JS填坑/" rel="tag"># JS填坑</a>
-          
         </div>
       
 
@@ -465,8 +467,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/14/icon-change/" rel="next" title="怎样更改组件库的图标？">
-                <i class="fa fa-chevron-left"></i> 怎样更改组件库的图标？
+              <a href="/2018/08/14/project/" rel="next" title="完成的项目，持续更新">
+                <i class="fa fa-chevron-left"></i> 完成的项目，持续更新
               </a>
             
           </div>
@@ -474,6 +476,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/19/typescript-note/" rel="prev" title="TypeScript学习笔记">
+                TypeScript学习笔记 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -626,7 +632,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#个人理解"><span class="nav-number">1.</span> <span class="nav-text">个人理解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些踩过的坑"><span class="nav-number">1.2.</span> <span class="nav-text">一些踩过的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#可选属性"><span class="nav-number">1.2.1.</span> <span class="nav-text">可选属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#任意数量的其它属性"><span class="nav-number">1.2.2.</span> <span class="nav-text">任意数量的其它属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#只读属性"><span class="nav-number">1.2.3.</span> <span class="nav-text">只读属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数类型"><span class="nav-number">1.2.4.</span> <span class="nav-text">函数类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#把类当做接口使用"><span class="nav-number">1.2.5.</span> <span class="nav-text">把类当做接口使用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#组件api替换大法"><span class="nav-number">1.</span> <span class="nav-text">组件api替换大法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源码copy大法"><span class="nav-number">2.</span> <span class="nav-text">源码copy大法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webpack修改大法"><span class="nav-number">3.</span> <span class="nav-text">webpack修改大法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#webpack上的resolve路径"><span class="nav-number">3.1.</span> <span class="nav-text">webpack上的resolve路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#icon-js的文件"><span class="nav-number">3.2.</span> <span class="nav-text">icon.js的文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地的图标"><span class="nav-number">3.3.</span> <span class="nav-text">本地的图标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>

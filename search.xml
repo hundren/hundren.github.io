@@ -8,7 +8,18 @@
         <category>学习笔记</category>
       </categories>
       <tags>
+        <tag>填坑</tag>
         <tag>JS填坑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[怎样更改组件库的图标？]]></title>
+    <url>%2F2019%2F03%2F14%2Ficon-change%2F</url>
+    <content type="text"><![CDATA[想必很多前端现在都是用别人的组件库，ant-design、element-ui或者vant等，那么当组件上的icon和我们美丽动人的UI小姐姐画出的UI稿不一样的时候，你们会怎么做呢？ 组件api替换大法1、组件本身提供api给你更换icon，换之则可2、但每次使用都要替换也是挺麻烦的，可以尝试先封装一下，使用高阶组件 可行性高，操作容易、略麻烦 源码copy大法1、不使用传统的npm install的包安装方法2、将组件库的源码copy下来单独一个文件3、修改源码组件对应的图标4、或者自己建立一个私有的npm库将整个组件库推上去 1、一次操作到位2、但是组件库版本滞后 webpack修改大法以ant-design为例子 webpack上的resolve路径1234567891011resolve: &#123; extensions: ['.ts', '.tsx', '.js', '.jsx', '.less', '.css', '.json'], alias: &#123; '@src': path.resolve(__dirname, '../', './src'), '@package': path.resolve(__dirname, '../', 'src', 'package'), '@libs': path.resolve(__dirname, '../', 'src', 'libs'), '@assets': path.resolve(__dirname, '../', 'src', 'assets'), '@ant-design/icons/lib/dist$': path.resolve(__dirname, '../', 'src', 'icon.js'), 'vue': 'vue/dist/vue.esm.js', &#125;&#125; 主要就是改变这个打包路径 ‘@ant-design/icons/lib/dist$’ icon.js的文件1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798export &#123; default as CloseOutline&#125; from '@libs/components/icons/CloseOutline'export &#123; default as CheckOutline&#125; from '@ant-design/icons/lib/outline/CheckOutline'export &#123; default as LoadingOutline&#125; from '@ant-design/icons/lib/outline/LoadingOutline'export &#123; default as CheckCircleOutline&#125; from '@ant-design/icons/lib/outline/CheckCircleOutline'export &#123; default as InfoCircleOutline&#125; from '@ant-design/icons/lib/outline/InfoCircleOutline'export &#123; default as CloseCircleOutline&#125; from '@ant-design/icons/lib/outline/CloseCircleOutline'export &#123; default as ExclamationCircleOutline&#125; from '@ant-design/icons/lib/outline/ExclamationCircleOutline'export &#123; default as CheckCircleFill&#125; from '@ant-design/icons/lib/fill/CheckCircleFill'export &#123; default as InfoCircleFill&#125; from '@ant-design/icons/lib/fill/InfoCircleFill'export &#123; default as CloseCircleFill&#125; from '@ant-design/icons/lib/fill/CloseCircleFill'export &#123; default as ExclamationCircleFill&#125; from '@ant-design/icons/lib/fill/ExclamationCircleFill'export &#123; default as UpOutline &#125; from '@ant-design/icons/lib/outline/UpOutline'export &#123; default as DownOutline&#125; from '@ant-design/icons/lib/outline/DownOutline'export &#123; default as LeftOutline&#125; from '@ant-design/icons/lib/outline/LeftOutline'export &#123; default as RightOutline&#125; from '@ant-design/icons/lib/outline/RightOutline'export &#123; default as RedoOutline&#125; from '@ant-design/icons/lib/outline/RedoOutline'export &#123; default as CalendarOutline&#125; from '@ant-design/icons/lib/outline/CalendarOutline'export &#123; default as SearchOutline&#125; from '@ant-design/icons/lib/outline/SearchOutline'export &#123; default as BarsOutline&#125; from '@ant-design/icons/lib/outline/BarsOutline'export &#123; default as StarFill&#125; from '@ant-design/icons/lib/fill/StarFill'export &#123; default as FilterOutline&#125; from '@ant-design/icons/lib/outline/FilterOutline'export &#123; default as CaretUpFill&#125; from '@ant-design/icons/lib/fill/CaretUpFill'export &#123; default as CaretDownFill&#125; from '@ant-design/icons/lib/fill/CaretDownFill'export &#123; default as CaretUpOutline&#125; from '@ant-design/icons/lib/outline/CaretUpOutline'export &#123; default as CaretDownOutline&#125; from '@ant-design/icons/lib/outline/CaretDownOutline'export &#123; default as PlusOutline&#125; from '@ant-design/icons/lib/outline/PlusOutline'export &#123; default as FileOutline&#125; from '@ant-design/icons/lib/outline/FileOutline'export &#123; default as FolderOpenOutline&#125; from '@ant-design/icons/lib/outline/FolderOpenOutline'export &#123; default as FolderOutline&#125; from '@ant-design/icons/lib/outline/FolderOutline'export &#123; default as PaperClipOutline&#125; from '@ant-design/icons/lib/outline/PaperClipOutline'export &#123; default as PictureOutline&#125; from '@ant-design/icons/lib/outline/PictureOutline'export &#123; default as EyeOutline&#125; from '@ant-design/icons/lib/outline/EyeOutline'export &#123; default as DeleteOutline&#125; from '@ant-design/icons/lib/outline/DeleteOutline' 就是将你需要更改的图标的地址改为你本地的而且这里可以只引入一些你需要的图标，会减少一些icon库的打包大小 本地的图标1234567891011121314151617181920"use strict"Object.defineProperty(exports, "__esModule", &#123; value: true &#125;)var CloseOutline = &#123; name: 'close', theme: 'outline', icon: &#123; tag: 'svg', attrs: &#123; version: '1.0', viewBox: '0 0 16 16', focusable: false &#125;, children: [ &#123; tag: 'path', attrs: &#123; 'fill-rule': 'evenodd', d: 'M10.17 7.72l5.63-5.67a.63.63 0 000-.9l-.86-.91a.63.63 0 00-.91 0L8.35 5.9a.42.42 0 01-.61 0L2.06.2a.63.63 0 00-.91 0l-.91.9a.63.63 0 000 .91l5.68 5.67c.17.17.17.43 0 .6L.2 13.98a.63.63 0 000 .92l.9.9c.27.26.66.26.92 0l5.68-5.66a.42.42 0 01.6 0l5.68 5.67c.26.25.65.25.91 0l.91-.91a.63.63 0 000-.91l-5.63-5.67a.42.42 0 010-.6' &#125; &#125; ] &#125;&#125;exports.default = CloseOutline 使用ant-design-icons的库做转换https://github.com/ant-design/ant-design-icons 总结各有利弊,欢迎补充]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
         <tag>填坑</tag>
       </tags>
   </entry>
@@ -31,8 +42,8 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>JS填坑</tag>
         <tag>填坑</tag>
+        <tag>JS填坑</tag>
       </tags>
   </entry>
   <entry>
@@ -55,8 +66,8 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>JS填坑</tag>
         <tag>填坑</tag>
+        <tag>JS填坑</tag>
       </tags>
   </entry>
   <entry>
@@ -90,14 +101,14 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>JS填坑</tag>
         <tag>填坑</tag>
+        <tag>JS填坑</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Hello Hexo]]></title>
     <url>%2F2016%2F02%2F14%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[博客换上Hexo主题， 很久以前 就被它的这个1试试代码 1001001111100101010110 文章目录吸引了1console.log('hello world'); 列表？ Red Green Blue 今天终于能够换来试试1$('#life').html('希望每个月能更一篇，以此为鉴'); 表示好兴奋大家提提意见博客能有什么改造的地方 1function bye()&#123;return "恭喜你获得阅读我的第一篇博客成就！"&#125;]]></content>
+    <content type="text"><![CDATA[博客换上Hexo主题， 很久以前 就被它的这个1试试代码 1001001111100101010110 试试区块 这是一个区块 这是斜体文字这是加粗的文字 我是变大的字这是个链接 文章目录吸引了1console.log('hello world'); 列表？ Red Green Blue 今天终于能够换来试试1$('#life').html('希望每个月能更一篇，以此为鉴'); 表示好兴奋大家提提意见博客能有什么改造的地方 1function bye()&#123;return "恭喜你获得阅读我的第一篇博客成就！"&#125;]]></content>
       <categories>
         <category>文章</category>
       </categories>
