@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="填坑,JS填坑,">
+  <meta name="keywords" content="案例,">
 
 
 
@@ -79,18 +79,25 @@
 
 
 
-<meta name="description" content="个人理解定义‘TypeScript’-顾名思义，就是有Type的Script">
-<meta name="keywords" content="填坑,JS填坑">
+<meta name="description" content="目标：写过的代码加起来能绕地球一圈 那是梦开始的地方">
+<meta name="keywords" content="案例">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TypeScript学习笔记">
-<meta property="og:url" content="http://yoursite.com/2019/05/19/typescript-note/index.html">
+<meta property="og:title" content="完成的项目，持续更新">
+<meta property="og:url" content="http://yoursite.com/2018/08/14/project/index.html">
 <meta property="og:site_name" content="Zgh">
-<meta property="og:description" content="个人理解定义‘TypeScript’-顾名思义，就是有Type的Script">
+<meta property="og:description" content="目标：写过的代码加起来能绕地球一圈 那是梦开始的地方">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-13T15:17:42.268Z">
+<meta property="og:image" content="http://yoursite.com/images/project/iot_user.jpg">
+<meta property="og:image" content="http://yoursite.com/images/project/iot_install.jpg">
+<meta property="og:image" content="http://yoursite.com/images/project/iot_wx.jpg">
+<meta property="og:image" content="http://yoursite.com/images/project/chezi.png">
+<meta property="og:image" content="http://yoursite.com/images/project/harroman.jpg">
+<meta property="og:image" content="http://yoursite.com/images/project/shilianmobile.png">
+<meta property="og:updated_time" content="2019-08-19T01:50:42.812Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TypeScript学习笔记">
-<meta name="twitter:description" content="个人理解定义‘TypeScript’-顾名思义，就是有Type的Script">
+<meta name="twitter:title" content="完成的项目，持续更新">
+<meta name="twitter:description" content="目标：写过的代码加起来能绕地球一圈 那是梦开始的地方">
+<meta name="twitter:image" content="http://yoursite.com/images/project/iot_user.jpg">
 
 
 
@@ -120,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/05/19/typescript-note/">
+  <link rel="canonical" href="http://yoursite.com/2018/08/14/project/">
 
 
 
 
 
-  <title>TypeScript学习笔记 | Zgh</title>
+  <title>完成的项目，持续更新 | Zgh</title>
   
 
 
@@ -291,7 +298,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/19/typescript-note/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/14/project/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zgh">
@@ -308,7 +315,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">TypeScript学习笔记</h1>
+          <h1 class="post-title" itemprop="name headline">完成的项目，持续更新</h1>
         
 
         <div class="post-meta">
@@ -320,8 +327,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-19T23:00:46+08:00">
-                2019-05-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-14T23:09:37+08:00">
+                2018-08-14
               </time>
             
 
@@ -343,8 +350,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
+                  <a href="/categories/项目/" itemprop="url" rel="index">
+                    <span itemprop="name">项目</span>
                   </a>
                 </span>
 
@@ -361,8 +368,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/05/19/typescript-note/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/19/typescript-note/" itemprop="commentCount"></span>
+                <a href="/2018/08/14/project/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/08/14/project/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -390,20 +397,14 @@
       
 
       
-        <h1 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>‘TypeScript’-顾名思义，就是有Type的Script<br><a id="more"></a></p>
-<hr>
-<p>那么它和没有Type的Script有什么不一样呢，例如某Java前缀的Script<br>举个例子：实际开发需求中我们要定义一个商品名称的变量为goodsName(<font color="red">ps:众所周知商品名称都必须是要字符串的</font>)<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// js中定义一个变量,先赋值一个字符串</span></span><br><span class="line"><span class="keyword">let</span> goodsName = <span class="string">'apple'</span> <span class="comment">// 很好，看起来都一起正常</span></span><br><span class="line"><span class="comment">// 然鹅，一位刚失恋的程序员哥哥，不小心把它改成一个数字（说笑，程序员哪会有女朋友）</span></span><br><span class="line">goodsName = <span class="number">520</span> <span class="comment">// 这时候程序也没有阻止小哥哥这种赤裸裸的示爱行为</span></span><br><span class="line"><span class="comment">// 甚至可以改成布尔值</span></span><br><span class="line">goodsName = <span class="literal">true</span></span><br><span class="line"><span class="comment">// -----------------</span></span><br><span class="line"><span class="comment">// 可以想想刚失恋的小哥哥，把这个变量提交给后端的接口</span></span><br><span class="line"><span class="comment">// 最后给产品发现了</span></span><br><span class="line"><span class="comment">// 后端调查发现是前端提交的数据类型错误</span></span><br><span class="line"><span class="comment">// 顺利摔锅给前端</span></span><br><span class="line"><span class="comment">// 从此小哥哥就步入了人生的低谷，情场事业双失😔</span></span><br></pre></td></tr></table></figure></p>
-<p>然而如果这时候这位程序员小哥哥用上了TypeScript<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 同上也先定义一个变量</span></span><br><span class="line"><span class="keyword">let</span> goodsName: string = <span class="string">'apple'</span> <span class="comment">// 看看有什么不同？没错，就是多了个string</span></span><br><span class="line">goodsName = <span class="number">520</span> <span class="comment">//这时候就会有一条红线在变量下方</span></span><br><span class="line"><span class="comment">// Error, number不是string类型</span></span><br><span class="line"><span class="comment">// -----------------</span></span><br><span class="line"><span class="comment">// 看到这条提示的红线，小哥哥也终于意识到了</span></span><br><span class="line"><span class="comment">// 他的爱情也像这条红线那样</span></span><br><span class="line"><span class="comment">// 已经到了高亮的结束边缘</span></span><br><span class="line"><span class="comment">// 最后小哥哥看着那条红线</span></span><br><span class="line"><span class="comment">// 突然对爱情重拾希望，然后不顾红线的错误提示，提交给后端</span></span><br><span class="line"><span class="comment">// 结局同上</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="一些踩过的坑"><a href="#一些踩过的坑" class="headerlink" title="一些踩过的坑"></a>一些踩过的坑</h2><h3 id="可选属性"><a href="#可选属性" class="headerlink" title="可选属性"></a>可选属性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">interface SquareConfig &#123;</span><br><span class="line">  color?: string;</span><br><span class="line">  width?: number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="任意数量的其它属性"><a href="#任意数量的其它属性" class="headerlink" title="任意数量的其它属性"></a>任意数量的其它属性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">interface SquareConfig &#123;</span><br><span class="line"> [propName: string]: any;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="只读属性"><a href="#只读属性" class="headerlink" title="只读属性"></a>只读属性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">interface Point &#123;</span><br><span class="line">    <span class="built_in">readonly</span> x: number;</span><br><span class="line">    <span class="built_in">readonly</span> y: number;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> p1: Point = &#123; x: 10, y: 20 &#125;;</span><br><span class="line">p1.x = 5; // error!</span><br></pre></td></tr></table></figure>
-<h3 id="函数类型"><a href="#函数类型" class="headerlink" title="函数类型"></a>函数类型</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//方法1</span><br><span class="line"><span class="keyword">function</span> add(x: number, y: number): number &#123;</span><br><span class="line">    <span class="built_in">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//方法2</span><br><span class="line"><span class="built_in">let</span> myAdd = <span class="keyword">function</span>(x: number, y: number): number &#123; <span class="built_in">return</span> x + y; &#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="把类当做接口使用"><a href="#把类当做接口使用" class="headerlink" title="把类当做接口使用"></a>把类当做接口使用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Point &#123;</span><br><span class="line">    x: number;</span><br><span class="line">    y: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface Point3d extends Point &#123;</span><br><span class="line">    z: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> point3d: Point3d = &#123;x: 1, y: 2, z: 3&#125;;</span><br></pre></td></tr></table></figure>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
-<li>提示真的很爽</li>
-<li>会增加写类型的时间</li>
-<li>大型项目来说上面花的时间是值得的，后期维护时间会变少</li>
-</ol>
+        <p>目标：写过的代码加起来能绕地球一圈</p>
+<h2 id="那是梦开始的地方"><a href="#那是梦开始的地方" class="headerlink" title="那是梦开始的地方"></a>那是梦开始的地方</h2><a id="more"></a>
+<h3 id="第一个小程序，IoT项目"><a href="#第一个小程序，IoT项目" class="headerlink" title="第一个小程序，IoT项目"></a>第一个小程序，IoT项目</h3><p><img src="/images/project/iot_user.jpg" alt><br>IoT安装端账号：az1 密码：123456<br><img src="/images/project/iot_install.jpg" alt><br>IoT售后端账号：wx1 密码：123456<br><img src="/images/project/iot_wx.jpg" alt></p>
+<h3 id="车仔网小程序"><a href="#车仔网小程序" class="headerlink" title="车仔网小程序"></a>车仔网小程序</h3><p><img src="/images/project/chezi.png" alt></p>
+<h3 id="男士理容预约小程序"><a href="#男士理容预约小程序" class="headerlink" title="男士理容预约小程序"></a>男士理容预约小程序</h3><p><img src="/images/project/harroman.jpg" alt></p>
+<h3 id="vue搭建的手机商城"><a href="#vue搭建的手机商城" class="headerlink" title="vue搭建的手机商城"></a>vue搭建的手机商城</h3><p><img src="/images/project/shilianmobile.png" alt></p>
+<h3 id="飞冰Ice后台demo"><a href="#飞冰Ice后台demo" class="headerlink" title="飞冰Ice后台demo"></a>飞冰Ice后台demo</h3><p><a href="http://hospital.pppppxt.cc" target="_blank" rel="noopener">demo链接,点我,点我</a><br>管理员账户：admin;医生账号：doctor 密码都是：123456</p>
+<h3 id="某题库测试系统前端demo"><a href="#某题库测试系统前端demo" class="headerlink" title="某题库测试系统前端demo"></a>某题库测试系统前端demo</h3><p><a href="http://wuweiquan.pppppxt.cc" target="_blank" rel="noopener">点我,点我</a><br>sn码随便输入即可</p>
 
       
     </div>
@@ -450,9 +451,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/填坑/" rel="tag"># 填坑</a>
-          
-            <a href="/tags/JS填坑/" rel="tag"># JS填坑</a>
+            <a href="/tags/案例/" rel="tag"># 案例</a>
           
         </div>
       
@@ -465,8 +464,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/14/icon-change/" rel="next" title="怎样更改组件库的图标？">
-                <i class="fa fa-chevron-left"></i> 怎样更改组件库的图标？
+              <a href="/2018/04/19/rn/" rel="next" title="React-native,我们一起走过的坑。">
+                <i class="fa fa-chevron-left"></i> React-native,我们一起走过的坑。
               </a>
             
           </div>
@@ -474,6 +473,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/14/icon-change/" rel="prev" title="怎样更改组件库的图标？">
+                怎样更改组件库的图标？ <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -626,7 +629,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#个人理解"><span class="nav-number">1.</span> <span class="nav-text">个人理解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些踩过的坑"><span class="nav-number">1.2.</span> <span class="nav-text">一些踩过的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#可选属性"><span class="nav-number">1.2.1.</span> <span class="nav-text">可选属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#任意数量的其它属性"><span class="nav-number">1.2.2.</span> <span class="nav-text">任意数量的其它属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#只读属性"><span class="nav-number">1.2.3.</span> <span class="nav-text">只读属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数类型"><span class="nav-number">1.2.4.</span> <span class="nav-text">函数类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#把类当做接口使用"><span class="nav-number">1.2.5.</span> <span class="nav-text">把类当做接口使用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#那是梦开始的地方"><span class="nav-number">1.</span> <span class="nav-text">那是梦开始的地方</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一个小程序，IoT项目"><span class="nav-number">1.1.</span> <span class="nav-text">第一个小程序，IoT项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#车仔网小程序"><span class="nav-number">1.2.</span> <span class="nav-text">车仔网小程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#男士理容预约小程序"><span class="nav-number">1.3.</span> <span class="nav-text">男士理容预约小程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vue搭建的手机商城"><span class="nav-number">1.4.</span> <span class="nav-text">vue搭建的手机商城</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#飞冰Ice后台demo"><span class="nav-number">1.5.</span> <span class="nav-text">飞冰Ice后台demo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#某题库测试系统前端demo"><span class="nav-number">1.6.</span> <span class="nav-text">某题库测试系统前端demo</span></a></li></ol></li></ol></div>
             
 
           </div>
