@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[是export还是module.exports，是import还是require，是ES6还是CommonJS，是爱❤️还是责任？]]></title>
+    <url>%2F2019%2F12%2F10%2Fmodule%2F</url>
+    <content type="text"><![CDATA[故事要从一次错误的编码开始。。。 Node的模块众所周知，在上古年代，node的开发一直被 Commonjs 规范所支配着，这也是悲剧发生的导火索，请看灾难现场： 123456789101112131415// version.jsvar version = 3;function incVersion() &#123; version++;&#125;module.exports = &#123; version, incVersion,&#125;;// main.jsvar mod = require('./version');console.log(mod.version); // 3mod.incVersion();console.log(mod.version); // 3 这，这一瞬间，时间的涡轮好像停止了一样，版本号变量version一直停留在3永不向前，就好像我的人生那样，停滞不前，是命运的捉弄，还是人为的操控呢？ 不，是值的拷贝，CommonJS 模块输出的是值的拷贝，也就是说，mod.version是一个原始类型的值，会被缓存，那么我们怎样解决这个问题呢?1234567891011# 可以改写成函数var version = 3;function incVersion() &#123; version++;&#125;module.exports = &#123; get version() &#123; return version &#125;, incVersion,&#125;; 或者用es6的import引用，那么这又是什么呢，敲黑板，画重点，要考。 ES6 模块与 CommonJS 模块它们有两个重大差异。 CommonJS 模块输出的是一个值的拷贝，ES6 模块输出的是值的引用。 CommonJS 模块是运行时加载，ES6 模块是编译时输出接口。 CommonJS ES6 特征 exports ✓ x 是 module.exports 的一个引用 module.exports ✓ x module.exports = xxx，就是导出xxx export x ✓ 多个 export default x ✓ 单个 require ✓ ✓ 导出的内容是module.exports的指向的内存块内容/ es6时是一个对象（{default:xxx}） import x ✓ 引用多个 123456789101112//无聊的冷门尝试 es6试用require//a.jsexport default 123//main.jsconst a = require('./a')console.log('a', a) //&#123;default: 123&#125;//a.jsexport const a = 123//main.jsconst a = require('./a')console.log('a', a) //&#123;a: 123&#125; exports 和 module.exports在一个node执行一个文件时，会给这个文件内生成一个 exports和module对象，而module又有一个exports属性。他们之间的关系如下图，都指向一块{}内存区域。1exports = module.exports = &#123;&#125;; export 和 export default首先我们讲这两个导出，下面我们讲讲它们的区别 export与export default均可用于导出常量、函数、文件、模块等 在一个文件或模块中，export、import可以有多个，export default仅有一个 通过export方式导出，在导入时要加{}，export default则不需要 export能直接导出变量表达式，export default不行。 天坑-循环依赖“循环依赖”（circular dependency）指的是，a脚本的执行依赖b脚本，而b脚本的执行又依赖a脚本。1234567// a.jsvar b = require('b'); //a-step 1module.exports.value = 'a'; //a-step 2// b.jsvar a = require('a'); //b-step 1module.exports.value = 'b'; //b-step 2 一般很少会这样写，出现的话证明你的功能逻辑有耦合了，应该先分开，但是一些大型项目就很难避免，小弟不才，真的遇到过。 node的执行顺序 a-step 1 –&gt; b-step 1 –&gt; b-step 2 –&gt; a-step 2 当年的黑科技临时解决办法，其实不建议，就是将a中的a-step 2移到a-step 1之上。 123 // a.jsmodule.exports.value = 'a'; //a-step 2var b = require('b'); //a-step 1 上面的其实是Commonjs版的，es6的解决方法有点不一样，具体就是将要引用的变量改成函数，因为函数具有提升作用，在加载时就已经有定义了。（ps:改成了函数表达式也不行，因为不具有提升作用） 最后那么在座各位天才小儿童，肯定能想到怎样用es6解决那个灾难现场了吧，答案就是直接用123456789101112//a.jsvar version = 3;function incVersion() &#123; version ++;&#125;export &#123; version, incVersion &#125;//main.jsimport &#123; version, incVersion &#125; from './a'console.log( 'version', version )incVersion()console.log( 'version', version )]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>JS填坑</tag>
+        <tag>填坑</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[TypeScript学习笔记]]></title>
     <url>%2F2019%2F05%2F19%2Ftypescript-note%2F</url>
     <content type="text"><![CDATA[个人理解定义‘TypeScript’-顾名思义，就是有Type的Script 那么它和没有Type的Script有什么不一样呢，例如某Java前缀的Script举个例子：实际开发需求中我们要定义一个商品名称的变量为goodsName(ps:众所周知商品名称都必须是要字符串的)123456789101112// js中定义一个变量,先赋值一个字符串let goodsName = 'apple' // 很好，看起来都一起正常// 然鹅，一位刚失恋的程序员哥哥，不小心把它改成一个数字（说笑，程序员哪会有女朋友）goodsName = 520 // 这时候程序也没有阻止小哥哥这种赤裸裸的示爱行为// 甚至可以改成布尔值goodsName = true// -----------------// 可以想想刚失恋的小哥哥，把这个变量提交给后端的接口// 最后给产品发现了// 后端调查发现是前端提交的数据类型错误// 顺利摔锅给前端// 从此小哥哥就步入了人生的低谷，情场事业双失😔 然而如果这时候这位程序员小哥哥用上了TypeScript1234567891011// 同上也先定义一个变量let goodsName: string = 'apple' // 看看有什么不同？没错，就是多了个stringgoodsName = 520 //这时候就会有一条红线在变量下方// Error, number不是string类型// -----------------// 看到这条提示的红线，小哥哥也终于意识到了// 他的爱情也像这条红线那样// 已经到了高亮的结束边缘// 最后小哥哥看着那条红线// 突然对爱情重拾希望，然后不顾红线的错误提示，提交给后端// 结局同上 一些踩过的坑可选属性1234interface SquareConfig &#123; color?: string; width?: number;&#125; 任意数量的其它属性123interface SquareConfig &#123; [propName: string]: any;&#125; 只读属性123456interface Point &#123; readonly x: number; readonly y: number;&#125;let p1: Point = &#123; x: 10, y: 20 &#125;;p1.x = 5; // error! 函数类型1234567//方法1function add(x: number, y: number): number &#123; return x + y;&#125;//方法2let myAdd = function(x: number, y: number): number &#123; return x + y; &#125;; 把类当做接口使用12345678910class Point &#123; x: number; y: number;&#125;interface Point3d extends Point &#123; z: number;&#125;let point3d: Point3d = &#123;x: 1, y: 2, z: 3&#125;; 总结 提示真的很爽 会增加写类型的时间 大型项目来说上面花的时间是值得的，后期维护时间会变少]]></content>
@@ -8,8 +20,8 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>填坑</tag>
         <tag>JS填坑</tag>
+        <tag>填坑</tag>
       </tags>
   </entry>
   <entry>
@@ -42,8 +54,8 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>填坑</tag>
         <tag>JS填坑</tag>
+        <tag>填坑</tag>
       </tags>
   </entry>
   <entry>
@@ -66,8 +78,8 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>填坑</tag>
         <tag>JS填坑</tag>
+        <tag>填坑</tag>
       </tags>
   </entry>
   <entry>
@@ -101,14 +113,14 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>填坑</tag>
         <tag>JS填坑</tag>
+        <tag>填坑</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Hello Hexo]]></title>
     <url>%2F2016%2F02%2F14%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[博客换上Hexo主题， 很久以前 就被它的这个1试试代码 1001001111100101010110 试试区块 这是一个区块 这是斜体文字这是加粗的文字 我是变大的字这是个链接 文章目录吸引了1console.log('hello world'); 列表？ Red Green Blue 今天终于能够换来试试1$('#life').html('希望每个月能更一篇，以此为鉴'); 表示好兴奋大家提提意见博客能有什么改造的地方 1function bye()&#123;return "恭喜你获得阅读我的第一篇博客成就！"&#125;]]></content>
+    <content type="text"><![CDATA[博客换上Hexo主题， 很久以前 就被它的这个1试试代码 1001001111100101010110 试试区块 这是一个区块 这是斜体文字这是加粗的文字 我是变大的字 我是有颜色字 这是个链接 文章目录吸引了1console.log('hello world'); 列表？ Red Green Blue 表格| 左对齐 | 右对齐 | 居中对齐 || :—–| —-: | :—-: || 单元格 | 单元格 | 单元格 || 单元格 | 单元格 | 单元格 | 今天终于能够换来试试1$('#life').html('希望每个月能更一篇，以此为鉴'); 表示好兴奋大家提提意见博客能有什么改造的地方 1function bye()&#123;return "恭喜你获得阅读我的第一篇博客成就！"&#125;]]></content>
       <categories>
         <category>文章</category>
       </categories>
