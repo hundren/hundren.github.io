@@ -93,7 +93,7 @@
 <meta property="og:image" content="http://yoursite.com/images/gitactions/error.png">
 <meta property="og:image" content="http://yoursite.com/images/gitactions/docker.png">
 <meta property="og:image" content="http://yoursite.com/images/gitactions/virtual.png">
-<meta property="og:updated_time" content="2020-01-18T09:39:15.065Z">
+<meta property="og:updated_time" content="2020-01-18T09:47:39.239Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github Actions, yes! + docker, yes yes!">
 <meta name="twitter:description" content="最近点开了一下Github Actions的技能树，在说真香之前，不得不说一下我踩过的这些前置任务的坑。找到这篇文章看的朋友大概也知道Github Actions是Github上的持续集成服务，它允许你在一些节点上（如提交代码，特定时间等）触发一些操作。这里我们实现自动部署应用到自己的服务器。  首先要买一台服务器过程略。。。 建立仓库有细心看标题的朋友，应该知道我们是在Github（世界最大同性">
@@ -413,7 +413,9 @@
 <p>用私密登录也是正常的，用其它ssh登录的actions也可以用，事情发展到不可开交的地步，战事一触即发，幸好我们还有其它别人写好的actions可以用，后来换上<code>FTP-Deploy-Action</code>，心情就变得愉快了，妈妈再也不用担心我写代码了</p>
 <h3 id="docker容器"><a href="#docker容器" class="headerlink" title="docker容器"></a>docker容器</h3><p>如果没有用到docker的话，文章写到这里就可以结束了，把你的项目发布上了服务器，nginx配置指定一下域名和路径你就成功上岸了</p>
 <p><font color="red">那什么是docker？</font></p>
-<p><figure class="half"><br>    <img src="/images/gitactions/docker.png"><br>    <img src="/images/gitactions/virtual.png"><br></figure><br>遇事不决先上图</p>
+<p><div style="float:left;margin-right:20px"><img width="360" src="/images/gitactions/docker.png"></div></p>
+<p><div style="float:left"><img width="360" src="/images/gitactions/virtual.png"></div></p>
+<p><div style="float:none;clear:both;"><br></div><br>遇事不决先上图</p>
 <p>小弟不才，说说自己的见解，看图就很容易看出docker和虚拟机的最大区别，说人话就是，首先要说出docker里的容器和镜像的概念，容器就是根据你需要的镜像启动的，比如你有一个centos系统镜像，传统的虚拟机就是每个虚拟机上都用这个镜像往里面装一次，而docker就用这个镜像启动就可以了，这就生成了一个容器，而容器之间是独立的，比如你下了一个别人写好的nginx镜像，你run几下，就创造了几个简单的独立的前端部署容器，这样就能做到资源的复用，扯远了。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//我也是用的别人的nginx镜像，简单记录一下</span><br><span class="line">docker pull nginx:latest</span><br><span class="line">docker run --name nginx-test -p 80:80 -d nginx</span><br></pre></td></tr></table></figure>
 <p>那细心的朋友也发现，我最好的那个actions的配置其实就是一些ssh命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> 你的docker容器名称 rm -rf /usr/share/nginx/html</span><br><span class="line">docker cp /home/www 你的docker容器名称:/usr/share/nginx/html</span><br></pre></td></tr></table></figure></p>
