@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="zgh 前端 量子 游戏 H5 Game 意识">
+  <meta name="keywords" content="部署,Linux,">
 
 
 
@@ -79,16 +79,25 @@
 
 
 
-<meta name="description" content="Just do IT!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zgh">
-<meta property="og:url" content="http://yoursite.com/archives/2018/04/index.html">
+<meta name="description" content="最近点开了一下Github Actions的技能树，在说真香之前，不得不说一下我踩过的这些前置任务的坑。找到这篇文章看的朋友大概也知道Github Actions是Github上的持续集成服务，它允许你在一些节点上（如提交代码，特定时间等）触发一些操作。这里我们实现自动部署应用到自己的服务器。  首先要买一台服务器过程略。。。 建立仓库有细心看标题的朋友，应该知道我们是在Github（世界最大同性">
+<meta name="keywords" content="部署,Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Github Actions, yes! + docker, yes yes!">
+<meta property="og:url" content="http://yoursite.com/2020/01/18/git-actions/index.html">
 <meta property="og:site_name" content="Zgh">
-<meta property="og:description" content="Just do IT!">
+<meta property="og:description" content="最近点开了一下Github Actions的技能树，在说真香之前，不得不说一下我踩过的这些前置任务的坑。找到这篇文章看的朋友大概也知道Github Actions是Github上的持续集成服务，它允许你在一些节点上（如提交代码，特定时间等）触发一些操作。这里我们实现自动部署应用到自己的服务器。  首先要买一台服务器过程略。。。 建立仓库有细心看标题的朋友，应该知道我们是在Github（世界最大同性">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2020/01/18/git-actions/gitactions/bg2019091201.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/01/18/git-actions/gitactions/ci.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/18/git-actions/gitactions/actions-market.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/18/git-actions/gitactions/bg2019091201.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/01/18/git-actions/gitactions/docker.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/18/git-actions/gitactions/virtual.png">
+<meta property="og:updated_time" content="2020-01-18T09:27:55.480Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zgh">
-<meta name="twitter:description" content="Just do IT!">
+<meta name="twitter:title" content="Github Actions, yes! + docker, yes yes!">
+<meta name="twitter:description" content="最近点开了一下Github Actions的技能树，在说真香之前，不得不说一下我踩过的这些前置任务的坑。找到这篇文章看的朋友大概也知道Github Actions是Github上的持续集成服务，它允许你在一些节点上（如提交代码，特定时间等）触发一些操作。这里我们实现自动部署应用到自己的服务器。  首先要买一台服务器过程略。。。 建立仓库有细心看标题的朋友，应该知道我们是在Github（世界最大同性">
+<meta name="twitter:image" content="http://yoursite.com/2020/01/18/git-actions/gitactions/bg2019091201.jpg">
 
 
 
@@ -118,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2018/04/">
+  <link rel="canonical" href="http://yoursite.com/2020/01/18/git-actions/">
 
 
 
 
 
-  <title>归档 | Zgh</title>
+  <title>Github Actions, yes! + docker, yes yes! | Zgh</title>
   
 
 
@@ -143,7 +152,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -275,72 +284,236 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 12 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/18/git-actions/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zgh">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/avatar.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zgh">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/04/19/rn/" itemprop="url">
-              
-                <span itemprop="name">React-native,我们一起走过的坑。</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Github Actions, yes! + docker, yes yes!</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-04-19T23:09:37+08:00" content="2018-04-19">
-          04-19
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-18T14:09:37+08:00">
+                2020-01-18
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/01/18/git-actions/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/01/18/git-actions/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <p>最近点开了一下Github Actions的技能树，在说真香之前，不得不说一下我踩过的这些前置任务的坑。找到这篇文章看的朋友大概也知道Github Actions是Github上的持续集成服务，它允许你在一些节点上（如提交代码，特定时间等）触发一些操作。这里我们实现自动部署应用到自己的服务器。<br><img src="./gitactions/bg2019091201.jpg" alt></p>
+<hr>
+<h2 id="首先要买一台服务器"><a href="#首先要买一台服务器" class="headerlink" title="首先要买一台服务器"></a>首先要买一台服务器</h2><p>过程略。。。</p>
+<h2 id="建立仓库"><a href="#建立仓库" class="headerlink" title="建立仓库"></a>建立仓库</h2><p>有细心看标题的朋友，应该知道我们是在<code>Github</code>（世界最大同性交友网站）上玩的<br><img src="./gitactions/ci.png" alt><br>在你的项目里面建一个.github文件夹（注意有一点.），然后再建一个workflows文件夹，里面再新建一个后缀为yml的文件（名字任意），完成以上步骤你大概就完成50%的工作量了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ci.yml</span></span><br><span class="line">name: deploy to aliyun</span><br><span class="line">on:</span><br><span class="line">  push:</span><br><span class="line">    branches:</span><br><span class="line">      - master</span><br><span class="line"><span class="built_in">jobs</span>:</span><br><span class="line">  build:</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line">    steps:</span><br><span class="line">      <span class="comment"># 切换分支</span></span><br><span class="line">      - name: Checkout</span><br><span class="line">        uses: actions/checkout@master</span><br><span class="line">      <span class="comment"># 使用 node:10</span></span><br><span class="line">      - name: use Node.js 10</span><br><span class="line">        uses: actions/setup-node@v1</span><br><span class="line">        with:</span><br><span class="line">          node-version: 10</span><br><span class="line">      <span class="comment"># npm install</span></span><br><span class="line">      - name: npm install and build</span><br><span class="line">        run: |</span><br><span class="line">          yarn install</span><br><span class="line">          npm run build</span><br><span class="line">        env:</span><br><span class="line">          CI: <span class="literal">true</span></span><br><span class="line">      <span class="comment"># Deploy</span></span><br><span class="line">      - name: FTP-Deploy</span><br><span class="line">        uses: SamKirkland/FTP-Deploy-Action@2.0.0</span><br><span class="line">        env:</span><br><span class="line">          FTP_SERVER: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">          FTP_USERNAME: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">          FTP_PASSWORD: <span class="variable">$&#123;&#123; secrets.REMOTE_PWD &#125;</span>&#125;</span><br><span class="line">          LOCAL_DIR: build</span><br><span class="line">          METHOD: sftp</span><br><span class="line">          REMOTE_DIR: /home/www</span><br><span class="line">          ARGS: --delete</span><br><span class="line">      - name: Docker-deploy</span><br><span class="line">        uses: appleboy/ssh-action@master</span><br><span class="line">        with:</span><br><span class="line">          host: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">          username: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">          key: <span class="variable">$&#123;&#123; secrets.ACCESS_TOKEN &#125;</span>&#125;</span><br><span class="line">          script: |</span><br><span class="line">            docker <span class="built_in">exec</span> 你的docker容器名称 rm -rf /usr/share/nginx/html</span><br><span class="line">            docker cp /home/www 你的docker容器名称:/usr/share/nginx/html</span><br></pre></td></tr></table></figure></p>
+<p>展示一下我的终极配置，当然事情的发展没有这么简单</p>
+<h3 id="配置详情"><a href="#配置详情" class="headerlink" title="配置详情"></a>配置详情</h3><p>git actions的奥妙之处就在于它有丰富的插件资源可以使用<br><img src="./gitactions/actions-market.png" alt><br>对于我们部署而言，前3个资源一般来说也是没问题的，最大的问题就在于发布，毕竟要和服务器打交道</p>
+<blockquote>
+<p>踩过的坑如下</p>
+</blockquote>
+<p>我之前发布用的模块是这个<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deploy</span></span><br><span class="line">      - name: Deploy</span><br><span class="line">        uses: easingthemes/ssh-deploy@v2.0.7</span><br><span class="line">        env:</span><br><span class="line">          SSH_PRIVATE_KEY: <span class="variable">$&#123;&#123; secrets.ACCESS_TOKEN &#125;</span>&#125;</span><br><span class="line">          ARGS: <span class="string">"-avz --delete"</span></span><br><span class="line">          SOURCE: <span class="string">"build/"</span></span><br><span class="line">          REMOTE_HOST: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">          REMOTE_USER: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">          TARGET: <span class="variable">$&#123;&#123; secrets.TARGET &#125;</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<font color="green">哦，对，大家看到这些secrets的变量是不是很奇怪，其实是为了隐私安全问题，在github项目上Settings里Secrets上添加就好了</font>
+
+<p>然后一直报这个错😢<br><img src="./gitactions/bg2019091201.jpg" alt><br>服务器上什么的<code>ssh</code>都设置好了，在本地上<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -i id_rsa root@xxx.xxx.xxx.x</span><br></pre></td></tr></table></figure></p>
+<p>用私密登录也是正常的，用其它ssh登录的actions也可以用，事情发展到不可开交的地步，战事一触即发，幸好我们还有其它别人写好的actions可以用，后来换上<code>FTP-Deploy-Action</code>，心情就变得愉快了，妈妈再也不用担心我写代码了</p>
+<h3 id="docker容器"><a href="#docker容器" class="headerlink" title="docker容器"></a>docker容器</h3><p>如果没有用到docker的话，文章写到这里就可以结束了，把你的项目发布上了服务器，nginx配置指定一下域名和路径你就成功上岸了</p>
+<p><font color="red">那什么是docker？</font><br><img src="./gitactions/docker.png" alt><br><img src="./gitactions/virtual.png" alt><br>遇事不决先上图</p>
+<p>小弟不才，说说自己的见解，看图就很容易看出docker和虚拟机的最大区别，说人话就是，首先要说出docker里的容器和镜像的概念，容器就是根据你需要的镜像启动的，比如你有一个centos系统镜像，传统的虚拟机就是每个虚拟机上都用这个镜像往里面装一次，而docker就用这个镜像启动就可以了，这就生成了一个容器，而容器之间是独立的，比如你下了一个别人写好的nginx镜像，你run几下，就创造了几个简单的独立的前端部署容器，这样就能做到资源的复用，扯远了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//我也是用的别人的nginx镜像，简单记录一下</span><br><span class="line">docker pull nginx:latest</span><br><span class="line">docker run --name nginx-test -p 80:80 -d nginx</span><br></pre></td></tr></table></figure>
+<p>那细心的朋友也发现，我最好的那个actions的配置其实就是一些ssh命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> 你的docker容器名称 rm -rf /usr/share/nginx/html</span><br><span class="line">docker cp /home/www 你的docker容器名称:/usr/share/nginx/html</span><br></pre></td></tr></table></figure></p>
+<p>1、第一个就是先删除容器里的之前的项目，但也踩过坑，<code>docker exec</code>这个就是进入容器的命令了，之前我写的是<code>docker exec -it xxx /bin/bash</code><br>进去在<code>rm -rf</code>然后<code>exit</code>这样的，想法很美滋滋，但是ci命令上就报<code>err: the input device is not a TTY</code>后来换成这个<br>2、第二个就是把发上服务器的项目复制到容器里</p>
+<h2 id="开发应用"><a href="#开发应用" class="headerlink" title="开发应用"></a>开发应用</h2><p>过程也略。。。（到目前为止，如无意外的话，你只要push一下代码，就会进入到我们设置好的“陷阱”里，一顿自动操作执行下来，你的网站就部署上去了）</p>
+<h2 id="优化与改进（先挖好个坑）"><a href="#优化与改进（先挖好个坑）" class="headerlink" title="优化与改进（先挖好个坑）"></a>优化与改进（先挖好个坑）</h2><h3 id="自动发布到容器里（方案一）"><a href="#自动发布到容器里（方案一）" class="headerlink" title="自动发布到容器里（方案一）"></a>自动发布到容器里（方案一）</h3><p>1、将容器的sftp端口映射到服务器的某个端口上<br>2、在ftp actions里配置好对应的端口上传上去</p>
+<h3 id="用dockerFile自制镜像-（方案二）"><a href="#用dockerFile自制镜像-（方案二）" class="headerlink" title="用dockerFile自制镜像 （方案二）"></a>用dockerFile自制镜像 （方案二）</h3><p>1、ci.yml里面就是执行自制的docker镜像run一下<br>2、镜像逻辑大概如下：拉取最新代码到容器-&gt;打包项目-&gt;覆盖项目上的自定义nginx配置文件到容器nginx的默认路径</p>
+<p>参考文档：</p>
+<blockquote>
+<p><a href="http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html" target="_blank" rel="noopener">GitHub Actions 入门教程 - 阮一峰</a><br><a href="https://www.kai666666.top/2020/01/04/%E4%BD%BF%E7%94%A8GithubActions%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88ECS%EF%BC%89/" target="_blank" rel="noopener">使用GithubActions自动部署应用到自己的服务器（ECS）</a></p>
+</blockquote>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>请不要给我打赏！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/wei.jpg" alt="zgh 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/zhi.jpg" alt="zgh 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/部署/" rel="tag"># 部署</a>
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/10/module/" rel="next" title="是export还是module.exports，是import还是require，是ES6还是CommonJS，是爱❤️还是责任？">
+                <i class="fa fa-chevron-left"></i> 是export还是module.exports，是import还是require，是ES6还是CommonJS，是爱❤️还是责任？
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -348,6 +521,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -368,8 +548,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -465,6 +654,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#首先要买一台服务器"><span class="nav-number">1.</span> <span class="nav-text">首先要买一台服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立仓库"><span class="nav-number">2.</span> <span class="nav-text">建立仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置详情"><span class="nav-number">2.1.</span> <span class="nav-text">配置详情</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#docker容器"><span class="nav-number">2.2.</span> <span class="nav-text">docker容器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发应用"><span class="nav-number">3.</span> <span class="nav-text">开发应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化与改进（先挖好个坑）"><span class="nav-number">4.</span> <span class="nav-text">优化与改进（先挖好个坑）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自动发布到容器里（方案一）"><span class="nav-number">4.1.</span> <span class="nav-text">自动发布到容器里（方案一）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用dockerFile自制镜像-（方案二）"><span class="nav-number">4.2.</span> <span class="nav-text">用dockerFile自制镜像 （方案二）</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -819,6 +1024,10 @@ function show_popup(text,color){
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
