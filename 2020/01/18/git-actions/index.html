@@ -93,7 +93,7 @@
 <meta property="og:image" content="http://yoursite.com/images/gitactions/error.png">
 <meta property="og:image" content="http://yoursite.com/images/gitactions/docker.png">
 <meta property="og:image" content="http://yoursite.com/images/gitactions/virtual.png">
-<meta property="og:updated_time" content="2020-01-18T09:47:39.239Z">
+<meta property="og:updated_time" content="2020-01-19T01:14:24.418Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github Actions, yes! + docker, yes yes!">
 <meta name="twitter:description" content="最近点开了一下Github Actions的技能树，在说真香之前，不得不说一下我踩过的这些前置任务的坑。找到这篇文章看的朋友大概也知道Github Actions是Github上的持续集成服务，它允许你在一些节点上（如提交代码，特定时间等）触发一些操作。这里我们实现自动部署应用到自己的服务器。  首先要买一台服务器过程略。。。 建立仓库有细心看标题的朋友，应该知道我们是在Github（世界最大同性">
@@ -416,10 +416,10 @@
 <p><div style="float:left;margin-right:20px"><img width="360" src="/images/gitactions/docker.png"></div></p>
 <p><div style="float:left"><img width="360" src="/images/gitactions/virtual.png"></div></p>
 <p><div style="float:none;clear:both;"><br></div><br>遇事不决先上图</p>
-<p>小弟不才，说说自己的见解，看图就很容易看出docker和虚拟机的最大区别，说人话就是，首先要说出docker里的容器和镜像的概念，容器就是根据你需要的镜像启动的，比如你有一个centos系统镜像，传统的虚拟机就是每个虚拟机上都用这个镜像往里面装一次，而docker就用这个镜像启动就可以了，这就生成了一个容器，而容器之间是独立的，比如你下了一个别人写好的nginx镜像，你run几下，就创造了几个简单的独立的前端部署容器，这样就能做到资源的复用，扯远了。</p>
+<p>小弟不才，说说自己的见解，看图就很容易看出docker和虚拟机的最大区别，说人话就是，首先要说出docker里的容器和镜像的概念，容器就是根据你需要的镜像启动的，比如你有一个centos系统镜像，传统的虚拟机就是每个虚拟机上都用这个镜像往里面装一次，而docker就用这个镜像启动就可以了，这就生成了一个容器，而容器之间是独立的，这样就能做到资源的复用，扯远了。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//我也是用的别人的nginx镜像，简单记录一下</span><br><span class="line">docker pull nginx:latest</span><br><span class="line">docker run --name nginx-test -p 80:80 -d nginx</span><br></pre></td></tr></table></figure>
-<p>那细心的朋友也发现，我最好的那个actions的配置其实就是一些ssh命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> 你的docker容器名称 rm -rf /usr/share/nginx/html</span><br><span class="line">docker cp /home/www 你的docker容器名称:/usr/share/nginx/html</span><br></pre></td></tr></table></figure></p>
-<p>1、第一个就是先删除容器里的之前的项目，但也踩过坑，<code>docker exec</code>这个就是进入容器的命令了，之前我写的是<code>docker exec -it xxx /bin/bash</code><br>进去在<code>rm -rf</code>然后<code>exit</code>这样的，想法很美滋滋，但是ci命令上就报<code>err: the input device is not a TTY</code>后来换成这个<br>2、第二个就是把发上服务器的项目复制到容器里</p>
+<p>那细心的朋友也发现，我最后的那个actions的配置其实就是一些ssh命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> 你的docker容器名称 rm -rf /usr/share/nginx/html</span><br><span class="line">docker cp /home/www 你的docker容器名称:/usr/share/nginx/html</span><br></pre></td></tr></table></figure></p>
+<p>1、第一个就是先删除容器里的之前的项目，但也踩过坑，<code>docker exec</code>这个就是进入容器的命令了，之前我写的是<code>docker exec -it xxx /bin/bash</code>进去再<code>rm -rf</code>然后<code>exit</code>这样的，想法很美滋滋，但是ci命令上就报<code>err: the input device is not a TTY</code>后来才换成现在的命令<br>2、第二个就是把发上服务器的项目复制到容器里</p>
 <h2 id="开发应用"><a href="#开发应用" class="headerlink" title="开发应用"></a>开发应用</h2><p>过程也略。。。（到目前为止，如无意外的话，你只要push一下代码，就会进入到我们设置好的“陷阱”里，一顿自动操作执行下来，你的网站就部署上去了）</p>
 <h2 id="优化与改进（先挖好个坑）"><a href="#优化与改进（先挖好个坑）" class="headerlink" title="优化与改进（先挖好个坑）"></a>优化与改进（先挖好个坑）</h2><h3 id="自动发布到容器里（方案一）"><a href="#自动发布到容器里（方案一）" class="headerlink" title="自动发布到容器里（方案一）"></a>自动发布到容器里（方案一）</h3><p>1、将容器的sftp端口映射到服务器的某个端口上<br>2、在ftp actions里配置好对应的端口上传上去</p>
 <h3 id="用dockerFile自制镜像-（方案二）"><a href="#用dockerFile自制镜像-（方案二）" class="headerlink" title="用dockerFile自制镜像 （方案二）"></a>用dockerFile自制镜像 （方案二）</h3><p>1、ci.yml里面就是执行自制的docker镜像run一下<br>2、镜像逻辑大概如下：拉取最新代码到容器-&gt;打包项目-&gt;覆盖项目上的自定义nginx配置文件到容器nginx的默认路径</p>
