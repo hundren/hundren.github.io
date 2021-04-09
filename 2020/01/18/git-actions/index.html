@@ -93,7 +93,7 @@
 <meta property="og:image" content="http://yoursite.com/images/gitactions/error.png">
 <meta property="og:image" content="http://yoursite.com/images/gitactions/docker.png">
 <meta property="og:image" content="http://yoursite.com/images/gitactions/virtual.png">
-<meta property="og:updated_time" content="2020-01-19T01:14:24.418Z">
+<meta property="og:updated_time" content="2021-01-14T12:44:15.347Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github Actions, yes! + docker, yes yes!">
 <meta name="twitter:description" content="最近点开了一下Github Actions的技能树，在说真香之前，不得不说一下我踩过的这些前置任务的坑。找到这篇文章看的朋友大概也知道Github Actions是Github上的持续集成服务，它允许你在一些节点上（如提交代码，特定时间等）触发一些操作。这里我们实现自动部署应用到自己的服务器。  首先要买一台服务器过程略。。。 建立仓库有细心看标题的朋友，应该知道我们是在Github（世界最大同性">
@@ -400,16 +400,19 @@
         <p>最近点开了一下Github Actions的技能树，在说真香之前，不得不说一下我踩过的这些前置任务的坑。找到这篇文章看的朋友大概也知道Github Actions是Github上的持续集成服务，它允许你在一些节点上（如提交代码，特定时间等）触发一些操作。这里我们实现自动部署应用到自己的服务器。<br><img src="/images/gitactions/bg2019091201.jpg" alt></p>
 <hr>
 <h2 id="首先要买一台服务器"><a href="#首先要买一台服务器" class="headerlink" title="首先要买一台服务器"></a>首先要买一台服务器</h2><p>过程略。。。</p>
-<h2 id="建立仓库"><a href="#建立仓库" class="headerlink" title="建立仓库"></a>建立仓库</h2><p>有细心看标题的朋友，应该知道我们是在<code>Github</code>（世界最大同性交友网站）上玩的<br><img src="/images/gitactions/ci.png" alt><br>在你的项目里面建一个.github文件夹（注意有一点.），然后再建一个workflows文件夹，里面再新建一个后缀为yml的文件（名字任意），完成以上步骤你大概就完成50%的工作量了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ci.yml</span></span><br><span class="line">name: deploy to aliyun</span><br><span class="line">on:</span><br><span class="line">  push:</span><br><span class="line">    branches:</span><br><span class="line">      - master</span><br><span class="line"><span class="built_in">jobs</span>:</span><br><span class="line">  build:</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line">    steps:</span><br><span class="line">      <span class="comment"># 切换分支</span></span><br><span class="line">      - name: Checkout</span><br><span class="line">        uses: actions/checkout@master</span><br><span class="line">      <span class="comment"># 使用 node:10</span></span><br><span class="line">      - name: use Node.js 10</span><br><span class="line">        uses: actions/setup-node@v1</span><br><span class="line">        with:</span><br><span class="line">          node-version: 10</span><br><span class="line">      <span class="comment"># npm install</span></span><br><span class="line">      - name: npm install and build</span><br><span class="line">        run: |</span><br><span class="line">          yarn install</span><br><span class="line">          npm run build</span><br><span class="line">        env:</span><br><span class="line">          CI: <span class="literal">true</span></span><br><span class="line">      <span class="comment"># Deploy</span></span><br><span class="line">      - name: FTP-Deploy</span><br><span class="line">        uses: SamKirkland/FTP-Deploy-Action@2.0.0</span><br><span class="line">        env:</span><br><span class="line">          FTP_SERVER: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">          FTP_USERNAME: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">          FTP_PASSWORD: <span class="variable">$&#123;&#123; secrets.REMOTE_PWD &#125;</span>&#125;</span><br><span class="line">          LOCAL_DIR: build</span><br><span class="line">          METHOD: sftp</span><br><span class="line">          REMOTE_DIR: /home/www</span><br><span class="line">          ARGS: --delete</span><br><span class="line">      - name: Docker-deploy</span><br><span class="line">        uses: appleboy/ssh-action@master</span><br><span class="line">        with:</span><br><span class="line">          host: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">          username: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">          key: <span class="variable">$&#123;&#123; secrets.ACCESS_TOKEN &#125;</span>&#125;</span><br><span class="line">          script: |</span><br><span class="line">            docker <span class="built_in">exec</span> 你的docker容器名称 rm -rf /usr/share/nginx/html</span><br><span class="line">            docker cp /home/www 你的docker容器名称:/usr/share/nginx/html</span><br></pre></td></tr></table></figure></p>
+<h2 id="建立仓库"><a href="#建立仓库" class="headerlink" title="建立仓库"></a>建立仓库</h2><p>有细心看标题的朋友，应该知道我们是在<code>Github</code>（世界最大同性交友网站）上玩的<br><img src="/images/gitactions/ci.png" alt><br>在你的项目里面建一个.github文件夹（注意有一点.），然后再建一个workflows文件夹，里面再新建一个后缀为yml的文件（名字任意），完成以上步骤你大概就完成50%的工作量了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ci.yml</span></span><br><span class="line">name: deploy to aliyun</span><br><span class="line">on:</span><br><span class="line">  push:</span><br><span class="line">    branches:</span><br><span class="line">      - master</span><br><span class="line"><span class="built_in">jobs</span>:</span><br><span class="line">  build:</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line">    steps:</span><br><span class="line">      <span class="comment"># 切换分支</span></span><br><span class="line">      - name: Checkout</span><br><span class="line">        uses: actions/checkout@master</span><br><span class="line">      <span class="comment"># 使用 node:10</span></span><br><span class="line">      - name: use Node.js 10</span><br><span class="line">        uses: actions/setup-node@v1</span><br><span class="line">        with:</span><br><span class="line">          node-version: 10</span><br><span class="line">      <span class="comment"># npm install</span></span><br><span class="line">      - name: npm install and build</span><br><span class="line">        run: |</span><br><span class="line">          yarn install</span><br><span class="line">          npm run build</span><br><span class="line">        env:</span><br><span class="line">          CI: <span class="literal">true</span></span><br><span class="line">      <span class="comment"># Deploy</span></span><br><span class="line">      - name: FTP-Deploy</span><br><span class="line">        uses: SamKirkland/FTP-Deploy-Action@2.0.0</span><br><span class="line">        env:</span><br><span class="line">          FTP_SERVER: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">          FTP_USERNAME: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">          FTP_PASSWORD: <span class="variable">$&#123;&#123; secrets.REMOTE_PWD &#125;</span>&#125;</span><br><span class="line">          LOCAL_DIR: build</span><br><span class="line">          METHOD: sftp</span><br><span class="line">          REMOTE_DIR: /home/www</span><br><span class="line">          ARGS: --delete</span><br><span class="line">      - name: Docker-deploy</span><br><span class="line">        uses: appleboy/ssh-action@master</span><br><span class="line">        with:</span><br><span class="line">          host: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">          username: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">          key: <span class="variable">$&#123;&#123; secrets.ACCESS_TOKEN &#125;</span>&#125;</span><br><span class="line">          script: |</span><br><span class="line">            docker <span class="built_in">exec</span> 你的docker容器名称 rm -rf /usr/share/nginx/html</span><br><span class="line">            docker cp /home/www 你的docker容器名称:/usr/share/nginx/html</span><br></pre></td></tr></table></figure>
 <p>展示一下我的终极配置，当然事情的发展没有这么简单</p>
 <h3 id="配置详情"><a href="#配置详情" class="headerlink" title="配置详情"></a>配置详情</h3><p>git actions的奥妙之处就在于它有丰富的插件资源可以使用<br><img src="/images/gitactions/actions-market.png" alt><br>对于我们部署而言，前3个资源一般来说也是没问题的，最大的问题就在于发布，毕竟要和服务器打交道</p>
 <blockquote>
 <p>踩过的坑如下</p>
 </blockquote>
-<p>我之前发布用的模块是这个<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deploy</span></span><br><span class="line">      - name: Deploy</span><br><span class="line">        uses: easingthemes/ssh-deploy@v2.0.7</span><br><span class="line">        env:</span><br><span class="line">          SSH_PRIVATE_KEY: <span class="variable">$&#123;&#123; secrets.ACCESS_TOKEN &#125;</span>&#125;</span><br><span class="line">          ARGS: <span class="string">"-avz --delete"</span></span><br><span class="line">          SOURCE: <span class="string">"build/"</span></span><br><span class="line">          REMOTE_HOST: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">          REMOTE_USER: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">          TARGET: <span class="variable">$&#123;&#123; secrets.TARGET &#125;</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>我之前发布用的模块是这个</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deploy</span></span><br><span class="line">      - name: Deploy</span><br><span class="line">        uses: easingthemes/ssh-deploy@v2.0.7</span><br><span class="line">        env:</span><br><span class="line">          SSH_PRIVATE_KEY: <span class="variable">$&#123;&#123; secrets.ACCESS_TOKEN &#125;</span>&#125;</span><br><span class="line">          ARGS: <span class="string">"-avz --delete"</span></span><br><span class="line">          SOURCE: <span class="string">"build/"</span></span><br><span class="line">          REMOTE_HOST: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">          REMOTE_USER: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">          TARGET: <span class="variable">$&#123;&#123; secrets.TARGET &#125;</span>&#125;</span><br></pre></td></tr></table></figure>
 <font color="green">哦，对，大家看到这些secrets的变量是不是很奇怪，其实是为了隐私安全问题，在github项目上Settings里Secrets上添加就好了</font>
 
-<p>然后一直报这个错😢<br><img src="/images/gitactions/error.png" alt><br>服务器上什么的<code>ssh</code>都设置好了，在本地上<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -i id_rsa root@xxx.xxx.xxx.x</span><br></pre></td></tr></table></figure></p>
+<p>然后一直报这个错😢<br><img src="/images/gitactions/error.png" alt><br>服务器上什么的<code>ssh</code>都设置好了，在本地上</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -i id_rsa root@xxx.xxx.xxx.x</span><br></pre></td></tr></table></figure>
 <p>用私密登录也是正常的，用其它ssh登录的actions也可以用，事情发展到不可开交的地步，战事一触即发，幸好我们还有其它别人写好的actions可以用，后来换上<code>FTP-Deploy-Action</code>，心情就变得愉快了，妈妈再也不用担心我写代码了</p>
 <h3 id="docker容器"><a href="#docker容器" class="headerlink" title="docker容器"></a>docker容器</h3><p>如果没有用到docker的话，文章写到这里就可以结束了，把你的项目发布上了服务器，nginx配置指定一下域名和路径你就成功上岸了</p>
 <p><font color="red">那什么是docker？</font></p>
@@ -418,7 +421,8 @@
 <p><div style="float:none;clear:both;"><br></div><br>遇事不决先上图</p>
 <p>小弟不才，说说自己的见解，看图就很容易看出docker和虚拟机的最大区别，说人话就是，首先要说出docker里的容器和镜像的概念，容器就是根据你需要的镜像启动的，比如你有一个centos系统镜像，传统的虚拟机就是每个虚拟机上都用这个镜像往里面装一次，而docker就用这个镜像启动就可以了，这就生成了一个容器，而容器之间是独立的，这样就能做到资源的复用，扯远了。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//我也是用的别人的nginx镜像，简单记录一下</span><br><span class="line">docker pull nginx:latest</span><br><span class="line">docker run --name nginx-test -p 80:80 -d nginx</span><br></pre></td></tr></table></figure>
-<p>那细心的朋友也发现，我最后的那个actions的配置其实就是一些ssh命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> 你的docker容器名称 rm -rf /usr/share/nginx/html</span><br><span class="line">docker cp /home/www 你的docker容器名称:/usr/share/nginx/html</span><br></pre></td></tr></table></figure></p>
+<p>那细心的朋友也发现，我最后的那个actions的配置其实就是一些ssh命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> 你的docker容器名称 rm -rf /usr/share/nginx/html</span><br><span class="line">docker cp /home/www 你的docker容器名称:/usr/share/nginx/html</span><br></pre></td></tr></table></figure>
 <p>1、第一个就是先删除容器里的之前的项目，但也踩过坑，<code>docker exec</code>这个就是进入容器的命令了，之前我写的是<code>docker exec -it xxx /bin/bash</code>进去再<code>rm -rf</code>然后<code>exit</code>这样的，想法很美滋滋，但是ci命令上就报<code>err: the input device is not a TTY</code>后来才换成现在的命令<br>2、第二个就是把发上服务器的项目复制到容器里</p>
 <h2 id="开发应用"><a href="#开发应用" class="headerlink" title="开发应用"></a>开发应用</h2><p>过程也略。。。（到目前为止，如无意外的话，你只要push一下代码，就会进入到我们设置好的“陷阱”里，一顿自动操作执行下来，你的网站就部署上去了）</p>
 <h2 id="优化与改进（先挖好个坑）"><a href="#优化与改进（先挖好个坑）" class="headerlink" title="优化与改进（先挖好个坑）"></a>优化与改进（先挖好个坑）</h2><h3 id="自动发布到容器里（方案一）"><a href="#自动发布到容器里（方案一）" class="headerlink" title="自动发布到容器里（方案一）"></a>自动发布到容器里（方案一）</h3><p>1、将容器的sftp端口映射到服务器的某个端口上<br>2、在ftp actions里配置好对应的端口上传上去</p>
@@ -434,6 +438,14 @@
     
     
 
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/wechat_qrcode.jpg" alt="zgh wechat" style="width: 200px; max-width: 100%;">
+    <div>今天扫码，有机会分配一位小哥哥，在线教前端。</div>
+</div>
+
+      </div>
     
 
     
@@ -497,6 +509,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/01/14/form/" rel="prev" title="写前端就是写表单？">
+                写前端就是写表单？ <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -578,7 +594,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -589,7 +605,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -600,7 +616,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -691,7 +707,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -981,6 +997,9 @@ function show_popup(text,color){
 
 
 
+  
+  
+
 
 
 
@@ -1015,6 +1034,16 @@ function show_popup(text,color){
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
   
 
 
