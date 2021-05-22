@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[JavaScript忍者秘籍第2版-笔记]]></title>
+    <url>%2F2021%2F05%2F18%2FJavaScript%E5%BF%8D%E8%80%85%E7%A7%98%E7%B1%8D%E7%AC%AC2%E7%89%88-%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[一些特性 生成器 Promise 代理 高级数组方法 Map 正则表达式 模块 事件处理 Javascript 就是只开启了一个柜台 注册事件（addEventListener)]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>神书推荐</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[this/必包/作用域]]></title>
     <url>%2F2021%2F05%2F02%2Fthis-%E5%BF%85%E5%8C%85-%E4%BD%9C%E7%94%A8%E5%9F%9F%2F</url>
     <content type="text"><![CDATA[bind可以传基本类型，只会绑定一次 1234function fn()&#123; console.log(this)&#125;fn.bind(1).bind(2)() // Number &#123;1&#125;]]></content>
