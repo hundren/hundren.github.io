@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[react核心]]></title>
+    <url>%2F2021%2F06%2F21%2Freact%2F</url>
+    <content type="text"><![CDATA[react 的fiber有5个优先级的等级 Immediate UserBlocking Normal Low Idle 高阶组件怎么写一个高阶组件？ 普通方式 装饰器 多个高阶组件组合 高阶组件 属性代理 1、操作props2、操作ref 继续/劫持 什么是react hooks?优势react hooks 有什么优势class 的缺点 组件间的状态逻辑很难复用不要在render里写bind hooks 的优点 利于业务逻辑的封装和拆分，可以自由自定义hooksuseEffect(()=&gt;{}) hooks使用注意事项 不能在循环判断里用索引问题 只能在 React 的函数组件中调⽤ Hook，不要在其他 JavaScript 函数中调⽤]]></content>
+      <categories>
+        <category>知识总结</category>
+      </categories>
+      <tags>
+        <tag>重学前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[vue核心]]></title>
+    <url>%2F2021%2F06%2F21%2Fvue%2F</url>
+    <content type="text"><![CDATA[why O(n)?严格意义不是真的O(n),复杂度其实是O(nm) how O(n)?同层级比较 用index做keyvue: [0,1,2],[0,1] 误删react: 会重新渲染 都是新建 虚拟dom过程 虚拟 DOM 什么是虚拟 DOM 1234567&#123; type: 'div', props: &#123; children: [] &#125;, el: xxxx&#125; 怎么创建虚拟 DOM 12-&gt; h 、createElement...function h(type, props) &#123; return &#123; type, props &#125; &#125; 使用呢 123456JSX:&lt;div&gt; &lt;ul className='padding-20'&gt; &lt;li key='li-01'&gt;this is li 01&lt;/li&gt; &lt;/ul&gt;&lt;/div&gt; 经过一些工具转一下： 123456createElement('div', &#123; children: [ createElement('ul', &#123; className: 'padding-20' &#125;, createElement('li', &#123; key: 'li-01'&#125;, 'this is li 01')) ]&#125;) 虚拟DOM的数据结构有了，那就是渲染了 (mount/render) 12345678910111213f(vnode) -&gt; viewf(vode) &#123;document.createElement();....parent.insert(). insertBefore&#125;export const render = (vnode, parent) =&gt; &#123; &#125;&lt;div id='app'&gt;&lt;/div&gt; diff 相关了(patch) 1f(oldVnodeTree, newVnodeTree, parent) -&gt; 调度? -&gt; view]]></content>
+      <categories>
+        <category>知识总结</category>
+      </categories>
+      <tags>
+        <tag>重学前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[webpack]]></title>
+    <url>%2F2021%2F05%2F29%2Fwebpack%2F</url>
+    <content type="text"><![CDATA[我们常说的chunk和bundle的区别是什么？（important！） Chunk是Webpack打包过程中Modules的集合，是打包过程中的概念。Webpack的打包是从⼀个⼊⼝模块开始，⼊⼝模块引⽤其他模块，模块再引⽤模块。Webpack通过引⽤关系逐个打包模块，这些module就形成了⼀个Chunk。当然如果有多个⼊⼝模块，可能会产出多条打包路径，每条路径都会形成⼀个Chunk。 bundleBundle是我们最终输出的⼀个或多个打包好的⽂件 Chunk 和 Bundle 的关系?]]></content>
+      <categories>
+        <category>知识总结</category>
+      </categories>
+      <tags>
+        <tag>重学前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[JavaScript忍者秘籍第2版-笔记]]></title>
     <url>%2F2021%2F05%2F18%2FJavaScript%E5%BF%8D%E8%80%85%E7%A7%98%E7%B1%8D%E7%AC%AC2%E7%89%88-%E7%AC%94%E8%AE%B0%2F</url>
     <content type="text"><![CDATA[一些特性 生成器 Promise 代理 高级数组方法 Map 正则表达式 模块 事件处理 Javascript 就是只开启了一个柜台 注册事件（addEventListener)]]></content>
@@ -75,8 +108,8 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>JS填坑</tag>
         <tag>填坑</tag>
+        <tag>JS填坑</tag>
       </tags>
   </entry>
   <entry>
@@ -87,8 +120,8 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>JS填坑</tag>
         <tag>填坑</tag>
+        <tag>JS填坑</tag>
       </tags>
   </entry>
   <entry>
@@ -121,8 +154,8 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>JS填坑</tag>
         <tag>填坑</tag>
+        <tag>JS填坑</tag>
       </tags>
   </entry>
   <entry>
@@ -145,8 +178,8 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>JS填坑</tag>
         <tag>填坑</tag>
+        <tag>JS填坑</tag>
       </tags>
   </entry>
   <entry>
@@ -180,8 +213,8 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>JS填坑</tag>
         <tag>填坑</tag>
+        <tag>JS填坑</tag>
       </tags>
   </entry>
   <entry>
