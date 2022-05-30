@@ -1,32 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>JavaScript忍者秘籍第2版-笔记</title>
-    <url>/2021/05/18/JavaScript%E5%BF%8D%E8%80%85%E7%A7%98%E7%B1%8D%E7%AC%AC2%E7%89%88-%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="一些特性"><a href="#一些特性" class="headerlink" title="一些特性"></a>一些特性</h2><ul>
-<li>生成器</li>
-<li>Promise</li>
-<li>代理</li>
-<li>高级数组方法</li>
-<li>Map</li>
-<li>正则表达式</li>
-<li>模块</li>
-</ul>
-<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><blockquote>
-<p>Javascript 就是只开启了一个柜台</p>
-</blockquote>
-<ol>
-<li>注册事件（addEventListener)</li>
-</ol>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>神书推荐</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ES6 规范详解、ESNext 规范</title>
     <url>/2021/04/28/ES6%20%E8%A7%84%E8%8C%83%E8%AF%A6%E8%A7%A3%E3%80%81ESNext%20%E8%A7%84%E8%8C%83/</url>
     <content><![CDATA[<h2 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h2><p>var、const、let、function<br>let 变量提升、作用域</p>
@@ -77,81 +51,29 @@
       </tags>
   </entry>
   <entry>
-    <title>写前端就是写表单？</title>
-    <url>/2021/01/14/form/</url>
-    <content><![CDATA[<p>首先，大家思考一下表单是什么？前端又是什么？<br><a id="more"></a></p>
-<hr>
-<h2 id="表单是什么？"><a href="#表单是什么？" class="headerlink" title="表单是什么？"></a>表单是什么？</h2><p>小弟不才，曾有幸参与<code>某中台的表单引擎</code>的开发工作，一般开发前我们都是先用<code>领域设计模型</code>分析一波，时间的关系，先上图<br><img src="/images/form/form.png" alt></p>
-<p>用现在流行的<code>八卦文</code>翻译一下就是要先找出业务的聚合根，再分析它的属性，然后再总结它的生命周期<br>最后我们得出的结论是：<br>写前端<font size="24" color="red">不</font>等于写表单<br><strong>本文终。</strong><br><img src="/images/form/stop.jpeg" alt></p>
-<h2 id="前端是什么？"><a href="#前端是什么？" class="headerlink" title="前端是什么？"></a>前端是什么？</h2><blockquote>
-<p>那写前端到底是写什么？<br>本人才疏学浅<br>我认为人机需要交互的地方都属于前端<br>包括但不限于全息控制、人脑控制、声音控制、AR、VR<br>所以说要立志要做大前端的那位<br>你们以后的css样式可能还要加上声音/气味属性了</p>
-</blockquote>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.flower</span>:&#123;</span><br><span class="line">  <span class="attribute">color</span>: yellow;</span><br><span class="line">  <span class="attribute">sound</span>: quiet;</span><br><span class="line">  <span class="attribute">smell</span>: sweet;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="我设计的表单"><a href="#我设计的表单" class="headerlink" title="我设计的表单"></a>我设计的表单</h2><p>但相信大家都同意的是，表单开发在日常的开发中，应该是最复杂，占用的时间应该是最多的<br>我先来随便说几点：</p>
-<ul>
-<li>动态表单生成</li>
-<li>多级联动</li>
-<li>动态校验</li>
-<li>定制业务组件</li>
-<li>嵌套子级表单</li>
-<li>数据反显</li>
-<li>编辑状态禁用</li>
-<li>等等</li>
+    <title>JavaScript忍者秘籍第2版-笔记</title>
+    <url>/2021/05/18/JavaScript%E5%BF%8D%E8%80%85%E7%A7%98%E7%B1%8D%E7%AC%AC2%E7%89%88-%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="一些特性"><a href="#一些特性" class="headerlink" title="一些特性"></a>一些特性</h2><ul>
+<li>生成器</li>
+<li>Promise</li>
+<li>代理</li>
+<li>高级数组方法</li>
+<li>Map</li>
+<li>正则表达式</li>
+<li>模块</li>
 </ul>
-<p>某知名博文《写前端就是写表单？》的博主曾经说过：“控制最小边界，组合，就是好架构”<br>所以我们先设计一个最小的表单</p>
-<h3 id="最小的表单"><a href="#最小的表单" class="headerlink" title="最小的表单"></a>最小的表单</h3><p>1.要有一个<code>&lt;form&gt;&lt;/form&gt;</code><br>2.要有一个<code>formData</code><br>3.要有一个<code>控件配置表</code></p>
-<h3 id="配置表"><a href="#配置表" class="headerlink" title="配置表"></a>配置表</h3><blockquote>
-<p>建一个form-register.ts 的文件</p>
+<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><blockquote>
+<p>Javascript 就是只开启了一个柜台</p>
 </blockquote>
-<p>ts, 是的我加了ts<br>就是将所有组件import进来 再export出去<br>规范点的话还能用require.context动态引入</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Text <span class="keyword">from</span> <span class="string">'./Text/index.vue'</span></span><br><span class="line"><span class="comment">//类型</span></span><br><span class="line"><span class="keyword">export</span>  formConfigs:formTypes= &#123;</span><br><span class="line">  text: Text</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>眼利的朋友应该发现有一个formTypes</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//组件的class很强大，可以直接作为类型</span></span><br><span class="line"><span class="keyword">export</span> interface formTypes &#123;</span><br><span class="line">  Text?: Text</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>那还有一个最关键的别人调用的配置项是长怎样的呢，以下是我的参考，具体可以根据自己业务需要自行添加</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> interface fieldType &#123;</span><br><span class="line">  fieldType: keyof formTypes</span><br><span class="line">  key: string</span><br><span class="line">  dict?: string</span><br><span class="line">  type?: string</span><br><span class="line">  name?: string</span><br><span class="line">  label?: string</span><br><span class="line">  placeholder?: string</span><br><span class="line">  required?: boolean</span><br><span class="line">  isShow?: <span class="built_in">Function</span> <span class="comment">//是否显示</span></span><br><span class="line">  dateType?: <span class="string">'date'</span> | <span class="string">'time'</span> | <span class="string">'year-month'</span> | <span class="string">'month-day'</span> | <span class="string">'datetime'</span></span><br><span class="line">  readonly?: boolean</span><br><span class="line">  rules?: rule[]</span><br><span class="line">  isWrap?: boolean</span><br><span class="line">  hiddenLabel? :boolean</span><br><span class="line">  extraKey?: string | extraKeyType[]</span><br><span class="line">  formDataFormatter?: <span class="built_in">Function</span> <span class="comment">//格式化函数</span></span><br><span class="line">  formDataConvert?: <span class="built_in">Function</span> <span class="comment">// 转换成多个其他值</span></span><br><span class="line">  propShowValue?:string <span class="comment">//显示的字段</span></span><br><span class="line">  handleChange?: <span class="built_in">Function</span></span><br><span class="line">  [k: string]: any</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>大家发现会有一个<code>[k: string]: any</code>，需然牺牲了一些类型约束，但是换来的扩展自由也是很有价值的</p>
-<h3 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h3><blockquote>
-<p>加入了一个动态组件渲染</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;form&gt;</span><br><span class="line">  &lt;template v-<span class="keyword">for</span>=<span class="string">"fieldItem in fieldList"</span>&gt;</span><br><span class="line">    &lt;component</span><br><span class="line">      :key=<span class="string">"fieldItem.key"</span></span><br><span class="line">      :is=<span class="string">"formRegister[fieldItem.fieldType]"</span></span><br><span class="line">      :fieldItem=<span class="string">"fieldItem"</span></span><br><span class="line">      v-bind=<span class="string">"fieldItem"</span></span><br><span class="line">      v-model=<span class="string">"formData[fieldItem.key]"</span></span><br><span class="line">    &gt;&lt;<span class="regexp">/component&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>template&gt;</span><br><span class="line">&lt;<span class="regexp">/form&gt;</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>这里用到<code>v-bind</code>把所有属性props进去，react的话可以自己解构<code>...props</code><br>到这里如无意外的话，你的表单组件应该渲染出来了<br>但有人可能就会问，也不是杠什么的，你的<code>fieldList</code>是怎样来的</p>
-</blockquote>
-<h3 id="函数生成器"><a href="#函数生成器" class="headerlink" title="函数生成器"></a>函数生成器</h3><p>当初设计的时候第一直觉，就是props一个<code>fieldList</code>的数组进来<br>但后来遇到一些问题</p>
-<ul>
-<li>组件之间联动</li>
-<li>数据值强绑定</li>
-<li>表单项动态生成</li>
-<li>校验规则条件动态变化</li>
-<li>等<br>可能都要监听<code>formData</code>值的变化，再改变<code>fieldList</code>的值</li>
-</ul>
-<blockquote>
-<p>后来，某天发呆的时候，想到《上帝掷骰子吗》一书中，对多宇宙的一个解说是，<code>每个世界线的变动都会再产生出一个新宇宙</code></p>
-</blockquote>
-<p>好家伙，那我们为什么不能写一个多宇宙的表单组件呢？<code>每次formData值的变动就再产生出一个新的fieldList</code><br><strong>fieldListMaker诞生</strong><br>我马上改成如下：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">get</span> formDataString() &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">JSON</span>.stringify(<span class="keyword">this</span>.formData)</span><br><span class="line">&#125;</span><br><span class="line">@Watch(<span class="string">'formDataString'</span>, &#123; <span class="attr">immediate</span>: <span class="literal">true</span>, <span class="attr">deep</span>: <span class="literal">false</span> &#125;)</span><br><span class="line">formDataChanged(val: any, <span class="attr">oldVal</span>: any) &#123;</span><br><span class="line">  <span class="keyword">if</span> (val !== oldVal) &#123;</span><br><span class="line">    <span class="keyword">this</span>.fieldList = <span class="keyword">this</span>.fieldListMaker(val)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>formData转为string监听，为了避免一些深层次的属性变化监听不到<br>传入的时候fieldListMaker长这样</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">fieldListMaker(formData: any): <span class="built_in">Array</span>&lt;fieldType&gt; &#123;</span><br><span class="line">  <span class="comment">// 你在这里可以做你想做的各种东西😊</span></span><br><span class="line">  <span class="keyword">return</span> [</span><br><span class="line">    &#123;</span><br><span class="line">      fieldType: <span class="string">'text'</span>,</span><br><span class="line">      key: <span class="string">'abc'</span>,</span><br><span class="line">      label: <span class="string">'def'</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>实际使用就是</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> FormList <span class="keyword">from</span> <span class="string">'@/components/form/index.vue'</span></span><br><span class="line">&lt;FormList</span><br><span class="line">  ref=<span class="string">"formRef"</span></span><br><span class="line">  :fieldListMaker=<span class="string">"fieldListMaker"</span></span><br><span class="line">  :showBtn=<span class="string">"false"</span></span><br><span class="line">  @change=<span class="string">"handleFormChange"</span></span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
-<p>大家可以根据各自喜好，在里面添加一些方法，如：</p>
 <ol>
-<li>校验方法</li>
-<li>设置属性值方法</li>
-<li>清空校验方法</li>
-<li>强制更新list方法</li>
-<li>等<br>各种业务表单组件也可以自己添加，只要约定好一些基本方法，里面@Model(‘change’)出来一个双向绑定就好了<br><strong>真.完结,撒花</strong></li>
+<li>注册事件（addEventListener)</li>
 </ol>
-<blockquote>
-<p>彩蛋</p>
-</blockquote>
-<p>有兴趣的可以看源代码<a href="https://github.com/hundren/multiverse-form" title="代码地址" target="_blank" rel="noopener">多宇宙表单</a></p>
 ]]></content>
       <categories>
-        <category>知识总结</category>
+        <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>架构</tag>
+        <tag>神书推荐</tag>
       </tags>
   </entry>
   <entry>
@@ -341,6 +263,84 @@
       </tags>
   </entry>
   <entry>
+    <title>写前端就是写表单？</title>
+    <url>/2021/01/14/form/</url>
+    <content><![CDATA[<p>首先，大家思考一下表单是什么？前端又是什么？<br><a id="more"></a></p>
+<hr>
+<h2 id="表单是什么？"><a href="#表单是什么？" class="headerlink" title="表单是什么？"></a>表单是什么？</h2><p>小弟不才，曾有幸参与<code>某中台的表单引擎</code>的开发工作，一般开发前我们都是先用<code>领域设计模型</code>分析一波，时间的关系，先上图<br><img src="/images/form/form.png" alt></p>
+<p>用现在流行的<code>八卦文</code>翻译一下就是要先找出业务的聚合根，再分析它的属性，然后再总结它的生命周期<br>最后我们得出的结论是：<br>写前端<font size="24" color="red">不</font>等于写表单<br><strong>本文终。</strong><br><img src="/images/form/stop.jpeg" alt></p>
+<h2 id="前端是什么？"><a href="#前端是什么？" class="headerlink" title="前端是什么？"></a>前端是什么？</h2><blockquote>
+<p>那写前端到底是写什么？<br>本人才疏学浅<br>我认为人机需要交互的地方都属于前端<br>包括但不限于全息控制、人脑控制、声音控制、AR、VR<br>所以说要立志要做大前端的那位<br>你们以后的css样式可能还要加上声音/气味属性了</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.flower</span>:&#123;</span><br><span class="line">  <span class="attribute">color</span>: yellow;</span><br><span class="line">  <span class="attribute">sound</span>: quiet;</span><br><span class="line">  <span class="attribute">smell</span>: sweet;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="我设计的表单"><a href="#我设计的表单" class="headerlink" title="我设计的表单"></a>我设计的表单</h2><p>但相信大家都同意的是，表单开发在日常的开发中，应该是最复杂，占用的时间应该是最多的<br>我先来随便说几点：</p>
+<ul>
+<li>动态表单生成</li>
+<li>多级联动</li>
+<li>动态校验</li>
+<li>定制业务组件</li>
+<li>嵌套子级表单</li>
+<li>数据反显</li>
+<li>编辑状态禁用</li>
+<li>等等</li>
+</ul>
+<p>某知名博文《写前端就是写表单？》的博主曾经说过：“控制最小边界，组合，就是好架构”<br>所以我们先设计一个最小的表单</p>
+<h3 id="最小的表单"><a href="#最小的表单" class="headerlink" title="最小的表单"></a>最小的表单</h3><p>1.要有一个<code>&lt;form&gt;&lt;/form&gt;</code><br>2.要有一个<code>formData</code><br>3.要有一个<code>控件配置表</code></p>
+<h3 id="配置表"><a href="#配置表" class="headerlink" title="配置表"></a>配置表</h3><blockquote>
+<p>建一个form-register.ts 的文件</p>
+</blockquote>
+<p>ts, 是的我加了ts<br>就是将所有组件import进来 再export出去<br>规范点的话还能用require.context动态引入</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Text <span class="keyword">from</span> <span class="string">'./Text/index.vue'</span></span><br><span class="line"><span class="comment">//类型</span></span><br><span class="line"><span class="keyword">export</span>  formConfigs:formTypes= &#123;</span><br><span class="line">  text: Text</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>眼利的朋友应该发现有一个formTypes</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//组件的class很强大，可以直接作为类型</span></span><br><span class="line"><span class="keyword">export</span> interface formTypes &#123;</span><br><span class="line">  Text?: Text</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>那还有一个最关键的别人调用的配置项是长怎样的呢，以下是我的参考，具体可以根据自己业务需要自行添加</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> interface fieldType &#123;</span><br><span class="line">  fieldType: keyof formTypes</span><br><span class="line">  key: string</span><br><span class="line">  dict?: string</span><br><span class="line">  type?: string</span><br><span class="line">  name?: string</span><br><span class="line">  label?: string</span><br><span class="line">  placeholder?: string</span><br><span class="line">  required?: boolean</span><br><span class="line">  isShow?: <span class="built_in">Function</span> <span class="comment">//是否显示</span></span><br><span class="line">  dateType?: <span class="string">'date'</span> | <span class="string">'time'</span> | <span class="string">'year-month'</span> | <span class="string">'month-day'</span> | <span class="string">'datetime'</span></span><br><span class="line">  readonly?: boolean</span><br><span class="line">  rules?: rule[]</span><br><span class="line">  isWrap?: boolean</span><br><span class="line">  hiddenLabel? :boolean</span><br><span class="line">  extraKey?: string | extraKeyType[]</span><br><span class="line">  formDataFormatter?: <span class="built_in">Function</span> <span class="comment">//格式化函数</span></span><br><span class="line">  formDataConvert?: <span class="built_in">Function</span> <span class="comment">// 转换成多个其他值</span></span><br><span class="line">  propShowValue?:string <span class="comment">//显示的字段</span></span><br><span class="line">  handleChange?: <span class="built_in">Function</span></span><br><span class="line">  [k: string]: any</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>大家发现会有一个<code>[k: string]: any</code>，需然牺牲了一些类型约束，但是换来的扩展自由也是很有价值的</p>
+<h3 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h3><blockquote>
+<p>加入了一个动态组件渲染</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;form&gt;</span><br><span class="line">  &lt;template v-<span class="keyword">for</span>=<span class="string">"fieldItem in fieldList"</span>&gt;</span><br><span class="line">    &lt;component</span><br><span class="line">      :key=<span class="string">"fieldItem.key"</span></span><br><span class="line">      :is=<span class="string">"formRegister[fieldItem.fieldType]"</span></span><br><span class="line">      :fieldItem=<span class="string">"fieldItem"</span></span><br><span class="line">      v-bind=<span class="string">"fieldItem"</span></span><br><span class="line">      v-model=<span class="string">"formData[fieldItem.key]"</span></span><br><span class="line">    &gt;&lt;<span class="regexp">/component&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>template&gt;</span><br><span class="line">&lt;<span class="regexp">/form&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这里用到<code>v-bind</code>把所有属性props进去，react的话可以自己解构<code>...props</code><br>到这里如无意外的话，你的表单组件应该渲染出来了<br>但有人可能就会问，也不是杠什么的，你的<code>fieldList</code>是怎样来的</p>
+</blockquote>
+<h3 id="函数生成器"><a href="#函数生成器" class="headerlink" title="函数生成器"></a>函数生成器</h3><p>当初设计的时候第一直觉，就是props一个<code>fieldList</code>的数组进来<br>但后来遇到一些问题</p>
+<ul>
+<li>组件之间联动</li>
+<li>数据值强绑定</li>
+<li>表单项动态生成</li>
+<li>校验规则条件动态变化</li>
+<li>等<br>可能都要监听<code>formData</code>值的变化，再改变<code>fieldList</code>的值</li>
+</ul>
+<blockquote>
+<p>后来，某天发呆的时候，想到《上帝掷骰子吗》一书中，对多宇宙的一个解说是，<code>每个世界线的变动都会再产生出一个新宇宙</code></p>
+</blockquote>
+<p>好家伙，那我们为什么不能写一个多宇宙的表单组件呢？<code>每次formData值的变动就再产生出一个新的fieldList</code><br><strong>fieldListMaker诞生</strong><br>我马上改成如下：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">get</span> formDataString() &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">JSON</span>.stringify(<span class="keyword">this</span>.formData)</span><br><span class="line">&#125;</span><br><span class="line">@Watch(<span class="string">'formDataString'</span>, &#123; <span class="attr">immediate</span>: <span class="literal">true</span>, <span class="attr">deep</span>: <span class="literal">false</span> &#125;)</span><br><span class="line">formDataChanged(val: any, <span class="attr">oldVal</span>: any) &#123;</span><br><span class="line">  <span class="keyword">if</span> (val !== oldVal) &#123;</span><br><span class="line">    <span class="keyword">this</span>.fieldList = <span class="keyword">this</span>.fieldListMaker(val)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>formData转为string监听，为了避免一些深层次的属性变化监听不到<br>传入的时候fieldListMaker长这样</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">fieldListMaker(formData: any): <span class="built_in">Array</span>&lt;fieldType&gt; &#123;</span><br><span class="line">  <span class="comment">// 你在这里可以做你想做的各种东西😊</span></span><br><span class="line">  <span class="keyword">return</span> [</span><br><span class="line">    &#123;</span><br><span class="line">      fieldType: <span class="string">'text'</span>,</span><br><span class="line">      key: <span class="string">'abc'</span>,</span><br><span class="line">      label: <span class="string">'def'</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>实际使用就是</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> FormList <span class="keyword">from</span> <span class="string">'@/components/form/index.vue'</span></span><br><span class="line">&lt;FormList</span><br><span class="line">  ref=<span class="string">"formRef"</span></span><br><span class="line">  :fieldListMaker=<span class="string">"fieldListMaker"</span></span><br><span class="line">  :showBtn=<span class="string">"false"</span></span><br><span class="line">  @change=<span class="string">"handleFormChange"</span></span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+<p>大家可以根据各自喜好，在里面添加一些方法，如：</p>
+<ol>
+<li>校验方法</li>
+<li>设置属性值方法</li>
+<li>清空校验方法</li>
+<li>强制更新list方法</li>
+<li>等<br>各种业务表单组件也可以自己添加，只要约定好一些基本方法，里面@Model(‘change’)出来一个双向绑定就好了<br><strong>真.完结,撒花</strong></li>
+</ol>
+<blockquote>
+<p>彩蛋</p>
+</blockquote>
+<p>有兴趣的可以看源代码<a href="https://github.com/hundren/multiverse-form" title="代码地址" target="_blank" rel="noopener">多宇宙表单</a></p>
+]]></content>
+      <categories>
+        <category>知识总结</category>
+      </categories>
+      <tags>
+        <tag>架构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>1.10乘100为什么不等于110</title>
     <url>/2017/02/14/js-note/</url>
     <content><![CDATA[<h2 id="事情的起因"><a href="#事情的起因" class="headerlink" title="事情的起因"></a>事情的起因</h2><p>要从今天的微信支付调试说起，众所周知微信支付的接口，要求传入的金额数值是按分为单位的，所以都必须是大于0的整数。<br><a id="more"></a><br>&emsp;&emsp;所以我们一般业务的实际金额都要做乘以100的处理，例如某大妈刚在市场买了1.10元的菜，她摸了摸口袋，看了一眼诚实憨厚的大叔，已经麻利地帮她打包好菜，实在不忍心说出自己今天忘记带钱包。<br>&emsp;&emsp;大叔正打算把菜递给大妈之际，看到大妈尾头紧皱，已经失去平时要把1.10元的菜讲价到1.00元的风韵神采，便意识到事情并不简单，便默默从下方抽屉中抽出一个微信二维码递给她。<br>&emsp;&emsp;大妈心中暗喜，迅速拔出他儿子刚为她买的最新款红米手机，熟练地扫过二维码，也没有要讲价到1.00元的意思了，麻利地在微信上输入1.10元的金额，点击立即支付，输入过密码。。。<br>&emsp;&emsp;“参数错误：你输入的金额格式不正确”，看着手机弹出的提示弹窗，大妈狠狠咬了牙，又重复了一遍上述的支付动作，“参数错误：你输入的金额格式不正确”。这时大妈崩溃的用着恳求可怜的眼神看着大叔，大叔也一面无奈地轻轻将打包好的菜微微收了过来一下，空气突然安静地凝固起来。</p>
@@ -366,56 +366,149 @@
       </tags>
   </entry>
   <entry>
+    <title>面试经历</title>
+    <url>/2021/08/15/interview/</url>
+    <content><![CDATA[<p>分享一下一些面试经历</p>
+<hr>
+<h2 id="腾讯-小游戏部门"><a href="#腾讯-小游戏部门" class="headerlink" title="腾讯-小游戏部门"></a>腾讯-小游戏部门</h2><p>笔试题</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">-<span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 给定一组图片链接，加载全部图片</span></span><br><span class="line"><span class="comment"> * @param &#123;String[]&#125; imgList 图片链接数组</span></span><br><span class="line"><span class="comment"> * @return &#123;Promise&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">loadAllImages</span>(<span class="params">imgList</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">loadOneImage</span>(<span class="params">src</span>) </span>&#123;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line">               </span><br><span class="line"><span class="keyword">const</span> imgList = [</span><br><span class="line">  <span class="string">'https://www.midea.com/1.png'</span>,</span><br><span class="line">  <span class="string">'https://www.midea.com/2.png'</span>,</span><br><span class="line">  <span class="string">'https://www.midea.com/3.png'</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 预期: imgList包含的全部图片链接加载成功后执行回调</span></span><br><span class="line">loadAllImages(imgList).then(<span class="function">(<span class="params">imgs</span>) =&gt;</span> &#123;</span><br><span class="line"> <span class="built_in">console</span>.log(<span class="string">'loadAllImages success'</span>, imgs);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>怎样将html、css转换成canvas</li>
+<li>有没做过小游戏</li>
+<li>img的onLoad怎样回调</li>
+<li>reactNative 转换成app的原理</li>
+<li>项目上的问题</li>
+<li>为什么要用mpvue</li>
+</ul>
+<h2 id="腾讯-质控部门"><a href="#腾讯-质控部门" class="headerlink" title="腾讯-质控部门"></a>腾讯-质控部门</h2><h3 id="笔试题"><a href="#笔试题" class="headerlink" title="笔试题"></a>笔试题</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(i)</span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">aaaabbbccccddfgh  给定一个字符串,写一个函数输出数量最多，相同的也要输出</span><br></pre></td></tr></table></figure>
+<ul>
+<li>忘记问了什么了</li>
+</ul>
+<h2 id="字节"><a href="#字节" class="headerlink" title="字节"></a>字节</h2><h3 id="编程题目"><a href="#编程题目" class="headerlink" title="编程题目"></a>编程题目</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">* 合并排序</span><br><span class="line">* 写个方法把&lt;div a=<span class="string">"111"</span>&gt;<span class="number">123</span>&lt;<span class="regexp">/div&gt;转换成对象</span></span><br></pre></td></tr></table></figure>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ul>
+<li>xhr攻击</li>
+<li>Https安全</li>
+<li>微前端怎样做样式隔离</li>
+<li>说说项目上那个很厉害的领域设计模型</li>
+<li>websocket 原理</li>
+</ul>
+<h2 id="欢聚"><a href="#欢聚" class="headerlink" title="欢聚"></a>欢聚</h2><p>题目1</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">2</span>)</span><br><span class="line">&#125;, <span class="number">0</span>);</span><br><span class="line"><span class="keyword">const</span> promise = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">3</span>);</span><br><span class="line">  resolve(<span class="number">7</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">4</span>)</span><br><span class="line">&#125;)</span><br><span class="line">promise.then(<span class="function">(<span class="params">value</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">5</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(value)</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Promise</span>.resolve(<span class="number">8</span>)</span><br><span class="line">&#125;).then(<span class="function">(<span class="params">value</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(value)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">6</span>)</span><br></pre></td></tr></table></figure>
+<p>题目2</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">arr.splice()</span><br><span class="line">arr.reverse()</span><br><span class="line">arr.slice()</span><br><span class="line">arr.map()</span><br><span class="line">哪些会造成数组原结构改变</span><br></pre></td></tr></table></figure>
+<ul>
+<li>输入url整个过程</li>
+<li>说说跨域</li>
+<li>协议、域名、端口哪些会造成跨域</li>
+<li>浏览器缓存</li>
+<li>301 是什么</li>
+<li>cookie跨域获取</li>
+<li>vue的mixins的顺序，mixins，page和子组件</li>
+<li>created生命周期获取dom</li>
+<li>说说事件循环</li>
+<li>说说TCP的3次握手，第2次中断了会怎样</li>
+<li>指令有什么生命周期</li>
+</ul>
+<h2 id="树根"><a href="#树根" class="headerlink" title="树根"></a>树根</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">delayToEcho</span> (<span class="params">msg, cb</span>) </span>&#123;</span><br><span class="line">  setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> err = <span class="built_in">Date</span>.now() % <span class="number">2</span> === <span class="number">0</span> ? <span class="literal">null</span> : <span class="keyword">new</span> <span class="built_in">Error</span>();</span><br><span class="line">    cb(err, msg);</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 正常调用</span></span><br><span class="line">delayToEcho(<span class="string">'msg'</span>, (err, msg) =&gt; &#123;&#125;);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">promisify</span> (<span class="params">fn</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function">(<span class="params">msg</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="comment">// 请把这个函数实现，能够让第 #15 行开始的代码能够成功运行</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">      fn(msg,(err,msg)=&gt;&#123;</span><br><span class="line">        <span class="keyword">if</span>(err)&#123;</span><br><span class="line">          reject(err)</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">          resolve(msg)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// console.log('promisify',promisify(delayToEcho)('dddd'))</span></span><br><span class="line">promisify(delayToEcho)(<span class="string">'msg'</span>)</span><br><span class="line">.then(<span class="function"><span class="params">msg</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'msg'</span>,msg);</span><br><span class="line">&#125;)</span><br><span class="line">.catch(<span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'err'</span>,err);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>样式居中</li>
+<li>new方法</li>
+<li>react 的hooks有哪些</li>
+<li>箭头函数特点</li>
+</ul>
+<h2 id="碧桂园"><a href="#碧桂园" class="headerlink" title="碧桂园"></a>碧桂园</h2><ul>
+<li>浏览器缓存</li>
+<li>vue的diff</li>
+<li>object对象有哪些不能枚举</li>
+<li>说说es6数组的新api</li>
+</ul>
+<h2 id="欢聚shopeline"><a href="#欢聚shopeline" class="headerlink" title="欢聚shopeline"></a>欢聚shopeline</h2><h3 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h3><ul>
+<li>浏览器的性能瓶颈</li>
+<li>webpack的dll缓存你们的更新机制</li>
+<li>umi的不好的地方</li>
+<li>vue和react不同的性能优化方法</li>
+<li>一个main.js包和多个小包的各自的好处</li>
+<li>cdn缓存的方法、页面数据缓存</li>
+<li>vue的渲染生命周期</li>
+<li>ci/cd的实现</li>
+<li>组件库的设计</li>
+<li>ts的使用情况</li>
+<li>vue2对ts的支持</li>
+<li>有什么项目比较有痛点</li>
+<li>有没做过ssr</li>
+<li>飞冰和umi的区别</li>
+<li>react的jsx怎样转换成页面</li>
+</ul>
+<h3 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h3><ul>
+<li>webpack5的联邦绑定</li>
+<li>微前端怎样渲染那个url</li>
+<li>nodejs多线程怎样通信</li>
+<li>nodejs中间件怎样数据共享</li>
+<li>websocket突然收到多个并发怎样处理</li>
+<li>nodejs的global是什么</li>
+</ul>
+<h2 id="YY"><a href="#YY" class="headerlink" title="YY"></a>YY</h2><h3 id="一面-1"><a href="#一面-1" class="headerlink" title="一面"></a>一面</h3><ul>
+<li>树的最大权重路径问题（随机权重）</li>
+<li>cookie跨域设置</li>
+<li>防御dns攻击</li>
+<li>ssr怎样知道html和数据返回了</li>
+<li>前端负责人和一线技术</li>
+<li>聊聊微前端</li>
+<li>Https为什么可以防止dns攻击</li>
+<li>nodejs的内存泄漏定位</li>
+<li>写个左右布局的样式，头像固定</li>
+<li>vue 和 react 的对比</li>
+<li>react Native 的写法</li>
+</ul>
+<h3 id="二面-1"><a href="#二面-1" class="headerlink" title="二面"></a>二面</h3><ul>
+<li>我想发一个跨域，header需要怎样配置（Access-Control-Allow-Origin:*）</li>
+<li>webpack5有什么新特性</li>
+<li>webpack5的tree shaking和webpack4有什么区别</li>
+<li>有没有了解过server worker</li>
+<li>有没有了解过webworker，用在什么地方</li>
+<li>webgl基于什么实现</li>
+<li>说说vue的路由原理，hash和history分别用到什么api</li>
+<li>computed是个独立的沙箱，说说vuex怎么会被computed监听到</li>
+<li>canvas怎样读取图片，怎样获取canvas图片后的色值，上传到服务器用什么办法</li>
+<li>如何控制canvas动画的快慢</li>
+<li>ci/cd 的实现，docker机制</li>
+<li>让你用c语言自己实现一个数组的push要怎样写</li>
+<li>微前端的原理</li>
+<li>webassembly有没了解过，他最终浏览器是会转成什么</li>
+<li>nodejs 的守护进程用什么，他们的原理是怎样的</li>
+<li>开发nodejs的时候是怎样部署到服务器的</li>
+<li>websocket的底层原理，最大并发是多少，服务器怎样限制这个最大并发数</li>
+<li>说说v8的堆和栈，（基础类型和引用类型，基本类型栈，引用堆）</li>
+<li>为什么考虑到用RN</li>
+<li>进程和线程的区别</li>
+<li>移动端自适应方案</li>
+<li>微前端怎样通过url渲染</li>
+</ul>
+<h3 id="三面"><a href="#三面" class="headerlink" title="三面"></a>三面</h3><ul>
+<li>webpack5的模块联邦有没了解过</li>
+<li>用领域设计模式对开发有什么好处</li>
+<li>微前端有没使用过</li>
+<li>Handlebars有没使用过，模板语法有什么好处</li>
+</ul>
+<h3 id="四面"><a href="#四面" class="headerlink" title="四面"></a>四面</h3><ul>
+<li>新技术会怎样落地</li>
+<li>怎样看待996</li>
+<li>有没用过YY什么产品</li>
+<li>怎样接触一些新的技术</li>
+</ul>
+]]></content>
+      <categories>
+        <category>文章</category>
+      </categories>
+      <tags>
+        <tag>面试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JS的变量提升了解一下？</title>
     <url>/2018/03/14/js-var/</url>
     <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var 100</span><br><span class="line">//等等，去喝杯咖啡再写</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>填坑</tag>
-        <tag>JS填坑</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>完成的项目，持续更新</title>
-    <url>/2018/08/14/project/</url>
-    <content><![CDATA[<p>目标：写过的代码加起来能绕地球一圈</p>
-<h2 id="那是梦开始的地方"><a href="#那是梦开始的地方" class="headerlink" title="那是梦开始的地方"></a>那是梦开始的地方</h2><a id="more"></a>
-<h3 id="第一个小程序，IoT项目"><a href="#第一个小程序，IoT项目" class="headerlink" title="第一个小程序，IoT项目"></a>第一个小程序，IoT项目</h3><p><img src="/images/project/iot_user.jpg" alt><br>IoT安装端账号：az1 密码：123456<br><img src="/images/project/iot_install.jpg" alt><br>IoT售后端账号：wx1 密码：123456<br><img src="/images/project/iot_wx.jpg" alt></p>
-<h3 id="车仔网小程序"><a href="#车仔网小程序" class="headerlink" title="车仔网小程序"></a>车仔网小程序</h3><p><img src="/images/project/chezi.png" alt></p>
-<h3 id="男士理容预约小程序"><a href="#男士理容预约小程序" class="headerlink" title="男士理容预约小程序"></a>男士理容预约小程序</h3><p><img src="/images/project/harroman.jpg" alt></p>
-<h3 id="vue搭建的手机商城"><a href="#vue搭建的手机商城" class="headerlink" title="vue搭建的手机商城"></a>vue搭建的手机商城</h3><p><img src="/images/project/shilianmobile.png" alt></p>
-<h3 id="飞冰Ice后台demo"><a href="#飞冰Ice后台demo" class="headerlink" title="飞冰Ice后台demo"></a>飞冰Ice后台demo</h3><p><a href="http://hospital.pppppxt.cc" target="_blank" rel="noopener">demo链接,点我,点我</a><br>管理员账户：admin;医生账号：doctor 密码都是：123456</p>
-<h3 id="某题库测试系统前端demo"><a href="#某题库测试系统前端demo" class="headerlink" title="某题库测试系统前端demo"></a>某题库测试系统前端demo</h3><p><a href="http://wuweiquan.pppppxt.cc" target="_blank" rel="noopener">点我,点我</a><br>sn码随便输入即可</p>
-]]></content>
-      <categories>
-        <category>项目</category>
-      </categories>
-      <tags>
-        <tag>案例</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>React-native,我们一起走过的坑。</title>
-    <url>/2018/04/19/rn/</url>
-    <content><![CDATA[<p>前几个星期，点开了RN的技能树，废话不多说，那我就意简言赅地记录一下自己遇到的坑，避免后人再犯自己的错误。<br><a id="more"></a><br>先说明一下我的运行环境：<br>1.我当时这个年代用的RN版本是0.55<br>2.使用的脚手架是create-react-native-app</p>
-<h1 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h1><h2 id="EJECT前（即生成那个android和ios文件前）"><a href="#EJECT前（即生成那个android和ios文件前）" class="headerlink" title="EJECT前（即生成那个android和ios文件前）"></a>EJECT前（即生成那个android和ios文件前）</h2><p>如果你像我那样，按照官方的说明方法：初始化了一个项目<br>但也是找不到android和ios文件的话，不要慌张，要淡定，因为这时你还没有EJECT，官方解析就是：<br>“eject” eventually to create your own native builds<br>但是，是男人的话怎么能那么快eject的，所以这时就该大名鼎鼎的’Expo’登场了，你只需要在你的手机或者模拟器上安装上这个最新版的’Expo’软件，然后在你的本地项目运行命令npm start，这时不出意料的话你就会弹出一个二维码出来（但是不知为何我每次都是出意外地弹了一个崩了的二维码），在你的Expo上扫一扫就能运行成功了，当然最后是少不摇一摇你的手机打开调试，Android模拟器：Command⌘ + M，iOS模拟器：Command⌘ + D，打开Enable Live Reload,然后你就能愉快地撸码了。<br>但是身为一个前端工程师，一眼见不到那个盒子模型，心里总会不舒服的，这时，你只要执行上面一样的操作，选择Show inspector就行了。<br><img src="/images/Developer Menu.jpg" alt></p>
-<h2 id="EJECT后"><a href="#EJECT后" class="headerlink" title="EJECT后"></a>EJECT后</h2><p>这时候，情况就比较尴尬了<br>这时你已经进入了贤者模式，而你的项目结构也会发生一些微妙的变化，看你能不能找出来，找出来后，这时候你要面对就是那个android文件夹和ios文件夹，身为一个只懂JS的前端工程师的我来说，一开始我是拒绝的<br>但是深入理解之后，我发现我其实根本不用管它们的。<br>当运行npm run android/npm run ios后，你的手机/模拟器毫无意外就会被强制地安装上了一个应用了，这时候调试同上的。</p>
-<blockquote>
-<p>总结<br>普通手机应用的话还是eject后真机模拟器调试方便的，不竟后面还有一些你预想不到的一些npm模块居然还要更改android文件什么才能用的，哼(￢︿̫̿￢☆)<br>如果你那么不幸，像我一样要开发什么鬼特制机的话，那些机全身上下只有一些USB接口，而接上电脑后又完全没有响应的话，这时候EXPO那骚一般的远程调试就适合不过了</p>
-</blockquote>
-<h1 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h1><h2 id="不能继承-不能继承-不能继承"><a href="#不能继承-不能继承-不能继承" class="headerlink" title="不能继承 不能继承 不能继承"></a>不能继承 不能继承 不能继承</h2><p>好吧，我先深呼吸一下，先放些代码给大家感受下<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;View style=&#123;styles.view&#125;&gt;</span><br><span class="line">    &lt;Text style=&#123;styles.text&#125;&gt;&lt;/Text&gt;</span><br><span class="line">    &lt;Text style=&#123;styles.text&#125;&gt;&lt;/Text&gt;</span><br><span class="line">&lt;/View&gt;</span><br><span class="line">const styles = StyleSheet.create(&#123;</span><br><span class="line">  view: &#123;</span><br><span class="line">    width:300,</span><br><span class="line">  &#125;，</span><br><span class="line">  text：&#123;</span><br><span class="line">    fontSize:10,   </span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
-<p>如果你想把这个view里面的text字体都设为10的话怎么办？<br>嗯，没错，你只能乖乖地每一个text都写上一个样式了。<br>好吧，首先我们要知道它是模仿css的规则的而已，所以也就只能这样了。</p>
-<h2 id="默认尺寸是DP"><a href="#默认尺寸是DP" class="headerlink" title="默认尺寸是DP"></a>默认尺寸是DP</h2><p>百分比不能用<br>可以用flex:1,flex:2,做等比例</p>
-<h1 id="组件坑"><a href="#组件坑" class="headerlink" title="组件坑"></a>组件坑</h1><h2 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h2><h3 id="要先设宽高"><a href="#要先设宽高" class="headerlink" title="要先设宽高"></a>要先设宽高</h3><p>为了性能方便所有网络图片都要先设固定宽高（来自官方傲娇的解析）<br>像这样<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> &lt;Image </span><br><span class="line">    style=&#123;&#123;width: 100, height: 100&#125;&#125;</span><br><span class="line">    <span class="built_in">source</span>=&#123;&#123;uri: url&#125;&#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure></p>
-<p>那么问题来了，我特么的怎么知道图片的尺寸是什么。<br>解决方法：<br>1、使用Image自带的getSize方法先获取宽高<br>2、使用别的大神的组件React Native Fit Image 等</p>
-<h3 id="资源超过400kb左右不显示"><a href="#资源超过400kb左右不显示" class="headerlink" title="资源超过400kb左右不显示"></a>资源超过400kb左右不显示</h3><p>所以说原生组件，😔<br>推荐使用别的组件库：react-native-fast-image（要先装个glide，略为麻烦）</p>
-<h3 id="静态资源"><a href="#静态资源" class="headerlink" title="静态资源"></a>静态资源</h3><p>source={require(‘./xxx.jpg’)} 资源路径不能拼接，但可以这样写<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">const a=require(<span class="string">'./xxx/'</span>)</span><br><span class="line">&lt;Image <span class="built_in">source</span>=&#123;a&#125;/&gt;</span><br></pre></td></tr></table></figure></p>
-<h2 id="点击事件尽量使用Touchable开头的"><a href="#点击事件尽量使用Touchable开头的" class="headerlink" title="点击事件尽量使用Touchable开头的"></a>点击事件尽量使用Touchable开头的</h2><h2 id="react-navigation"><a href="#react-navigation" class="headerlink" title="react-navigation"></a>react-navigation</h2><p>官方推荐的路由组件库<br>我使用StackNavigator方法<br>坑1： navigation.goBack()，返回上一个页面所有生命周期都没有进入，不像小程序有一个onShow周期<br>坑2：navigation.goBack()，不能带参数<br>我的解决办法：<br>1、把方法传进下一个页面，goBack()前调用<br>2、传入route_key，使用setParams方法传参</p>
-<h1 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h1><p>建议按官网流程<br>我踩过的坑：index.js 里的 registerComponent 不同app要不一样</p>
-<p><em>未完待续</em></p>
-]]></content>
       <categories>
         <category>学习笔记</category>
       </categories>
@@ -672,357 +765,6 @@
       </tags>
   </entry>
   <entry>
-    <title>this/必包/作用域</title>
-    <url>/2021/05/02/this-%E5%BF%85%E5%8C%85-%E4%BD%9C%E7%94%A8%E5%9F%9F/</url>
-    <content><![CDATA[<p>bind可以传基本类型，只会绑定一次</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br><span class="line">fn.bind(<span class="number">1</span>).bind(<span class="number">2</span>)() <span class="comment">// Number &#123;1&#125;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>知识总结</category>
-      </categories>
-      <tags>
-        <tag>重学前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vue核心</title>
-    <url>/2021/06/21/vue/</url>
-    <content><![CDATA[<h3 id="why-O-n"><a href="#why-O-n" class="headerlink" title="why O(n)?"></a>why O(n)?</h3><p>严格意义不是真的O(n),复杂度其实是O(nm)</p>
-<h3 id="how-O-n"><a href="#how-O-n" class="headerlink" title="how O(n)?"></a>how O(n)?</h3><p>同层级比较</p>
-<h3 id="用index做key"><a href="#用index做key" class="headerlink" title="用index做key"></a>用index做key</h3><p>vue: [0,1,2],[0,1] 误删<br>react: 会重新渲染 都是新建</p>
-<h3 id="虚拟dom过程"><a href="#虚拟dom过程" class="headerlink" title="虚拟dom过程"></a>虚拟dom过程</h3><p> 虚拟 DOM</p>
-<ol>
-<li><p>什么是虚拟 DOM</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> type: <span class="string">'div'</span>,</span><br><span class="line"> props: &#123;</span><br><span class="line"> children: []</span><br><span class="line"> &#125;,</span><br><span class="line"> el: xxxx</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>怎么创建虚拟 DOM</p>
-</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">-&gt; h 、createElement...</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">h</span>(<span class="params">type, props</span>) </span>&#123; <span class="keyword">return</span> &#123; type, props &#125; &#125;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>使用呢</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">JSX:</span><br><span class="line">&lt;div&gt;</span><br><span class="line"> &lt;ul className=<span class="string">'padding-20'</span>&gt;</span><br><span class="line">   &lt;li key=<span class="string">'li-01'</span>&gt;<span class="keyword">this</span> is li <span class="number">01</span>&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp"> &lt;/u</span>l&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure>
-<p> 经过一些工具转一下：</p>
- <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">createElement(<span class="string">'div'</span>, &#123;</span><br><span class="line"> children: [</span><br><span class="line">   createElement(<span class="string">'ul'</span>, &#123; <span class="attr">className</span>: <span class="string">'padding-20'</span> &#125;,</span><br><span class="line">   createElement(<span class="string">'li'</span>, &#123; <span class="attr">key</span>: <span class="string">'li-01'</span>&#125;, <span class="string">'this is li 01'</span>))</span><br><span class="line"> ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li><p>虚拟DOM的数据结构有了，那就是渲染了 (mount/render)</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">f(vnode) -&gt; view</span><br><span class="line"></span><br><span class="line">f(vode) &#123;</span><br><span class="line"><span class="built_in">document</span>.createElement();</span><br><span class="line">....</span><br><span class="line"></span><br><span class="line">parent.insert()</span><br><span class="line">. insertBefore</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> render = <span class="function">(<span class="params">vnode, parent</span>) =&gt;</span> &#123;  &#125;</span><br><span class="line"></span><br><span class="line">&lt;div id=<span class="string">'app'</span>&gt;&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>diff 相关了(patch)</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">f(oldVnodeTree, newVnodeTree, parent) -&gt; 调度? -&gt; view</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>知识总结</category>
-      </categories>
-      <tags>
-        <tag>重学前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一些前端题目</title>
-    <url>/2018/03/22/test-list/</url>
-    <content><![CDATA[<h1 id="整理一下一些前端题目"><a href="#整理一下一些前端题目" class="headerlink" title="整理一下一些前端题目"></a>整理一下一些前端题目</h1><a id="more"></a>
-<h2 id="以下分别输出什么-为什么"><a href="#以下分别输出什么-为什么" class="headerlink" title="以下分别输出什么,为什么"></a>以下分别输出什么,为什么</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var User = &#123;</span><br><span class="line">  count: 1,</span><br><span class="line">  getCount: <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    <span class="built_in">return</span> this.count;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">console.log(User.getCount());  // what?</span><br><span class="line">var func = User.getCount;</span><br><span class="line">console.log(func());  // what?</span><br></pre></td></tr></table></figure>
-<p>答案是:1和undefined。</p>
-<h2 id="以下代码执行结果是什么"><a href="#以下代码执行结果是什么" class="headerlink" title="以下代码执行结果是什么"></a>以下代码执行结果是什么</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">  var foo = 1,bar = 2,j,<span class="built_in">test</span>;</span><br><span class="line">  <span class="built_in">test</span> = <span class="keyword">function</span>(j) &#123;</span><br><span class="line">      j = 5;</span><br><span class="line">      var bar = 5;</span><br><span class="line">      foo = 5;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">test</span>(10);</span><br><span class="line">  console.log(foo); //</span><br><span class="line">  console.log(bar); //</span><br><span class="line">  console.log(j); //</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">console.log(User.getCount());  // what?</span><br><span class="line">var func = User.getCount;</span><br><span class="line">console.log(func());  // what?</span><br></pre></td></tr></table></figure>
-<p>答案是:5 2 undefined。</p>
-<h2 id="说出输出的结果顺序"><a href="#说出输出的结果顺序" class="headerlink" title="说出输出的结果顺序"></a>说出输出的结果顺序</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">  console.log(1)</span><br><span class="line">&#125;, 0);</span><br><span class="line">new Promise(<span class="keyword">function</span> executor(resolve) &#123;</span><br><span class="line">  console.log(2);</span><br><span class="line">  <span class="keyword">for</span>( var i=0 ; i&lt;10000 ; i++ ) &#123;</span><br><span class="line">    i == 9999 &amp;&amp; resolve();</span><br><span class="line">  &#125;</span><br><span class="line">  console.log(3);</span><br><span class="line">&#125;).<span class="keyword">then</span>(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">  console.log(4);</span><br><span class="line">&#125;);</span><br><span class="line">console.log(5);</span><br></pre></td></tr></table></figure>
-<p>答案：“2 3 5 4 1”</p>
-<h2 id="以下代码执行结果是什么-1"><a href="#以下代码执行结果是什么-1" class="headerlink" title="以下代码执行结果是什么"></a>以下代码执行结果是什么</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">foo</span></span>() &#123;this.value = 42;&#125;</span><br><span class="line">foo.prototype = &#123;method: <span class="function"><span class="title">function</span></span> () &#123;<span class="built_in">return</span> <span class="literal">true</span>;&#125;&#125;;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">bar</span></span>() &#123;</span><br><span class="line">    var value = 1;</span><br><span class="line">    <span class="built_in">return</span>&#123;method:<span class="function"><span class="title">function</span></span>()&#123;<span class="built_in">return</span> value;&#125;&#125;;</span><br><span class="line">&#125;</span><br><span class="line">foo.prototype = new bar();</span><br><span class="line">console.log(foo.prototype.constructor); //</span><br><span class="line">console.log(foo.prototype instanceof  bar); //</span><br><span class="line">var <span class="built_in">test</span> = new foo();</span><br><span class="line">console.log(<span class="built_in">test</span> instanceof foo);//</span><br><span class="line">console.log(<span class="built_in">test</span> instanceof bar);//</span><br><span class="line">console.log(test.method());//</span><br></pre></td></tr></table></figure>
-<p>答案：ƒ Object() { [native code] }<br>      False<br>      true<br>      false<br>      1</p>
-<h2 id="用纯css-html写一个导航栏的tab切换-不使用js"><a href="#用纯css-html写一个导航栏的tab切换-不使用js" class="headerlink" title="用纯css,html写一个导航栏的tab切换(不使用js)"></a>用纯css,html写一个导航栏的tab切换(不使用js)</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">方法1：</span><br><span class="line">&lt;ul class=<span class="string">'nav'</span>&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=<span class="string">"#content1"</span>&gt;列表1&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=<span class="string">"#content2"</span>&gt;列表2&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line">&lt;div id=<span class="string">"content1"</span>&gt;列表1内容:123456&lt;/div&gt;</span><br><span class="line">&lt;div id=<span class="string">"content2"</span>&gt;列表2内容:abcdefgkijkl&lt;/div&gt;</span><br><span class="line">&lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</span><br><span class="line">	<span class="comment">#content1,</span></span><br><span class="line">	<span class="comment">#content2&#123;</span></span><br><span class="line">	    display:none;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="comment">#content1:target,</span></span><br><span class="line">	<span class="comment">#content2:target&#123;</span></span><br><span class="line">	    display:block;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">#content1:target ~ .nav li&#123;</span></span><br><span class="line">	    // 改变li元素的背景色和字体颜色</span><br><span class="line">	    &amp;:first-child&#123;</span><br><span class="line">	        background:<span class="comment">#ff7300;</span></span><br><span class="line">	        color:<span class="comment">#fff;</span></span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">#content2:target ~ .nav li&#123;</span></span><br><span class="line">	    // 改变li元素的背景色和字体颜色</span><br><span class="line">	    &amp;:last-child&#123;</span><br><span class="line">	        background:<span class="comment">#ff7300;</span></span><br><span class="line">	        color:<span class="comment">#fff;</span></span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">方法2：</span><br><span class="line">&lt;div class=<span class="string">"container"</span>&gt;</span><br><span class="line">    &lt;input class=<span class="string">"nav1"</span> id=<span class="string">"li1"</span> <span class="built_in">type</span>=<span class="string">"radio"</span> name=<span class="string">"nav"</span>&gt;</span><br><span class="line">    &lt;input class=<span class="string">"nav2"</span> id=<span class="string">"li2"</span> <span class="built_in">type</span>=<span class="string">"radio"</span> name=<span class="string">"nav"</span>&gt;</span><br><span class="line">    &lt;ul class=<span class="string">'nav'</span>&gt;</span><br><span class="line">        &lt;li class=<span class="string">'active'</span>&gt;&lt;label <span class="keyword">for</span>=<span class="string">"li1"</span>&gt;列表1&lt;/label&gt;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&lt;label <span class="keyword">for</span>=<span class="string">"li2"</span>&gt;列表2&lt;/label&gt;&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;div class=<span class="string">"content"</span>&gt;</span><br><span class="line">        &lt;div class=<span class="string">"content1"</span>&gt;列表1内容:123456&lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">"content1"</span>&gt;列表2内容:abcdefgkijkl&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</span><br><span class="line">	.container&#123;</span><br><span class="line">    position:relative;</span><br><span class="line">    width:400px;</span><br><span class="line">    margin: 50px auto;</span><br><span class="line">&#125;</span><br><span class="line">input&#123;</span><br><span class="line">    display:none;</span><br><span class="line">&#125;</span><br><span class="line">.nav&#123;</span><br><span class="line">    position:relative;</span><br><span class="line">    overflow:hidden;</span><br><span class="line">&#125;</span><br><span class="line">li&#123;</span><br><span class="line">    width:200px;</span><br><span class="line">    <span class="built_in">float</span>:left;</span><br><span class="line">    text-align:center;</span><br><span class="line">    background:<span class="comment">#ddd;</span></span><br><span class="line">&#125;</span><br><span class="line">li label&#123;</span><br><span class="line">    display:block;</span><br><span class="line">    width:200px;</span><br><span class="line">    line-height:36px;</span><br><span class="line">    font-size:18px;</span><br><span class="line">    cursor:pointer;</span><br><span class="line">&#125;</span><br><span class="line">.content&#123;</span><br><span class="line">    position:relative;</span><br><span class="line">    overflow:hidden;</span><br><span class="line">    width:400px;</span><br><span class="line">    height:100px;</span><br><span class="line">    border:1px solid <span class="comment">#999;</span></span><br><span class="line">    box-sizing:border-box;</span><br><span class="line">    padding:10px;</span><br><span class="line">&#125;</span><br><span class="line">.content1,</span><br><span class="line">.content2&#123;</span><br><span class="line">    display:none;</span><br><span class="line">    width:100%;</span><br><span class="line">    height:100%;</span><br><span class="line">&#125;</span><br><span class="line">.nav1:checked ~ .nav li &#123;</span><br><span class="line">    background:<span class="comment">#ddd;</span></span><br><span class="line">    color:<span class="comment">#000;</span></span><br><span class="line">    </span><br><span class="line">    &amp;:first-child&#123;</span><br><span class="line">        background:<span class="comment">#ff7300;</span></span><br><span class="line">        color:<span class="comment">#fff;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">.nav2:checked ~ .nav li&#123;</span><br><span class="line">    background:<span class="comment">#ddd;</span></span><br><span class="line">    color:<span class="comment">#000;</span></span><br><span class="line">    </span><br><span class="line">    &amp;:last-child&#123;</span><br><span class="line">        background:<span class="comment">#ff7300;</span></span><br><span class="line">        color:<span class="comment">#fff;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">.nav1:checked ~ .content &gt; div&#123;</span><br><span class="line">    display:none;</span><br><span class="line">    </span><br><span class="line">    &amp;:first-child&#123;</span><br><span class="line">    display:block;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">.nav2:checked ~ .content &gt; div&#123;</span><br><span class="line">    display:none;</span><br><span class="line">    </span><br><span class="line">    &amp;:last-child&#123;</span><br><span class="line">    display:block;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">.active &#123;</span><br><span class="line">        background:<span class="comment">#ff7300;</span></span><br><span class="line">        color:<span class="comment">#fff;</span></span><br><span class="line">&#125;</span><br><span class="line">.default&#123;</span><br><span class="line">    display:block;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="编写程序，统计字符串var-str-”helloworld”-中每种字符出现的次数-出现次数最多的是-出现-次"><a href="#编写程序，统计字符串var-str-”helloworld”-中每种字符出现的次数-出现次数最多的是-出现-次" class="headerlink" title="编写程序，统计字符串var str=”helloworld”;中每种字符出现的次数,出现次数最多的是? 出现?次"></a>编写程序，统计字符串var str=”helloworld”;中每种字符出现的次数,出现次数最多的是? 出现?次</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var str=<span class="string">"helloworld"</span>;</span><br><span class="line">  方法一：用<span class="built_in">hash</span></span><br><span class="line">  <span class="keyword">for</span>(var i=0,<span class="built_in">hash</span>=&#123;&#125;;i&lt;str.length;i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">hash</span>[str[i]])&#123;</span><br><span class="line">      <span class="built_in">hash</span>[str[i]]++</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      <span class="built_in">hash</span>[str[i]]=1;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  console.dir(<span class="built_in">hash</span>);</span><br><span class="line">方法二：用正则</span><br><span class="line">var arr=str.split(<span class="string">""</span>)</span><br><span class="line">  .sort()</span><br><span class="line">  .join(<span class="string">""</span>)</span><br><span class="line">  .match(/([a-z])\1*/g)</span><br><span class="line">  .sort(<span class="keyword">function</span>(a,b)&#123;</span><br><span class="line"><span class="built_in">return</span> b.length-a.length; &#125;)</span><br><span class="line">console.log(<span class="string">"出现最多的是: "</span>+arr[0][0]</span><br><span class="line">  +<span class="string">"共"</span>+arr[0].length+<span class="string">"次"</span>);</span><br><span class="line">var <span class="built_in">hash</span>=&#123;&#125;;</span><br><span class="line">  arr.forEach(<span class="keyword">function</span>(val)&#123;</span><br><span class="line">    <span class="built_in">hash</span>[val[0]]=val.length;</span><br><span class="line">  &#125;);</span><br><span class="line">  console.dir(<span class="built_in">hash</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="民间有一直有一游戏，玩法就是，大家轮流报数，如果报到能被7整除的数字，或者尾数是7的数字，都算踩地雷了。就应该罚唱歌。"><a href="#民间有一直有一游戏，玩法就是，大家轮流报数，如果报到能被7整除的数字，或者尾数是7的数字，都算踩地雷了。就应该罚唱歌。" class="headerlink" title="民间有一直有一游戏，玩法就是，大家轮流报数，如果报到能被7整除的数字，或者尾数是7的数字，都算踩地雷了。就应该罚唱歌。"></a>民间有一直有一游戏，玩法就是，大家轮流报数，如果报到能被7整除的数字，或者尾数是7的数字，都算踩地雷了。就应该罚唱歌。</h2><p>请编写程序，输出1~60之间的所有“安全数”<br>比如：<br>1、2、3、4、5、6、8、9、10、11、12、13、15、16、18、19、20、22、23、24、25、26、29、30……</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(var i = 1; i &lt;= 60 ; i++)&#123;</span><br><span class="line"><span class="keyword">if</span>(i%7 == 0 || i%10 == 7)&#123;</span><br><span class="line">console.log(i);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="浏览器输入url到完整显示出页面经历的过程"><a href="#浏览器输入url到完整显示出页面经历的过程" class="headerlink" title="浏览器输入url到完整显示出页面经历的过程"></a>浏览器输入url到完整显示出页面经历的过程</h2><p>第一种简单的说呢就是这样的：<br>第一步：客户机提出域名解析请求,并将该请求发送给本地的域名服务器。<br>第二步：当本地的域名服务器收到请求后,就先查询本地的缓存,如果有该纪录项,则本地的域名服务器就直接把查询的结果返回。<br>第三步：如果本地的缓存中没有该纪录,则本地域名服务器就直接把请求发给根域名服务器,然后根域名服务器再返回给本地域名服务器一个所查询域(根的子域)的主域名服务器的地址。<br>第四步：本地服务器再向上一步返回的域名服务器发送请求,然后接受请求的服务器查询自己的缓存,如果没有该纪录,则返回相关的下级的域名服务器的地址。<br>第五步：重复第四步,直到找到正确的纪录。</p>
-<h2 id="机试题"><a href="#机试题" class="headerlink" title="机试题"></a>机试题</h2><p> ·点击某个节点元素，则该节点元素呈现一个特殊被选中的样式<br> ·增加一个删除按钮，当选中某个节点元素后，点击删除按钮，则将该节点及其所有子节点删除掉<br> ·增加一个输入框及一个“添加”按钮当选中某个节点元素后，点击增加按钮，则在该节点下增加一个子节点，节·点内容为输入框中内容，插入在其子节点的最后一个位置<br> ·提供一个按钮，显示开始遍历，点击后，以动画的形式呈现遍历的过程<br> ·当前被遍历到的节点做一个特殊显示（比如不同的颜色）<br> ·每隔一段时间（500ms，1s等时间自定）再遍历下一个节点<br> ·增加一个输入框及一个“查询”按钮，点击按钮时，开始在树中以动画形式查找节点内容和输入框中内容一致的节点，找到后以特殊样式显示该节点，找不到的话给出找不到的提示。查询过程中的展示过程和遍历过程保持一致</p>
-<p><a href="http://ife.baidu.com/2016/task/all" target="_blank" rel="noopener">神奇的链接</a></p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>面试</tag>
-        <tag>题目</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>react核心</title>
-    <url>/2021/06/21/react/</url>
-    <content><![CDATA[<h2 id="react-的fiber"><a href="#react-的fiber" class="headerlink" title="react 的fiber"></a>react 的fiber</h2><p>有5个优先级的等级</p>
-<ul>
-<li>Immediate</li>
-<li>UserBlocking</li>
-<li>Normal</li>
-<li>Low</li>
-<li>Idle</li>
-</ul>
-<h2 id="高阶组件"><a href="#高阶组件" class="headerlink" title="高阶组件"></a>高阶组件</h2><h3 id="怎么写一个高阶组件？"><a href="#怎么写一个高阶组件？" class="headerlink" title="怎么写一个高阶组件？"></a>怎么写一个高阶组件？</h3><ol>
-<li>普通方式</li>
-<li>装饰器</li>
-<li>多个高阶组件组合</li>
-</ol>
-<h3 id="高阶组件-1"><a href="#高阶组件-1" class="headerlink" title="高阶组件"></a>高阶组件</h3><ol>
-<li><p>属性代理</p>
-<p>1、操作props<br>2、操作ref</p>
-</li>
-<li><p>继续/劫持</p>
-</li>
-</ol>
-<h2 id="什么是react-hooks-优势"><a href="#什么是react-hooks-优势" class="headerlink" title="什么是react hooks?优势"></a>什么是react hooks?优势</h2><p>useState<br>useEffect<br>useMemo</p>
-<h2 id="react-hooks-有什么优势"><a href="#react-hooks-有什么优势" class="headerlink" title="react hooks 有什么优势"></a>react hooks 有什么优势</h2><h3 id="class-的缺点"><a href="#class-的缺点" class="headerlink" title="class 的缺点"></a>class 的缺点</h3><ol>
-<li>组件间的状态逻辑很难复用</li>
-<li>复杂业务的有状态组件会越来越复杂</li>
-<li>监听和定时器的操作，被分散在多个区域</li>
-</ol>
-<p>不要在render里写bind</p>
-<h3 id="hooks-的优点"><a href="#hooks-的优点" class="headerlink" title="hooks 的优点"></a>hooks 的优点</h3><ol>
-<li>利于业务逻辑的封装和拆分，可以自由自定义hooks(自己封装的用到了react hooks的公共逻辑)<br>useEffect(()=&gt;{})</li>
-<li>可以在无需修改组件结构的情况下，复用状态逻辑</li>
-<li>定时器、监听等等都被聚合到同一块代码下</li>
-</ol>
-<h3 id="hooks使用注意事项"><a href="#hooks使用注意事项" class="headerlink" title="hooks使用注意事项"></a>hooks使用注意事项</h3><ol>
-<li>不能在循环判断里用<br>索引问题</li>
-<li>只能在 React 的函数组件中调⽤ Hook，不要在其他 JavaScript 函数中调⽤</li>
-<li>自定义的hook怎样操作组件</li>
-</ol>
-<h2 id="经验总结"><a href="#经验总结" class="headerlink" title="经验总结"></a>经验总结</h2>]]></content>
-      <categories>
-        <category>知识总结</category>
-      </categories>
-      <tags>
-        <tag>重学前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>TypeScript学习笔记</title>
-    <url>/2019/05/19/typescript-note/</url>
-    <content><![CDATA[<h1 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>‘TypeScript’-顾名思义，就是有Type的Script<br><a id="more"></a></p>
-<hr>
-<p>那么它和没有Type的Script有什么不一样呢，例如某Java前缀的Script<br>举个例子：实际开发需求中我们要定义一个商品名称的变量为goodsName(<font color="red">ps:众所周知商品名称都必须是要字符串的</font>)<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// js中定义一个变量,先赋值一个字符串</span></span><br><span class="line"><span class="keyword">let</span> goodsName = <span class="string">'apple'</span> <span class="comment">// 很好，看起来都一起正常</span></span><br><span class="line"><span class="comment">// 然鹅，一位刚失恋的程序员哥哥，不小心把它改成一个数字（说笑，程序员哪会有女朋友）</span></span><br><span class="line">goodsName = <span class="number">520</span> <span class="comment">// 这时候程序也没有阻止小哥哥这种赤裸裸的示爱行为</span></span><br><span class="line"><span class="comment">// 甚至可以改成布尔值</span></span><br><span class="line">goodsName = <span class="literal">true</span></span><br><span class="line"><span class="comment">// -----------------</span></span><br><span class="line"><span class="comment">// 可以想想刚失恋的小哥哥，把这个变量提交给后端的接口</span></span><br><span class="line"><span class="comment">// 最后给产品发现了</span></span><br><span class="line"><span class="comment">// 后端调查发现是前端提交的数据类型错误</span></span><br><span class="line"><span class="comment">// 顺利摔锅给前端</span></span><br><span class="line"><span class="comment">// 从此小哥哥就步入了人生的低谷，情场事业双失😔</span></span><br></pre></td></tr></table></figure></p>
-<p>然而如果这时候这位程序员小哥哥用上了TypeScript<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 同上也先定义一个变量</span></span><br><span class="line"><span class="keyword">let</span> goodsName: string = <span class="string">'apple'</span> <span class="comment">// 看看有什么不同？没错，就是多了个string</span></span><br><span class="line">goodsName = <span class="number">520</span> <span class="comment">//这时候就会有一条红线在变量下方</span></span><br><span class="line"><span class="comment">// Error, number不是string类型</span></span><br><span class="line"><span class="comment">// -----------------</span></span><br><span class="line"><span class="comment">// 看到这条提示的红线，小哥哥也终于意识到了</span></span><br><span class="line"><span class="comment">// 他的爱情也像这条红线那样</span></span><br><span class="line"><span class="comment">// 已经到了高亮的结束边缘</span></span><br><span class="line"><span class="comment">// 最后小哥哥看着那条红线</span></span><br><span class="line"><span class="comment">// 突然对爱情重拾希望，然后不顾红线的错误提示，提交给后端</span></span><br><span class="line"><span class="comment">// 结局同上</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="一些踩过的坑"><a href="#一些踩过的坑" class="headerlink" title="一些踩过的坑"></a>一些踩过的坑</h2><h3 id="可选属性"><a href="#可选属性" class="headerlink" title="可选属性"></a>可选属性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface SquareConfig &#123;</span><br><span class="line">  color?: string;</span><br><span class="line">  width?: number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="任意数量的其它属性"><a href="#任意数量的其它属性" class="headerlink" title="任意数量的其它属性"></a>任意数量的其它属性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface SquareConfig &#123;</span><br><span class="line"> [propName: string]: any;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="只读属性"><a href="#只读属性" class="headerlink" title="只读属性"></a>只读属性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface Point &#123;</span><br><span class="line">    <span class="built_in">readonly</span> x: number;</span><br><span class="line">    <span class="built_in">readonly</span> y: number;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> p1: Point = &#123; x: 10, y: 20 &#125;;</span><br><span class="line">p1.x = 5; // error!</span><br></pre></td></tr></table></figure>
-<h3 id="函数类型"><a href="#函数类型" class="headerlink" title="函数类型"></a>函数类型</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//方法1</span><br><span class="line"><span class="keyword">function</span> add(x: number, y: number): number &#123;</span><br><span class="line">    <span class="built_in">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//方法2</span><br><span class="line"><span class="built_in">let</span> myAdd = <span class="keyword">function</span>(x: number, y: number): number &#123; <span class="built_in">return</span> x + y; &#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="把类当做接口使用"><a href="#把类当做接口使用" class="headerlink" title="把类当做接口使用"></a>把类当做接口使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">class Point &#123;</span><br><span class="line">    x: number;</span><br><span class="line">    y: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface Point3d extends Point &#123;</span><br><span class="line">    z: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> point3d: Point3d = &#123;x: 1, y: 2, z: 3&#125;;</span><br></pre></td></tr></table></figure>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
-<li>提示真的很爽</li>
-<li>会增加写类型的时间</li>
-<li>大型项目来说上面花的时间是值得的，后期维护时间会变少</li>
-</ol>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>填坑</tag>
-        <tag>JS填坑</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>webpack</title>
-    <url>/2021/05/29/webpack/</url>
-    <content><![CDATA[<h3 id="我们常说的Module是什么"><a href="#我们常说的Module是什么" class="headerlink" title="我们常说的Module是什么"></a>我们常说的Module是什么</h3><p>webpack支持 ESModule, CommonJS, AMD, Assests</p>
-<h3 id="如何表达各种依赖关系？"><a href="#如何表达各种依赖关系？" class="headerlink" title="如何表达各种依赖关系？"></a>如何表达各种依赖关系？</h3><h3 id="我们常说的chunk和bundle的区别是什么？（important！）"><a href="#我们常说的chunk和bundle的区别是什么？（important！）" class="headerlink" title="我们常说的chunk和bundle的区别是什么？（important！）"></a>我们常说的chunk和bundle的区别是什么？（important！）</h3><ol>
-<li><p>Chunk<br>是Webpack打包过程中Modules的集合，是<code>打包过程</code>中的概念。<br>Webpack的打包是从⼀个⼊⼝模块开始，⼊⼝模块引⽤其他模块，模块再引⽤模块。<br>Webpack通过引⽤关系逐个打包模块，这些module就形成了⼀个Chunk。<br>当然如果有多个⼊⼝模块，可能会产出多条打包路径，每条路径都会形成⼀个Chunk。</p>
-</li>
-<li><p>bundle<br>Bundle是我们最终输出的⼀个或多个打包好的⽂件</p>
-</li>
-<li><p>Chunk 和 Bundle 的关系?<br>大多数情况，一个chunk一个bundle</p>
-</li>
-</ol>
-<h3 id="Plugin-和-Loader-分别做什么？怎样工作的？"><a href="#Plugin-和-Loader-分别做什么？怎样工作的？" class="headerlink" title="Plugin 和 Loader 分别做什么？怎样工作的？"></a>Plugin 和 Loader 分别做什么？怎样工作的？</h3><ol>
-<li>Loader<br>模块转换器，将非js模块转化为webpack能识别的</li>
-<li>Plugin<br>扩展插件,webpack各个阶段都会广播出对应的事件</li>
-<li><p>Compiler<br>对象，也可以理解为webpack的实例</p>
-</li>
-<li><p>Compliation<br>模块资源</p>
-</li>
-</ol>
-<h3 id="简单描述一下打包过程"><a href="#简单描述一下打包过程" class="headerlink" title="简单描述一下打包过程"></a>简单描述一下打包过程</h3><ol>
-<li>初始化参数：shell webpack.config.js</li>
-<li>开始编译</li>
-<li>确定入口</li>
-<li>编译模块</li>
-<li>完成模块编译</li>
-<li>输出资源</li>
-</ol>
-]]></content>
-      <categories>
-        <category>知识总结</category>
-      </categories>
-      <tags>
-        <tag>重学前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>微信小程序填坑日记</title>
-    <url>/2017/06/14/wehchat-small/</url>
-    <content><![CDATA[<p>记录一下那些年，开发微信小程序踩过的坑<br><a id="more"></a></p>
-<h1 id="微信小程序认识"><a href="#微信小程序认识" class="headerlink" title="微信小程序认识"></a>微信小程序认识</h1><h2 id="总体认识"><a href="#总体认识" class="headerlink" title="总体认识"></a>总体认识</h2><p>隐约感受到的RN的身影<br><a href="https://mp.weixin.qq.com/debug/wxadoc/dev/framework/performance/tips.html" target="_blank" rel="noopener">官方的Q&amp;A文档</a></p>
-<blockquote>
-<p>为什么脚本内不能使用window等对象<br>页面的脚本逻辑是在JsCore中运行，JsCore是一个没有窗口对象的环境，所以不能在脚本中使用window，也无法在脚本中操作组件</p>
-</blockquote>
-<p>碰巧RN也是通过JsCore与手机的原生语言通信的，简单来说它只不过是以 JavaScript 的形式告诉 Objective-C /java该执行什么代码<br>反正我们知道它能直接调用微信本身的控件就行了</p>
-<h2 id="小体认识"><a href="#小体认识" class="headerlink" title="小体认识"></a>小体认识</h2><p><em>MVVM</em>,<em>前后端分离</em>,<em>数据绑定</em>,<em>数据驱动</em><br><img src="/images/model.png" alt></p>
-<h1 id="一些代码"><a href="#一些代码" class="headerlink" title="一些代码"></a>一些代码</h1><p>自定义弹框<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;view hidden=<span class="string">"&#123;&#123;showTrue&#125;&#125;"</span>&gt;&lt;/view&gt;</span><br><span class="line">&lt;view wx:<span class="keyword">if</span>=<span class="string">"&#123;&#123;showTrue&#125;&#125;"</span>&gt;&lt;/view&gt;</span><br></pre></td></tr></table></figure></p>
-<p>改变样式<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;view class=<span class="string">"&#123;&#123;diyClassName&#125;&#125;"</span>&gt;&lt;/view&gt;</span><br></pre></td></tr></table></figure></p>
-<h1 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h1><p><a href="https://mp.weixin.qq.com/debug/wxadoc/dev/" target="_blank" rel="noopener">最重要的当然是官方文档</a><br><a href="https://github.com/justjavac/awesome-wechat-weapp" target="_blank" rel="noopener">微信小程序资源汇总</a><br><a href="https://github.com/chemzqm/wept" target="_blank" rel="noopener">用chrome运行小程序</a><br><a href="https://github.com/Hao-Wu/WeApp-Demo" target="_blank" rel="noopener">官方demo源码</a></p>
-<h1 id="填过的坑"><a href="#填过的坑" class="headerlink" title="填过的坑"></a>填过的坑</h1><p>1.透明底的png图片,border-raduis：50%会变形<br>2.canvas在swiper和scroll-view不兼容会浮出来<br>3.iphone：scroll-view内部滚动必须设置高度，在iphone不能设100%,可以通过js设高度或设固定值<br>4.iphone：image图片里padding不能设百分比,只能设固定值<br>5.最多只能打开5个页面,注意一下页面跳转的关闭</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>填坑</tag>
-        <tag>微信小程序</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>面试经历</title>
-    <url>/2021/08/15/interview/</url>
-    <content><![CDATA[<p>分享一下一些面试经历</p>
-<hr>
-<h2 id="腾讯-小游戏部门"><a href="#腾讯-小游戏部门" class="headerlink" title="腾讯-小游戏部门"></a>腾讯-小游戏部门</h2><p>笔试题</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">-<span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 给定一组图片链接，加载全部图片</span></span><br><span class="line"><span class="comment"> * @param &#123;String[]&#125; imgList 图片链接数组</span></span><br><span class="line"><span class="comment"> * @return &#123;Promise&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">loadAllImages</span>(<span class="params">imgList</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">loadOneImage</span>(<span class="params">src</span>) </span>&#123;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line">               </span><br><span class="line"><span class="keyword">const</span> imgList = [</span><br><span class="line">  <span class="string">'https://www.midea.com/1.png'</span>,</span><br><span class="line">  <span class="string">'https://www.midea.com/2.png'</span>,</span><br><span class="line">  <span class="string">'https://www.midea.com/3.png'</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 预期: imgList包含的全部图片链接加载成功后执行回调</span></span><br><span class="line">loadAllImages(imgList).then(<span class="function">(<span class="params">imgs</span>) =&gt;</span> &#123;</span><br><span class="line"> <span class="built_in">console</span>.log(<span class="string">'loadAllImages success'</span>, imgs);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<ul>
-<li>怎样将html、css转换成canvas</li>
-<li>有没做过小游戏</li>
-<li>img的onLoad怎样回调</li>
-<li>reactNative 转换成app的原理</li>
-<li>项目上的问题</li>
-<li>为什么要用mpvue</li>
-</ul>
-<h2 id="腾讯-质控部门"><a href="#腾讯-质控部门" class="headerlink" title="腾讯-质控部门"></a>腾讯-质控部门</h2><h3 id="笔试题"><a href="#笔试题" class="headerlink" title="笔试题"></a>笔试题</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(i)</span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">aaaabbbccccddfgh  给定一个字符串,写一个函数输出数量最多，相同的也要输出</span><br></pre></td></tr></table></figure>
-<ul>
-<li>忘记问了什么了</li>
-</ul>
-<h2 id="字节"><a href="#字节" class="headerlink" title="字节"></a>字节</h2><h3 id="编程题目"><a href="#编程题目" class="headerlink" title="编程题目"></a>编程题目</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">* 合并排序</span><br><span class="line">* 写个方法把&lt;div a=<span class="string">"111"</span>&gt;<span class="number">123</span>&lt;<span class="regexp">/div&gt;转换成对象</span></span><br></pre></td></tr></table></figure>
-<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ul>
-<li>xhr攻击</li>
-<li>Https安全</li>
-<li>微前端怎样做样式隔离</li>
-<li>说说项目上那个很厉害的领域设计模型</li>
-<li>websocket 原理</li>
-</ul>
-<h2 id="欢聚"><a href="#欢聚" class="headerlink" title="欢聚"></a>欢聚</h2><p>题目1</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">2</span>)</span><br><span class="line">&#125;, <span class="number">0</span>);</span><br><span class="line"><span class="keyword">const</span> promise = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">3</span>);</span><br><span class="line">  resolve(<span class="number">7</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">4</span>)</span><br><span class="line">&#125;)</span><br><span class="line">promise.then(<span class="function">(<span class="params">value</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">5</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(value)</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Promise</span>.resolve(<span class="number">8</span>)</span><br><span class="line">&#125;).then(<span class="function">(<span class="params">value</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(value)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">6</span>)</span><br></pre></td></tr></table></figure>
-<p>题目2</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">arr.splice()</span><br><span class="line">arr.reverse()</span><br><span class="line">arr.slice()</span><br><span class="line">arr.map()</span><br><span class="line">哪些会造成数组原结构改变</span><br></pre></td></tr></table></figure>
-<ul>
-<li>输入url整个过程</li>
-<li>说说跨域</li>
-<li>协议、域名、端口哪些会造成跨域</li>
-<li>浏览器缓存</li>
-<li>301 是什么</li>
-<li>cookie跨域获取</li>
-<li>vue的mixins的顺序，mixins，page和子组件</li>
-<li>created生命周期获取dom</li>
-<li>说说事件循环</li>
-<li>说说TCP的3次握手，第2次中断了会怎样</li>
-<li>指令有什么生命周期</li>
-</ul>
-<h2 id="树根"><a href="#树根" class="headerlink" title="树根"></a>树根</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">delayToEcho</span> (<span class="params">msg, cb</span>) </span>&#123;</span><br><span class="line">  setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> err = <span class="built_in">Date</span>.now() % <span class="number">2</span> === <span class="number">0</span> ? <span class="literal">null</span> : <span class="keyword">new</span> <span class="built_in">Error</span>();</span><br><span class="line">    cb(err, msg);</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 正常调用</span></span><br><span class="line">delayToEcho(<span class="string">'msg'</span>, (err, msg) =&gt; &#123;&#125;);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">promisify</span> (<span class="params">fn</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function">(<span class="params">msg</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="comment">// 请把这个函数实现，能够让第 #15 行开始的代码能够成功运行</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">      fn(msg,(err,msg)=&gt;&#123;</span><br><span class="line">        <span class="keyword">if</span>(err)&#123;</span><br><span class="line">          reject(err)</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">          resolve(msg)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// console.log('promisify',promisify(delayToEcho)('dddd'))</span></span><br><span class="line">promisify(delayToEcho)(<span class="string">'msg'</span>)</span><br><span class="line">.then(<span class="function"><span class="params">msg</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'msg'</span>,msg);</span><br><span class="line">&#125;)</span><br><span class="line">.catch(<span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'err'</span>,err);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<ul>
-<li>样式居中</li>
-<li>new方法</li>
-<li>react 的hooks有哪些</li>
-<li>箭头函数特点</li>
-</ul>
-<h2 id="碧桂园"><a href="#碧桂园" class="headerlink" title="碧桂园"></a>碧桂园</h2><ul>
-<li>浏览器缓存</li>
-<li>vue的diff</li>
-<li>object对象有哪些不能枚举</li>
-<li>说说es6数组的新api</li>
-</ul>
-<h2 id="欢聚shopeline"><a href="#欢聚shopeline" class="headerlink" title="欢聚shopeline"></a>欢聚shopeline</h2><h3 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h3><ul>
-<li>浏览器的性能瓶颈</li>
-<li>webpack的dll缓存你们的更新机制</li>
-<li>umi的不好的地方</li>
-<li>vue和react不同的性能优化方法</li>
-<li>一个main.js包和多个小包的各自的好处</li>
-<li>cdn缓存的方法、页面数据缓存</li>
-<li>vue的渲染生命周期</li>
-<li>ci/cd的实现</li>
-<li>组件库的设计</li>
-<li>ts的使用情况</li>
-<li>vue2对ts的支持</li>
-<li>有什么项目比较有痛点</li>
-<li>有没做过ssr</li>
-<li>飞冰和umi的区别</li>
-<li>react的jsx怎样转换成页面</li>
-</ul>
-<h3 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h3><ul>
-<li>webpack5的联邦绑定</li>
-<li>微前端怎样渲染那个url</li>
-<li>nodejs多线程怎样通信</li>
-<li>nodejs中间件怎样数据共享</li>
-<li>websocket突然收到多个并发怎样处理</li>
-<li>nodejs的global是什么</li>
-</ul>
-<h2 id="YY"><a href="#YY" class="headerlink" title="YY"></a>YY</h2><h3 id="一面-1"><a href="#一面-1" class="headerlink" title="一面"></a>一面</h3><ul>
-<li>树的最大权重路径问题（随机权重）</li>
-<li>cookie跨域设置</li>
-<li>防御dns攻击</li>
-<li>ssr怎样知道html和数据返回了</li>
-<li>前端负责人和一线技术</li>
-<li>聊聊微前端</li>
-<li>Https为什么可以防止dns攻击</li>
-<li>nodejs的内存泄漏定位</li>
-<li>写个左右布局的样式，头像固定</li>
-<li>vue 和 react 的对比</li>
-<li>react Native 的写法</li>
-</ul>
-<h3 id="二面-1"><a href="#二面-1" class="headerlink" title="二面"></a>二面</h3><ul>
-<li>我想发一个跨域，header需要怎样配置（Access-Control-Allow-Origin:*）</li>
-<li>webpack5有什么新特性</li>
-<li>webpack5的tree shaking和webpack4有什么区别</li>
-<li>有没有了解过server worker</li>
-<li>有没有了解过webworker，用在什么地方</li>
-<li>webgl基于什么实现</li>
-<li>说说vue的路由原理，hash和history分别用到什么api</li>
-<li>computed是个独立的沙箱，说说vuex怎么会被computed监听到</li>
-<li>canvas怎样读取图片，怎样获取canvas图片后的色值，上传到服务器用什么办法</li>
-<li>如何控制canvas动画的快慢</li>
-<li>ci/cd 的实现，docker机制</li>
-<li>让你用c语言自己实现一个数组的push要怎样写</li>
-<li>微前端的原理</li>
-<li>webassembly有没了解过，他最终浏览器是会转成什么</li>
-<li>nodejs 的守护进程用什么，他们的原理是怎样的</li>
-<li>开发nodejs的时候是怎样部署到服务器的</li>
-<li>websocket的底层原理，最大并发是多少，服务器怎样限制这个最大并发数</li>
-<li>说说v8的堆和栈，（基础类型和引用类型，基本类型栈，引用堆）</li>
-<li>为什么考虑到用RN</li>
-<li>进程和线程的区别</li>
-<li>移动端自适应方案</li>
-<li>微前端怎样通过url渲染</li>
-</ul>
-<h3 id="三面"><a href="#三面" class="headerlink" title="三面"></a>三面</h3><ul>
-<li>webpack5的模块联邦有没了解过</li>
-<li>用领域设计模式对开发有什么好处</li>
-<li>微前端有没使用过</li>
-<li>Handlebars有没使用过，模板语法有什么好处</li>
-</ul>
-<h3 id="四面"><a href="#四面" class="headerlink" title="四面"></a>四面</h3><ul>
-<li>新技术会怎样落地</li>
-<li>怎样看待996</li>
-<li>有没用过YY什么产品</li>
-<li>怎样接触一些新的技术</li>
-</ul>
-]]></content>
-      <categories>
-        <category>文章</category>
-      </categories>
-      <tags>
-        <tag>面试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>是export还是module.exports，是import还是require，是ES6还是CommonJS，是爱❤️还是责任？</title>
     <url>/2019/12/10/module/</url>
     <content><![CDATA[<p>故事要从一次错误的编码开始。。。<br><a id="more"></a></p>
@@ -1116,6 +858,278 @@
       </tags>
   </entry>
   <entry>
+    <title>完成的项目，持续更新</title>
+    <url>/2018/08/14/project/</url>
+    <content><![CDATA[<p>目标：写过的代码加起来能绕地球一圈</p>
+<h2 id="那是梦开始的地方"><a href="#那是梦开始的地方" class="headerlink" title="那是梦开始的地方"></a>那是梦开始的地方</h2><a id="more"></a>
+<h3 id="第一个小程序，IoT项目"><a href="#第一个小程序，IoT项目" class="headerlink" title="第一个小程序，IoT项目"></a>第一个小程序，IoT项目</h3><p><img src="/images/project/iot_user.jpg" alt><br>IoT安装端账号：az1 密码：123456<br><img src="/images/project/iot_install.jpg" alt><br>IoT售后端账号：wx1 密码：123456<br><img src="/images/project/iot_wx.jpg" alt></p>
+<h3 id="车仔网小程序"><a href="#车仔网小程序" class="headerlink" title="车仔网小程序"></a>车仔网小程序</h3><p><img src="/images/project/chezi.png" alt></p>
+<h3 id="男士理容预约小程序"><a href="#男士理容预约小程序" class="headerlink" title="男士理容预约小程序"></a>男士理容预约小程序</h3><p><img src="/images/project/harroman.jpg" alt></p>
+<h3 id="vue搭建的手机商城"><a href="#vue搭建的手机商城" class="headerlink" title="vue搭建的手机商城"></a>vue搭建的手机商城</h3><p><img src="/images/project/shilianmobile.png" alt></p>
+<h3 id="飞冰Ice后台demo"><a href="#飞冰Ice后台demo" class="headerlink" title="飞冰Ice后台demo"></a>飞冰Ice后台demo</h3><p><a href="http://hospital.pppppxt.cc" target="_blank" rel="noopener">demo链接,点我,点我</a><br>管理员账户：admin;医生账号：doctor 密码都是：123456</p>
+<h3 id="某题库测试系统前端demo"><a href="#某题库测试系统前端demo" class="headerlink" title="某题库测试系统前端demo"></a>某题库测试系统前端demo</h3><p><a href="http://wuweiquan.pppppxt.cc" target="_blank" rel="noopener">点我,点我</a><br>sn码随便输入即可</p>
+]]></content>
+      <categories>
+        <category>项目</category>
+      </categories>
+      <tags>
+        <tag>案例</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>react核心</title>
+    <url>/2021/06/21/react/</url>
+    <content><![CDATA[<h2 id="react-的fiber"><a href="#react-的fiber" class="headerlink" title="react 的fiber"></a>react 的fiber</h2><p>有5个优先级的等级</p>
+<ul>
+<li>Immediate</li>
+<li>UserBlocking</li>
+<li>Normal</li>
+<li>Low</li>
+<li>Idle</li>
+</ul>
+<h2 id="高阶组件"><a href="#高阶组件" class="headerlink" title="高阶组件"></a>高阶组件</h2><h3 id="怎么写一个高阶组件？"><a href="#怎么写一个高阶组件？" class="headerlink" title="怎么写一个高阶组件？"></a>怎么写一个高阶组件？</h3><ol>
+<li>普通方式</li>
+<li>装饰器</li>
+<li>多个高阶组件组合</li>
+</ol>
+<h3 id="高阶组件-1"><a href="#高阶组件-1" class="headerlink" title="高阶组件"></a>高阶组件</h3><ol>
+<li><p>属性代理</p>
+<p>1、操作props<br>2、操作ref</p>
+</li>
+<li><p>继续/劫持</p>
+</li>
+</ol>
+<h2 id="什么是react-hooks-优势"><a href="#什么是react-hooks-优势" class="headerlink" title="什么是react hooks?优势"></a>什么是react hooks?优势</h2><p>useState<br>useEffect<br>useMemo</p>
+<h2 id="react-hooks-有什么优势"><a href="#react-hooks-有什么优势" class="headerlink" title="react hooks 有什么优势"></a>react hooks 有什么优势</h2><h3 id="class-的缺点"><a href="#class-的缺点" class="headerlink" title="class 的缺点"></a>class 的缺点</h3><ol>
+<li>组件间的状态逻辑很难复用</li>
+<li>复杂业务的有状态组件会越来越复杂</li>
+<li>监听和定时器的操作，被分散在多个区域</li>
+</ol>
+<p>不要在render里写bind</p>
+<h3 id="hooks-的优点"><a href="#hooks-的优点" class="headerlink" title="hooks 的优点"></a>hooks 的优点</h3><ol>
+<li>利于业务逻辑的封装和拆分，可以自由自定义hooks(自己封装的用到了react hooks的公共逻辑)<br>useEffect(()=&gt;{})</li>
+<li>可以在无需修改组件结构的情况下，复用状态逻辑</li>
+<li>定时器、监听等等都被聚合到同一块代码下</li>
+</ol>
+<h3 id="hooks使用注意事项"><a href="#hooks使用注意事项" class="headerlink" title="hooks使用注意事项"></a>hooks使用注意事项</h3><ol>
+<li>不能在循环判断里用<br>索引问题</li>
+<li>只能在 React 的函数组件中调⽤ Hook，不要在其他 JavaScript 函数中调⽤</li>
+<li>自定义的hook怎样操作组件</li>
+</ol>
+<h2 id="经验总结"><a href="#经验总结" class="headerlink" title="经验总结"></a>经验总结</h2>]]></content>
+      <categories>
+        <category>知识总结</category>
+      </categories>
+      <tags>
+        <tag>重学前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>React-native,我们一起走过的坑。</title>
+    <url>/2018/04/19/rn/</url>
+    <content><![CDATA[<p>前几个星期，点开了RN的技能树，废话不多说，那我就意简言赅地记录一下自己遇到的坑，避免后人再犯自己的错误。<br><a id="more"></a><br>先说明一下我的运行环境：<br>1.我当时这个年代用的RN版本是0.55<br>2.使用的脚手架是create-react-native-app</p>
+<h1 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h1><h2 id="EJECT前（即生成那个android和ios文件前）"><a href="#EJECT前（即生成那个android和ios文件前）" class="headerlink" title="EJECT前（即生成那个android和ios文件前）"></a>EJECT前（即生成那个android和ios文件前）</h2><p>如果你像我那样，按照官方的说明方法：初始化了一个项目<br>但也是找不到android和ios文件的话，不要慌张，要淡定，因为这时你还没有EJECT，官方解析就是：<br>“eject” eventually to create your own native builds<br>但是，是男人的话怎么能那么快eject的，所以这时就该大名鼎鼎的’Expo’登场了，你只需要在你的手机或者模拟器上安装上这个最新版的’Expo’软件，然后在你的本地项目运行命令npm start，这时不出意料的话你就会弹出一个二维码出来（但是不知为何我每次都是出意外地弹了一个崩了的二维码），在你的Expo上扫一扫就能运行成功了，当然最后是少不摇一摇你的手机打开调试，Android模拟器：Command⌘ + M，iOS模拟器：Command⌘ + D，打开Enable Live Reload,然后你就能愉快地撸码了。<br>但是身为一个前端工程师，一眼见不到那个盒子模型，心里总会不舒服的，这时，你只要执行上面一样的操作，选择Show inspector就行了。<br><img src="/images/Developer Menu.jpg" alt></p>
+<h2 id="EJECT后"><a href="#EJECT后" class="headerlink" title="EJECT后"></a>EJECT后</h2><p>这时候，情况就比较尴尬了<br>这时你已经进入了贤者模式，而你的项目结构也会发生一些微妙的变化，看你能不能找出来，找出来后，这时候你要面对就是那个android文件夹和ios文件夹，身为一个只懂JS的前端工程师的我来说，一开始我是拒绝的<br>但是深入理解之后，我发现我其实根本不用管它们的。<br>当运行npm run android/npm run ios后，你的手机/模拟器毫无意外就会被强制地安装上了一个应用了，这时候调试同上的。</p>
+<blockquote>
+<p>总结<br>普通手机应用的话还是eject后真机模拟器调试方便的，不竟后面还有一些你预想不到的一些npm模块居然还要更改android文件什么才能用的，哼(￢︿̫̿￢☆)<br>如果你那么不幸，像我一样要开发什么鬼特制机的话，那些机全身上下只有一些USB接口，而接上电脑后又完全没有响应的话，这时候EXPO那骚一般的远程调试就适合不过了</p>
+</blockquote>
+<h1 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h1><h2 id="不能继承-不能继承-不能继承"><a href="#不能继承-不能继承-不能继承" class="headerlink" title="不能继承 不能继承 不能继承"></a>不能继承 不能继承 不能继承</h2><p>好吧，我先深呼吸一下，先放些代码给大家感受下<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;View style=&#123;styles.view&#125;&gt;</span><br><span class="line">    &lt;Text style=&#123;styles.text&#125;&gt;&lt;/Text&gt;</span><br><span class="line">    &lt;Text style=&#123;styles.text&#125;&gt;&lt;/Text&gt;</span><br><span class="line">&lt;/View&gt;</span><br><span class="line">const styles = StyleSheet.create(&#123;</span><br><span class="line">  view: &#123;</span><br><span class="line">    width:300,</span><br><span class="line">  &#125;，</span><br><span class="line">  text：&#123;</span><br><span class="line">    fontSize:10,   </span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果你想把这个view里面的text字体都设为10的话怎么办？<br>嗯，没错，你只能乖乖地每一个text都写上一个样式了。<br>好吧，首先我们要知道它是模仿css的规则的而已，所以也就只能这样了。</p>
+<h2 id="默认尺寸是DP"><a href="#默认尺寸是DP" class="headerlink" title="默认尺寸是DP"></a>默认尺寸是DP</h2><p>百分比不能用<br>可以用flex:1,flex:2,做等比例</p>
+<h1 id="组件坑"><a href="#组件坑" class="headerlink" title="组件坑"></a>组件坑</h1><h2 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h2><h3 id="要先设宽高"><a href="#要先设宽高" class="headerlink" title="要先设宽高"></a>要先设宽高</h3><p>为了性能方便所有网络图片都要先设固定宽高（来自官方傲娇的解析）<br>像这样<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> &lt;Image </span><br><span class="line">    style=&#123;&#123;width: 100, height: 100&#125;&#125;</span><br><span class="line">    <span class="built_in">source</span>=&#123;&#123;uri: url&#125;&#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure></p>
+<p>那么问题来了，我特么的怎么知道图片的尺寸是什么。<br>解决方法：<br>1、使用Image自带的getSize方法先获取宽高<br>2、使用别的大神的组件React Native Fit Image 等</p>
+<h3 id="资源超过400kb左右不显示"><a href="#资源超过400kb左右不显示" class="headerlink" title="资源超过400kb左右不显示"></a>资源超过400kb左右不显示</h3><p>所以说原生组件，😔<br>推荐使用别的组件库：react-native-fast-image（要先装个glide，略为麻烦）</p>
+<h3 id="静态资源"><a href="#静态资源" class="headerlink" title="静态资源"></a>静态资源</h3><p>source={require(‘./xxx.jpg’)} 资源路径不能拼接，但可以这样写<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">const a=require(<span class="string">'./xxx/'</span>)</span><br><span class="line">&lt;Image <span class="built_in">source</span>=&#123;a&#125;/&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="点击事件尽量使用Touchable开头的"><a href="#点击事件尽量使用Touchable开头的" class="headerlink" title="点击事件尽量使用Touchable开头的"></a>点击事件尽量使用Touchable开头的</h2><h2 id="react-navigation"><a href="#react-navigation" class="headerlink" title="react-navigation"></a>react-navigation</h2><p>官方推荐的路由组件库<br>我使用StackNavigator方法<br>坑1： navigation.goBack()，返回上一个页面所有生命周期都没有进入，不像小程序有一个onShow周期<br>坑2：navigation.goBack()，不能带参数<br>我的解决办法：<br>1、把方法传进下一个页面，goBack()前调用<br>2、传入route_key，使用setParams方法传参</p>
+<h1 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h1><p>建议按官网流程<br>我踩过的坑：index.js 里的 registerComponent 不同app要不一样</p>
+<p><em>未完待续</em></p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>填坑</tag>
+        <tag>JS填坑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一些前端题目</title>
+    <url>/2018/03/22/test-list/</url>
+    <content><![CDATA[<h1 id="整理一下一些前端题目"><a href="#整理一下一些前端题目" class="headerlink" title="整理一下一些前端题目"></a>整理一下一些前端题目</h1><a id="more"></a>
+<h2 id="以下分别输出什么-为什么"><a href="#以下分别输出什么-为什么" class="headerlink" title="以下分别输出什么,为什么"></a>以下分别输出什么,为什么</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var User = &#123;</span><br><span class="line">  count: 1,</span><br><span class="line">  getCount: <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    <span class="built_in">return</span> this.count;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">console.log(User.getCount());  // what?</span><br><span class="line">var func = User.getCount;</span><br><span class="line">console.log(func());  // what?</span><br></pre></td></tr></table></figure>
+<p>答案是:1和undefined。</p>
+<h2 id="以下代码执行结果是什么"><a href="#以下代码执行结果是什么" class="headerlink" title="以下代码执行结果是什么"></a>以下代码执行结果是什么</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">  var foo = 1,bar = 2,j,<span class="built_in">test</span>;</span><br><span class="line">  <span class="built_in">test</span> = <span class="keyword">function</span>(j) &#123;</span><br><span class="line">      j = 5;</span><br><span class="line">      var bar = 5;</span><br><span class="line">      foo = 5;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">test</span>(10);</span><br><span class="line">  console.log(foo); //</span><br><span class="line">  console.log(bar); //</span><br><span class="line">  console.log(j); //</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">console.log(User.getCount());  // what?</span><br><span class="line">var func = User.getCount;</span><br><span class="line">console.log(func());  // what?</span><br></pre></td></tr></table></figure>
+<p>答案是:5 2 undefined。</p>
+<h2 id="说出输出的结果顺序"><a href="#说出输出的结果顺序" class="headerlink" title="说出输出的结果顺序"></a>说出输出的结果顺序</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">  console.log(1)</span><br><span class="line">&#125;, 0);</span><br><span class="line">new Promise(<span class="keyword">function</span> executor(resolve) &#123;</span><br><span class="line">  console.log(2);</span><br><span class="line">  <span class="keyword">for</span>( var i=0 ; i&lt;10000 ; i++ ) &#123;</span><br><span class="line">    i == 9999 &amp;&amp; resolve();</span><br><span class="line">  &#125;</span><br><span class="line">  console.log(3);</span><br><span class="line">&#125;).<span class="keyword">then</span>(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">  console.log(4);</span><br><span class="line">&#125;);</span><br><span class="line">console.log(5);</span><br></pre></td></tr></table></figure>
+<p>答案：“2 3 5 4 1”</p>
+<h2 id="以下代码执行结果是什么-1"><a href="#以下代码执行结果是什么-1" class="headerlink" title="以下代码执行结果是什么"></a>以下代码执行结果是什么</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">foo</span></span>() &#123;this.value = 42;&#125;</span><br><span class="line">foo.prototype = &#123;method: <span class="function"><span class="title">function</span></span> () &#123;<span class="built_in">return</span> <span class="literal">true</span>;&#125;&#125;;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">bar</span></span>() &#123;</span><br><span class="line">    var value = 1;</span><br><span class="line">    <span class="built_in">return</span>&#123;method:<span class="function"><span class="title">function</span></span>()&#123;<span class="built_in">return</span> value;&#125;&#125;;</span><br><span class="line">&#125;</span><br><span class="line">foo.prototype = new bar();</span><br><span class="line">console.log(foo.prototype.constructor); //</span><br><span class="line">console.log(foo.prototype instanceof  bar); //</span><br><span class="line">var <span class="built_in">test</span> = new foo();</span><br><span class="line">console.log(<span class="built_in">test</span> instanceof foo);//</span><br><span class="line">console.log(<span class="built_in">test</span> instanceof bar);//</span><br><span class="line">console.log(test.method());//</span><br></pre></td></tr></table></figure>
+<p>答案：ƒ Object() { [native code] }<br>      False<br>      true<br>      false<br>      1</p>
+<h2 id="用纯css-html写一个导航栏的tab切换-不使用js"><a href="#用纯css-html写一个导航栏的tab切换-不使用js" class="headerlink" title="用纯css,html写一个导航栏的tab切换(不使用js)"></a>用纯css,html写一个导航栏的tab切换(不使用js)</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">方法1：</span><br><span class="line">&lt;ul class=<span class="string">'nav'</span>&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=<span class="string">"#content1"</span>&gt;列表1&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=<span class="string">"#content2"</span>&gt;列表2&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line">&lt;div id=<span class="string">"content1"</span>&gt;列表1内容:123456&lt;/div&gt;</span><br><span class="line">&lt;div id=<span class="string">"content2"</span>&gt;列表2内容:abcdefgkijkl&lt;/div&gt;</span><br><span class="line">&lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</span><br><span class="line">	<span class="comment">#content1,</span></span><br><span class="line">	<span class="comment">#content2&#123;</span></span><br><span class="line">	    display:none;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="comment">#content1:target,</span></span><br><span class="line">	<span class="comment">#content2:target&#123;</span></span><br><span class="line">	    display:block;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">#content1:target ~ .nav li&#123;</span></span><br><span class="line">	    // 改变li元素的背景色和字体颜色</span><br><span class="line">	    &amp;:first-child&#123;</span><br><span class="line">	        background:<span class="comment">#ff7300;</span></span><br><span class="line">	        color:<span class="comment">#fff;</span></span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">#content2:target ~ .nav li&#123;</span></span><br><span class="line">	    // 改变li元素的背景色和字体颜色</span><br><span class="line">	    &amp;:last-child&#123;</span><br><span class="line">	        background:<span class="comment">#ff7300;</span></span><br><span class="line">	        color:<span class="comment">#fff;</span></span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">方法2：</span><br><span class="line">&lt;div class=<span class="string">"container"</span>&gt;</span><br><span class="line">    &lt;input class=<span class="string">"nav1"</span> id=<span class="string">"li1"</span> <span class="built_in">type</span>=<span class="string">"radio"</span> name=<span class="string">"nav"</span>&gt;</span><br><span class="line">    &lt;input class=<span class="string">"nav2"</span> id=<span class="string">"li2"</span> <span class="built_in">type</span>=<span class="string">"radio"</span> name=<span class="string">"nav"</span>&gt;</span><br><span class="line">    &lt;ul class=<span class="string">'nav'</span>&gt;</span><br><span class="line">        &lt;li class=<span class="string">'active'</span>&gt;&lt;label <span class="keyword">for</span>=<span class="string">"li1"</span>&gt;列表1&lt;/label&gt;&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;&lt;label <span class="keyword">for</span>=<span class="string">"li2"</span>&gt;列表2&lt;/label&gt;&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;div class=<span class="string">"content"</span>&gt;</span><br><span class="line">        &lt;div class=<span class="string">"content1"</span>&gt;列表1内容:123456&lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">"content1"</span>&gt;列表2内容:abcdefgkijkl&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</span><br><span class="line">	.container&#123;</span><br><span class="line">    position:relative;</span><br><span class="line">    width:400px;</span><br><span class="line">    margin: 50px auto;</span><br><span class="line">&#125;</span><br><span class="line">input&#123;</span><br><span class="line">    display:none;</span><br><span class="line">&#125;</span><br><span class="line">.nav&#123;</span><br><span class="line">    position:relative;</span><br><span class="line">    overflow:hidden;</span><br><span class="line">&#125;</span><br><span class="line">li&#123;</span><br><span class="line">    width:200px;</span><br><span class="line">    <span class="built_in">float</span>:left;</span><br><span class="line">    text-align:center;</span><br><span class="line">    background:<span class="comment">#ddd;</span></span><br><span class="line">&#125;</span><br><span class="line">li label&#123;</span><br><span class="line">    display:block;</span><br><span class="line">    width:200px;</span><br><span class="line">    line-height:36px;</span><br><span class="line">    font-size:18px;</span><br><span class="line">    cursor:pointer;</span><br><span class="line">&#125;</span><br><span class="line">.content&#123;</span><br><span class="line">    position:relative;</span><br><span class="line">    overflow:hidden;</span><br><span class="line">    width:400px;</span><br><span class="line">    height:100px;</span><br><span class="line">    border:1px solid <span class="comment">#999;</span></span><br><span class="line">    box-sizing:border-box;</span><br><span class="line">    padding:10px;</span><br><span class="line">&#125;</span><br><span class="line">.content1,</span><br><span class="line">.content2&#123;</span><br><span class="line">    display:none;</span><br><span class="line">    width:100%;</span><br><span class="line">    height:100%;</span><br><span class="line">&#125;</span><br><span class="line">.nav1:checked ~ .nav li &#123;</span><br><span class="line">    background:<span class="comment">#ddd;</span></span><br><span class="line">    color:<span class="comment">#000;</span></span><br><span class="line">    </span><br><span class="line">    &amp;:first-child&#123;</span><br><span class="line">        background:<span class="comment">#ff7300;</span></span><br><span class="line">        color:<span class="comment">#fff;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">.nav2:checked ~ .nav li&#123;</span><br><span class="line">    background:<span class="comment">#ddd;</span></span><br><span class="line">    color:<span class="comment">#000;</span></span><br><span class="line">    </span><br><span class="line">    &amp;:last-child&#123;</span><br><span class="line">        background:<span class="comment">#ff7300;</span></span><br><span class="line">        color:<span class="comment">#fff;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">.nav1:checked ~ .content &gt; div&#123;</span><br><span class="line">    display:none;</span><br><span class="line">    </span><br><span class="line">    &amp;:first-child&#123;</span><br><span class="line">    display:block;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">.nav2:checked ~ .content &gt; div&#123;</span><br><span class="line">    display:none;</span><br><span class="line">    </span><br><span class="line">    &amp;:last-child&#123;</span><br><span class="line">    display:block;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">.active &#123;</span><br><span class="line">        background:<span class="comment">#ff7300;</span></span><br><span class="line">        color:<span class="comment">#fff;</span></span><br><span class="line">&#125;</span><br><span class="line">.default&#123;</span><br><span class="line">    display:block;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="编写程序，统计字符串var-str-”helloworld”-中每种字符出现的次数-出现次数最多的是-出现-次"><a href="#编写程序，统计字符串var-str-”helloworld”-中每种字符出现的次数-出现次数最多的是-出现-次" class="headerlink" title="编写程序，统计字符串var str=”helloworld”;中每种字符出现的次数,出现次数最多的是? 出现?次"></a>编写程序，统计字符串var str=”helloworld”;中每种字符出现的次数,出现次数最多的是? 出现?次</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var str=<span class="string">"helloworld"</span>;</span><br><span class="line">  方法一：用<span class="built_in">hash</span></span><br><span class="line">  <span class="keyword">for</span>(var i=0,<span class="built_in">hash</span>=&#123;&#125;;i&lt;str.length;i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">hash</span>[str[i]])&#123;</span><br><span class="line">      <span class="built_in">hash</span>[str[i]]++</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      <span class="built_in">hash</span>[str[i]]=1;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  console.dir(<span class="built_in">hash</span>);</span><br><span class="line">方法二：用正则</span><br><span class="line">var arr=str.split(<span class="string">""</span>)</span><br><span class="line">  .sort()</span><br><span class="line">  .join(<span class="string">""</span>)</span><br><span class="line">  .match(/([a-z])\1*/g)</span><br><span class="line">  .sort(<span class="keyword">function</span>(a,b)&#123;</span><br><span class="line"><span class="built_in">return</span> b.length-a.length; &#125;)</span><br><span class="line">console.log(<span class="string">"出现最多的是: "</span>+arr[0][0]</span><br><span class="line">  +<span class="string">"共"</span>+arr[0].length+<span class="string">"次"</span>);</span><br><span class="line">var <span class="built_in">hash</span>=&#123;&#125;;</span><br><span class="line">  arr.forEach(<span class="keyword">function</span>(val)&#123;</span><br><span class="line">    <span class="built_in">hash</span>[val[0]]=val.length;</span><br><span class="line">  &#125;);</span><br><span class="line">  console.dir(<span class="built_in">hash</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="民间有一直有一游戏，玩法就是，大家轮流报数，如果报到能被7整除的数字，或者尾数是7的数字，都算踩地雷了。就应该罚唱歌。"><a href="#民间有一直有一游戏，玩法就是，大家轮流报数，如果报到能被7整除的数字，或者尾数是7的数字，都算踩地雷了。就应该罚唱歌。" class="headerlink" title="民间有一直有一游戏，玩法就是，大家轮流报数，如果报到能被7整除的数字，或者尾数是7的数字，都算踩地雷了。就应该罚唱歌。"></a>民间有一直有一游戏，玩法就是，大家轮流报数，如果报到能被7整除的数字，或者尾数是7的数字，都算踩地雷了。就应该罚唱歌。</h2><p>请编写程序，输出1~60之间的所有“安全数”<br>比如：<br>1、2、3、4、5、6、8、9、10、11、12、13、15、16、18、19、20、22、23、24、25、26、29、30……</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(var i = 1; i &lt;= 60 ; i++)&#123;</span><br><span class="line"><span class="keyword">if</span>(i%7 == 0 || i%10 == 7)&#123;</span><br><span class="line">console.log(i);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="浏览器输入url到完整显示出页面经历的过程"><a href="#浏览器输入url到完整显示出页面经历的过程" class="headerlink" title="浏览器输入url到完整显示出页面经历的过程"></a>浏览器输入url到完整显示出页面经历的过程</h2><p>第一种简单的说呢就是这样的：<br>第一步：客户机提出域名解析请求,并将该请求发送给本地的域名服务器。<br>第二步：当本地的域名服务器收到请求后,就先查询本地的缓存,如果有该纪录项,则本地的域名服务器就直接把查询的结果返回。<br>第三步：如果本地的缓存中没有该纪录,则本地域名服务器就直接把请求发给根域名服务器,然后根域名服务器再返回给本地域名服务器一个所查询域(根的子域)的主域名服务器的地址。<br>第四步：本地服务器再向上一步返回的域名服务器发送请求,然后接受请求的服务器查询自己的缓存,如果没有该纪录,则返回相关的下级的域名服务器的地址。<br>第五步：重复第四步,直到找到正确的纪录。</p>
+<h2 id="机试题"><a href="#机试题" class="headerlink" title="机试题"></a>机试题</h2><p> ·点击某个节点元素，则该节点元素呈现一个特殊被选中的样式<br> ·增加一个删除按钮，当选中某个节点元素后，点击删除按钮，则将该节点及其所有子节点删除掉<br> ·增加一个输入框及一个“添加”按钮当选中某个节点元素后，点击增加按钮，则在该节点下增加一个子节点，节·点内容为输入框中内容，插入在其子节点的最后一个位置<br> ·提供一个按钮，显示开始遍历，点击后，以动画的形式呈现遍历的过程<br> ·当前被遍历到的节点做一个特殊显示（比如不同的颜色）<br> ·每隔一段时间（500ms，1s等时间自定）再遍历下一个节点<br> ·增加一个输入框及一个“查询”按钮，点击按钮时，开始在树中以动画形式查找节点内容和输入框中内容一致的节点，找到后以特殊样式显示该节点，找不到的话给出找不到的提示。查询过程中的展示过程和遍历过程保持一致</p>
+<p><a href="http://ife.baidu.com/2016/task/all" target="_blank" rel="noopener">神奇的链接</a></p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>面试</tag>
+        <tag>题目</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>this/必包/作用域</title>
+    <url>/2021/05/02/this-%E5%BF%85%E5%8C%85-%E4%BD%9C%E7%94%A8%E5%9F%9F/</url>
+    <content><![CDATA[<p>bind可以传基本类型，只会绑定一次</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br><span class="line">fn.bind(<span class="number">1</span>).bind(<span class="number">2</span>)() <span class="comment">// Number &#123;1&#125;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>知识总结</category>
+      </categories>
+      <tags>
+        <tag>重学前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>three笔记</title>
+    <url>/2022/05/04/three/</url>
+    <content><![CDATA[<blockquote>
+<p>three的笔记学习-一开始总以为是tree，原来是three，感觉就是3d，然后很多三角形的意思</p>
+</blockquote>
+<h2 id="一开"><a href="#一开" class="headerlink" title="一开"></a>一开</h2>]]></content>
+      <categories>
+        <category>知识总结</category>
+      </categories>
+      <tags>
+        <tag>文章</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TypeScript学习笔记</title>
+    <url>/2019/05/19/typescript-note/</url>
+    <content><![CDATA[<h1 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>‘TypeScript’-顾名思义，就是有Type的Script<br><a id="more"></a></p>
+<hr>
+<p>那么它和没有Type的Script有什么不一样呢，例如某Java前缀的Script<br>举个例子：实际开发需求中我们要定义一个商品名称的变量为goodsName(<font color="red">ps:众所周知商品名称都必须是要字符串的</font>)<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// js中定义一个变量,先赋值一个字符串</span></span><br><span class="line"><span class="keyword">let</span> goodsName = <span class="string">'apple'</span> <span class="comment">// 很好，看起来都一起正常</span></span><br><span class="line"><span class="comment">// 然鹅，一位刚失恋的程序员哥哥，不小心把它改成一个数字（说笑，程序员哪会有女朋友）</span></span><br><span class="line">goodsName = <span class="number">520</span> <span class="comment">// 这时候程序也没有阻止小哥哥这种赤裸裸的示爱行为</span></span><br><span class="line"><span class="comment">// 甚至可以改成布尔值</span></span><br><span class="line">goodsName = <span class="literal">true</span></span><br><span class="line"><span class="comment">// -----------------</span></span><br><span class="line"><span class="comment">// 可以想想刚失恋的小哥哥，把这个变量提交给后端的接口</span></span><br><span class="line"><span class="comment">// 最后给产品发现了</span></span><br><span class="line"><span class="comment">// 后端调查发现是前端提交的数据类型错误</span></span><br><span class="line"><span class="comment">// 顺利摔锅给前端</span></span><br><span class="line"><span class="comment">// 从此小哥哥就步入了人生的低谷，情场事业双失😔</span></span><br></pre></td></tr></table></figure></p>
+<p>然而如果这时候这位程序员小哥哥用上了TypeScript<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 同上也先定义一个变量</span></span><br><span class="line"><span class="keyword">let</span> goodsName: string = <span class="string">'apple'</span> <span class="comment">// 看看有什么不同？没错，就是多了个string</span></span><br><span class="line">goodsName = <span class="number">520</span> <span class="comment">//这时候就会有一条红线在变量下方</span></span><br><span class="line"><span class="comment">// Error, number不是string类型</span></span><br><span class="line"><span class="comment">// -----------------</span></span><br><span class="line"><span class="comment">// 看到这条提示的红线，小哥哥也终于意识到了</span></span><br><span class="line"><span class="comment">// 他的爱情也像这条红线那样</span></span><br><span class="line"><span class="comment">// 已经到了高亮的结束边缘</span></span><br><span class="line"><span class="comment">// 最后小哥哥看着那条红线</span></span><br><span class="line"><span class="comment">// 突然对爱情重拾希望，然后不顾红线的错误提示，提交给后端</span></span><br><span class="line"><span class="comment">// 结局同上</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="一些踩过的坑"><a href="#一些踩过的坑" class="headerlink" title="一些踩过的坑"></a>一些踩过的坑</h2><h3 id="可选属性"><a href="#可选属性" class="headerlink" title="可选属性"></a>可选属性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface SquareConfig &#123;</span><br><span class="line">  color?: string;</span><br><span class="line">  width?: number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="任意数量的其它属性"><a href="#任意数量的其它属性" class="headerlink" title="任意数量的其它属性"></a>任意数量的其它属性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface SquareConfig &#123;</span><br><span class="line"> [propName: string]: any;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="只读属性"><a href="#只读属性" class="headerlink" title="只读属性"></a>只读属性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface Point &#123;</span><br><span class="line">    <span class="built_in">readonly</span> x: number;</span><br><span class="line">    <span class="built_in">readonly</span> y: number;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> p1: Point = &#123; x: 10, y: 20 &#125;;</span><br><span class="line">p1.x = 5; // error!</span><br></pre></td></tr></table></figure>
+<h3 id="函数类型"><a href="#函数类型" class="headerlink" title="函数类型"></a>函数类型</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//方法1</span><br><span class="line"><span class="keyword">function</span> add(x: number, y: number): number &#123;</span><br><span class="line">    <span class="built_in">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//方法2</span><br><span class="line"><span class="built_in">let</span> myAdd = <span class="keyword">function</span>(x: number, y: number): number &#123; <span class="built_in">return</span> x + y; &#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="把类当做接口使用"><a href="#把类当做接口使用" class="headerlink" title="把类当做接口使用"></a>把类当做接口使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">class Point &#123;</span><br><span class="line">    x: number;</span><br><span class="line">    y: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface Point3d extends Point &#123;</span><br><span class="line">    z: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> point3d: Point3d = &#123;x: 1, y: 2, z: 3&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
+<li>提示真的很爽</li>
+<li>会增加写类型的时间</li>
+<li>大型项目来说上面花的时间是值得的，后期维护时间会变少</li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>填坑</tag>
+        <tag>JS填坑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vue核心</title>
+    <url>/2021/06/21/vue/</url>
+    <content><![CDATA[<h3 id="why-O-n"><a href="#why-O-n" class="headerlink" title="why O(n)?"></a>why O(n)?</h3><p>严格意义不是真的O(n),复杂度其实是O(nm)</p>
+<h3 id="how-O-n"><a href="#how-O-n" class="headerlink" title="how O(n)?"></a>how O(n)?</h3><p>同层级比较</p>
+<h3 id="用index做key"><a href="#用index做key" class="headerlink" title="用index做key"></a>用index做key</h3><p>vue: [0,1,2],[0,1] 误删<br>react: 会重新渲染 都是新建</p>
+<h3 id="虚拟dom过程"><a href="#虚拟dom过程" class="headerlink" title="虚拟dom过程"></a>虚拟dom过程</h3><p> 虚拟 DOM</p>
+<ol>
+<li><p>什么是虚拟 DOM</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> type: <span class="string">'div'</span>,</span><br><span class="line"> props: &#123;</span><br><span class="line"> children: []</span><br><span class="line"> &#125;,</span><br><span class="line"> el: xxxx</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>怎么创建虚拟 DOM</p>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">-&gt; h 、createElement...</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">h</span>(<span class="params">type, props</span>) </span>&#123; <span class="keyword">return</span> &#123; type, props &#125; &#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>使用呢</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">JSX:</span><br><span class="line">&lt;div&gt;</span><br><span class="line"> &lt;ul className=<span class="string">'padding-20'</span>&gt;</span><br><span class="line">   &lt;li key=<span class="string">'li-01'</span>&gt;<span class="keyword">this</span> is li <span class="number">01</span>&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp"> &lt;/u</span>l&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure>
+<p> 经过一些工具转一下：</p>
+ <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">createElement(<span class="string">'div'</span>, &#123;</span><br><span class="line"> children: [</span><br><span class="line">   createElement(<span class="string">'ul'</span>, &#123; <span class="attr">className</span>: <span class="string">'padding-20'</span> &#125;,</span><br><span class="line">   createElement(<span class="string">'li'</span>, &#123; <span class="attr">key</span>: <span class="string">'li-01'</span>&#125;, <span class="string">'this is li 01'</span>))</span><br><span class="line"> ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li><p>虚拟DOM的数据结构有了，那就是渲染了 (mount/render)</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">f(vnode) -&gt; view</span><br><span class="line"></span><br><span class="line">f(vode) &#123;</span><br><span class="line"><span class="built_in">document</span>.createElement();</span><br><span class="line">....</span><br><span class="line"></span><br><span class="line">parent.insert()</span><br><span class="line">. insertBefore</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> render = <span class="function">(<span class="params">vnode, parent</span>) =&gt;</span> &#123;  &#125;</span><br><span class="line"></span><br><span class="line">&lt;div id=<span class="string">'app'</span>&gt;&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>diff 相关了(patch)</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">f(oldVnodeTree, newVnodeTree, parent) -&gt; 调度? -&gt; view</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>知识总结</category>
+      </categories>
+      <tags>
+        <tag>重学前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>webpack</title>
+    <url>/2021/05/29/webpack/</url>
+    <content><![CDATA[<h3 id="我们常说的Module是什么"><a href="#我们常说的Module是什么" class="headerlink" title="我们常说的Module是什么"></a>我们常说的Module是什么</h3><p>webpack支持 ESModule, CommonJS, AMD, Assests</p>
+<h3 id="如何表达各种依赖关系？"><a href="#如何表达各种依赖关系？" class="headerlink" title="如何表达各种依赖关系？"></a>如何表达各种依赖关系？</h3><h3 id="我们常说的chunk和bundle的区别是什么？（important！）"><a href="#我们常说的chunk和bundle的区别是什么？（important！）" class="headerlink" title="我们常说的chunk和bundle的区别是什么？（important！）"></a>我们常说的chunk和bundle的区别是什么？（important！）</h3><ol>
+<li><p>Chunk<br>是Webpack打包过程中Modules的集合，是<code>打包过程</code>中的概念。<br>Webpack的打包是从⼀个⼊⼝模块开始，⼊⼝模块引⽤其他模块，模块再引⽤模块。<br>Webpack通过引⽤关系逐个打包模块，这些module就形成了⼀个Chunk。<br>当然如果有多个⼊⼝模块，可能会产出多条打包路径，每条路径都会形成⼀个Chunk。</p>
+</li>
+<li><p>bundle<br>Bundle是我们最终输出的⼀个或多个打包好的⽂件</p>
+</li>
+<li><p>Chunk 和 Bundle 的关系?<br>大多数情况，一个chunk一个bundle</p>
+</li>
+</ol>
+<h3 id="Plugin-和-Loader-分别做什么？怎样工作的？"><a href="#Plugin-和-Loader-分别做什么？怎样工作的？" class="headerlink" title="Plugin 和 Loader 分别做什么？怎样工作的？"></a>Plugin 和 Loader 分别做什么？怎样工作的？</h3><ol>
+<li>Loader<br>模块转换器，将非js模块转化为webpack能识别的</li>
+<li>Plugin<br>扩展插件,webpack各个阶段都会广播出对应的事件</li>
+<li><p>Compiler<br>对象，也可以理解为webpack的实例</p>
+</li>
+<li><p>Compliation<br>模块资源</p>
+</li>
+</ol>
+<h3 id="简单描述一下打包过程"><a href="#简单描述一下打包过程" class="headerlink" title="简单描述一下打包过程"></a>简单描述一下打包过程</h3><ol>
+<li>初始化参数：shell webpack.config.js</li>
+<li>开始编译</li>
+<li>确定入口</li>
+<li>编译模块</li>
+<li>完成模块编译</li>
+<li>输出资源</li>
+</ol>
+]]></content>
+      <categories>
+        <category>知识总结</category>
+      </categories>
+      <tags>
+        <tag>重学前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序填坑日记</title>
+    <url>/2017/06/14/wehchat-small/</url>
+    <content><![CDATA[<p>记录一下那些年，开发微信小程序踩过的坑<br><a id="more"></a></p>
+<h1 id="微信小程序认识"><a href="#微信小程序认识" class="headerlink" title="微信小程序认识"></a>微信小程序认识</h1><h2 id="总体认识"><a href="#总体认识" class="headerlink" title="总体认识"></a>总体认识</h2><p>隐约感受到的RN的身影<br><a href="https://mp.weixin.qq.com/debug/wxadoc/dev/framework/performance/tips.html" target="_blank" rel="noopener">官方的Q&amp;A文档</a></p>
+<blockquote>
+<p>为什么脚本内不能使用window等对象<br>页面的脚本逻辑是在JsCore中运行，JsCore是一个没有窗口对象的环境，所以不能在脚本中使用window，也无法在脚本中操作组件</p>
+</blockquote>
+<p>碰巧RN也是通过JsCore与手机的原生语言通信的，简单来说它只不过是以 JavaScript 的形式告诉 Objective-C /java该执行什么代码<br>反正我们知道它能直接调用微信本身的控件就行了</p>
+<h2 id="小体认识"><a href="#小体认识" class="headerlink" title="小体认识"></a>小体认识</h2><p><em>MVVM</em>,<em>前后端分离</em>,<em>数据绑定</em>,<em>数据驱动</em><br><img src="/images/model.png" alt></p>
+<h1 id="一些代码"><a href="#一些代码" class="headerlink" title="一些代码"></a>一些代码</h1><p>自定义弹框<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;view hidden=<span class="string">"&#123;&#123;showTrue&#125;&#125;"</span>&gt;&lt;/view&gt;</span><br><span class="line">&lt;view wx:<span class="keyword">if</span>=<span class="string">"&#123;&#123;showTrue&#125;&#125;"</span>&gt;&lt;/view&gt;</span><br></pre></td></tr></table></figure></p>
+<p>改变样式<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;view class=<span class="string">"&#123;&#123;diyClassName&#125;&#125;"</span>&gt;&lt;/view&gt;</span><br></pre></td></tr></table></figure></p>
+<h1 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h1><p><a href="https://mp.weixin.qq.com/debug/wxadoc/dev/" target="_blank" rel="noopener">最重要的当然是官方文档</a><br><a href="https://github.com/justjavac/awesome-wechat-weapp" target="_blank" rel="noopener">微信小程序资源汇总</a><br><a href="https://github.com/chemzqm/wept" target="_blank" rel="noopener">用chrome运行小程序</a><br><a href="https://github.com/Hao-Wu/WeApp-Demo" target="_blank" rel="noopener">官方demo源码</a></p>
+<h1 id="填过的坑"><a href="#填过的坑" class="headerlink" title="填过的坑"></a>填过的坑</h1><p>1.透明底的png图片,border-raduis：50%会变形<br>2.canvas在swiper和scroll-view不兼容会浮出来<br>3.iphone：scroll-view内部滚动必须设置高度，在iphone不能设100%,可以通过js设高度或设固定值<br>4.iphone：image图片里padding不能设百分比,只能设固定值<br>5.最多只能打开5个页面,注意一下页面跳转的关闭</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>填坑</tag>
+        <tag>微信小程序</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【重学前端】面向对象/原型链/继承</title>
     <url>/2021/04/18/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E5%8E%9F%E5%9E%8B%E9%93%BE-%E7%BB%A7%E6%89%BF/</url>
     <content><![CDATA[<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><h2 id="寄生组合式继承"><a href="#寄生组合式继承" class="headerlink" title="寄生组合式继承"></a>寄生组合式继承</h2><h2 id="类数组转换成数组"><a href="#类数组转换成数组" class="headerlink" title="类数组转换成数组"></a>类数组转换成数组</h2><p> 1.[…arguments].slice()<br> 2.Array.prototype.slice.apply(arguments)<br> 3.Array.from(arguments).slice()</p>
@@ -1147,20 +1161,6 @@
       </categories>
       <tags>
         <tag>数据结构、算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>three笔记</title>
-    <url>/2022/05/04/three/</url>
-    <content><![CDATA[<blockquote>
-<p>three的笔记学习-一开始总以为是tree，原来是three，感觉就是3d，然后很多三角形的意思</p>
-</blockquote>
-<h2 id="一开"><a href="#一开" class="headerlink" title="一开"></a>一开</h2>]]></content>
-      <categories>
-        <category>知识总结</category>
-      </categories>
-      <tags>
-        <tag>文章</tag>
       </tags>
   </entry>
 </search>
