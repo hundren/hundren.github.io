@@ -1,167 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>ES6 规范详解、ESNext 规范</title>
-    <url>/2021/04/28/ES6%20%E8%A7%84%E8%8C%83%E8%AF%A6%E8%A7%A3%E3%80%81ESNext%20%E8%A7%84%E8%8C%83/</url>
-    <content><![CDATA[<h2 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h2><p>var、const、let、function<br>let 变量提升、作用域</p>
-<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><p>1、箭头函数this是定义时决定，普通函数是使用时决定<br>2、简写</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> fn = <span class="function"><span class="params">()</span>=&gt;</span> <span class="string">'sss'</span></span><br></pre></td></tr></table></figure>
-<p>3、不能做构造函数</p>
-<h3 id="class"><a href="#class" class="headerlink" title="class"></a>class</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span>()</span>&#123;</span><br><span class="line">  <span class="keyword">static</span> getFormatName()&#123;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>static 静态方法，只能console.log(Test.getFormatName())</p>
-<h3 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h3><ol>
-<li>for in</li>
-</ol>
-<ul>
-<li>会调用原型链（obj.hasOwnProperty(key)）判断一下</li>
-<li>不适合遍历数组</li>
-</ul>
-<ol start="2">
-<li>for of</li>
-</ol>
-<h3 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h3><ol>
-<li>Object.keys</li>
-<li>Object.values</li>
-<li>Object.entries</li>
-<li>Object.getOwnPropertyNames</li>
-<li>Object.getOwnPropertyDescriptor<br>对象的描述</li>
-</ol>
-<ul>
-<li>configurable: true</li>
-<li>writable: false</li>
-<li>enumerable: true //枚举</li>
-</ul>
-<p>Reflect 一种js 优化</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Reflect</span>.deleteProperty(obj,name) 等</span><br></pre></td></tr></table></figure>
-<h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><p>array.slice() 可以浅拷贝</p>
-<ul>
-<li>Array.from<br>如何把arguments转换成真数组</li>
-</ul>
-<ol>
-<li>[…arguments]</li>
-<li>Array.from(arguments)</li>
-<li>Array.prototype.slice.call(arguments)</li>
-</ol>
-]]></content>
-      <categories>
-        <category>知识总结</category>
-      </categories>
-      <tags>
-        <tag>重学前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello Hexo</title>
-    <url>/2016/02/14/hello-world/</url>
-    <content><![CDATA[<p>博客换上Hexo主题</p>
-<hr>
-<h2 id="很久以前"><a href="#很久以前" class="headerlink" title="很久以前"></a>很久以前</h2><a id="more"></a>
-<h3 id="就被它的这个"><a href="#就被它的这个" class="headerlink" title="就被它的这个"></a>就被它的这个</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">试试代码</span><br></pre></td></tr></table></figure>
-<p>1001001111100101010110</p>
-<blockquote>
-<p>试试区块 这是一个区块</p>
-</blockquote>
-<p><em>这是斜体文字</em><br><strong>这是加粗的文字</strong></p>
-<p><font size="4">我是变大的字</font></p>
-<p><font color="green">我是有颜色字</font><br><img src="/images/module/exports.png" alt><br><code>代码字</code><br><a href="https://mp.weixin.qq.com/debug/wxadoc/dev/framework/performance/tips.html" target="_blank" rel="noopener">这是个链接</a></p>
-<h3 id="文章目录吸引了"><a href="#文章目录吸引了" class="headerlink" title="文章目录吸引了"></a>文章目录吸引了</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">console.log(<span class="string">'hello world'</span>);</span><br></pre></td></tr></table></figure>
-<p>列表？</p>
-<ol>
-<li>Red</li>
-<li>Green</li>
-<li>Blue</li>
-</ol>
-<ul>
-<li>a</li>
-<li>b</li>
-<li>c</li>
-</ul>
-<p>表格<br>| 左对齐 | 右对齐 | 居中对齐 |<br>| :—–| —-: | :—-: |<br>| 单元格 | 单元格 | 单元格 |<br>| 单元格 | 单元格 | 单元格 |</p>
-<h3 id="今天终于能够换来试试"><a href="#今天终于能够换来试试" class="headerlink" title="今天终于能够换来试试"></a>今天终于能够换来试试</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$(<span class="string">'#life'</span>).html(<span class="string">'希望每个月能更一篇，以此为鉴'</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="表示好兴奋"><a href="#表示好兴奋" class="headerlink" title="表示好兴奋"></a>表示好兴奋</h3><p>大家提提意见博客能有什么改造的地方</p>
-<p>上标<sup>TM</sup><br>下标<sub>i</sub></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">bye</span></span>()&#123;<span class="built_in">return</span> <span class="string">"恭喜你获得阅读我的第一篇博客成就！"</span>&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>文章</category>
-      </categories>
-      <tags>
-        <tag>第一次</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Github Actions, yes! + docker, yes yes!</title>
-    <url>/2020/01/18/git-actions/</url>
-    <content><![CDATA[<p>最近点开了一下Github Actions的技能树，在说真香之前，不得不说一下我踩过的这些前置任务的坑。找到这篇文章看的朋友大概也知道Github Actions是Github上的持续集成服务，它允许你在一些节点上（如提交代码，特定时间等）触发一些操作。这里我们实现自动部署应用到自己的服务器。<br><img src="/images/gitactions/bg2019091201.jpg" alt></p>
-<hr>
-<h2 id="首先要买一台服务器"><a href="#首先要买一台服务器" class="headerlink" title="首先要买一台服务器"></a>首先要买一台服务器</h2><p>过程略。。。</p>
-<h2 id="建立仓库"><a href="#建立仓库" class="headerlink" title="建立仓库"></a>建立仓库</h2><p>有细心看标题的朋友，应该知道我们是在<code>Github</code>（世界最大同性交友网站）上玩的<br><img src="/images/gitactions/ci.png" alt><br>在你的项目里面建一个.github文件夹（注意有一点.），然后再建一个workflows文件夹，里面再新建一个后缀为yml的文件（名字任意），完成以上步骤你大概就完成50%的工作量了。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ci.yml</span></span><br><span class="line">name: deploy to aliyun</span><br><span class="line">on:</span><br><span class="line">  push:</span><br><span class="line">    branches:</span><br><span class="line">      - master</span><br><span class="line"><span class="built_in">jobs</span>:</span><br><span class="line">  build:</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line">    steps:</span><br><span class="line">      <span class="comment"># 切换分支</span></span><br><span class="line">      - name: Checkout</span><br><span class="line">        uses: actions/checkout@master</span><br><span class="line">      <span class="comment"># 使用 node:10</span></span><br><span class="line">      - name: use Node.js 10</span><br><span class="line">        uses: actions/setup-node@v1</span><br><span class="line">        with:</span><br><span class="line">          node-version: 10</span><br><span class="line">      <span class="comment"># npm install</span></span><br><span class="line">      - name: npm install and build</span><br><span class="line">        run: |</span><br><span class="line">          yarn install</span><br><span class="line">          npm run build</span><br><span class="line">        env:</span><br><span class="line">          CI: <span class="literal">true</span></span><br><span class="line">      <span class="comment"># Deploy</span></span><br><span class="line">      - name: FTP-Deploy</span><br><span class="line">        uses: SamKirkland/FTP-Deploy-Action@2.0.0</span><br><span class="line">        env:</span><br><span class="line">          FTP_SERVER: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">          FTP_USERNAME: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">          FTP_PASSWORD: <span class="variable">$&#123;&#123; secrets.REMOTE_PWD &#125;</span>&#125;</span><br><span class="line">          LOCAL_DIR: build</span><br><span class="line">          METHOD: sftp</span><br><span class="line">          REMOTE_DIR: /home/www</span><br><span class="line">          ARGS: --delete</span><br><span class="line">      - name: Docker-deploy</span><br><span class="line">        uses: appleboy/ssh-action@master</span><br><span class="line">        with:</span><br><span class="line">          host: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">          username: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">          key: <span class="variable">$&#123;&#123; secrets.ACCESS_TOKEN &#125;</span>&#125;</span><br><span class="line">          script: |</span><br><span class="line">            docker <span class="built_in">exec</span> 你的docker容器名称 rm -rf /usr/share/nginx/html</span><br><span class="line">            docker cp /home/www 你的docker容器名称:/usr/share/nginx/html</span><br></pre></td></tr></table></figure>
-<p>展示一下我的终极配置，当然事情的发展没有这么简单</p>
-<h3 id="配置详情"><a href="#配置详情" class="headerlink" title="配置详情"></a>配置详情</h3><p>git actions的奥妙之处就在于它有丰富的插件资源可以使用<br><img src="/images/gitactions/actions-market.png" alt><br>对于我们部署而言，前3个资源一般来说也是没问题的，最大的问题就在于发布，毕竟要和服务器打交道</p>
-<blockquote>
-<p>踩过的坑如下</p>
-</blockquote>
-<p>我之前发布用的模块是这个</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deploy</span></span><br><span class="line">      - name: Deploy</span><br><span class="line">        uses: easingthemes/ssh-deploy@v2.0.7</span><br><span class="line">        env:</span><br><span class="line">          SSH_PRIVATE_KEY: <span class="variable">$&#123;&#123; secrets.ACCESS_TOKEN &#125;</span>&#125;</span><br><span class="line">          ARGS: <span class="string">"-avz --delete"</span></span><br><span class="line">          SOURCE: <span class="string">"build/"</span></span><br><span class="line">          REMOTE_HOST: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">          REMOTE_USER: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">          TARGET: <span class="variable">$&#123;&#123; secrets.TARGET &#125;</span>&#125;</span><br></pre></td></tr></table></figure>
-<font color="green">哦，对，大家看到这些secrets的变量是不是很奇怪，其实是为了隐私安全问题，在github项目上Settings里Secrets上添加就好了</font>
-
-<p>然后一直报这个错😢<br><img src="/images/gitactions/error.png" alt><br>服务器上什么的<code>ssh</code>都设置好了，在本地上</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -i id_rsa root@xxx.xxx.xxx.x</span><br></pre></td></tr></table></figure>
-<p>用私密登录也是正常的，用其它ssh登录的actions也可以用，事情发展到不可开交的地步，战事一触即发，幸好我们还有其它别人写好的actions可以用，后来换上<code>FTP-Deploy-Action</code>，心情就变得愉快了，妈妈再也不用担心我写代码了</p>
-<h3 id="docker容器"><a href="#docker容器" class="headerlink" title="docker容器"></a>docker容器</h3><p>如果没有用到docker的话，文章写到这里就可以结束了，把你的项目发布上了服务器，nginx配置指定一下域名和路径你就成功上岸了</p>
-<p><font color="red">那什么是docker？</font></p>
-<p><div style="float:left;margin-right:20px"><img width="360" src="/images/gitactions/docker.png"></div></p>
-<p><div style="float:left"><img width="360" src="/images/gitactions/virtual.png"></div></p>
-<p><div style="float:none;clear:both;"><br></div><br>遇事不决先上图</p>
-<p>小弟不才，说说自己的见解，看图就很容易看出docker和虚拟机的最大区别，说人话就是，首先要说出docker里的容器和镜像的概念，容器就是根据你需要的镜像启动的，比如你有一个centos系统镜像，传统的虚拟机就是每个虚拟机上都用这个镜像往里面装一次，而docker就用这个镜像启动就可以了，这就生成了一个容器，而容器之间是独立的，这样就能做到资源的复用，扯远了。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//我也是用的别人的nginx镜像，简单记录一下</span><br><span class="line">docker pull nginx:latest</span><br><span class="line">docker run --name nginx-test -p 80:80 -d nginx</span><br></pre></td></tr></table></figure>
-<p>那细心的朋友也发现，我最后的那个actions的配置其实就是一些ssh命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> 你的docker容器名称 rm -rf /usr/share/nginx/html</span><br><span class="line">docker cp /home/www 你的docker容器名称:/usr/share/nginx/html</span><br></pre></td></tr></table></figure>
-<p>1、第一个就是先删除容器里的之前的项目，但也踩过坑，<code>docker exec</code>这个就是进入容器的命令了，之前我写的是<code>docker exec -it xxx /bin/bash</code>进去再<code>rm -rf</code>然后<code>exit</code>这样的，想法很美滋滋，但是ci命令上就报<code>err: the input device is not a TTY</code>后来才换成现在的命令<br>2、第二个就是把发上服务器的项目复制到容器里</p>
-<h2 id="开发应用"><a href="#开发应用" class="headerlink" title="开发应用"></a>开发应用</h2><p>过程也略。。。（到目前为止，如无意外的话，你只要push一下代码，就会进入到我们设置好的“陷阱”里，一顿自动操作执行下来，你的网站就部署上去了）</p>
-<h2 id="优化与改进（先挖好个坑）"><a href="#优化与改进（先挖好个坑）" class="headerlink" title="优化与改进（先挖好个坑）"></a>优化与改进（先挖好个坑）</h2><h3 id="自动发布到容器里（方案一）"><a href="#自动发布到容器里（方案一）" class="headerlink" title="自动发布到容器里（方案一）"></a>自动发布到容器里（方案一）</h3><p>1、将容器的sftp端口映射到服务器的某个端口上<br>2、在ftp actions里配置好对应的端口上传上去</p>
-<h3 id="用dockerFile自制镜像-（方案二）"><a href="#用dockerFile自制镜像-（方案二）" class="headerlink" title="用dockerFile自制镜像 （方案二）"></a>用dockerFile自制镜像 （方案二）</h3><p>1、ci.yml里面就是执行自制的docker镜像run一下<br>2、镜像逻辑大概如下：拉取最新代码到容器-&gt;打包项目-&gt;覆盖项目上的自定义nginx配置文件到容器nginx的默认路径</p>
-<p>参考文档：</p>
-<blockquote>
-<p><a href="http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html" target="_blank" rel="noopener">GitHub Actions 入门教程 - 阮一峰</a><br><a href="https://www.kai666666.top/2020/01/04/%E4%BD%BF%E7%94%A8GithubActions%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88ECS%EF%BC%89/" target="_blank" rel="noopener">使用GithubActions自动部署应用到自己的服务器（ECS）</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>部署</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaScript忍者秘籍第2版-笔记</title>
-    <url>/2021/05/18/JavaScript%E5%BF%8D%E8%80%85%E7%A7%98%E7%B1%8D%E7%AC%AC2%E7%89%88-%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="一些特性"><a href="#一些特性" class="headerlink" title="一些特性"></a>一些特性</h2><ul>
-<li>生成器</li>
-<li>Promise</li>
-<li>代理</li>
-<li>高级数组方法</li>
-<li>Map</li>
-<li>正则表达式</li>
-<li>模块</li>
-</ul>
-<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><blockquote>
-<p>Javascript 就是只开启了一个柜台</p>
-</blockquote>
-<ol>
-<li>注册事件（addEventListener)</li>
-</ol>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>神书推荐</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>写前端就是写表单？</title>
     <url>/2021/01/14/form/</url>
     <content><![CDATA[<p>首先，大家思考一下表单是什么？前端又是什么？<br><a id="more"></a></p>
@@ -240,75 +79,164 @@
       </tags>
   </entry>
   <entry>
-    <title>使用hooks的一些小感想</title>
-    <url>/2022/01/14/hooks/</url>
-    <content><![CDATA[<blockquote>
-<p>这里文章说的都是hooks<sup>react</sup></p>
-</blockquote>
-<h3 id="那什么是hooks"><a href="#那什么是hooks" class="headerlink" title="那什么是hooks"></a>那什么是hooks</h3><p>故名思义 <code>Hooks</code> 译为钩子，<code>Hooks</code> 就是在函数组件内，负责钩进外部功能的函数。</p>
-<p>(说了又好像没说)</p>
-<h3 id="有什么爽的👌"><a href="#有什么爽的👌" class="headerlink" title="有什么爽的👌"></a>有什么爽的👌</h3><ul>
-<li>函数组件原地飞升</li>
-<li>不用管this了</li>
-<li>生命周期也不用记那么多了</li>
+    <title>JavaScript忍者秘籍第2版-笔记</title>
+    <url>/2021/05/18/JavaScript%E5%BF%8D%E8%80%85%E7%A7%98%E7%B1%8D%E7%AC%AC2%E7%89%88-%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="一些特性"><a href="#一些特性" class="headerlink" title="一些特性"></a>一些特性</h2><ul>
+<li>生成器</li>
+<li>Promise</li>
+<li>代理</li>
+<li>高级数组方法</li>
+<li>Map</li>
+<li>正则表达式</li>
+<li>模块</li>
 </ul>
-<p>开始结束的生命周期可以写在一起，代码更漂亮了</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'开波'</span>)</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'结束'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,[])</span><br><span class="line"><span class="comment">// ps.空数组就是只进入一次</span></span><br></pre></td></tr></table></figure>
-<p>props的值的变化，xx值的变化都能放在一起监听</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'无论是数组还是对象，数据多深都能进（后来才发现也不是多深都能啦），这不比vue的watch爽？'</span>)</span><br><span class="line">  <span class="comment">// 那么useEffect是怎样监听数据变化的呢</span></span><br><span class="line">  <span class="comment">// 它和useLayoutEffect又有什么区别呢</span></span><br><span class="line">  <span class="comment">// 这要从hooks的基础概念链表说起，请往下看</span></span><br><span class="line">&#125;,[props.a,b])</span><br></pre></td></tr></table></figure>
-<p>通过看useEffect的源码，我们不难发现</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 通过看源码我们得知</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; prevDeps.length &amp;&amp; i &lt; nextDeps.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (is(nextDeps[i], prevDeps[i])) &#123;</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 我们知道它的对比方法是</span></span><br><span class="line"><span class="comment">// 其中里面的is是这个</span></span><br><span class="line"><span class="keyword">import</span> is <span class="keyword">from</span> <span class="string">'shared/objectIs'</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">is</span>(<span class="params">x: any, y: any</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    (x === y &amp;&amp; (x !== <span class="number">0</span> || <span class="number">1</span> / x === <span class="number">1</span> / y)) || (x !== x &amp;&amp; y !== y) <span class="comment">// eslint-disable-line no-self-compare</span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> objectIs: <span class="function">(<span class="params">x: any, y: any</span>) =&gt;</span> boolean =</span><br><span class="line">  <span class="keyword">typeof</span> <span class="built_in">Object</span>.is === <span class="string">'function'</span> ? <span class="built_in">Object</span>.is : is;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> objectIs;</span><br></pre></td></tr></table></figure>
-<p>所以其实它就是用<code>Object.is</code>做比较</p>
-<blockquote>
-<p>有需要做深比较的可以用<code>ahooks</code>的<code>useDeepCompareEffect</code>，用法与 useEffect 一致，但 deps 通过 lodash 的<code>isEqual</code>进行深比较。</p>
+<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><blockquote>
+<p>Javascript 就是只开启了一个柜台</p>
 </blockquote>
+<ol>
+<li>注册事件（addEventListener)</li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>神书推荐</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ES6 规范详解、ESNext 规范</title>
+    <url>/2021/04/28/ES6%20%E8%A7%84%E8%8C%83%E8%AF%A6%E8%A7%A3%E3%80%81ESNext%20%E8%A7%84%E8%8C%83/</url>
+    <content><![CDATA[<h2 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h2><p>var、const、let、function<br>let 变量提升、作用域</p>
+<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><p>1、箭头函数this是定义时决定，普通函数是使用时决定<br>2、简写</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> fn = <span class="function"><span class="params">()</span>=&gt;</span> <span class="string">'sss'</span></span><br></pre></td></tr></table></figure>
+<p>3、不能做构造函数</p>
+<h3 id="class"><a href="#class" class="headerlink" title="class"></a>class</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span>()</span>&#123;</span><br><span class="line">  <span class="keyword">static</span> getFormatName()&#123;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>static 静态方法，只能console.log(Test.getFormatName())</p>
+<h3 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h3><ol>
+<li>for in</li>
+</ol>
 <ul>
-<li>代码复用更高</li>
+<li>会调用原型链（obj.hasOwnProperty(key)）判断一下</li>
+<li>不适合遍历数组</li>
 </ul>
-<h3 id="吐槽一下"><a href="#吐槽一下" class="headerlink" title="吐槽一下"></a>吐槽一下</h3><h4 id="闭包陷阱"><a href="#闭包陷阱" class="headerlink" title="闭包陷阱"></a>闭包陷阱</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;useEffect, useState&#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = useState(<span class="number">0</span>)</span><br><span class="line">  useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      setCount(count + <span class="number">1</span>)</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">  &#125;, [])</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">       &lt;p&gt;count=&#123;count&#125;&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
-<p>大家可能会一直期待着数字的变化，但它就偏不，一直保持着1</p>
-<p>事情为什么会发展成这样，那就要从底层的渲染开始说起</p>
-<blockquote>
-<p>初次渲染-&gt;执行APP-&gt;usestate设置count为初始0-&gt;1秒后state改变-&gt;视图更新-&gt;按照fiber链表执行hooks-&gt;useEffect deps 不变-&gt;然后1秒后的count始终都是0+1</p>
-</blockquote>
-<p>解决办法：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 有细心的网友可能会发现，网上其他地方可能会建议在useEffect的deps上加上count</span></span><br><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    setCount(count + <span class="number">1</span>)</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;, [count])</span><br><span class="line"><span class="comment">// 这样确实能拿到最新的count</span></span><br><span class="line"><span class="comment">// ❌但是这里喔不建议这样写</span></span><br><span class="line"><span class="comment">// 因为你想想，每次count的更新它都会重新进去建一个新的定时器</span></span><br><span class="line"><span class="comment">// 以后画面就会很鬼畜</span></span><br></pre></td></tr></table></figure>
-<p>建议版本方法</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    setCount(<span class="function"><span class="params">res</span>=&gt;</span>(res+<span class="number">1</span>))</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;, [])</span><br><span class="line"><span class="comment">// setCount本身可以传方法，本来就是最新的值</span></span><br></pre></td></tr></table></figure>
-<p>高级版本ref大法</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//简单来说就是利用useRef返回的是同一个对象，指向同一片内存</span></span><br><span class="line"><span class="keyword">let</span> ref_ = useRef(<span class="number">1</span>)</span><br><span class="line">ref_.current++</span><br><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  setInterval(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(ref.current) <span class="comment">// 3</span></span><br><span class="line">  &#125;, <span class="number">1000</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h4 id="不能用判断或者随机函数"><a href="#不能用判断或者随机函数" class="headerlink" title="不能用判断或者随机函数"></a>不能用判断或者随机函数</h4><p>举个🌰</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">Math</span>.random() &gt; <span class="number">0.5</span>) &#123;</span><br><span class="line">  useState(<span class="string">'first'</span>)</span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">let</span> showSex = <span class="literal">true</span></span><br><span class="line"><span class="keyword">if</span>(showSex)&#123;</span><br><span class="line">    <span class="keyword">const</span> [ sex, setSex ] = useState(<span class="string">'男'</span>);</span><br><span class="line">    showSex = <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以上的行为都是打咩的</p>
-<p>原因是hooks的数据管理是用链表管理的，所以数据不能一时有一时没</p>
-<p>举个不太恰当的例子，就像</p>
-<blockquote>
+<ol start="2">
+<li>for of</li>
+</ol>
+<h3 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h3><ol>
+<li>Object.keys</li>
+<li>Object.values</li>
+<li>Object.entries</li>
+<li>Object.getOwnPropertyNames</li>
+<li>Object.getOwnPropertyDescriptor<br>对象的描述</li>
+</ol>
 <ul>
-<li>数组[0]代表useState(‘A’)</li>
-<li>数组[1]代表useState(‘B)</li>
-<li>现在你突然把’A’删掉了，那就变成数组[0]代表useState(‘B’)了</li>
-<li>那么你就不是你了，他也不是他了</li>
+<li>configurable: true</li>
+<li>writable: false</li>
+<li>enumerable: true //枚举</li>
 </ul>
-</blockquote>
-<h4 id="useCallBack-还是-useMemo"><a href="#useCallBack-还是-useMemo" class="headerlink" title="useCallBack 还是 useMemo"></a>useCallBack 还是 useMemo</h4><p>仅仅 <code>依赖数据</code> 发生变化, 才会重新计算结果，说是为了性能优化，起到缓存的作用，</p>
-<p>这里说一个面试常问的<code>useCallBack</code> 和 <code>useMemo</code> 有什么区别？</p>
-<p>网上各种解析长篇大论的，一句话其实就是</p>
-<blockquote>
-<p>useCallback 缓存钩子函数，useMemo 缓存返回值（计算结果）[当然useMemo也可以传入函数]。</p>
-</blockquote>
-<p>这个时候，有好奇宝贝就会问了,那用这个会多那么多代码量，有什么用呢</p>
-<p>答案是：性能优化，这里就要涉及到更深层的react的渲染原理了，”比较更新！！”,react每次渲染的时候，它都把值和函数重新计算渲染，这里就会消耗点内存了，用上那2玩意，其实就是告诉react，我们没有变化，帮我存起来，不用再比较了</p>
-<p>那么有些姓杠的小朋友，这时候就不耐烦了，站起来问道：为什么react不帮我们自动做这些优化呢，我就想静静地写代码，为什么还要考虑该不该包个<code>useCallBack</code></p>
-<p>问得好，这里顺便@一下官方团队，希望相关单位能密切关注这个问题</p>
-<p>还会有些害羞的小朋友会嘀咕着，为什么class组件的时候就不需要注意这些呢</p>
-<p>个人鄙见：新旧版本的渲染方法其实差不多的，我觉得前端深入研究性能优化是没有前途的，框架或者浏览器，一次小小的版本更新，可能效果就远远胜过了你多少个日日夜夜的辛勤付出了。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>hooks需好，但要小心使用</p>
+<p>Reflect 一种js 优化</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Reflect</span>.deleteProperty(obj,name) 等</span><br></pre></td></tr></table></figure>
+<h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><p>array.slice() 可以浅拷贝</p>
+<ul>
+<li>Array.from<br>如何把arguments转换成真数组</li>
+</ul>
+<ol>
+<li>[…arguments]</li>
+<li>Array.from(arguments)</li>
+<li>Array.prototype.slice.call(arguments)</li>
+</ol>
 ]]></content>
       <categories>
         <category>知识总结</category>
       </categories>
       <tags>
-        <tag>文章</tag>
+        <tag>重学前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Github Actions, yes! + docker, yes yes!</title>
+    <url>/2020/01/18/git-actions/</url>
+    <content><![CDATA[<p>最近点开了一下Github Actions的技能树，在说真香之前，不得不说一下我踩过的这些前置任务的坑。找到这篇文章看的朋友大概也知道Github Actions是Github上的持续集成服务，它允许你在一些节点上（如提交代码，特定时间等）触发一些操作。这里我们实现自动部署应用到自己的服务器。<br><img src="/images/gitactions/bg2019091201.jpg" alt></p>
+<hr>
+<h2 id="首先要买一台服务器"><a href="#首先要买一台服务器" class="headerlink" title="首先要买一台服务器"></a>首先要买一台服务器</h2><p>过程略。。。</p>
+<h2 id="建立仓库"><a href="#建立仓库" class="headerlink" title="建立仓库"></a>建立仓库</h2><p>有细心看标题的朋友，应该知道我们是在<code>Github</code>（世界最大同性交友网站）上玩的<br><img src="/images/gitactions/ci.png" alt><br>在你的项目里面建一个.github文件夹（注意有一点.），然后再建一个workflows文件夹，里面再新建一个后缀为yml的文件（名字任意），完成以上步骤你大概就完成50%的工作量了。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ci.yml</span></span><br><span class="line">name: deploy to aliyun</span><br><span class="line">on:</span><br><span class="line">  push:</span><br><span class="line">    branches:</span><br><span class="line">      - master</span><br><span class="line"><span class="built_in">jobs</span>:</span><br><span class="line">  build:</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line">    steps:</span><br><span class="line">      <span class="comment"># 切换分支</span></span><br><span class="line">      - name: Checkout</span><br><span class="line">        uses: actions/checkout@master</span><br><span class="line">      <span class="comment"># 使用 node:10</span></span><br><span class="line">      - name: use Node.js 10</span><br><span class="line">        uses: actions/setup-node@v1</span><br><span class="line">        with:</span><br><span class="line">          node-version: 10</span><br><span class="line">      <span class="comment"># npm install</span></span><br><span class="line">      - name: npm install and build</span><br><span class="line">        run: |</span><br><span class="line">          yarn install</span><br><span class="line">          npm run build</span><br><span class="line">        env:</span><br><span class="line">          CI: <span class="literal">true</span></span><br><span class="line">      <span class="comment"># Deploy</span></span><br><span class="line">      - name: FTP-Deploy</span><br><span class="line">        uses: SamKirkland/FTP-Deploy-Action@2.0.0</span><br><span class="line">        env:</span><br><span class="line">          FTP_SERVER: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">          FTP_USERNAME: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">          FTP_PASSWORD: <span class="variable">$&#123;&#123; secrets.REMOTE_PWD &#125;</span>&#125;</span><br><span class="line">          LOCAL_DIR: build</span><br><span class="line">          METHOD: sftp</span><br><span class="line">          REMOTE_DIR: /home/www</span><br><span class="line">          ARGS: --delete</span><br><span class="line">      - name: Docker-deploy</span><br><span class="line">        uses: appleboy/ssh-action@master</span><br><span class="line">        with:</span><br><span class="line">          host: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">          username: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">          key: <span class="variable">$&#123;&#123; secrets.ACCESS_TOKEN &#125;</span>&#125;</span><br><span class="line">          script: |</span><br><span class="line">            docker <span class="built_in">exec</span> 你的docker容器名称 rm -rf /usr/share/nginx/html</span><br><span class="line">            docker cp /home/www 你的docker容器名称:/usr/share/nginx/html</span><br></pre></td></tr></table></figure>
+<p>展示一下我的终极配置，当然事情的发展没有这么简单</p>
+<h3 id="配置详情"><a href="#配置详情" class="headerlink" title="配置详情"></a>配置详情</h3><p>git actions的奥妙之处就在于它有丰富的插件资源可以使用<br><img src="/images/gitactions/actions-market.png" alt><br>对于我们部署而言，前3个资源一般来说也是没问题的，最大的问题就在于发布，毕竟要和服务器打交道</p>
+<blockquote>
+<p>踩过的坑如下</p>
+</blockquote>
+<p>我之前发布用的模块是这个</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deploy</span></span><br><span class="line">      - name: Deploy</span><br><span class="line">        uses: easingthemes/ssh-deploy@v2.0.7</span><br><span class="line">        env:</span><br><span class="line">          SSH_PRIVATE_KEY: <span class="variable">$&#123;&#123; secrets.ACCESS_TOKEN &#125;</span>&#125;</span><br><span class="line">          ARGS: <span class="string">"-avz --delete"</span></span><br><span class="line">          SOURCE: <span class="string">"build/"</span></span><br><span class="line">          REMOTE_HOST: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">          REMOTE_USER: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">          TARGET: <span class="variable">$&#123;&#123; secrets.TARGET &#125;</span>&#125;</span><br></pre></td></tr></table></figure>
+<font color="green">哦，对，大家看到这些secrets的变量是不是很奇怪，其实是为了隐私安全问题，在github项目上Settings里Secrets上添加就好了</font>
+
+<p>然后一直报这个错😢<br><img src="/images/gitactions/error.png" alt><br>服务器上什么的<code>ssh</code>都设置好了，在本地上</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -i id_rsa root@xxx.xxx.xxx.x</span><br></pre></td></tr></table></figure>
+<p>用私密登录也是正常的，用其它ssh登录的actions也可以用，事情发展到不可开交的地步，战事一触即发，幸好我们还有其它别人写好的actions可以用，后来换上<code>FTP-Deploy-Action</code>，心情就变得愉快了，妈妈再也不用担心我写代码了</p>
+<h3 id="docker容器"><a href="#docker容器" class="headerlink" title="docker容器"></a>docker容器</h3><p>如果没有用到docker的话，文章写到这里就可以结束了，把你的项目发布上了服务器，nginx配置指定一下域名和路径你就成功上岸了</p>
+<p><font color="red">那什么是docker？</font></p>
+<p><div style="float:left;margin-right:20px"><img width="360" src="/images/gitactions/docker.png"></div></p>
+<p><div style="float:left"><img width="360" src="/images/gitactions/virtual.png"></div></p>
+<p><div style="float:none;clear:both;"><br></div><br>遇事不决先上图</p>
+<p>小弟不才，说说自己的见解，看图就很容易看出docker和虚拟机的最大区别，说人话就是，首先要说出docker里的容器和镜像的概念，容器就是根据你需要的镜像启动的，比如你有一个centos系统镜像，传统的虚拟机就是每个虚拟机上都用这个镜像往里面装一次，而docker就用这个镜像启动就可以了，这就生成了一个容器，而容器之间是独立的，这样就能做到资源的复用，扯远了。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//我也是用的别人的nginx镜像，简单记录一下</span><br><span class="line">docker pull nginx:latest</span><br><span class="line">docker run --name nginx-test -p 80:80 -d nginx</span><br></pre></td></tr></table></figure>
+<p>那细心的朋友也发现，我最后的那个actions的配置其实就是一些ssh命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> 你的docker容器名称 rm -rf /usr/share/nginx/html</span><br><span class="line">docker cp /home/www 你的docker容器名称:/usr/share/nginx/html</span><br></pre></td></tr></table></figure>
+<p>1、第一个就是先删除容器里的之前的项目，但也踩过坑，<code>docker exec</code>这个就是进入容器的命令了，之前我写的是<code>docker exec -it xxx /bin/bash</code>进去再<code>rm -rf</code>然后<code>exit</code>这样的，想法很美滋滋，但是ci命令上就报<code>err: the input device is not a TTY</code>后来才换成现在的命令<br>2、第二个就是把发上服务器的项目复制到容器里</p>
+<h2 id="开发应用"><a href="#开发应用" class="headerlink" title="开发应用"></a>开发应用</h2><p>过程也略。。。（到目前为止，如无意外的话，你只要push一下代码，就会进入到我们设置好的“陷阱”里，一顿自动操作执行下来，你的网站就部署上去了）</p>
+<h2 id="优化与改进（先挖好个坑）"><a href="#优化与改进（先挖好个坑）" class="headerlink" title="优化与改进（先挖好个坑）"></a>优化与改进（先挖好个坑）</h2><h3 id="自动发布到容器里（方案一）"><a href="#自动发布到容器里（方案一）" class="headerlink" title="自动发布到容器里（方案一）"></a>自动发布到容器里（方案一）</h3><p>1、将容器的sftp端口映射到服务器的某个端口上<br>2、在ftp actions里配置好对应的端口上传上去</p>
+<h3 id="用dockerFile自制镜像-（方案二）"><a href="#用dockerFile自制镜像-（方案二）" class="headerlink" title="用dockerFile自制镜像 （方案二）"></a>用dockerFile自制镜像 （方案二）</h3><p>1、ci.yml里面就是执行自制的docker镜像run一下<br>2、镜像逻辑大概如下：拉取最新代码到容器-&gt;打包项目-&gt;覆盖项目上的自定义nginx配置文件到容器nginx的默认路径</p>
+<p>参考文档：</p>
+<blockquote>
+<p><a href="http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html" target="_blank" rel="noopener">GitHub Actions 入门教程 - 阮一峰</a><br><a href="https://www.kai666666.top/2020/01/04/%E4%BD%BF%E7%94%A8GithubActions%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88ECS%EF%BC%89/" target="_blank" rel="noopener">使用GithubActions自动部署应用到自己的服务器（ECS）</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>部署</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello Hexo</title>
+    <url>/2016/02/14/hello-world/</url>
+    <content><![CDATA[<p>博客换上Hexo主题</p>
+<hr>
+<h2 id="很久以前"><a href="#很久以前" class="headerlink" title="很久以前"></a>很久以前</h2><a id="more"></a>
+<h3 id="就被它的这个"><a href="#就被它的这个" class="headerlink" title="就被它的这个"></a>就被它的这个</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">试试代码</span><br></pre></td></tr></table></figure>
+<p>1001001111100101010110</p>
+<blockquote>
+<p>试试区块 这是一个区块</p>
+</blockquote>
+<p><em>这是斜体文字</em><br><strong>这是加粗的文字</strong></p>
+<p><font size="4">我是变大的字</font></p>
+<p><font color="green">我是有颜色字</font><br><img src="/images/module/exports.png" alt><br><code>代码字</code><br><a href="https://mp.weixin.qq.com/debug/wxadoc/dev/framework/performance/tips.html" target="_blank" rel="noopener">这是个链接</a></p>
+<h3 id="文章目录吸引了"><a href="#文章目录吸引了" class="headerlink" title="文章目录吸引了"></a>文章目录吸引了</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">console.log(<span class="string">'hello world'</span>);</span><br></pre></td></tr></table></figure>
+<p>列表？</p>
+<ol>
+<li>Red</li>
+<li>Green</li>
+<li>Blue</li>
+</ol>
+<ul>
+<li>a</li>
+<li>b</li>
+<li>c</li>
+</ul>
+<p>表格<br>| 左对齐 | 右对齐 | 居中对齐 |<br>| :—–| —-: | :—-: |<br>| 单元格 | 单元格 | 单元格 |<br>| 单元格 | 单元格 | 单元格 |</p>
+<h3 id="今天终于能够换来试试"><a href="#今天终于能够换来试试" class="headerlink" title="今天终于能够换来试试"></a>今天终于能够换来试试</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$(<span class="string">'#life'</span>).html(<span class="string">'希望每个月能更一篇，以此为鉴'</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="表示好兴奋"><a href="#表示好兴奋" class="headerlink" title="表示好兴奋"></a>表示好兴奋</h3><p>大家提提意见博客能有什么改造的地方</p>
+<p>上标<sup>TM</sup><br>下标<sub>i</sub></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">bye</span></span>()&#123;<span class="built_in">return</span> <span class="string">"恭喜你获得阅读我的第一篇博客成就！"</span>&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>文章</category>
+      </categories>
+      <tags>
+        <tag>第一次</tag>
       </tags>
   </entry>
   <entry>
@@ -515,6 +443,171 @@
       <tags>
         <tag>填坑</tag>
         <tag>JS填坑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>是export还是module.exports，是import还是require，是ES6还是CommonJS，是爱❤️还是责任？</title>
+    <url>/2019/12/10/module/</url>
+    <content><![CDATA[<p>故事要从一次错误的编码开始。。。<br><a id="more"></a></p>
+<h1 id="Node的模块"><a href="#Node的模块" class="headerlink" title="Node的模块"></a>Node的模块</h1><p>众所周知，在上古年代，node的开发一直被 Commonjs 规范所支配着，这也是悲剧发生的导火索，请看灾难现场：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// version.js</span></span><br><span class="line"><span class="keyword">var</span> version = <span class="number">3</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">incVersion</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  version++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  version,</span><br><span class="line">  incVersion,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">var</span> mod = <span class="built_in">require</span>(<span class="string">'./version'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(mod.version);  <span class="comment">// 3</span></span><br><span class="line">mod.incVersion();</span><br><span class="line"><span class="built_in">console</span>.log(mod.version); <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+<p>这，这一瞬间，时间的涡轮好像停止了一样，版本号变量<font color="green"><em>version</em></font>一直停留在3永不向前，就好像我的人生那样，停滞不前，是命运的捉弄，还是人为的操控呢？</p>
+<p>不，是值的拷贝，CommonJS 模块输出的是值的拷贝，也就是说，mod.version是一个原始类型的值，会被缓存，那么我们怎样解决这个问题呢?<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"># 可以改写成函数</span><br><span class="line"><span class="keyword">var</span> version = <span class="number">3</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">incVersion</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  version++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="keyword">get</span> version() &#123;</span><br><span class="line">    <span class="keyword">return</span> version</span><br><span class="line">  &#125;,</span><br><span class="line">  incVersion,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>或者用es6的import引用，那么这又是什么呢，敲黑板，画重点，要考。</p>
+<h1 id="ES6-模块与-CommonJS-模块"><a href="#ES6-模块与-CommonJS-模块" class="headerlink" title="ES6 模块与 CommonJS 模块"></a>ES6 模块与 CommonJS 模块</h1><p>它们有两个重大差异。</p>
+<blockquote>
+<p>CommonJS 模块输出的是一个值的拷贝，ES6 模块输出的是值的引用。</p>
+</blockquote>
+<blockquote>
+<p>CommonJS 模块是运行时加载，ES6 模块是编译时输出接口。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">CommonJS</th>
+<th style="text-align:center">ES6</th>
+<th style="text-align:center">特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">exports</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">是 module.exports 的一个引用</td>
+</tr>
+<tr>
+<td style="text-align:center">module.exports</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">module.exports = xxx，就是导出xxx</td>
+</tr>
+<tr>
+<td style="text-align:center">export</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">多个</td>
+</tr>
+<tr>
+<td style="text-align:center">export default</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">单个</td>
+</tr>
+<tr>
+<td style="text-align:center">require</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">导出的内容是module.exports的指向的内存块内容/ es6时是一个对象（{default:xxx}）</td>
+</tr>
+<tr>
+<td style="text-align:center">import</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center">引用多个</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//无聊的冷门尝试 es6试用require</span></span><br><span class="line"><span class="comment">//a.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="number">123</span></span><br><span class="line"><span class="comment">//main.js</span></span><br><span class="line"><span class="keyword">const</span> a = <span class="built_in">require</span>(<span class="string">'./a'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'a'</span>, a) <span class="comment">//&#123;default: 123&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//a.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> a = <span class="number">123</span></span><br><span class="line"><span class="comment">//main.js</span></span><br><span class="line"><span class="keyword">const</span> a = <span class="built_in">require</span>(<span class="string">'./a'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'a'</span>, a) <span class="comment">//&#123;a: 123&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="exports-和-module-exports"><a href="#exports-和-module-exports" class="headerlink" title="exports 和 module.exports"></a>exports 和 module.exports</h2><p>在一个node执行一个文件时，会给这个文件内生成一个 exports和module对象，<br>而module又有一个exports属性。他们之间的关系如下图，都指向一块{}内存区域。<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">exports = <span class="built_in">module</span>.exports = &#123;&#125;;</span><br></pre></td></tr></table></figure></p>
+<p><img src="/images/module/exports.png" alt></p>
+<h2 id="export-和-export-default"><a href="#export-和-export-default" class="headerlink" title="export 和 export default"></a>export 和 export default</h2><p>首先我们讲这两个导出，下面我们讲讲它们的区别</p>
+<ol>
+<li><font color="pink">export</font>与<font color="pink">export default</font>均可用于导出常量、函数、文件、模块等</li>
+<li>在一个文件或模块中，<font color="pink">export</font>、<font color="pink">import</font>可以有多个，<font color="pink">export default</font>仅有一个</li>
+<li>通过<font color="pink">export</font>方式导出，在导入时要加{}，<font color="pink">export default</font>则不需要</li>
+<li><font color="pink">export</font>能直接导出变量表达式，<font color="pink">export default</font>不行。</li>
+</ol>
+<h1 id="天坑-循环依赖"><a href="#天坑-循环依赖" class="headerlink" title="天坑-循环依赖"></a>天坑-循环依赖</h1><p>“循环依赖”（circular dependency）指的是，a脚本的执行依赖b脚本，而b脚本的执行又依赖a脚本。<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// a.js</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="built_in">require</span>(<span class="string">'b'</span>); <span class="comment">//a-step 1</span></span><br><span class="line"><span class="built_in">module</span>.exports.value = <span class="string">'a'</span>; <span class="comment">//a-step 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// b.js</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">'a'</span>); <span class="comment">//b-step 1</span></span><br><span class="line"><span class="built_in">module</span>.exports.value = <span class="string">'b'</span>; <span class="comment">//b-step 2</span></span><br></pre></td></tr></table></figure></p>
+<p>一般很少会这样写，出现的话证明你的功能逻辑有耦合了，应该先分开，但是一些大型项目就很难避免，小弟不才，真的遇到过。</p>
+<p>node的执行顺序</p>
+<blockquote>
+<p>a-step 1 –&gt; b-step 1 –&gt; b-step 2 –&gt; a-step 2</p>
+</blockquote>
+<p> 当年的黑科技临时解决办法，其实不建议，就是将a中的a-step 2移到a-step 1之上。<br> <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"> <span class="comment">// a.js</span></span><br><span class="line"><span class="built_in">module</span>.exports.value = <span class="string">'a'</span>; <span class="comment">//a-step 2</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="built_in">require</span>(<span class="string">'b'</span>); <span class="comment">//a-step 1</span></span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>上面的其实是<strong>Commonjs</strong>版的，<strong>es6</strong>的解决方法有点不一样，具体就是将要引用的变量改成函数，因为函数具有提升作用，在加载时就已经有定义了。（ps:改成了函数表达式也不行，因为不具有提升作用）</p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>那么在座各位天才小儿童，肯定能想到怎样用es6解决那个灾难现场了吧，答案就是直接用<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//a.js</span></span><br><span class="line"><span class="keyword">var</span> version = <span class="number">3</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">incVersion</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  version ++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> &#123; version, incVersion &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//main.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; version, incVersion &#125; <span class="keyword">from</span> <span class="string">'./a'</span></span><br><span class="line"><span class="built_in">console</span>.log( <span class="string">'version'</span>, version )</span><br><span class="line">incVersion()</span><br><span class="line"><span class="built_in">console</span>.log( <span class="string">'version'</span>, version )</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>填坑</tag>
+        <tag>JS填坑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用hooks的一些小感想</title>
+    <url>/2022/01/14/hooks/</url>
+    <content><![CDATA[<blockquote>
+<p>这里文章说的都是hooks<sup>react</sup></p>
+</blockquote>
+<h3 id="那什么是hooks"><a href="#那什么是hooks" class="headerlink" title="那什么是hooks"></a>那什么是hooks</h3><p>故名思义 <code>Hooks</code> 译为钩子，<code>Hooks</code> 就是在函数组件内，负责钩进外部功能的函数。</p>
+<p>(说了又好像没说)</p>
+<h3 id="有什么爽的👌"><a href="#有什么爽的👌" class="headerlink" title="有什么爽的👌"></a>有什么爽的👌</h3><ul>
+<li>函数组件原地飞升</li>
+<li>不用管this了</li>
+<li>生命周期也不用记那么多了</li>
+</ul>
+<p>开始结束的生命周期可以写在一起，代码更漂亮了</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'开波'</span>)</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'结束'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,[])</span><br><span class="line"><span class="comment">// ps.空数组就是只进入一次</span></span><br></pre></td></tr></table></figure>
+<p>props的值的变化，xx值的变化都能放在一起监听</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'无论是数组还是对象，数据多深都能进（后来才发现也不是多深都能啦），这不比vue的watch爽？'</span>)</span><br><span class="line">  <span class="comment">// 那么useEffect是怎样监听数据变化的呢</span></span><br><span class="line">  <span class="comment">// 它和useLayoutEffect又有什么区别呢</span></span><br><span class="line">  <span class="comment">// 这要从hooks的基础概念链表说起，请往下看</span></span><br><span class="line">&#125;,[props.a,b])</span><br></pre></td></tr></table></figure>
+<p>通过看useEffect的源码，我们不难发现</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 通过看源码我们得知</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; prevDeps.length &amp;&amp; i &lt; nextDeps.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (is(nextDeps[i], prevDeps[i])) &#123;</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 我们知道它的对比方法是</span></span><br><span class="line"><span class="comment">// 其中里面的is是这个</span></span><br><span class="line"><span class="keyword">import</span> is <span class="keyword">from</span> <span class="string">'shared/objectIs'</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">is</span>(<span class="params">x: any, y: any</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    (x === y &amp;&amp; (x !== <span class="number">0</span> || <span class="number">1</span> / x === <span class="number">1</span> / y)) || (x !== x &amp;&amp; y !== y) <span class="comment">// eslint-disable-line no-self-compare</span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> objectIs: <span class="function">(<span class="params">x: any, y: any</span>) =&gt;</span> boolean =</span><br><span class="line">  <span class="keyword">typeof</span> <span class="built_in">Object</span>.is === <span class="string">'function'</span> ? <span class="built_in">Object</span>.is : is;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> objectIs;</span><br></pre></td></tr></table></figure>
+<p>所以其实它就是用<code>Object.is</code>做比较</p>
+<blockquote>
+<p>有需要做深比较的可以用<code>ahooks</code>的<code>useDeepCompareEffect</code>，用法与 useEffect 一致，但 deps 通过 lodash 的<code>isEqual</code>进行深比较。</p>
+</blockquote>
+<ul>
+<li>代码复用更高</li>
+</ul>
+<h3 id="吐槽一下"><a href="#吐槽一下" class="headerlink" title="吐槽一下"></a>吐槽一下</h3><h4 id="闭包陷阱"><a href="#闭包陷阱" class="headerlink" title="闭包陷阱"></a>闭包陷阱</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;useEffect, useState&#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = useState(<span class="number">0</span>)</span><br><span class="line">  useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      setCount(count + <span class="number">1</span>)</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">  &#125;, [])</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">       &lt;p&gt;count=&#123;count&#125;&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>大家可能会一直期待着数字的变化，但它就偏不，一直保持着1</p>
+<p>事情为什么会发展成这样，那就要从底层的渲染开始说起</p>
+<blockquote>
+<p>初次渲染-&gt;执行APP-&gt;usestate设置count为初始0-&gt;1秒后state改变-&gt;视图更新-&gt;按照fiber链表执行hooks-&gt;useEffect deps 不变-&gt;然后1秒后的count始终都是0+1</p>
+</blockquote>
+<p>解决办法：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 有细心的网友可能会发现，网上其他地方可能会建议在useEffect的deps上加上count</span></span><br><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    setCount(count + <span class="number">1</span>)</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;, [count])</span><br><span class="line"><span class="comment">// 这样确实能拿到最新的count</span></span><br><span class="line"><span class="comment">// ❌但是这里喔不建议这样写</span></span><br><span class="line"><span class="comment">// 因为你想想，每次count的更新它都会重新进去建一个新的定时器</span></span><br><span class="line"><span class="comment">// 以后画面就会很鬼畜</span></span><br></pre></td></tr></table></figure>
+<p>建议版本方法</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    setCount(<span class="function"><span class="params">res</span>=&gt;</span>(res+<span class="number">1</span>))</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;, [])</span><br><span class="line"><span class="comment">// setCount本身可以传方法，本来就是最新的值</span></span><br></pre></td></tr></table></figure>
+<p>高级版本ref大法</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//简单来说就是利用useRef返回的是同一个对象，指向同一片内存</span></span><br><span class="line"><span class="keyword">let</span> ref_ = useRef(<span class="number">1</span>)</span><br><span class="line">ref_.current++</span><br><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  setInterval(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(ref.current) <span class="comment">// 3</span></span><br><span class="line">  &#125;, <span class="number">1000</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="不能用判断或者随机函数"><a href="#不能用判断或者随机函数" class="headerlink" title="不能用判断或者随机函数"></a>不能用判断或者随机函数</h4><p>举个🌰</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">Math</span>.random() &gt; <span class="number">0.5</span>) &#123;</span><br><span class="line">  useState(<span class="string">'first'</span>)</span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">let</span> showSex = <span class="literal">true</span></span><br><span class="line"><span class="keyword">if</span>(showSex)&#123;</span><br><span class="line">    <span class="keyword">const</span> [ sex, setSex ] = useState(<span class="string">'男'</span>);</span><br><span class="line">    showSex = <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上的行为都是打咩的</p>
+<p>原因是hooks的数据管理是用链表管理的，所以数据不能一时有一时没</p>
+<p>举个不太恰当的例子，就像</p>
+<blockquote>
+<ul>
+<li>数组[0]代表useState(‘A’)</li>
+<li>数组[1]代表useState(‘B)</li>
+<li>现在你突然把’A’删掉了，那就变成数组[0]代表useState(‘B’)了</li>
+<li>那么你就不是你了，他也不是他了</li>
+</ul>
+</blockquote>
+<h4 id="useCallBack-还是-useMemo"><a href="#useCallBack-还是-useMemo" class="headerlink" title="useCallBack 还是 useMemo"></a>useCallBack 还是 useMemo</h4><p>仅仅 <code>依赖数据</code> 发生变化, 才会重新计算结果，说是为了性能优化，起到缓存的作用，</p>
+<p>这里说一个面试常问的<code>useCallBack</code> 和 <code>useMemo</code> 有什么区别？</p>
+<p>网上各种解析长篇大论的，一句话其实就是</p>
+<blockquote>
+<p>useCallback 缓存钩子函数，useMemo 缓存返回值（计算结果）[当然useMemo也可以传入函数]。</p>
+</blockquote>
+<p>这个时候，有好奇宝贝就会问了,那用这个会多那么多代码量，有什么用呢</p>
+<p>答案是：性能优化，这里就要涉及到更深层的react的渲染原理了，”比较更新！！”,react每次渲染的时候，它都把值和函数重新计算渲染，这里就会消耗点内存了，用上那2玩意，其实就是告诉react，我们没有变化，帮我存起来，不用再比较了</p>
+<p>那么有些姓杠的小朋友，这时候就不耐烦了，站起来问道：为什么react不帮我们自动做这些优化呢，我就想静静地写代码，为什么还要考虑该不该包个<code>useCallBack</code></p>
+<p>问得好，这里顺便@一下官方团队，希望相关单位能密切关注这个问题</p>
+<p>还会有些害羞的小朋友会嘀咕着，为什么class组件的时候就不需要注意这些呢</p>
+<p>个人鄙见：新旧版本的渲染方法其实差不多的，我觉得前端深入研究性能优化是没有前途的，框架或者浏览器，一次小小的版本更新，可能效果就远远胜过了你多少个日日夜夜的辛勤付出了。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>hooks需好，但要小心使用</p>
+]]></content>
+      <categories>
+        <category>知识总结</category>
+      </categories>
+      <tags>
+        <tag>文章</tag>
       </tags>
   </entry>
   <entry>
@@ -765,99 +858,6 @@
       </tags>
   </entry>
   <entry>
-    <title>是export还是module.exports，是import还是require，是ES6还是CommonJS，是爱❤️还是责任？</title>
-    <url>/2019/12/10/module/</url>
-    <content><![CDATA[<p>故事要从一次错误的编码开始。。。<br><a id="more"></a></p>
-<h1 id="Node的模块"><a href="#Node的模块" class="headerlink" title="Node的模块"></a>Node的模块</h1><p>众所周知，在上古年代，node的开发一直被 Commonjs 规范所支配着，这也是悲剧发生的导火索，请看灾难现场：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// version.js</span></span><br><span class="line"><span class="keyword">var</span> version = <span class="number">3</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">incVersion</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  version++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  version,</span><br><span class="line">  incVersion,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">var</span> mod = <span class="built_in">require</span>(<span class="string">'./version'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(mod.version);  <span class="comment">// 3</span></span><br><span class="line">mod.incVersion();</span><br><span class="line"><span class="built_in">console</span>.log(mod.version); <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
-<p>这，这一瞬间，时间的涡轮好像停止了一样，版本号变量<font color="green"><em>version</em></font>一直停留在3永不向前，就好像我的人生那样，停滞不前，是命运的捉弄，还是人为的操控呢？</p>
-<p>不，是值的拷贝，CommonJS 模块输出的是值的拷贝，也就是说，mod.version是一个原始类型的值，会被缓存，那么我们怎样解决这个问题呢?<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"># 可以改写成函数</span><br><span class="line"><span class="keyword">var</span> version = <span class="number">3</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">incVersion</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  version++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="keyword">get</span> version() &#123;</span><br><span class="line">    <span class="keyword">return</span> version</span><br><span class="line">  &#125;,</span><br><span class="line">  incVersion,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>或者用es6的import引用，那么这又是什么呢，敲黑板，画重点，要考。</p>
-<h1 id="ES6-模块与-CommonJS-模块"><a href="#ES6-模块与-CommonJS-模块" class="headerlink" title="ES6 模块与 CommonJS 模块"></a>ES6 模块与 CommonJS 模块</h1><p>它们有两个重大差异。</p>
-<blockquote>
-<p>CommonJS 模块输出的是一个值的拷贝，ES6 模块输出的是值的引用。</p>
-</blockquote>
-<blockquote>
-<p>CommonJS 模块是运行时加载，ES6 模块是编译时输出接口。</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:center"></th>
-<th style="text-align:center">CommonJS</th>
-<th style="text-align:center">ES6</th>
-<th style="text-align:center">特征</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">exports</td>
-<td style="text-align:center">✓</td>
-<td style="text-align:center">x</td>
-<td style="text-align:center">是 module.exports 的一个引用</td>
-</tr>
-<tr>
-<td style="text-align:center">module.exports</td>
-<td style="text-align:center">✓</td>
-<td style="text-align:center">x</td>
-<td style="text-align:center">module.exports = xxx，就是导出xxx</td>
-</tr>
-<tr>
-<td style="text-align:center">export</td>
-<td style="text-align:center">x</td>
-<td style="text-align:center">✓</td>
-<td style="text-align:center">多个</td>
-</tr>
-<tr>
-<td style="text-align:center">export default</td>
-<td style="text-align:center">x</td>
-<td style="text-align:center">✓</td>
-<td style="text-align:center">单个</td>
-</tr>
-<tr>
-<td style="text-align:center">require</td>
-<td style="text-align:center">✓</td>
-<td style="text-align:center">✓</td>
-<td style="text-align:center">导出的内容是module.exports的指向的内存块内容/ es6时是一个对象（{default:xxx}）</td>
-</tr>
-<tr>
-<td style="text-align:center">import</td>
-<td style="text-align:center">x</td>
-<td style="text-align:center">✓</td>
-<td style="text-align:center">引用多个</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//无聊的冷门尝试 es6试用require</span></span><br><span class="line"><span class="comment">//a.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="number">123</span></span><br><span class="line"><span class="comment">//main.js</span></span><br><span class="line"><span class="keyword">const</span> a = <span class="built_in">require</span>(<span class="string">'./a'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'a'</span>, a) <span class="comment">//&#123;default: 123&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//a.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> a = <span class="number">123</span></span><br><span class="line"><span class="comment">//main.js</span></span><br><span class="line"><span class="keyword">const</span> a = <span class="built_in">require</span>(<span class="string">'./a'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'a'</span>, a) <span class="comment">//&#123;a: 123&#125;</span></span><br></pre></td></tr></table></figure>
-<h2 id="exports-和-module-exports"><a href="#exports-和-module-exports" class="headerlink" title="exports 和 module.exports"></a>exports 和 module.exports</h2><p>在一个node执行一个文件时，会给这个文件内生成一个 exports和module对象，<br>而module又有一个exports属性。他们之间的关系如下图，都指向一块{}内存区域。<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">exports = <span class="built_in">module</span>.exports = &#123;&#125;;</span><br></pre></td></tr></table></figure></p>
-<p><img src="/images/module/exports.png" alt></p>
-<h2 id="export-和-export-default"><a href="#export-和-export-default" class="headerlink" title="export 和 export default"></a>export 和 export default</h2><p>首先我们讲这两个导出，下面我们讲讲它们的区别</p>
-<ol>
-<li><font color="pink">export</font>与<font color="pink">export default</font>均可用于导出常量、函数、文件、模块等</li>
-<li>在一个文件或模块中，<font color="pink">export</font>、<font color="pink">import</font>可以有多个，<font color="pink">export default</font>仅有一个</li>
-<li>通过<font color="pink">export</font>方式导出，在导入时要加{}，<font color="pink">export default</font>则不需要</li>
-<li><font color="pink">export</font>能直接导出变量表达式，<font color="pink">export default</font>不行。</li>
-</ol>
-<h1 id="天坑-循环依赖"><a href="#天坑-循环依赖" class="headerlink" title="天坑-循环依赖"></a>天坑-循环依赖</h1><p>“循环依赖”（circular dependency）指的是，a脚本的执行依赖b脚本，而b脚本的执行又依赖a脚本。<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// a.js</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="built_in">require</span>(<span class="string">'b'</span>); <span class="comment">//a-step 1</span></span><br><span class="line"><span class="built_in">module</span>.exports.value = <span class="string">'a'</span>; <span class="comment">//a-step 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// b.js</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">'a'</span>); <span class="comment">//b-step 1</span></span><br><span class="line"><span class="built_in">module</span>.exports.value = <span class="string">'b'</span>; <span class="comment">//b-step 2</span></span><br></pre></td></tr></table></figure></p>
-<p>一般很少会这样写，出现的话证明你的功能逻辑有耦合了，应该先分开，但是一些大型项目就很难避免，小弟不才，真的遇到过。</p>
-<p>node的执行顺序</p>
-<blockquote>
-<p>a-step 1 –&gt; b-step 1 –&gt; b-step 2 –&gt; a-step 2</p>
-</blockquote>
-<p> 当年的黑科技临时解决办法，其实不建议，就是将a中的a-step 2移到a-step 1之上。<br> <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"> <span class="comment">// a.js</span></span><br><span class="line"><span class="built_in">module</span>.exports.value = <span class="string">'a'</span>; <span class="comment">//a-step 2</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="built_in">require</span>(<span class="string">'b'</span>); <span class="comment">//a-step 1</span></span><br></pre></td></tr></table></figure></p>
-<hr>
-<p>上面的其实是<strong>Commonjs</strong>版的，<strong>es6</strong>的解决方法有点不一样，具体就是将要引用的变量改成函数，因为函数具有提升作用，在加载时就已经有定义了。（ps:改成了函数表达式也不行，因为不具有提升作用）</p>
-<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>那么在座各位天才小儿童，肯定能想到怎样用es6解决那个灾难现场了吧，答案就是直接用<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//a.js</span></span><br><span class="line"><span class="keyword">var</span> version = <span class="number">3</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">incVersion</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  version ++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> &#123; version, incVersion &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//main.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; version, incVersion &#125; <span class="keyword">from</span> <span class="string">'./a'</span></span><br><span class="line"><span class="built_in">console</span>.log( <span class="string">'version'</span>, version )</span><br><span class="line">incVersion()</span><br><span class="line"><span class="built_in">console</span>.log( <span class="string">'version'</span>, version )</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>填坑</tag>
-        <tag>JS填坑</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>完成的项目，持续更新</title>
     <url>/2018/08/14/project/</url>
     <content><![CDATA[<p>目标：写过的代码加起来能绕地球一圈</p>
@@ -874,19 +874,6 @@
       </categories>
       <tags>
         <tag>案例</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>this/必包/作用域</title>
-    <url>/2021/05/02/this-%E5%BF%85%E5%8C%85-%E4%BD%9C%E7%94%A8%E5%9F%9F/</url>
-    <content><![CDATA[<p>bind可以传基本类型，只会绑定一次</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br><span class="line">fn.bind(<span class="number">1</span>).bind(<span class="number">2</span>)() <span class="comment">// Number &#123;1&#125;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>知识总结</category>
-      </categories>
-      <tags>
-        <tag>重学前端</tag>
       </tags>
   </entry>
   <entry>
@@ -994,17 +981,16 @@
       </tags>
   </entry>
   <entry>
-    <title>three笔记</title>
-    <url>/2022/05/04/three/</url>
-    <content><![CDATA[<blockquote>
-<p>three的笔记学习-一开始总以为是tree，原来是three，感觉就是3d，然后很多三角形的意思</p>
-</blockquote>
-<h2 id="一开"><a href="#一开" class="headerlink" title="一开"></a>一开</h2>]]></content>
+    <title>this/必包/作用域</title>
+    <url>/2021/05/02/this-%E5%BF%85%E5%8C%85-%E4%BD%9C%E7%94%A8%E5%9F%9F/</url>
+    <content><![CDATA[<p>bind可以传基本类型，只会绑定一次</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br><span class="line">fn.bind(<span class="number">1</span>).bind(<span class="number">2</span>)() <span class="comment">// Number &#123;1&#125;</span></span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>知识总结</category>
       </categories>
       <tags>
-        <tag>文章</tag>
+        <tag>重学前端</tag>
       </tags>
   </entry>
   <entry>
@@ -1034,39 +1020,22 @@
       </tags>
   </entry>
   <entry>
-    <title>webpack</title>
-    <url>/2021/05/29/webpack/</url>
-    <content><![CDATA[<h3 id="我们常说的Module是什么"><a href="#我们常说的Module是什么" class="headerlink" title="我们常说的Module是什么"></a>我们常说的Module是什么</h3><p>webpack支持 ESModule, CommonJS, AMD, Assests</p>
-<h3 id="如何表达各种依赖关系？"><a href="#如何表达各种依赖关系？" class="headerlink" title="如何表达各种依赖关系？"></a>如何表达各种依赖关系？</h3><h3 id="我们常说的chunk和bundle的区别是什么？（important！）"><a href="#我们常说的chunk和bundle的区别是什么？（important！）" class="headerlink" title="我们常说的chunk和bundle的区别是什么？（important！）"></a>我们常说的chunk和bundle的区别是什么？（important！）</h3><ol>
-<li><p>Chunk<br>是Webpack打包过程中Modules的集合，是<code>打包过程</code>中的概念。<br>Webpack的打包是从⼀个⼊⼝模块开始，⼊⼝模块引⽤其他模块，模块再引⽤模块。<br>Webpack通过引⽤关系逐个打包模块，这些module就形成了⼀个Chunk。<br>当然如果有多个⼊⼝模块，可能会产出多条打包路径，每条路径都会形成⼀个Chunk。</p>
-</li>
-<li><p>bundle<br>Bundle是我们最终输出的⼀个或多个打包好的⽂件</p>
-</li>
-<li><p>Chunk 和 Bundle 的关系?<br>大多数情况，一个chunk一个bundle</p>
-</li>
-</ol>
-<h3 id="Plugin-和-Loader-分别做什么？怎样工作的？"><a href="#Plugin-和-Loader-分别做什么？怎样工作的？" class="headerlink" title="Plugin 和 Loader 分别做什么？怎样工作的？"></a>Plugin 和 Loader 分别做什么？怎样工作的？</h3><ol>
-<li>Loader<br>模块转换器，将非js模块转化为webpack能识别的</li>
-<li>Plugin<br>扩展插件,webpack各个阶段都会广播出对应的事件</li>
-<li><p>Compiler<br>对象，也可以理解为webpack的实例</p>
-</li>
-<li><p>Compliation<br>模块资源</p>
-</li>
-</ol>
-<h3 id="简单描述一下打包过程"><a href="#简单描述一下打包过程" class="headerlink" title="简单描述一下打包过程"></a>简单描述一下打包过程</h3><ol>
-<li>初始化参数：shell webpack.config.js</li>
-<li>开始编译</li>
-<li>确定入口</li>
-<li>编译模块</li>
-<li>完成模块编译</li>
-<li>输出资源</li>
-</ol>
+    <title>three笔记</title>
+    <url>/2022/05/04/three/</url>
+    <content><![CDATA[<blockquote>
+<p>three的笔记学习-一开始总以为是tree，原来是three，感觉就是3d，然后很多三角形的意思</p>
+</blockquote>
+<h2 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h2><p>rotate 要注意xyz 顺序<br>group 打包</p>
+<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><p>用 window.requestAnimationFrame</p>
+<h2 id="相机"><a href="#相机" class="headerlink" title="相机"></a>相机</h2><p>camera 可以试试用sin 和 cos</p>
+<h2 id="geometries"><a href="#geometries" class="headerlink" title="geometries"></a>geometries</h2><h2 id="Textures"><a href="#Textures" class="headerlink" title="Textures"></a>Textures</h2><p>纹理</p>
+<h2 id="Materials"><a href="#Materials" class="headerlink" title="Materials"></a>Materials</h2><h2 id="3D-text"><a href="#3D-text" class="headerlink" title="3D_text"></a>3D_text</h2><p>字体转换网站[<a href="https://gero3.github.io/facetype.js/]" target="_blank" rel="noopener">https://gero3.github.io/facetype.js/]</a></p>
 ]]></content>
       <categories>
         <category>知识总结</category>
       </categories>
       <tags>
-        <tag>重学前端</tag>
+        <tag>文章</tag>
       </tags>
   </entry>
   <entry>
@@ -1127,6 +1096,42 @@
       <tags>
         <tag>填坑</tag>
         <tag>微信小程序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>webpack</title>
+    <url>/2021/05/29/webpack/</url>
+    <content><![CDATA[<h3 id="我们常说的Module是什么"><a href="#我们常说的Module是什么" class="headerlink" title="我们常说的Module是什么"></a>我们常说的Module是什么</h3><p>webpack支持 ESModule, CommonJS, AMD, Assests</p>
+<h3 id="如何表达各种依赖关系？"><a href="#如何表达各种依赖关系？" class="headerlink" title="如何表达各种依赖关系？"></a>如何表达各种依赖关系？</h3><h3 id="我们常说的chunk和bundle的区别是什么？（important！）"><a href="#我们常说的chunk和bundle的区别是什么？（important！）" class="headerlink" title="我们常说的chunk和bundle的区别是什么？（important！）"></a>我们常说的chunk和bundle的区别是什么？（important！）</h3><ol>
+<li><p>Chunk<br>是Webpack打包过程中Modules的集合，是<code>打包过程</code>中的概念。<br>Webpack的打包是从⼀个⼊⼝模块开始，⼊⼝模块引⽤其他模块，模块再引⽤模块。<br>Webpack通过引⽤关系逐个打包模块，这些module就形成了⼀个Chunk。<br>当然如果有多个⼊⼝模块，可能会产出多条打包路径，每条路径都会形成⼀个Chunk。</p>
+</li>
+<li><p>bundle<br>Bundle是我们最终输出的⼀个或多个打包好的⽂件</p>
+</li>
+<li><p>Chunk 和 Bundle 的关系?<br>大多数情况，一个chunk一个bundle</p>
+</li>
+</ol>
+<h3 id="Plugin-和-Loader-分别做什么？怎样工作的？"><a href="#Plugin-和-Loader-分别做什么？怎样工作的？" class="headerlink" title="Plugin 和 Loader 分别做什么？怎样工作的？"></a>Plugin 和 Loader 分别做什么？怎样工作的？</h3><ol>
+<li>Loader<br>模块转换器，将非js模块转化为webpack能识别的</li>
+<li>Plugin<br>扩展插件,webpack各个阶段都会广播出对应的事件</li>
+<li><p>Compiler<br>对象，也可以理解为webpack的实例</p>
+</li>
+<li><p>Compliation<br>模块资源</p>
+</li>
+</ol>
+<h3 id="简单描述一下打包过程"><a href="#简单描述一下打包过程" class="headerlink" title="简单描述一下打包过程"></a>简单描述一下打包过程</h3><ol>
+<li>初始化参数：shell webpack.config.js</li>
+<li>开始编译</li>
+<li>确定入口</li>
+<li>编译模块</li>
+<li>完成模块编译</li>
+<li>输出资源</li>
+</ol>
+]]></content>
+      <categories>
+        <category>知识总结</category>
+      </categories>
+      <tags>
+        <tag>重学前端</tag>
       </tags>
   </entry>
   <entry>
