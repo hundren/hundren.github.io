@@ -1,200 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>ES6 规范详解、ESNext 规范</title>
-    <url>/2021/04/28/ES6%20%E8%A7%84%E8%8C%83%E8%AF%A6%E8%A7%A3%E3%80%81ESNext%20%E8%A7%84%E8%8C%83/</url>
-    <content><![CDATA[<h2 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h2><p>var、const、let、function<br>let 变量提升、作用域</p>
-<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><p>1、箭头函数this是定义时决定，普通函数是使用时决定<br>2、简写</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> fn = <span class="function"><span class="params">()</span>=&gt;</span> <span class="string">'sss'</span></span><br></pre></td></tr></table></figure>
-<p>3、不能做构造函数</p>
-<h3 id="class"><a href="#class" class="headerlink" title="class"></a>class</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span>()</span>&#123;</span><br><span class="line">  <span class="keyword">static</span> getFormatName()&#123;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>static 静态方法，只能console.log(Test.getFormatName())</p>
-<h3 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h3><ol>
-<li>for in</li>
-</ol>
-<ul>
-<li>会调用原型链（obj.hasOwnProperty(key)）判断一下</li>
-<li>不适合遍历数组</li>
-</ul>
-<ol start="2">
-<li>for of</li>
-</ol>
-<h3 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h3><ol>
-<li>Object.keys</li>
-<li>Object.values</li>
-<li>Object.entries</li>
-<li>Object.getOwnPropertyNames</li>
-<li>Object.getOwnPropertyDescriptor<br>对象的描述</li>
-</ol>
-<ul>
-<li>configurable: true</li>
-<li>writable: false</li>
-<li>enumerable: true //枚举</li>
-</ul>
-<p>Reflect 一种js 优化</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Reflect</span>.deleteProperty(obj,name) 等</span><br></pre></td></tr></table></figure>
-<h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><p>array.slice() 可以浅拷贝</p>
-<ul>
-<li>Array.from<br>如何把arguments转换成真数组</li>
-</ul>
-<ol>
-<li>[…arguments]</li>
-<li>Array.from(arguments)</li>
-<li>Array.prototype.slice.call(arguments)</li>
-</ol>
-]]></content>
-      <categories>
-        <category>知识总结</category>
-      </categories>
-      <tags>
-        <tag>重学前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaScript忍者秘籍第2版-笔记</title>
-    <url>/2021/05/18/JavaScript%E5%BF%8D%E8%80%85%E7%A7%98%E7%B1%8D%E7%AC%AC2%E7%89%88-%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="一些特性"><a href="#一些特性" class="headerlink" title="一些特性"></a>一些特性</h2><ul>
-<li>生成器</li>
-<li>Promise</li>
-<li>代理</li>
-<li>高级数组方法</li>
-<li>Map</li>
-<li>正则表达式</li>
-<li>模块</li>
-</ul>
-<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><blockquote>
-<p>Javascript 就是只开启了一个柜台</p>
-</blockquote>
-<ol>
-<li>注册事件（addEventListener)</li>
-</ol>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>神书推荐</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用hooks的一些小感想</title>
-    <url>/2022/01/14/hooks/</url>
-    <content><![CDATA[<blockquote>
-<p>这里文章说的都是hooks<sup>react</sup></p>
-</blockquote>
-<h3 id="那什么是hooks"><a href="#那什么是hooks" class="headerlink" title="那什么是hooks"></a>那什么是hooks</h3><p>故名思义 <code>Hooks</code> 译为钩子，<code>Hooks</code> 就是在函数组件内，负责钩进外部功能的函数。</p>
-<p>(说了又好像没说)</p>
-<h3 id="有什么爽的👌"><a href="#有什么爽的👌" class="headerlink" title="有什么爽的👌"></a>有什么爽的👌</h3><ul>
-<li>函数组件原地飞升</li>
-<li>不用管this了</li>
-<li>生命周期也不用记那么多了</li>
-</ul>
-<p>开始结束的生命周期可以写在一起，代码更漂亮了</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'开波'</span>)</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'结束'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,[])</span><br><span class="line"><span class="comment">// ps.空数组就是只进入一次</span></span><br></pre></td></tr></table></figure>
-<p>props的值的变化，xx值的变化都能放在一起监听</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'无论是数组还是对象，数据多深都能进（后来才发现也不是多深都能啦），这不比vue的watch爽？'</span>)</span><br><span class="line">  <span class="comment">// 那么useEffect是怎样监听数据变化的呢</span></span><br><span class="line">  <span class="comment">// 它和useLayoutEffect又有什么区别呢</span></span><br><span class="line">  <span class="comment">// 这要从hooks的基础概念链表说起，请往下看</span></span><br><span class="line">&#125;,[props.a,b])</span><br></pre></td></tr></table></figure>
-<p>通过看useEffect的源码，我们不难发现</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 通过看源码我们得知</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; prevDeps.length &amp;&amp; i &lt; nextDeps.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (is(nextDeps[i], prevDeps[i])) &#123;</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 我们知道它的对比方法是</span></span><br><span class="line"><span class="comment">// 其中里面的is是这个</span></span><br><span class="line"><span class="keyword">import</span> is <span class="keyword">from</span> <span class="string">'shared/objectIs'</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">is</span>(<span class="params">x: any, y: any</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    (x === y &amp;&amp; (x !== <span class="number">0</span> || <span class="number">1</span> / x === <span class="number">1</span> / y)) || (x !== x &amp;&amp; y !== y) <span class="comment">// eslint-disable-line no-self-compare</span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> objectIs: <span class="function">(<span class="params">x: any, y: any</span>) =&gt;</span> boolean =</span><br><span class="line">  <span class="keyword">typeof</span> <span class="built_in">Object</span>.is === <span class="string">'function'</span> ? <span class="built_in">Object</span>.is : is;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> objectIs;</span><br></pre></td></tr></table></figure>
-<p>所以其实它就是用<code>Object.is</code>做比较</p>
-<blockquote>
-<p>有需要做深比较的可以用<code>ahooks</code>的<code>useDeepCompareEffect</code>，用法与 useEffect 一致，但 deps 通过 lodash 的<code>isEqual</code>进行深比较。</p>
-</blockquote>
-<ul>
-<li>代码复用更高</li>
-</ul>
-<h3 id="吐槽一下"><a href="#吐槽一下" class="headerlink" title="吐槽一下"></a>吐槽一下</h3><h4 id="闭包陷阱"><a href="#闭包陷阱" class="headerlink" title="闭包陷阱"></a>闭包陷阱</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;useEffect, useState&#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = useState(<span class="number">0</span>)</span><br><span class="line">  useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      setCount(count + <span class="number">1</span>)</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">  &#125;, [])</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">       &lt;p&gt;count=&#123;count&#125;&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
-<p>大家可能会一直期待着数字的变化，但它就偏不，一直保持着1</p>
-<p>事情为什么会发展成这样，那就要从底层的渲染开始说起</p>
-<blockquote>
-<p>初次渲染-&gt;执行APP-&gt;usestate设置count为初始0-&gt;1秒后state改变-&gt;视图更新-&gt;按照fiber链表执行hooks-&gt;useEffect deps 不变-&gt;然后1秒后的count始终都是0+1</p>
-</blockquote>
-<p>解决办法：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 有细心的网友可能会发现，网上其他地方可能会建议在useEffect的deps上加上count</span></span><br><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    setCount(count + <span class="number">1</span>)</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;, [count])</span><br><span class="line"><span class="comment">// 这样确实能拿到最新的count</span></span><br><span class="line"><span class="comment">// ❌但是这里喔不建议这样写</span></span><br><span class="line"><span class="comment">// 因为你想想，每次count的更新它都会重新进去建一个新的定时器</span></span><br><span class="line"><span class="comment">// 以后画面就会很鬼畜</span></span><br></pre></td></tr></table></figure>
-<p>建议版本方法</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    setCount(<span class="function"><span class="params">res</span>=&gt;</span>(res+<span class="number">1</span>))</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;, [])</span><br><span class="line"><span class="comment">// setCount本身可以传方法，本来就是最新的值</span></span><br></pre></td></tr></table></figure>
-<p>高级版本ref大法</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//简单来说就是利用useRef返回的是同一个对象，指向同一片内存</span></span><br><span class="line"><span class="keyword">let</span> ref_ = useRef(<span class="number">1</span>)</span><br><span class="line">ref_.current++</span><br><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  setInterval(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(ref.current) <span class="comment">// 3</span></span><br><span class="line">  &#125;, <span class="number">1000</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h4 id="不能用判断或者随机函数"><a href="#不能用判断或者随机函数" class="headerlink" title="不能用判断或者随机函数"></a>不能用判断或者随机函数</h4><p>举个🌰</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">Math</span>.random() &gt; <span class="number">0.5</span>) &#123;</span><br><span class="line">  useState(<span class="string">'first'</span>)</span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">let</span> showSex = <span class="literal">true</span></span><br><span class="line"><span class="keyword">if</span>(showSex)&#123;</span><br><span class="line">    <span class="keyword">const</span> [ sex, setSex ] = useState(<span class="string">'男'</span>);</span><br><span class="line">    showSex = <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以上的行为都是打咩的</p>
-<p>原因是hooks的数据管理是用链表管理的，所以数据不能一时有一时没</p>
-<p>举个不太恰当的例子，就像</p>
-<blockquote>
-<ul>
-<li>数组[0]代表useState(‘A’)</li>
-<li>数组[1]代表useState(‘B)</li>
-<li>现在你突然把’A’删掉了，那就变成数组[0]代表useState(‘B’)了</li>
-<li>那么你就不是你了，他也不是他了</li>
-</ul>
-</blockquote>
-<h4 id="useCallBack-还是-useMemo"><a href="#useCallBack-还是-useMemo" class="headerlink" title="useCallBack 还是 useMemo"></a>useCallBack 还是 useMemo</h4><p>仅仅 <code>依赖数据</code> 发生变化, 才会重新计算结果，说是为了性能优化，起到缓存的作用，</p>
-<p>这里说一个面试常问的<code>useCallBack</code> 和 <code>useMemo</code> 有什么区别？</p>
-<p>网上各种解析长篇大论的，一句话其实就是</p>
-<blockquote>
-<p>useCallback 缓存钩子函数，useMemo 缓存返回值（计算结果）[当然useMemo也可以传入函数]。</p>
-</blockquote>
-<p>这个时候，有好奇宝贝就会问了,那用这个会多那么多代码量，有什么用呢</p>
-<p>答案是：性能优化，这里就要涉及到更深层的react的渲染原理了，”比较更新！！”,react每次渲染的时候，它都把值和函数重新计算渲染，这里就会消耗点内存了，用上那2玩意，其实就是告诉react，我们没有变化，帮我存起来，不用再比较了</p>
-<p>那么有些姓杠的小朋友，这时候就不耐烦了，站起来问道：为什么react不帮我们自动做这些优化呢，我就想静静地写代码，为什么还要考虑该不该包个<code>useCallBack</code></p>
-<p>问得好，这里顺便@一下官方团队，希望相关单位能密切关注这个问题</p>
-<p>还会有些害羞的小朋友会嘀咕着，为什么class组件的时候就不需要注意这些呢</p>
-<p>个人鄙见：新旧版本的渲染方法其实差不多的，我觉得前端深入研究性能优化是没有前途的，框架或者浏览器，一次小小的版本更新，可能效果就远远胜过了你多少个日日夜夜的辛勤付出了。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>hooks需好，但要小心使用</p>
-]]></content>
-      <categories>
-        <category>知识总结</category>
-      </categories>
-      <tags>
-        <tag>文章</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Github Actions, yes! + docker, yes yes!</title>
-    <url>/2020/01/18/git-actions/</url>
-    <content><![CDATA[<p>最近点开了一下Github Actions的技能树，在说真香之前，不得不说一下我踩过的这些前置任务的坑。找到这篇文章看的朋友大概也知道Github Actions是Github上的持续集成服务，它允许你在一些节点上（如提交代码，特定时间等）触发一些操作。这里我们实现自动部署应用到自己的服务器。<br><img src="/images/gitactions/bg2019091201.jpg" alt></p>
-<hr>
-<h2 id="首先要买一台服务器"><a href="#首先要买一台服务器" class="headerlink" title="首先要买一台服务器"></a>首先要买一台服务器</h2><p>过程略。。。</p>
-<h2 id="建立仓库"><a href="#建立仓库" class="headerlink" title="建立仓库"></a>建立仓库</h2><p>有细心看标题的朋友，应该知道我们是在<code>Github</code>（世界最大同性交友网站）上玩的<br><img src="/images/gitactions/ci.png" alt><br>在你的项目里面建一个.github文件夹（注意有一点.），然后再建一个workflows文件夹，里面再新建一个后缀为yml的文件（名字任意），完成以上步骤你大概就完成50%的工作量了。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ci.yml</span></span><br><span class="line">name: deploy to aliyun</span><br><span class="line">on:</span><br><span class="line">  push:</span><br><span class="line">    branches:</span><br><span class="line">      - master</span><br><span class="line"><span class="built_in">jobs</span>:</span><br><span class="line">  build:</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line">    steps:</span><br><span class="line">      <span class="comment"># 切换分支</span></span><br><span class="line">      - name: Checkout</span><br><span class="line">        uses: actions/checkout@master</span><br><span class="line">      <span class="comment"># 使用 node:10</span></span><br><span class="line">      - name: use Node.js 10</span><br><span class="line">        uses: actions/setup-node@v1</span><br><span class="line">        with:</span><br><span class="line">          node-version: 10</span><br><span class="line">      <span class="comment"># npm install</span></span><br><span class="line">      - name: npm install and build</span><br><span class="line">        run: |</span><br><span class="line">          yarn install</span><br><span class="line">          npm run build</span><br><span class="line">        env:</span><br><span class="line">          CI: <span class="literal">true</span></span><br><span class="line">      <span class="comment"># Deploy</span></span><br><span class="line">      - name: FTP-Deploy</span><br><span class="line">        uses: SamKirkland/FTP-Deploy-Action@2.0.0</span><br><span class="line">        env:</span><br><span class="line">          FTP_SERVER: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">          FTP_USERNAME: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">          FTP_PASSWORD: <span class="variable">$&#123;&#123; secrets.REMOTE_PWD &#125;</span>&#125;</span><br><span class="line">          LOCAL_DIR: build</span><br><span class="line">          METHOD: sftp</span><br><span class="line">          REMOTE_DIR: /home/www</span><br><span class="line">          ARGS: --delete</span><br><span class="line">      - name: Docker-deploy</span><br><span class="line">        uses: appleboy/ssh-action@master</span><br><span class="line">        with:</span><br><span class="line">          host: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">          username: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">          key: <span class="variable">$&#123;&#123; secrets.ACCESS_TOKEN &#125;</span>&#125;</span><br><span class="line">          script: |</span><br><span class="line">            docker <span class="built_in">exec</span> 你的docker容器名称 rm -rf /usr/share/nginx/html</span><br><span class="line">            docker cp /home/www 你的docker容器名称:/usr/share/nginx/html</span><br></pre></td></tr></table></figure>
-<p>展示一下我的终极配置，当然事情的发展没有这么简单</p>
-<h3 id="配置详情"><a href="#配置详情" class="headerlink" title="配置详情"></a>配置详情</h3><p>git actions的奥妙之处就在于它有丰富的插件资源可以使用<br><img src="/images/gitactions/actions-market.png" alt><br>对于我们部署而言，前3个资源一般来说也是没问题的，最大的问题就在于发布，毕竟要和服务器打交道</p>
-<blockquote>
-<p>踩过的坑如下</p>
-</blockquote>
-<p>我之前发布用的模块是这个</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deploy</span></span><br><span class="line">      - name: Deploy</span><br><span class="line">        uses: easingthemes/ssh-deploy@v2.0.7</span><br><span class="line">        env:</span><br><span class="line">          SSH_PRIVATE_KEY: <span class="variable">$&#123;&#123; secrets.ACCESS_TOKEN &#125;</span>&#125;</span><br><span class="line">          ARGS: <span class="string">"-avz --delete"</span></span><br><span class="line">          SOURCE: <span class="string">"build/"</span></span><br><span class="line">          REMOTE_HOST: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">          REMOTE_USER: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">          TARGET: <span class="variable">$&#123;&#123; secrets.TARGET &#125;</span>&#125;</span><br></pre></td></tr></table></figure>
-<font color="green">哦，对，大家看到这些secrets的变量是不是很奇怪，其实是为了隐私安全问题，在github项目上Settings里Secrets上添加就好了</font>
-
-<p>然后一直报这个错😢<br><img src="/images/gitactions/error.png" alt><br>服务器上什么的<code>ssh</code>都设置好了，在本地上</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -i id_rsa root@xxx.xxx.xxx.x</span><br></pre></td></tr></table></figure>
-<p>用私密登录也是正常的，用其它ssh登录的actions也可以用，事情发展到不可开交的地步，战事一触即发，幸好我们还有其它别人写好的actions可以用，后来换上<code>FTP-Deploy-Action</code>，心情就变得愉快了，妈妈再也不用担心我写代码了</p>
-<h3 id="docker容器"><a href="#docker容器" class="headerlink" title="docker容器"></a>docker容器</h3><p>如果没有用到docker的话，文章写到这里就可以结束了，把你的项目发布上了服务器，nginx配置指定一下域名和路径你就成功上岸了</p>
-<p><font color="red">那什么是docker？</font></p>
-<p><div style="float:left;margin-right:20px"><img width="360" src="/images/gitactions/docker.png"></div></p>
-<p><div style="float:left"><img width="360" src="/images/gitactions/virtual.png"></div></p>
-<p><div style="float:none;clear:both;"><br></div><br>遇事不决先上图</p>
-<p>小弟不才，说说自己的见解，看图就很容易看出docker和虚拟机的最大区别，说人话就是，首先要说出docker里的容器和镜像的概念，容器就是根据你需要的镜像启动的，比如你有一个centos系统镜像，传统的虚拟机就是每个虚拟机上都用这个镜像往里面装一次，而docker就用这个镜像启动就可以了，这就生成了一个容器，而容器之间是独立的，这样就能做到资源的复用，扯远了。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//我也是用的别人的nginx镜像，简单记录一下</span><br><span class="line">docker pull nginx:latest</span><br><span class="line">docker run --name nginx-test -p 80:80 -d nginx</span><br></pre></td></tr></table></figure>
-<p>那细心的朋友也发现，我最后的那个actions的配置其实就是一些ssh命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> 你的docker容器名称 rm -rf /usr/share/nginx/html</span><br><span class="line">docker cp /home/www 你的docker容器名称:/usr/share/nginx/html</span><br></pre></td></tr></table></figure>
-<p>1、第一个就是先删除容器里的之前的项目，但也踩过坑，<code>docker exec</code>这个就是进入容器的命令了，之前我写的是<code>docker exec -it xxx /bin/bash</code>进去再<code>rm -rf</code>然后<code>exit</code>这样的，想法很美滋滋，但是ci命令上就报<code>err: the input device is not a TTY</code>后来才换成现在的命令<br>2、第二个就是把发上服务器的项目复制到容器里</p>
-<h2 id="开发应用"><a href="#开发应用" class="headerlink" title="开发应用"></a>开发应用</h2><p>过程也略。。。（到目前为止，如无意外的话，你只要push一下代码，就会进入到我们设置好的“陷阱”里，一顿自动操作执行下来，你的网站就部署上去了）</p>
-<h2 id="优化与改进（先挖好个坑）"><a href="#优化与改进（先挖好个坑）" class="headerlink" title="优化与改进（先挖好个坑）"></a>优化与改进（先挖好个坑）</h2><h3 id="自动发布到容器里（方案一）"><a href="#自动发布到容器里（方案一）" class="headerlink" title="自动发布到容器里（方案一）"></a>自动发布到容器里（方案一）</h3><p>1、将容器的sftp端口映射到服务器的某个端口上<br>2、在ftp actions里配置好对应的端口上传上去</p>
-<h3 id="用dockerFile自制镜像-（方案二）"><a href="#用dockerFile自制镜像-（方案二）" class="headerlink" title="用dockerFile自制镜像 （方案二）"></a>用dockerFile自制镜像 （方案二）</h3><p>1、ci.yml里面就是执行自制的docker镜像run一下<br>2、镜像逻辑大概如下：拉取最新代码到容器-&gt;打包项目-&gt;覆盖项目上的自定义nginx配置文件到容器nginx的默认路径</p>
-<p>参考文档：</p>
-<blockquote>
-<p><a href="http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html" target="_blank" rel="noopener">GitHub Actions 入门教程 - 阮一峰</a><br><a href="https://www.kai666666.top/2020/01/04/%E4%BD%BF%E7%94%A8GithubActions%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88ECS%EF%BC%89/" target="_blank" rel="noopener">使用GithubActions自动部署应用到自己的服务器（ECS）</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>部署</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>写前端就是写表单？</title>
     <url>/2021/01/14/form/</url>
     <content><![CDATA[<p>首先，大家思考一下表单是什么？前端又是什么？<br><a id="more"></a></p>
@@ -270,6 +76,221 @@
       </categories>
       <tags>
         <tag>架构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaScript忍者秘籍第2版-笔记</title>
+    <url>/2021/05/18/JavaScript%E5%BF%8D%E8%80%85%E7%A7%98%E7%B1%8D%E7%AC%AC2%E7%89%88-%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="一些特性"><a href="#一些特性" class="headerlink" title="一些特性"></a>一些特性</h2><ul>
+<li>生成器</li>
+<li>Promise</li>
+<li>代理</li>
+<li>高级数组方法</li>
+<li>Map</li>
+<li>正则表达式</li>
+<li>模块</li>
+</ul>
+<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><blockquote>
+<p>Javascript 就是只开启了一个柜台</p>
+</blockquote>
+<ol>
+<li>注册事件（addEventListener)</li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>神书推荐</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello Hexo</title>
+    <url>/2016/02/14/hello-world/</url>
+    <content><![CDATA[<p>博客换上Hexo主题</p>
+<hr>
+<h2 id="很久以前"><a href="#很久以前" class="headerlink" title="很久以前"></a>很久以前</h2><a id="more"></a>
+<h3 id="就被它的这个"><a href="#就被它的这个" class="headerlink" title="就被它的这个"></a>就被它的这个</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">试试代码</span><br></pre></td></tr></table></figure>
+<p>1001001111100101010110</p>
+<blockquote>
+<p>试试区块 这是一个区块</p>
+</blockquote>
+<p><em>这是斜体文字</em><br><strong>这是加粗的文字</strong></p>
+<p><font size="4">我是变大的字</font></p>
+<p><font color="green">我是有颜色字</font><br><img src="/images/module/exports.png" alt><br><code>代码字</code><br><a href="https://mp.weixin.qq.com/debug/wxadoc/dev/framework/performance/tips.html" target="_blank" rel="noopener">这是个链接</a></p>
+<h3 id="文章目录吸引了"><a href="#文章目录吸引了" class="headerlink" title="文章目录吸引了"></a>文章目录吸引了</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">console.log(<span class="string">'hello world'</span>);</span><br></pre></td></tr></table></figure>
+<p>列表？</p>
+<ol>
+<li>Red</li>
+<li>Green</li>
+<li>Blue</li>
+</ol>
+<ul>
+<li>a</li>
+<li>b</li>
+<li>c</li>
+</ul>
+<p>表格<br>| 左对齐 | 右对齐 | 居中对齐 |<br>| :—–| —-: | :—-: |<br>| 单元格 | 单元格 | 单元格 |<br>| 单元格 | 单元格 | 单元格 |</p>
+<h3 id="今天终于能够换来试试"><a href="#今天终于能够换来试试" class="headerlink" title="今天终于能够换来试试"></a>今天终于能够换来试试</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$(<span class="string">'#life'</span>).html(<span class="string">'希望每个月能更一篇，以此为鉴'</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="表示好兴奋"><a href="#表示好兴奋" class="headerlink" title="表示好兴奋"></a>表示好兴奋</h3><p>大家提提意见博客能有什么改造的地方</p>
+<p>上标<sup>TM</sup><br>下标<sub>i</sub></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">bye</span></span>()&#123;<span class="built_in">return</span> <span class="string">"恭喜你获得阅读我的第一篇博客成就！"</span>&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>文章</category>
+      </categories>
+      <tags>
+        <tag>第一次</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Github Actions, yes! + docker, yes yes!</title>
+    <url>/2020/01/18/git-actions/</url>
+    <content><![CDATA[<p>最近点开了一下Github Actions的技能树，在说真香之前，不得不说一下我踩过的这些前置任务的坑。找到这篇文章看的朋友大概也知道Github Actions是Github上的持续集成服务，它允许你在一些节点上（如提交代码，特定时间等）触发一些操作。这里我们实现自动部署应用到自己的服务器。<br><img src="/images/gitactions/bg2019091201.jpg" alt></p>
+<hr>
+<h2 id="首先要买一台服务器"><a href="#首先要买一台服务器" class="headerlink" title="首先要买一台服务器"></a>首先要买一台服务器</h2><p>过程略。。。</p>
+<h2 id="建立仓库"><a href="#建立仓库" class="headerlink" title="建立仓库"></a>建立仓库</h2><p>有细心看标题的朋友，应该知道我们是在<code>Github</code>（世界最大同性交友网站）上玩的<br><img src="/images/gitactions/ci.png" alt><br>在你的项目里面建一个.github文件夹（注意有一点.），然后再建一个workflows文件夹，里面再新建一个后缀为yml的文件（名字任意），完成以上步骤你大概就完成50%的工作量了。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ci.yml</span></span><br><span class="line">name: deploy to aliyun</span><br><span class="line">on:</span><br><span class="line">  push:</span><br><span class="line">    branches:</span><br><span class="line">      - master</span><br><span class="line"><span class="built_in">jobs</span>:</span><br><span class="line">  build:</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line">    steps:</span><br><span class="line">      <span class="comment"># 切换分支</span></span><br><span class="line">      - name: Checkout</span><br><span class="line">        uses: actions/checkout@master</span><br><span class="line">      <span class="comment"># 使用 node:10</span></span><br><span class="line">      - name: use Node.js 10</span><br><span class="line">        uses: actions/setup-node@v1</span><br><span class="line">        with:</span><br><span class="line">          node-version: 10</span><br><span class="line">      <span class="comment"># npm install</span></span><br><span class="line">      - name: npm install and build</span><br><span class="line">        run: |</span><br><span class="line">          yarn install</span><br><span class="line">          npm run build</span><br><span class="line">        env:</span><br><span class="line">          CI: <span class="literal">true</span></span><br><span class="line">      <span class="comment"># Deploy</span></span><br><span class="line">      - name: FTP-Deploy</span><br><span class="line">        uses: SamKirkland/FTP-Deploy-Action@2.0.0</span><br><span class="line">        env:</span><br><span class="line">          FTP_SERVER: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">          FTP_USERNAME: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">          FTP_PASSWORD: <span class="variable">$&#123;&#123; secrets.REMOTE_PWD &#125;</span>&#125;</span><br><span class="line">          LOCAL_DIR: build</span><br><span class="line">          METHOD: sftp</span><br><span class="line">          REMOTE_DIR: /home/www</span><br><span class="line">          ARGS: --delete</span><br><span class="line">      - name: Docker-deploy</span><br><span class="line">        uses: appleboy/ssh-action@master</span><br><span class="line">        with:</span><br><span class="line">          host: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">          username: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">          key: <span class="variable">$&#123;&#123; secrets.ACCESS_TOKEN &#125;</span>&#125;</span><br><span class="line">          script: |</span><br><span class="line">            docker <span class="built_in">exec</span> 你的docker容器名称 rm -rf /usr/share/nginx/html</span><br><span class="line">            docker cp /home/www 你的docker容器名称:/usr/share/nginx/html</span><br></pre></td></tr></table></figure>
+<p>展示一下我的终极配置，当然事情的发展没有这么简单</p>
+<h3 id="配置详情"><a href="#配置详情" class="headerlink" title="配置详情"></a>配置详情</h3><p>git actions的奥妙之处就在于它有丰富的插件资源可以使用<br><img src="/images/gitactions/actions-market.png" alt><br>对于我们部署而言，前3个资源一般来说也是没问题的，最大的问题就在于发布，毕竟要和服务器打交道</p>
+<blockquote>
+<p>踩过的坑如下</p>
+</blockquote>
+<p>我之前发布用的模块是这个</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deploy</span></span><br><span class="line">      - name: Deploy</span><br><span class="line">        uses: easingthemes/ssh-deploy@v2.0.7</span><br><span class="line">        env:</span><br><span class="line">          SSH_PRIVATE_KEY: <span class="variable">$&#123;&#123; secrets.ACCESS_TOKEN &#125;</span>&#125;</span><br><span class="line">          ARGS: <span class="string">"-avz --delete"</span></span><br><span class="line">          SOURCE: <span class="string">"build/"</span></span><br><span class="line">          REMOTE_HOST: <span class="variable">$&#123;&#123; secrets.REMOTE_HOST &#125;</span>&#125;</span><br><span class="line">          REMOTE_USER: <span class="variable">$&#123;&#123; secrets.REMOTE_USER &#125;</span>&#125;</span><br><span class="line">          TARGET: <span class="variable">$&#123;&#123; secrets.TARGET &#125;</span>&#125;</span><br></pre></td></tr></table></figure>
+<font color="green">哦，对，大家看到这些secrets的变量是不是很奇怪，其实是为了隐私安全问题，在github项目上Settings里Secrets上添加就好了</font>
+
+<p>然后一直报这个错😢<br><img src="/images/gitactions/error.png" alt><br>服务器上什么的<code>ssh</code>都设置好了，在本地上</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -i id_rsa root@xxx.xxx.xxx.x</span><br></pre></td></tr></table></figure>
+<p>用私密登录也是正常的，用其它ssh登录的actions也可以用，事情发展到不可开交的地步，战事一触即发，幸好我们还有其它别人写好的actions可以用，后来换上<code>FTP-Deploy-Action</code>，心情就变得愉快了，妈妈再也不用担心我写代码了</p>
+<h3 id="docker容器"><a href="#docker容器" class="headerlink" title="docker容器"></a>docker容器</h3><p>如果没有用到docker的话，文章写到这里就可以结束了，把你的项目发布上了服务器，nginx配置指定一下域名和路径你就成功上岸了</p>
+<p><font color="red">那什么是docker？</font></p>
+<p><div style="float:left;margin-right:20px"><img width="360" src="/images/gitactions/docker.png"></div></p>
+<p><div style="float:left"><img width="360" src="/images/gitactions/virtual.png"></div></p>
+<p><div style="float:none;clear:both;"><br></div><br>遇事不决先上图</p>
+<p>小弟不才，说说自己的见解，看图就很容易看出docker和虚拟机的最大区别，说人话就是，首先要说出docker里的容器和镜像的概念，容器就是根据你需要的镜像启动的，比如你有一个centos系统镜像，传统的虚拟机就是每个虚拟机上都用这个镜像往里面装一次，而docker就用这个镜像启动就可以了，这就生成了一个容器，而容器之间是独立的，这样就能做到资源的复用，扯远了。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//我也是用的别人的nginx镜像，简单记录一下</span><br><span class="line">docker pull nginx:latest</span><br><span class="line">docker run --name nginx-test -p 80:80 -d nginx</span><br></pre></td></tr></table></figure>
+<p>那细心的朋友也发现，我最后的那个actions的配置其实就是一些ssh命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> 你的docker容器名称 rm -rf /usr/share/nginx/html</span><br><span class="line">docker cp /home/www 你的docker容器名称:/usr/share/nginx/html</span><br></pre></td></tr></table></figure>
+<p>1、第一个就是先删除容器里的之前的项目，但也踩过坑，<code>docker exec</code>这个就是进入容器的命令了，之前我写的是<code>docker exec -it xxx /bin/bash</code>进去再<code>rm -rf</code>然后<code>exit</code>这样的，想法很美滋滋，但是ci命令上就报<code>err: the input device is not a TTY</code>后来才换成现在的命令<br>2、第二个就是把发上服务器的项目复制到容器里</p>
+<h2 id="开发应用"><a href="#开发应用" class="headerlink" title="开发应用"></a>开发应用</h2><p>过程也略。。。（到目前为止，如无意外的话，你只要push一下代码，就会进入到我们设置好的“陷阱”里，一顿自动操作执行下来，你的网站就部署上去了）</p>
+<h2 id="优化与改进（先挖好个坑）"><a href="#优化与改进（先挖好个坑）" class="headerlink" title="优化与改进（先挖好个坑）"></a>优化与改进（先挖好个坑）</h2><h3 id="自动发布到容器里（方案一）"><a href="#自动发布到容器里（方案一）" class="headerlink" title="自动发布到容器里（方案一）"></a>自动发布到容器里（方案一）</h3><p>1、将容器的sftp端口映射到服务器的某个端口上<br>2、在ftp actions里配置好对应的端口上传上去</p>
+<h3 id="用dockerFile自制镜像-（方案二）"><a href="#用dockerFile自制镜像-（方案二）" class="headerlink" title="用dockerFile自制镜像 （方案二）"></a>用dockerFile自制镜像 （方案二）</h3><p>1、ci.yml里面就是执行自制的docker镜像run一下<br>2、镜像逻辑大概如下：拉取最新代码到容器-&gt;打包项目-&gt;覆盖项目上的自定义nginx配置文件到容器nginx的默认路径</p>
+<p>参考文档：</p>
+<blockquote>
+<p><a href="http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html" target="_blank" rel="noopener">GitHub Actions 入门教程 - 阮一峰</a><br><a href="https://www.kai666666.top/2020/01/04/%E4%BD%BF%E7%94%A8GithubActions%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88ECS%EF%BC%89/" target="_blank" rel="noopener">使用GithubActions自动部署应用到自己的服务器（ECS）</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>部署</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ES6 规范详解、ESNext 规范</title>
+    <url>/2021/04/28/ES6%20%E8%A7%84%E8%8C%83%E8%AF%A6%E8%A7%A3%E3%80%81ESNext%20%E8%A7%84%E8%8C%83/</url>
+    <content><![CDATA[<h2 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h2><p>var、const、let、function<br>let 变量提升、作用域</p>
+<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><p>1、箭头函数this是定义时决定，普通函数是使用时决定<br>2、简写</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> fn = <span class="function"><span class="params">()</span>=&gt;</span> <span class="string">'sss'</span></span><br></pre></td></tr></table></figure>
+<p>3、不能做构造函数</p>
+<h3 id="class"><a href="#class" class="headerlink" title="class"></a>class</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span>()</span>&#123;</span><br><span class="line">  <span class="keyword">static</span> getFormatName()&#123;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>static 静态方法，只能console.log(Test.getFormatName())</p>
+<h3 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h3><ol>
+<li>for in</li>
+</ol>
+<ul>
+<li>会调用原型链（obj.hasOwnProperty(key)）判断一下</li>
+<li>不适合遍历数组</li>
+</ul>
+<ol start="2">
+<li>for of</li>
+</ol>
+<h3 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h3><ol>
+<li>Object.keys</li>
+<li>Object.values</li>
+<li>Object.entries</li>
+<li>Object.getOwnPropertyNames</li>
+<li>Object.getOwnPropertyDescriptor<br>对象的描述</li>
+</ol>
+<ul>
+<li>configurable: true</li>
+<li>writable: false</li>
+<li>enumerable: true //枚举</li>
+</ul>
+<p>Reflect 一种js 优化</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Reflect</span>.deleteProperty(obj,name) 等</span><br></pre></td></tr></table></figure>
+<h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><p>array.slice() 可以浅拷贝</p>
+<ul>
+<li>Array.from<br>如何把arguments转换成真数组</li>
+</ul>
+<ol>
+<li>[…arguments]</li>
+<li>Array.from(arguments)</li>
+<li>Array.prototype.slice.call(arguments)</li>
+</ol>
+]]></content>
+      <categories>
+        <category>知识总结</category>
+      </categories>
+      <tags>
+        <tag>重学前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>怎样更改组件库的图标？</title>
+    <url>/2019/03/14/icon-change/</url>
+    <content><![CDATA[<p>想必很多前端现在都是用别人的组件库，ant-design、element-ui或者vant等，那么当组件上的icon和我们美丽动人的UI小姐姐画出的UI稿不一样的时候，你们会怎么做呢？<br><a id="more"></a></p>
+<h2 id="组件api替换大法"><a href="#组件api替换大法" class="headerlink" title="组件api替换大法"></a>组件api替换大法</h2><p>1、组件本身提供api给你更换icon，换之则可<br>2、但每次使用都要替换也是挺麻烦的，可以尝试先封装一下，使用高阶组件</p>
+<blockquote>
+<p>可行性高，操作容易、略麻烦</p>
+</blockquote>
+<h2 id="源码copy大法"><a href="#源码copy大法" class="headerlink" title="源码copy大法"></a>源码copy大法</h2><p>1、不使用传统的npm install的包安装方法<br>2、将组件库的源码copy下来单独一个文件<br>3、修改源码组件对应的图标<br>4、或者自己建立一个私有的npm库将整个组件库推上去</p>
+<blockquote>
+<p>1、一次操作到位<br>2、但是组件库版本滞后</p>
+</blockquote>
+<h2 id="webpack修改大法"><a href="#webpack修改大法" class="headerlink" title="webpack修改大法"></a>webpack修改大法</h2><p>以ant-design为例子</p>
+<h3 id="webpack上的resolve路径"><a href="#webpack上的resolve路径" class="headerlink" title="webpack上的resolve路径"></a>webpack上的resolve路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">  extensions: [<span class="string">'.ts'</span>, <span class="string">'.tsx'</span>, <span class="string">'.js'</span>, <span class="string">'.jsx'</span>, <span class="string">'.less'</span>, <span class="string">'.css'</span>, <span class="string">'.json'</span>],</span><br><span class="line">  <span class="built_in">alias</span>: &#123;</span><br><span class="line">    <span class="string">'@src'</span>: path.resolve(__dirname, <span class="string">'../'</span>, <span class="string">'./src'</span>),</span><br><span class="line">    <span class="string">'@package'</span>: path.resolve(__dirname, <span class="string">'../'</span>, <span class="string">'src'</span>, <span class="string">'package'</span>),</span><br><span class="line">    <span class="string">'@libs'</span>: path.resolve(__dirname, <span class="string">'../'</span>, <span class="string">'src'</span>, <span class="string">'libs'</span>),</span><br><span class="line">    <span class="string">'@assets'</span>: path.resolve(__dirname, <span class="string">'../'</span>, <span class="string">'src'</span>, <span class="string">'assets'</span>),</span><br><span class="line">    <span class="string">'@ant-design/icons/lib/dist$'</span>: path.resolve(__dirname, <span class="string">'../'</span>, <span class="string">'src'</span>, <span class="string">'icon.js'</span>),</span><br><span class="line">    <span class="string">'vue'</span>: <span class="string">'vue/dist/vue.esm.js'</span>,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>主要就是改变这个打包路径 ‘@ant-design/icons/lib/dist$’</p>
+<h3 id="icon-js的文件"><a href="#icon-js的文件" class="headerlink" title="icon.js的文件"></a>icon.js的文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CloseOutline</span><br><span class="line">&#125; from <span class="string">'@libs/components/icons/CloseOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CheckOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/CheckOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as LoadingOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/LoadingOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CheckCircleOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/CheckCircleOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as InfoCircleOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/InfoCircleOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CloseCircleOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/CloseCircleOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as ExclamationCircleOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/ExclamationCircleOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CheckCircleFill</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/fill/CheckCircleFill'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as InfoCircleFill</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/fill/InfoCircleFill'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CloseCircleFill</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/fill/CloseCircleFill'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as ExclamationCircleFill</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/fill/ExclamationCircleFill'</span></span><br><span class="line"><span class="built_in">export</span> &#123; default as UpOutline &#125; from <span class="string">'@ant-design/icons/lib/outline/UpOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as DownOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/DownOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as LeftOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/LeftOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as RightOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/RightOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as RedoOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/RedoOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CalendarOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/CalendarOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as SearchOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/SearchOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as BarsOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/BarsOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as StarFill</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/fill/StarFill'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as FilterOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/FilterOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CaretUpFill</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/fill/CaretUpFill'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CaretDownFill</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/fill/CaretDownFill'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CaretUpOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/CaretUpOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CaretDownOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/CaretDownOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as PlusOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/PlusOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as FileOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/FileOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as FolderOpenOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/FolderOpenOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as FolderOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/FolderOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as PaperClipOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/PaperClipOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as PictureOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/PictureOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as EyeOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/EyeOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as DeleteOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/DeleteOutline'</span></span><br></pre></td></tr></table></figure>
+<p>就是将你需要更改的图标的地址改为你本地的<br>而且这里可以只引入一些你需要的图标，会减少一些icon库的打包大小</p>
+<h3 id="本地的图标"><a href="#本地的图标" class="headerlink" title="本地的图标"></a>本地的图标</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="string">"use strict"</span></span><br><span class="line">Object.defineProperty(exports, <span class="string">"__esModule"</span>, &#123; value: <span class="literal">true</span> &#125;)</span><br><span class="line">var CloseOutline = &#123;</span><br><span class="line">  name: <span class="string">'close'</span>,</span><br><span class="line">  theme: <span class="string">'outline'</span>,</span><br><span class="line">  icon: &#123;</span><br><span class="line">    tag: <span class="string">'svg'</span>,</span><br><span class="line">    attrs: &#123; version: <span class="string">'1.0'</span>, viewBox: <span class="string">'0 0 16 16'</span>, focusable: <span class="literal">false</span> &#125;,</span><br><span class="line">    children: [</span><br><span class="line">      &#123;</span><br><span class="line">        tag: <span class="string">'path'</span>,</span><br><span class="line">        attrs: &#123;</span><br><span class="line">          <span class="string">'fill-rule'</span>: <span class="string">'evenodd'</span>,</span><br><span class="line">          d: <span class="string">'M10.17 7.72l5.63-5.67a.63.63 0 000-.9l-.86-.91a.63.63 0 00-.91 0L8.35 5.9a.42.42 0 01-.61 0L2.06.2a.63.63 0 00-.91 0l-.91.9a.63.63 0 000 .91l5.68 5.67c.17.17.17.43 0 .6L.2 13.98a.63.63 0 000 .92l.9.9c.27.26.66.26.92 0l5.68-5.66a.42.42 0 01.6 0l5.68 5.67c.26.25.65.25.91 0l.91-.91a.63.63 0 000-.91l-5.63-5.67a.42.42 0 010-.6'</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">exports.default = CloseOutline</span><br></pre></td></tr></table></figure>
+<p>使用ant-design-icons的库做转换<br><a href="https://github.com/ant-design/ant-design-icons" target="_blank" rel="noopener">https://github.com/ant-design/ant-design-icons</a></p>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>各有利弊,欢迎补充</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>填坑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>1.10乘100为什么不等于110</title>
+    <url>/2017/02/14/js-note/</url>
+    <content><![CDATA[<h2 id="事情的起因"><a href="#事情的起因" class="headerlink" title="事情的起因"></a>事情的起因</h2><p>要从今天的微信支付调试说起，众所周知微信支付的接口，要求传入的金额数值是按分为单位的，所以都必须是大于0的整数。<br><a id="more"></a><br>&emsp;&emsp;所以我们一般业务的实际金额都要做乘以100的处理，例如某大妈刚在市场买了1.10元的菜，她摸了摸口袋，看了一眼诚实憨厚的大叔，已经麻利地帮她打包好菜，实在不忍心说出自己今天忘记带钱包。<br>&emsp;&emsp;大叔正打算把菜递给大妈之际，看到大妈尾头紧皱，已经失去平时要把1.10元的菜讲价到1.00元的风韵神采，便意识到事情并不简单，便默默从下方抽屉中抽出一个微信二维码递给她。<br>&emsp;&emsp;大妈心中暗喜，迅速拔出他儿子刚为她买的最新款红米手机，熟练地扫过二维码，也没有要讲价到1.00元的意思了，麻利地在微信上输入1.10元的金额，点击立即支付，输入过密码。。。<br>&emsp;&emsp;“参数错误：你输入的金额格式不正确”，看着手机弹出的提示弹窗，大妈狠狠咬了牙，又重复了一遍上述的支付动作，“参数错误：你输入的金额格式不正确”。这时大妈崩溃的用着恳求可怜的眼神看着大叔，大叔也一面无奈地轻轻将打包好的菜微微收了过来一下，空气突然安静地凝固起来。</p>
+<h2 id="问题剖释"><a href="#问题剖释" class="headerlink" title="问题剖释"></a>问题剖释</h2><p>&emsp;&emsp;空中传来旁白君的声音，它解析道：<br>&emsp;&emsp;没错，这为大妈所使用的程序，其实就是某知名博文《1.10乘100为什么不等于110》的博主还未调试完之前写的代码。<br>&emsp;&emsp;他就是这样把金额1.10乘100然后传过去微信的支付接口，他是那样的信心满满，因为他之前含着泪用自己的微信零钱支付的测试都是那样一条条地测试成功。他一次次发起1.10元支付测试，看着一次次弹出的反馈信息“参数错误：你输入的金额格式不正确”，他越觉得莫名奇妙，1.10乘100不就等于110吗，还有什么格式错误的？然而当这个too young too naive的少年，找出这个输入结果后，空气又突然安静地凝固起来。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt;1.10*100</span><br><span class="line">110.00000000000001</span><br></pre></td></tr></table></figure></p>
+<p>WHAT THE *!</p>
+<h2 id="IEEE754-双精度浮点数"><a href="#IEEE754-双精度浮点数" class="headerlink" title="IEEE754 双精度浮点数"></a>IEEE754 双精度浮点数</h2><p>Javascript 作为一门动态语言，其数字类型只有 number 一种。 nubmer 类型使用的就是美国电气电子工程师学会 IEEE754 标准中以64-bit存储的的双精度浮点。<br>而浮点数表示方式具有以下特点：<br>1.浮点数可表示的值范围比同等位数的整数表示方式的值范围要大得多；</p>
+<p>2.浮点数无法精确表示其值范围内的所有数值，而有符号和无符号整数则是精确表示其值范围内的每个数值；</p>
+<p>3.浮点数只能精确表示m*2e的数值；</p>
+<p>4.当biased-exponent为2e-1-1时，浮点数能精确表示该范围内的各整数值；</p>
+<p>5.当biased-exponent不为2e-1-1时，浮点数不能精确表示该范围内的各整数值。</p>
+<p>由于部分数值无法精确表示（存储），于是在运算统计后偏差会愈见明显。</p>
+<h3 id="So-Why-1-10-100-110-00000000000001"><a href="#So-Why-1-10-100-110-00000000000001" class="headerlink" title="So Why 1.10 * 100 === 110.00000000000001?"></a>So Why 1.10 * 100 === 110.00000000000001?</h3><p>1.1.10实际存储时的位模式是：<br>0011111111110001100110011001100110011001100110011001100110011001;<br>2.100实际存储时的位模式是<br>0110010000000000000000000000000000000000000000000000000000000000;<br>3.实际存储的位模式作为操作数进行浮点数乘法:<br>110000110011100010111011110111100110100001100000000000000。<br>转换为十进制即为110.00000000000001。</p>
+<h3 id="0-1-0-2"><a href="#0-1-0-2" class="headerlink" title="0.1+0.2"></a>0.1+0.2</h3><p>其实这和那著名的 0.1 + 0.2 === 0.30000000000000004问题是一个道理的，可笑的是，只要我们的大妈把价讲到1.00元<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt;1.00*100</span><br><span class="line">100</span><br></pre></td></tr></table></figure></p>
+<p>就不会有问题了。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>JS坑常有，我们慢慢填之。</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>填坑</tag>
+        <tag>JS填坑</tag>
       </tags>
   </entry>
   <entry>
@@ -520,99 +541,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello Hexo</title>
-    <url>/2016/02/14/hello-world/</url>
-    <content><![CDATA[<p>博客换上Hexo主题</p>
-<hr>
-<h2 id="很久以前"><a href="#很久以前" class="headerlink" title="很久以前"></a>很久以前</h2><a id="more"></a>
-<h3 id="就被它的这个"><a href="#就被它的这个" class="headerlink" title="就被它的这个"></a>就被它的这个</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">试试代码</span><br></pre></td></tr></table></figure>
-<p>1001001111100101010110</p>
-<blockquote>
-<p>试试区块 这是一个区块</p>
-</blockquote>
-<p><em>这是斜体文字</em><br><strong>这是加粗的文字</strong></p>
-<p><font size="4">我是变大的字</font></p>
-<p><font color="green">我是有颜色字</font><br><img src="/images/module/exports.png" alt><br><code>代码字</code><br><a href="https://mp.weixin.qq.com/debug/wxadoc/dev/framework/performance/tips.html" target="_blank" rel="noopener">这是个链接</a></p>
-<h3 id="文章目录吸引了"><a href="#文章目录吸引了" class="headerlink" title="文章目录吸引了"></a>文章目录吸引了</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">console.log(<span class="string">'hello world'</span>);</span><br></pre></td></tr></table></figure>
-<p>列表？</p>
-<ol>
-<li>Red</li>
-<li>Green</li>
-<li>Blue</li>
-</ol>
-<ul>
-<li>a</li>
-<li>b</li>
-<li>c</li>
-</ul>
-<p>表格<br>| 左对齐 | 右对齐 | 居中对齐 |<br>| :—–| —-: | :—-: |<br>| 单元格 | 单元格 | 单元格 |<br>| 单元格 | 单元格 | 单元格 |</p>
-<h3 id="今天终于能够换来试试"><a href="#今天终于能够换来试试" class="headerlink" title="今天终于能够换来试试"></a>今天终于能够换来试试</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$(<span class="string">'#life'</span>).html(<span class="string">'希望每个月能更一篇，以此为鉴'</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="表示好兴奋"><a href="#表示好兴奋" class="headerlink" title="表示好兴奋"></a>表示好兴奋</h3><p>大家提提意见博客能有什么改造的地方</p>
-<p>上标<sup>TM</sup><br>下标<sub>i</sub></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">bye</span></span>()&#123;<span class="built_in">return</span> <span class="string">"恭喜你获得阅读我的第一篇博客成就！"</span>&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>文章</category>
-      </categories>
-      <tags>
-        <tag>第一次</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>1.10乘100为什么不等于110</title>
-    <url>/2017/02/14/js-note/</url>
-    <content><![CDATA[<h2 id="事情的起因"><a href="#事情的起因" class="headerlink" title="事情的起因"></a>事情的起因</h2><p>要从今天的微信支付调试说起，众所周知微信支付的接口，要求传入的金额数值是按分为单位的，所以都必须是大于0的整数。<br><a id="more"></a><br>&emsp;&emsp;所以我们一般业务的实际金额都要做乘以100的处理，例如某大妈刚在市场买了1.10元的菜，她摸了摸口袋，看了一眼诚实憨厚的大叔，已经麻利地帮她打包好菜，实在不忍心说出自己今天忘记带钱包。<br>&emsp;&emsp;大叔正打算把菜递给大妈之际，看到大妈尾头紧皱，已经失去平时要把1.10元的菜讲价到1.00元的风韵神采，便意识到事情并不简单，便默默从下方抽屉中抽出一个微信二维码递给她。<br>&emsp;&emsp;大妈心中暗喜，迅速拔出他儿子刚为她买的最新款红米手机，熟练地扫过二维码，也没有要讲价到1.00元的意思了，麻利地在微信上输入1.10元的金额，点击立即支付，输入过密码。。。<br>&emsp;&emsp;“参数错误：你输入的金额格式不正确”，看着手机弹出的提示弹窗，大妈狠狠咬了牙，又重复了一遍上述的支付动作，“参数错误：你输入的金额格式不正确”。这时大妈崩溃的用着恳求可怜的眼神看着大叔，大叔也一面无奈地轻轻将打包好的菜微微收了过来一下，空气突然安静地凝固起来。</p>
-<h2 id="问题剖释"><a href="#问题剖释" class="headerlink" title="问题剖释"></a>问题剖释</h2><p>&emsp;&emsp;空中传来旁白君的声音，它解析道：<br>&emsp;&emsp;没错，这为大妈所使用的程序，其实就是某知名博文《1.10乘100为什么不等于110》的博主还未调试完之前写的代码。<br>&emsp;&emsp;他就是这样把金额1.10乘100然后传过去微信的支付接口，他是那样的信心满满，因为他之前含着泪用自己的微信零钱支付的测试都是那样一条条地测试成功。他一次次发起1.10元支付测试，看着一次次弹出的反馈信息“参数错误：你输入的金额格式不正确”，他越觉得莫名奇妙，1.10乘100不就等于110吗，还有什么格式错误的？然而当这个too young too naive的少年，找出这个输入结果后，空气又突然安静地凝固起来。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt;1.10*100</span><br><span class="line">110.00000000000001</span><br></pre></td></tr></table></figure></p>
-<p>WHAT THE *!</p>
-<h2 id="IEEE754-双精度浮点数"><a href="#IEEE754-双精度浮点数" class="headerlink" title="IEEE754 双精度浮点数"></a>IEEE754 双精度浮点数</h2><p>Javascript 作为一门动态语言，其数字类型只有 number 一种。 nubmer 类型使用的就是美国电气电子工程师学会 IEEE754 标准中以64-bit存储的的双精度浮点。<br>而浮点数表示方式具有以下特点：<br>1.浮点数可表示的值范围比同等位数的整数表示方式的值范围要大得多；</p>
-<p>2.浮点数无法精确表示其值范围内的所有数值，而有符号和无符号整数则是精确表示其值范围内的每个数值；</p>
-<p>3.浮点数只能精确表示m*2e的数值；</p>
-<p>4.当biased-exponent为2e-1-1时，浮点数能精确表示该范围内的各整数值；</p>
-<p>5.当biased-exponent不为2e-1-1时，浮点数不能精确表示该范围内的各整数值。</p>
-<p>由于部分数值无法精确表示（存储），于是在运算统计后偏差会愈见明显。</p>
-<h3 id="So-Why-1-10-100-110-00000000000001"><a href="#So-Why-1-10-100-110-00000000000001" class="headerlink" title="So Why 1.10 * 100 === 110.00000000000001?"></a>So Why 1.10 * 100 === 110.00000000000001?</h3><p>1.1.10实际存储时的位模式是：<br>0011111111110001100110011001100110011001100110011001100110011001;<br>2.100实际存储时的位模式是<br>0110010000000000000000000000000000000000000000000000000000000000;<br>3.实际存储的位模式作为操作数进行浮点数乘法:<br>110000110011100010111011110111100110100001100000000000000。<br>转换为十进制即为110.00000000000001。</p>
-<h3 id="0-1-0-2"><a href="#0-1-0-2" class="headerlink" title="0.1+0.2"></a>0.1+0.2</h3><p>其实这和那著名的 0.1 + 0.2 === 0.30000000000000004问题是一个道理的，可笑的是，只要我们的大妈把价讲到1.00元<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt;1.00*100</span><br><span class="line">100</span><br></pre></td></tr></table></figure></p>
-<p>就不会有问题了。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>JS坑常有，我们慢慢填之。</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>JS填坑</tag>
-        <tag>填坑</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>怎样更改组件库的图标？</title>
-    <url>/2019/03/14/icon-change/</url>
-    <content><![CDATA[<p>想必很多前端现在都是用别人的组件库，ant-design、element-ui或者vant等，那么当组件上的icon和我们美丽动人的UI小姐姐画出的UI稿不一样的时候，你们会怎么做呢？<br><a id="more"></a></p>
-<h2 id="组件api替换大法"><a href="#组件api替换大法" class="headerlink" title="组件api替换大法"></a>组件api替换大法</h2><p>1、组件本身提供api给你更换icon，换之则可<br>2、但每次使用都要替换也是挺麻烦的，可以尝试先封装一下，使用高阶组件</p>
-<blockquote>
-<p>可行性高，操作容易、略麻烦</p>
-</blockquote>
-<h2 id="源码copy大法"><a href="#源码copy大法" class="headerlink" title="源码copy大法"></a>源码copy大法</h2><p>1、不使用传统的npm install的包安装方法<br>2、将组件库的源码copy下来单独一个文件<br>3、修改源码组件对应的图标<br>4、或者自己建立一个私有的npm库将整个组件库推上去</p>
-<blockquote>
-<p>1、一次操作到位<br>2、但是组件库版本滞后</p>
-</blockquote>
-<h2 id="webpack修改大法"><a href="#webpack修改大法" class="headerlink" title="webpack修改大法"></a>webpack修改大法</h2><p>以ant-design为例子</p>
-<h3 id="webpack上的resolve路径"><a href="#webpack上的resolve路径" class="headerlink" title="webpack上的resolve路径"></a>webpack上的resolve路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">  extensions: [<span class="string">'.ts'</span>, <span class="string">'.tsx'</span>, <span class="string">'.js'</span>, <span class="string">'.jsx'</span>, <span class="string">'.less'</span>, <span class="string">'.css'</span>, <span class="string">'.json'</span>],</span><br><span class="line">  <span class="built_in">alias</span>: &#123;</span><br><span class="line">    <span class="string">'@src'</span>: path.resolve(__dirname, <span class="string">'../'</span>, <span class="string">'./src'</span>),</span><br><span class="line">    <span class="string">'@package'</span>: path.resolve(__dirname, <span class="string">'../'</span>, <span class="string">'src'</span>, <span class="string">'package'</span>),</span><br><span class="line">    <span class="string">'@libs'</span>: path.resolve(__dirname, <span class="string">'../'</span>, <span class="string">'src'</span>, <span class="string">'libs'</span>),</span><br><span class="line">    <span class="string">'@assets'</span>: path.resolve(__dirname, <span class="string">'../'</span>, <span class="string">'src'</span>, <span class="string">'assets'</span>),</span><br><span class="line">    <span class="string">'@ant-design/icons/lib/dist$'</span>: path.resolve(__dirname, <span class="string">'../'</span>, <span class="string">'src'</span>, <span class="string">'icon.js'</span>),</span><br><span class="line">    <span class="string">'vue'</span>: <span class="string">'vue/dist/vue.esm.js'</span>,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>主要就是改变这个打包路径 ‘@ant-design/icons/lib/dist$’</p>
-<h3 id="icon-js的文件"><a href="#icon-js的文件" class="headerlink" title="icon.js的文件"></a>icon.js的文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CloseOutline</span><br><span class="line">&#125; from <span class="string">'@libs/components/icons/CloseOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CheckOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/CheckOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as LoadingOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/LoadingOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CheckCircleOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/CheckCircleOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as InfoCircleOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/InfoCircleOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CloseCircleOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/CloseCircleOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as ExclamationCircleOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/ExclamationCircleOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CheckCircleFill</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/fill/CheckCircleFill'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as InfoCircleFill</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/fill/InfoCircleFill'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CloseCircleFill</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/fill/CloseCircleFill'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as ExclamationCircleFill</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/fill/ExclamationCircleFill'</span></span><br><span class="line"><span class="built_in">export</span> &#123; default as UpOutline &#125; from <span class="string">'@ant-design/icons/lib/outline/UpOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as DownOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/DownOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as LeftOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/LeftOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as RightOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/RightOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as RedoOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/RedoOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CalendarOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/CalendarOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as SearchOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/SearchOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as BarsOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/BarsOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as StarFill</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/fill/StarFill'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as FilterOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/FilterOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CaretUpFill</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/fill/CaretUpFill'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CaretDownFill</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/fill/CaretDownFill'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CaretUpOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/CaretUpOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as CaretDownOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/CaretDownOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as PlusOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/PlusOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as FileOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/FileOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as FolderOpenOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/FolderOpenOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as FolderOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/FolderOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as PaperClipOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/PaperClipOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as PictureOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/PictureOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as EyeOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/EyeOutline'</span></span><br><span class="line"><span class="built_in">export</span> &#123;</span><br><span class="line">  default as DeleteOutline</span><br><span class="line">&#125; from <span class="string">'@ant-design/icons/lib/outline/DeleteOutline'</span></span><br></pre></td></tr></table></figure>
-<p>就是将你需要更改的图标的地址改为你本地的<br>而且这里可以只引入一些你需要的图标，会减少一些icon库的打包大小</p>
-<h3 id="本地的图标"><a href="#本地的图标" class="headerlink" title="本地的图标"></a>本地的图标</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="string">"use strict"</span></span><br><span class="line">Object.defineProperty(exports, <span class="string">"__esModule"</span>, &#123; value: <span class="literal">true</span> &#125;)</span><br><span class="line">var CloseOutline = &#123;</span><br><span class="line">  name: <span class="string">'close'</span>,</span><br><span class="line">  theme: <span class="string">'outline'</span>,</span><br><span class="line">  icon: &#123;</span><br><span class="line">    tag: <span class="string">'svg'</span>,</span><br><span class="line">    attrs: &#123; version: <span class="string">'1.0'</span>, viewBox: <span class="string">'0 0 16 16'</span>, focusable: <span class="literal">false</span> &#125;,</span><br><span class="line">    children: [</span><br><span class="line">      &#123;</span><br><span class="line">        tag: <span class="string">'path'</span>,</span><br><span class="line">        attrs: &#123;</span><br><span class="line">          <span class="string">'fill-rule'</span>: <span class="string">'evenodd'</span>,</span><br><span class="line">          d: <span class="string">'M10.17 7.72l5.63-5.67a.63.63 0 000-.9l-.86-.91a.63.63 0 00-.91 0L8.35 5.9a.42.42 0 01-.61 0L2.06.2a.63.63 0 00-.91 0l-.91.9a.63.63 0 000 .91l5.68 5.67c.17.17.17.43 0 .6L.2 13.98a.63.63 0 000 .92l.9.9c.27.26.66.26.92 0l5.68-5.66a.42.42 0 01.6 0l5.68 5.67c.26.25.65.25.91 0l.91-.91a.63.63 0 000-.91l-5.63-5.67a.42.42 0 010-.6'</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">exports.default = CloseOutline</span><br></pre></td></tr></table></figure>
-<p>使用ant-design-icons的库做转换<br><a href="https://github.com/ant-design/ant-design-icons" target="_blank" rel="noopener">https://github.com/ant-design/ant-design-icons</a></p>
-<hr>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>各有利弊,欢迎补充</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>填坑</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JS的变量提升了解一下？</title>
     <url>/2018/03/14/js-var/</url>
     <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var 100</span><br><span class="line">//等等，去喝杯咖啡再写</span><br></pre></td></tr></table></figure>]]></content>
@@ -620,8 +548,122 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>JS填坑</tag>
         <tag>填坑</tag>
+        <tag>JS填坑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用hooks的一些小感想</title>
+    <url>/2022/01/14/hooks/</url>
+    <content><![CDATA[<blockquote>
+<p>这里文章说的都是hooks<sup>react</sup></p>
+</blockquote>
+<h3 id="那什么是hooks"><a href="#那什么是hooks" class="headerlink" title="那什么是hooks"></a>那什么是hooks</h3><p>故名思义 <code>Hooks</code> 译为钩子，<code>Hooks</code> 就是在函数组件内，负责钩进外部功能的函数。</p>
+<p>(说了又好像没说)</p>
+<h3 id="有什么爽的👌"><a href="#有什么爽的👌" class="headerlink" title="有什么爽的👌"></a>有什么爽的👌</h3><ul>
+<li>函数组件原地飞升</li>
+<li>不用管this了</li>
+<li>生命周期也不用记那么多了</li>
+</ul>
+<p>开始结束的生命周期可以写在一起，代码更漂亮了</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'开波'</span>)</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'结束'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,[])</span><br><span class="line"><span class="comment">// ps.空数组就是只进入一次</span></span><br></pre></td></tr></table></figure>
+<p>props的值的变化，xx值的变化都能放在一起监听</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'无论是数组还是对象，数据多深都能进（后来才发现也不是多深都能啦），这不比vue的watch爽？'</span>)</span><br><span class="line">  <span class="comment">// 那么useEffect是怎样监听数据变化的呢</span></span><br><span class="line">  <span class="comment">// 它和useLayoutEffect又有什么区别呢</span></span><br><span class="line">  <span class="comment">// 这要从hooks的基础概念链表说起，请往下看</span></span><br><span class="line">&#125;,[props.a,b])</span><br></pre></td></tr></table></figure>
+<p>通过看useEffect的源码，我们不难发现</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 通过看源码我们得知</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; prevDeps.length &amp;&amp; i &lt; nextDeps.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (is(nextDeps[i], prevDeps[i])) &#123;</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 我们知道它的对比方法是</span></span><br><span class="line"><span class="comment">// 其中里面的is是这个</span></span><br><span class="line"><span class="keyword">import</span> is <span class="keyword">from</span> <span class="string">'shared/objectIs'</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">is</span>(<span class="params">x: any, y: any</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    (x === y &amp;&amp; (x !== <span class="number">0</span> || <span class="number">1</span> / x === <span class="number">1</span> / y)) || (x !== x &amp;&amp; y !== y) <span class="comment">// eslint-disable-line no-self-compare</span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> objectIs: <span class="function">(<span class="params">x: any, y: any</span>) =&gt;</span> boolean =</span><br><span class="line">  <span class="keyword">typeof</span> <span class="built_in">Object</span>.is === <span class="string">'function'</span> ? <span class="built_in">Object</span>.is : is;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> objectIs;</span><br></pre></td></tr></table></figure>
+<p>所以其实它就是用<code>Object.is</code>做比较</p>
+<blockquote>
+<p>有需要做深比较的可以用<code>ahooks</code>的<code>useDeepCompareEffect</code>，用法与 useEffect 一致，但 deps 通过 lodash 的<code>isEqual</code>进行深比较。</p>
+</blockquote>
+<ul>
+<li>代码复用更高</li>
+</ul>
+<h3 id="吐槽一下"><a href="#吐槽一下" class="headerlink" title="吐槽一下"></a>吐槽一下</h3><h4 id="闭包陷阱"><a href="#闭包陷阱" class="headerlink" title="闭包陷阱"></a>闭包陷阱</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;useEffect, useState&#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = useState(<span class="number">0</span>)</span><br><span class="line">  useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      setCount(count + <span class="number">1</span>)</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">  &#125;, [])</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">       &lt;p&gt;count=&#123;count&#125;&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>大家可能会一直期待着数字的变化，但它就偏不，一直保持着1</p>
+<p>事情为什么会发展成这样，那就要从底层的渲染开始说起</p>
+<blockquote>
+<p>初次渲染-&gt;执行APP-&gt;usestate设置count为初始0-&gt;1秒后state改变-&gt;视图更新-&gt;按照fiber链表执行hooks-&gt;useEffect deps 不变-&gt;然后1秒后的count始终都是0+1</p>
+</blockquote>
+<p>解决办法：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 有细心的网友可能会发现，网上其他地方可能会建议在useEffect的deps上加上count</span></span><br><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    setCount(count + <span class="number">1</span>)</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;, [count])</span><br><span class="line"><span class="comment">// 这样确实能拿到最新的count</span></span><br><span class="line"><span class="comment">// ❌但是这里喔不建议这样写</span></span><br><span class="line"><span class="comment">// 因为你想想，每次count的更新它都会重新进去建一个新的定时器</span></span><br><span class="line"><span class="comment">// 以后画面就会很鬼畜</span></span><br></pre></td></tr></table></figure>
+<p>建议版本方法</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    setCount(<span class="function"><span class="params">res</span>=&gt;</span>(res+<span class="number">1</span>))</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;, [])</span><br><span class="line"><span class="comment">// setCount本身可以传方法，本来就是最新的值</span></span><br></pre></td></tr></table></figure>
+<p>高级版本ref大法</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//简单来说就是利用useRef返回的是同一个对象，指向同一片内存</span></span><br><span class="line"><span class="keyword">let</span> ref_ = useRef(<span class="number">1</span>)</span><br><span class="line">ref_.current++</span><br><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  setInterval(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(ref.current) <span class="comment">// 3</span></span><br><span class="line">  &#125;, <span class="number">1000</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="不能用判断或者随机函数"><a href="#不能用判断或者随机函数" class="headerlink" title="不能用判断或者随机函数"></a>不能用判断或者随机函数</h4><p>举个🌰</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">Math</span>.random() &gt; <span class="number">0.5</span>) &#123;</span><br><span class="line">  useState(<span class="string">'first'</span>)</span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">let</span> showSex = <span class="literal">true</span></span><br><span class="line"><span class="keyword">if</span>(showSex)&#123;</span><br><span class="line">    <span class="keyword">const</span> [ sex, setSex ] = useState(<span class="string">'男'</span>);</span><br><span class="line">    showSex = <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上的行为都是打咩的</p>
+<p>原因是hooks的数据管理是用链表管理的，所以数据不能一时有一时没</p>
+<p>举个不太恰当的例子，就像</p>
+<blockquote>
+<ul>
+<li>数组[0]代表useState(‘A’)</li>
+<li>数组[1]代表useState(‘B)</li>
+<li>现在你突然把’A’删掉了，那就变成数组[0]代表useState(‘B’)了</li>
+<li>那么你就不是你了，他也不是他了</li>
+</ul>
+</blockquote>
+<h4 id="useCallBack-还是-useMemo"><a href="#useCallBack-还是-useMemo" class="headerlink" title="useCallBack 还是 useMemo"></a>useCallBack 还是 useMemo</h4><p>仅仅 <code>依赖数据</code> 发生变化, 才会重新计算结果，说是为了性能优化，起到缓存的作用，</p>
+<p>这里说一个面试常问的<code>useCallBack</code> 和 <code>useMemo</code> 有什么区别？</p>
+<p>网上各种解析长篇大论的，一句话其实就是</p>
+<blockquote>
+<p>useCallback 缓存钩子函数，useMemo 缓存返回值（计算结果）[当然useMemo也可以传入函数]。</p>
+</blockquote>
+<p>这个时候，有好奇宝贝就会问了,那用这个会多那么多代码量，有什么用呢</p>
+<p>答案是：性能优化，这里就要涉及到更深层的react的渲染原理了，”比较更新！！”,react每次渲染的时候，它都把值和函数重新计算渲染，这里就会消耗点内存了，用上那2玩意，其实就是告诉react，我们没有变化，帮我存起来，不用再比较了</p>
+<p>那么有些姓杠的小朋友，这时候就不耐烦了，站起来问道：为什么react不帮我们自动做这些优化呢，我就想静静地写代码，为什么还要考虑该不该包个<code>useCallBack</code></p>
+<p>问得好，这里顺便@一下官方团队，希望相关单位能密切关注这个问题</p>
+<p>还会有些害羞的小朋友会嘀咕着，为什么class组件的时候就不需要注意这些呢</p>
+<p>个人鄙见：新旧版本的渲染方法其实差不多的，我觉得前端深入研究性能优化是没有前途的，框架或者浏览器，一次小小的版本更新，可能效果就远远胜过了你多少个日日夜夜的辛勤付出了。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>hooks需好，但要小心使用</p>
+]]></content>
+      <categories>
+        <category>知识总结</category>
+      </categories>
+      <tags>
+        <tag>文章</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>完成的项目，持续更新</title>
+    <url>/2018/08/14/project/</url>
+    <content><![CDATA[<p>目标：写过的代码加起来能绕地球一圈</p>
+<h2 id="那是梦开始的地方"><a href="#那是梦开始的地方" class="headerlink" title="那是梦开始的地方"></a>那是梦开始的地方</h2><a id="more"></a>
+<h3 id="第一个小程序，IoT项目"><a href="#第一个小程序，IoT项目" class="headerlink" title="第一个小程序，IoT项目"></a>第一个小程序，IoT项目</h3><p><img src="/images/project/iot_user.jpg" alt><br>IoT安装端账号：az1 密码：123456<br><img src="/images/project/iot_install.jpg" alt><br>IoT售后端账号：wx1 密码：123456<br><img src="/images/project/iot_wx.jpg" alt></p>
+<h3 id="车仔网小程序"><a href="#车仔网小程序" class="headerlink" title="车仔网小程序"></a>车仔网小程序</h3><p><img src="/images/project/chezi.png" alt></p>
+<h3 id="男士理容预约小程序"><a href="#男士理容预约小程序" class="headerlink" title="男士理容预约小程序"></a>男士理容预约小程序</h3><p><img src="/images/project/harroman.jpg" alt></p>
+<h3 id="vue搭建的手机商城"><a href="#vue搭建的手机商城" class="headerlink" title="vue搭建的手机商城"></a>vue搭建的手机商城</h3><p><img src="/images/project/shilianmobile.png" alt></p>
+<h3 id="飞冰Ice后台demo"><a href="#飞冰Ice后台demo" class="headerlink" title="飞冰Ice后台demo"></a>飞冰Ice后台demo</h3><p><a href="http://hospital.pppppxt.cc" target="_blank" rel="noopener">demo链接,点我,点我</a><br>管理员账户：admin;医生账号：doctor 密码都是：123456</p>
+<h3 id="某题库测试系统前端demo"><a href="#某题库测试系统前端demo" class="headerlink" title="某题库测试系统前端demo"></a>某题库测试系统前端demo</h3><p><a href="http://wuweiquan.pppppxt.cc" target="_blank" rel="noopener">点我,点我</a><br>sn码随便输入即可</p>
+]]></content>
+      <categories>
+        <category>项目</category>
+      </categories>
+      <tags>
+        <tag>案例</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Using a custom hook instead of useContext in React&#39;s Context API</title>
+    <url>/2023/09/17/react-context/</url>
+    <content><![CDATA[<p>Junior react devs should use a custom Hook instead of useContext to avoid prop drilling and easily access the theme in multiple components.</p>
+<hr>
+<a id="more"></a>
+<h2 id="example"><a href="#example" class="headerlink" title="example"></a>example</h2><p>Wrap the root component of your React app with a theme context provider to give all pages access to the theme, but be aware that only the provider itself needs to be a client component.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"># /context/theme-context</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> React, &#123; createContext, useState &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ThemeContext = createContext(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">ThemeContextProvider</span>(<span class="params">&#123;children&#125;</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [theme, setTheme] = useState(<span class="string">'light'</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;ThemeContext.Provider</span><br><span class="line">      value=&#123;&#123;</span><br><span class="line">        theme,</span><br><span class="line">        setTheme</span><br><span class="line">      &#125;&#125;</span><br><span class="line">    &gt;</span><br><span class="line">      &#123;children&#125;</span><br><span class="line">    &lt;<span class="regexp">/ThemeContext.Provider&gt;</span></span><br><span class="line"><span class="regexp">  )</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>the drawbacks of using the useContext hook for the Context API in React and suggests using a custom hook instead to avoid the need to manually import and specify the context in every component.</p>
+<h2 id="Use-Context-API"><a href="#Use-Context-API" class="headerlink" title="Use Context API"></a>Use Context API</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"># logo.tsx</span><br><span class="line"><span class="keyword">import</span> &#123; ThemeContext &#125; <span class="keyword">from</span> <span class="string">'@/context/theme-context'</span>;</span><br><span class="line"><span class="keyword">import</span> React, &#123; useContext &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">Logo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; theme, setTheme &#125; = useContext(ThemeContext);</span><br><span class="line">  <span class="comment">// if theme is dark mode, return dark mode logo...</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// if theme is light mode, return light mode logo...</span></span><br><span class="line">  <span class="keyword">return</span> &lt;div&gt;Logo&lt;/div&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Use-a-custom-hook"><a href="#Use-a-custom-hook" class="headerlink" title="Use a custom hook"></a>Use a custom hook</h2><p>Add a useThemeContext hook into theme-context</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">......</span><br><span class="line">type ThemeContextProviderProps = &#123;</span><br><span class="line">  children: React.ReactNode;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type Theme = <span class="string">'dark'</span> | <span class="string">'light'</span></span><br><span class="line"></span><br><span class="line">type ThemeContext = &#123;</span><br><span class="line">  theme: string;</span><br><span class="line">  setTheme: React.Dispatch&lt;React.SetStateAction&lt;string&gt;&gt;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> ThemeContext = createContext&lt;ThemeContext | <span class="literal">null</span>&gt;(<span class="literal">null</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">useThemeContext</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">const</span> context = React.useContext(ThemeContext);</span><br><span class="line">  <span class="keyword">if</span>(context === <span class="literal">undefined</span>)&#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span> (<span class="string">"useThemeContext muse be used within a ThemeContextProvider"</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> context;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>And in the component, use like this:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"># logo.tsx</span><br><span class="line"><span class="keyword">import</span> &#123; useThemeContext &#125; <span class="keyword">from</span> <span class="string">'@/context/theme-context'</span>;</span><br><span class="line"><span class="keyword">import</span> React, &#123; useContext &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">Logo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; theme, setTheme &#125; = useThemeContext();</span><br><span class="line">  <span class="comment">// if theme is dark mode, return dark mode logo...</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// if theme is light mode, return light mode logo...</span></span><br><span class="line">  <span class="keyword">return</span> &lt;div&gt;Logo&lt;/div&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>💡 One of the biggest mistakes that Junior react developers make is not using a custom Hook when they’re using the context API.<br>🌳 The root layout component in React should wrap the entire app with the theme context provider to ensure that all components have access to it.<br>💡 The speaker suggests using a custom hook instead of the useContext hook for implementing the Context API in React, highlighting potential issues with the useContext approach.<br>🚫 It is recommended to use a custom hook for the Context API instead of useContext to avoid the problems associated with null values and improve code readability.<br>🚀 By abstracting the problems into a custom hook, it becomes immediately clear which context is being used, improving code readability and maintainability.<br>🤔 TypeScript can help prevent errors by specifying the specific type of a variable, such as using a Union type for a theme.</p>
+]]></content>
+      <categories>
+        <category>文章</category>
+      </categories>
+      <tags>
+        <tag>english</tag>
       </tags>
   </entry>
   <entry>
@@ -648,8 +690,8 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>JS填坑</tag>
         <tag>填坑</tag>
+        <tag>JS填坑</tag>
       </tags>
   </entry>
   <entry>
@@ -671,25 +713,6 @@
       </categories>
       <tags>
         <tag>数学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>完成的项目，持续更新</title>
-    <url>/2018/08/14/project/</url>
-    <content><![CDATA[<p>目标：写过的代码加起来能绕地球一圈</p>
-<h2 id="那是梦开始的地方"><a href="#那是梦开始的地方" class="headerlink" title="那是梦开始的地方"></a>那是梦开始的地方</h2><a id="more"></a>
-<h3 id="第一个小程序，IoT项目"><a href="#第一个小程序，IoT项目" class="headerlink" title="第一个小程序，IoT项目"></a>第一个小程序，IoT项目</h3><p><img src="/images/project/iot_user.jpg" alt><br>IoT安装端账号：az1 密码：123456<br><img src="/images/project/iot_install.jpg" alt><br>IoT售后端账号：wx1 密码：123456<br><img src="/images/project/iot_wx.jpg" alt></p>
-<h3 id="车仔网小程序"><a href="#车仔网小程序" class="headerlink" title="车仔网小程序"></a>车仔网小程序</h3><p><img src="/images/project/chezi.png" alt></p>
-<h3 id="男士理容预约小程序"><a href="#男士理容预约小程序" class="headerlink" title="男士理容预约小程序"></a>男士理容预约小程序</h3><p><img src="/images/project/harroman.jpg" alt></p>
-<h3 id="vue搭建的手机商城"><a href="#vue搭建的手机商城" class="headerlink" title="vue搭建的手机商城"></a>vue搭建的手机商城</h3><p><img src="/images/project/shilianmobile.png" alt></p>
-<h3 id="飞冰Ice后台demo"><a href="#飞冰Ice后台demo" class="headerlink" title="飞冰Ice后台demo"></a>飞冰Ice后台demo</h3><p><a href="http://hospital.pppppxt.cc" target="_blank" rel="noopener">demo链接,点我,点我</a><br>管理员账户：admin;医生账号：doctor 密码都是：123456</p>
-<h3 id="某题库测试系统前端demo"><a href="#某题库测试系统前端demo" class="headerlink" title="某题库测试系统前端demo"></a>某题库测试系统前端demo</h3><p><a href="http://wuweiquan.pppppxt.cc" target="_blank" rel="noopener">点我,点我</a><br>sn码随便输入即可</p>
-]]></content>
-      <categories>
-        <category>项目</category>
-      </categories>
-      <tags>
-        <tag>案例</tag>
       </tags>
   </entry>
   <entry>
@@ -741,49 +764,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Using a custom hook instead of useContext in React&#39;s Context API</title>
-    <url>/2023/09/17/react-context/</url>
-    <content><![CDATA[<p>Junior react devs should use a custom Hook instead of useContext to avoid prop drilling and easily access the theme in multiple components.</p>
-<hr>
-<a id="more"></a>
-<h2 id="example"><a href="#example" class="headerlink" title="example"></a>example</h2><p>Wrap the root component of your React app with a theme context provider to give all pages access to the theme, but be aware that only the provider itself needs to be a client component.</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"># /context/theme-context</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> React, &#123; createContext, useState &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ThemeContext = createContext(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">ThemeContextProvider</span>(<span class="params">&#123;children&#125;</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [theme, setTheme] = useState(<span class="string">'light'</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;ThemeContext.Provider</span><br><span class="line">      value=&#123;&#123;</span><br><span class="line">        theme,</span><br><span class="line">        setTheme</span><br><span class="line">      &#125;&#125;</span><br><span class="line">    &gt;</span><br><span class="line">      &#123;children&#125;</span><br><span class="line">    &lt;<span class="regexp">/ThemeContext.Provider&gt;</span></span><br><span class="line"><span class="regexp">  )</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
-<p>the drawbacks of using the useContext hook for the Context API in React and suggests using a custom hook instead to avoid the need to manually import and specify the context in every component.</p>
-<h2 id="Use-Context-API"><a href="#Use-Context-API" class="headerlink" title="Use Context API"></a>Use Context API</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"># logo.tsx</span><br><span class="line"><span class="keyword">import</span> &#123; ThemeContext &#125; <span class="keyword">from</span> <span class="string">'@/context/theme-context'</span>;</span><br><span class="line"><span class="keyword">import</span> React, &#123; useContext &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">Logo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; theme, setTheme &#125; = useContext(ThemeContext);</span><br><span class="line">  <span class="comment">// if theme is dark mode, return dark mode logo...</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// if theme is light mode, return light mode logo...</span></span><br><span class="line">  <span class="keyword">return</span> &lt;div&gt;Logo&lt;/div&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Use-a-custom-hook"><a href="#Use-a-custom-hook" class="headerlink" title="Use a custom hook"></a>Use a custom hook</h2><p>Add a useThemeContext hook into theme-context</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">......</span><br><span class="line">type ThemeContextProviderProps = &#123;</span><br><span class="line">  children: React.ReactNode;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type Theme = <span class="string">'dark'</span> | <span class="string">'light'</span></span><br><span class="line"></span><br><span class="line">type ThemeContext = &#123;</span><br><span class="line">  theme: string;</span><br><span class="line">  setTheme: React.Dispatch&lt;React.SetStateAction&lt;string&gt;&gt;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> ThemeContext = createContext&lt;ThemeContext | <span class="literal">null</span>&gt;(<span class="literal">null</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">useThemeContext</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">const</span> context = React.useContext(ThemeContext);</span><br><span class="line">  <span class="keyword">if</span>(context === <span class="literal">undefined</span>)&#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span> (<span class="string">"useThemeContext muse be used within a ThemeContextProvider"</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> context;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>And in the component, use like this:</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"># logo.tsx</span><br><span class="line"><span class="keyword">import</span> &#123; useThemeContext &#125; <span class="keyword">from</span> <span class="string">'@/context/theme-context'</span>;</span><br><span class="line"><span class="keyword">import</span> React, &#123; useContext &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">Logo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; theme, setTheme &#125; = useThemeContext();</span><br><span class="line">  <span class="comment">// if theme is dark mode, return dark mode logo...</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// if theme is light mode, return light mode logo...</span></span><br><span class="line">  <span class="keyword">return</span> &lt;div&gt;Logo&lt;/div&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>💡 One of the biggest mistakes that Junior react developers make is not using a custom Hook when they’re using the context API.<br>🌳 The root layout component in React should wrap the entire app with the theme context provider to ensure that all components have access to it.<br>💡 The speaker suggests using a custom hook instead of the useContext hook for implementing the Context API in React, highlighting potential issues with the useContext approach.<br>🚫 It is recommended to use a custom hook for the Context API instead of useContext to avoid the problems associated with null values and improve code readability.<br>🚀 By abstracting the problems into a custom hook, it becomes immediately clear which context is being used, improving code readability and maintainability.<br>🤔 TypeScript can help prevent errors by specifying the specific type of a variable, such as using a Union type for a theme.</p>
-]]></content>
-      <categories>
-        <category>文章</category>
-      </categories>
-      <tags>
-        <tag>english</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>three笔记</title>
-    <url>/2022/05/04/three/</url>
-    <content><![CDATA[<blockquote>
-<p>three的笔记学习-一开始总以为是tree，原来是three，感觉就是3d，然后很多三角形的意思</p>
-</blockquote>
-<h2 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h2><p>rotate 要注意xyz 顺序<br>group 打包</p>
-<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><p>用 window.requestAnimationFrame</p>
-<h2 id="相机"><a href="#相机" class="headerlink" title="相机"></a>相机</h2><p>camera 可以试试用sin 和 cos</p>
-<h2 id="geometries"><a href="#geometries" class="headerlink" title="geometries"></a>geometries</h2><h2 id="Textures"><a href="#Textures" class="headerlink" title="Textures"></a>Textures</h2><p>纹理</p>
-<h2 id="Materials"><a href="#Materials" class="headerlink" title="Materials"></a>Materials</h2><h2 id="3D-text"><a href="#3D-text" class="headerlink" title="3D_text"></a>3D_text</h2><p><a href="https://gero3.github.io/facetype.js/" target="_blank" rel="noopener">字体转换网站</a></p>
-<p>我的博客即将同步至腾讯云开发者社区，邀请大家一同入驻：<a href="https://cloud.tencent.com/developer/support-plan?invite_code=11fg9t8w9fwtt" target="_blank" rel="noopener">传说门</a></p>
-]]></content>
-      <categories>
-        <category>知识总结</category>
-      </categories>
-      <tags>
-        <tag>文章</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一些前端题目</title>
     <url>/2018/03/22/test-list/</url>
     <content><![CDATA[<h1 id="整理一下一些前端题目"><a href="#整理一下一些前端题目" class="headerlink" title="整理一下一些前端题目"></a>整理一下一些前端题目</h1><a id="more"></a>
@@ -812,16 +792,29 @@
       </tags>
   </entry>
   <entry>
-    <title>this/闭包/作用域</title>
-    <url>/2021/05/02/this-%E5%BF%85%E5%8C%85-%E4%BD%9C%E7%94%A8%E5%9F%9F/</url>
-    <content><![CDATA[<p>bind可以传基本类型，只会绑定一次</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br><span class="line">fn.bind(<span class="number">1</span>).bind(<span class="number">2</span>)() <span class="comment">// Number &#123;1&#125;</span></span><br></pre></td></tr></table></figure>
+    <title>TypeScript学习笔记</title>
+    <url>/2019/05/19/typescript-note/</url>
+    <content><![CDATA[<h1 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>‘TypeScript’-顾名思义，就是有Type的Script<br><a id="more"></a></p>
+<hr>
+<p>那么它和没有Type的Script有什么不一样呢，例如某Java前缀的Script<br>举个例子：实际开发需求中我们要定义一个商品名称的变量为goodsName(<font color="red">ps:众所周知商品名称都必须是要字符串的</font>)<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// js中定义一个变量,先赋值一个字符串</span></span><br><span class="line"><span class="keyword">let</span> goodsName = <span class="string">'apple'</span> <span class="comment">// 很好，看起来都一起正常</span></span><br><span class="line"><span class="comment">// 然鹅，一位刚失恋的程序员哥哥，不小心把它改成一个数字（说笑，程序员哪会有女朋友）</span></span><br><span class="line">goodsName = <span class="number">520</span> <span class="comment">// 这时候程序也没有阻止小哥哥这种赤裸裸的示爱行为</span></span><br><span class="line"><span class="comment">// 甚至可以改成布尔值</span></span><br><span class="line">goodsName = <span class="literal">true</span></span><br><span class="line"><span class="comment">// -----------------</span></span><br><span class="line"><span class="comment">// 可以想想刚失恋的小哥哥，把这个变量提交给后端的接口</span></span><br><span class="line"><span class="comment">// 最后给产品发现了</span></span><br><span class="line"><span class="comment">// 后端调查发现是前端提交的数据类型错误</span></span><br><span class="line"><span class="comment">// 顺利摔锅给前端</span></span><br><span class="line"><span class="comment">// 从此小哥哥就步入了人生的低谷，情场事业双失😔</span></span><br></pre></td></tr></table></figure></p>
+<p>然而如果这时候这位程序员小哥哥用上了TypeScript<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 同上也先定义一个变量</span></span><br><span class="line"><span class="keyword">let</span> goodsName: string = <span class="string">'apple'</span> <span class="comment">// 看看有什么不同？没错，就是多了个string</span></span><br><span class="line">goodsName = <span class="number">520</span> <span class="comment">//这时候就会有一条红线在变量下方</span></span><br><span class="line"><span class="comment">// Error, number不是string类型</span></span><br><span class="line"><span class="comment">// -----------------</span></span><br><span class="line"><span class="comment">// 看到这条提示的红线，小哥哥也终于意识到了</span></span><br><span class="line"><span class="comment">// 他的爱情也像这条红线那样</span></span><br><span class="line"><span class="comment">// 已经到了高亮的结束边缘</span></span><br><span class="line"><span class="comment">// 最后小哥哥看着那条红线</span></span><br><span class="line"><span class="comment">// 突然对爱情重拾希望，然后不顾红线的错误提示，提交给后端</span></span><br><span class="line"><span class="comment">// 结局同上</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="一些踩过的坑"><a href="#一些踩过的坑" class="headerlink" title="一些踩过的坑"></a>一些踩过的坑</h2><h3 id="可选属性"><a href="#可选属性" class="headerlink" title="可选属性"></a>可选属性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface SquareConfig &#123;</span><br><span class="line">  color?: string;</span><br><span class="line">  width?: number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="任意数量的其它属性"><a href="#任意数量的其它属性" class="headerlink" title="任意数量的其它属性"></a>任意数量的其它属性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface SquareConfig &#123;</span><br><span class="line"> [propName: string]: any;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="只读属性"><a href="#只读属性" class="headerlink" title="只读属性"></a>只读属性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface Point &#123;</span><br><span class="line">    <span class="built_in">readonly</span> x: number;</span><br><span class="line">    <span class="built_in">readonly</span> y: number;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> p1: Point = &#123; x: 10, y: 20 &#125;;</span><br><span class="line">p1.x = 5; // error!</span><br></pre></td></tr></table></figure>
+<h3 id="函数类型"><a href="#函数类型" class="headerlink" title="函数类型"></a>函数类型</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//方法1</span><br><span class="line"><span class="keyword">function</span> add(x: number, y: number): number &#123;</span><br><span class="line">    <span class="built_in">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//方法2</span><br><span class="line"><span class="built_in">let</span> myAdd = <span class="keyword">function</span>(x: number, y: number): number &#123; <span class="built_in">return</span> x + y; &#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="把类当做接口使用"><a href="#把类当做接口使用" class="headerlink" title="把类当做接口使用"></a>把类当做接口使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">class Point &#123;</span><br><span class="line">    x: number;</span><br><span class="line">    y: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface Point3d extends Point &#123;</span><br><span class="line">    z: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> point3d: Point3d = &#123;x: 1, y: 2, z: 3&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
+<li>提示真的很爽</li>
+<li>会增加写类型的时间</li>
+<li>大型项目来说上面花的时间是值得的，后期维护时间会变少</li>
+</ol>
 ]]></content>
       <categories>
-        <category>知识总结</category>
+        <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>重学前端</tag>
+        <tag>填坑</tag>
+        <tag>JS填坑</tag>
       </tags>
   </entry>
   <entry>
@@ -913,8 +906,41 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>JS填坑</tag>
         <tag>填坑</tag>
+        <tag>JS填坑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>this/闭包/作用域</title>
+    <url>/2021/05/02/this-%E5%BF%85%E5%8C%85-%E4%BD%9C%E7%94%A8%E5%9F%9F/</url>
+    <content><![CDATA[<p>bind可以传基本类型，只会绑定一次</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br><span class="line">fn.bind(<span class="number">1</span>).bind(<span class="number">2</span>)() <span class="comment">// Number &#123;1&#125;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>知识总结</category>
+      </categories>
+      <tags>
+        <tag>重学前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>three笔记</title>
+    <url>/2022/05/04/three/</url>
+    <content><![CDATA[<blockquote>
+<p>three的笔记学习-一开始总以为是tree，原来是three，感觉就是3d，然后很多三角形的意思</p>
+</blockquote>
+<h2 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h2><p>rotate 要注意xyz 顺序<br>group 打包</p>
+<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><p>用 window.requestAnimationFrame</p>
+<h2 id="相机"><a href="#相机" class="headerlink" title="相机"></a>相机</h2><p>camera 可以试试用sin 和 cos</p>
+<h2 id="geometries"><a href="#geometries" class="headerlink" title="geometries"></a>geometries</h2><h2 id="Textures"><a href="#Textures" class="headerlink" title="Textures"></a>Textures</h2><p>纹理</p>
+<h2 id="Materials"><a href="#Materials" class="headerlink" title="Materials"></a>Materials</h2><h2 id="3D-text"><a href="#3D-text" class="headerlink" title="3D_text"></a>3D_text</h2><p><a href="https://gero3.github.io/facetype.js/" target="_blank" rel="noopener">字体转换网站</a></p>
+<p>我的博客即将同步至腾讯云开发者社区，邀请大家一同入驻：<a href="https://cloud.tencent.com/developer/support-plan?invite_code=11fg9t8w9fwtt" target="_blank" rel="noopener">传说门</a></p>
+]]></content>
+      <categories>
+        <category>知识总结</category>
+      </categories>
+      <tags>
+        <tag>文章</tag>
       </tags>
   </entry>
   <entry>
@@ -955,32 +981,6 @@
       </tags>
   </entry>
   <entry>
-    <title>TypeScript学习笔记</title>
-    <url>/2019/05/19/typescript-note/</url>
-    <content><![CDATA[<h1 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>‘TypeScript’-顾名思义，就是有Type的Script<br><a id="more"></a></p>
-<hr>
-<p>那么它和没有Type的Script有什么不一样呢，例如某Java前缀的Script<br>举个例子：实际开发需求中我们要定义一个商品名称的变量为goodsName(<font color="red">ps:众所周知商品名称都必须是要字符串的</font>)<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// js中定义一个变量,先赋值一个字符串</span></span><br><span class="line"><span class="keyword">let</span> goodsName = <span class="string">'apple'</span> <span class="comment">// 很好，看起来都一起正常</span></span><br><span class="line"><span class="comment">// 然鹅，一位刚失恋的程序员哥哥，不小心把它改成一个数字（说笑，程序员哪会有女朋友）</span></span><br><span class="line">goodsName = <span class="number">520</span> <span class="comment">// 这时候程序也没有阻止小哥哥这种赤裸裸的示爱行为</span></span><br><span class="line"><span class="comment">// 甚至可以改成布尔值</span></span><br><span class="line">goodsName = <span class="literal">true</span></span><br><span class="line"><span class="comment">// -----------------</span></span><br><span class="line"><span class="comment">// 可以想想刚失恋的小哥哥，把这个变量提交给后端的接口</span></span><br><span class="line"><span class="comment">// 最后给产品发现了</span></span><br><span class="line"><span class="comment">// 后端调查发现是前端提交的数据类型错误</span></span><br><span class="line"><span class="comment">// 顺利摔锅给前端</span></span><br><span class="line"><span class="comment">// 从此小哥哥就步入了人生的低谷，情场事业双失😔</span></span><br></pre></td></tr></table></figure></p>
-<p>然而如果这时候这位程序员小哥哥用上了TypeScript<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 同上也先定义一个变量</span></span><br><span class="line"><span class="keyword">let</span> goodsName: string = <span class="string">'apple'</span> <span class="comment">// 看看有什么不同？没错，就是多了个string</span></span><br><span class="line">goodsName = <span class="number">520</span> <span class="comment">//这时候就会有一条红线在变量下方</span></span><br><span class="line"><span class="comment">// Error, number不是string类型</span></span><br><span class="line"><span class="comment">// -----------------</span></span><br><span class="line"><span class="comment">// 看到这条提示的红线，小哥哥也终于意识到了</span></span><br><span class="line"><span class="comment">// 他的爱情也像这条红线那样</span></span><br><span class="line"><span class="comment">// 已经到了高亮的结束边缘</span></span><br><span class="line"><span class="comment">// 最后小哥哥看着那条红线</span></span><br><span class="line"><span class="comment">// 突然对爱情重拾希望，然后不顾红线的错误提示，提交给后端</span></span><br><span class="line"><span class="comment">// 结局同上</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="一些踩过的坑"><a href="#一些踩过的坑" class="headerlink" title="一些踩过的坑"></a>一些踩过的坑</h2><h3 id="可选属性"><a href="#可选属性" class="headerlink" title="可选属性"></a>可选属性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface SquareConfig &#123;</span><br><span class="line">  color?: string;</span><br><span class="line">  width?: number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="任意数量的其它属性"><a href="#任意数量的其它属性" class="headerlink" title="任意数量的其它属性"></a>任意数量的其它属性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface SquareConfig &#123;</span><br><span class="line"> [propName: string]: any;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="只读属性"><a href="#只读属性" class="headerlink" title="只读属性"></a>只读属性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface Point &#123;</span><br><span class="line">    <span class="built_in">readonly</span> x: number;</span><br><span class="line">    <span class="built_in">readonly</span> y: number;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> p1: Point = &#123; x: 10, y: 20 &#125;;</span><br><span class="line">p1.x = 5; // error!</span><br></pre></td></tr></table></figure>
-<h3 id="函数类型"><a href="#函数类型" class="headerlink" title="函数类型"></a>函数类型</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//方法1</span><br><span class="line"><span class="keyword">function</span> add(x: number, y: number): number &#123;</span><br><span class="line">    <span class="built_in">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//方法2</span><br><span class="line"><span class="built_in">let</span> myAdd = <span class="keyword">function</span>(x: number, y: number): number &#123; <span class="built_in">return</span> x + y; &#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="把类当做接口使用"><a href="#把类当做接口使用" class="headerlink" title="把类当做接口使用"></a>把类当做接口使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">class Point &#123;</span><br><span class="line">    x: number;</span><br><span class="line">    y: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface Point3d extends Point &#123;</span><br><span class="line">    z: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> point3d: Point3d = &#123;x: 1, y: 2, z: 3&#125;;</span><br></pre></td></tr></table></figure>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
-<li>提示真的很爽</li>
-<li>会增加写类型的时间</li>
-<li>大型项目来说上面花的时间是值得的，后期维护时间会变少</li>
-</ol>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>JS填坑</tag>
-        <tag>填坑</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>微信小程序填坑日记</title>
     <url>/2017/06/14/wehchat-small/</url>
     <content><![CDATA[<p>记录一下那些年，开发微信小程序踩过的坑<br><a id="more"></a></p>
@@ -1001,6 +1001,27 @@
       <tags>
         <tag>填坑</tag>
         <tag>微信小程序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>重学数据结构和算法</title>
+    <url>/2021/07/18/%E9%87%8D%E5%AD%A6%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="空间换时间"><a href="#空间换时间" class="headerlink" title="空间换时间"></a>空间换时间</h2><p>建立变量存数据</p>
+<h2 id="数据处理的基本操作"><a href="#数据处理的基本操作" class="headerlink" title="数据处理的基本操作"></a>数据处理的基本操作</h2><p><code>增、删、查</code></p>
+<ul>
+<li><p>首先，这段代码对数据进行了哪些操作？</p>
+</li>
+<li><p>其次，这些操作中，哪个操作最影响效率，对时间复杂度的损耗最大？</p>
+</li>
+<li><p>最后，哪种数据结构最能帮助你提高数据操作的使用效率？</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>知识总结</category>
+      </categories>
+      <tags>
+        <tag>数据结构、算法</tag>
       </tags>
   </entry>
   <entry>
@@ -1037,27 +1058,6 @@
       </categories>
       <tags>
         <tag>重学前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>重学数据结构和算法</title>
-    <url>/2021/07/18/%E9%87%8D%E5%AD%A6%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="空间换时间"><a href="#空间换时间" class="headerlink" title="空间换时间"></a>空间换时间</h2><p>建立变量存数据</p>
-<h2 id="数据处理的基本操作"><a href="#数据处理的基本操作" class="headerlink" title="数据处理的基本操作"></a>数据处理的基本操作</h2><p><code>增、删、查</code></p>
-<ul>
-<li><p>首先，这段代码对数据进行了哪些操作？</p>
-</li>
-<li><p>其次，这些操作中，哪个操作最影响效率，对时间复杂度的损耗最大？</p>
-</li>
-<li><p>最后，哪种数据结构最能帮助你提高数据操作的使用效率？</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>知识总结</category>
-      </categories>
-      <tags>
-        <tag>数据结构、算法</tag>
       </tags>
   </entry>
   <entry>
