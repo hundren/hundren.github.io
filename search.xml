@@ -1,32 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>JavaScript忍者秘籍第2版-笔记</title>
-    <url>/2021/05/18/JavaScript%E5%BF%8D%E8%80%85%E7%A7%98%E7%B1%8D%E7%AC%AC2%E7%89%88-%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="一些特性"><a href="#一些特性" class="headerlink" title="一些特性"></a>一些特性</h2><ul>
-<li>生成器</li>
-<li>Promise</li>
-<li>代理</li>
-<li>高级数组方法</li>
-<li>Map</li>
-<li>正则表达式</li>
-<li>模块</li>
-</ul>
-<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><blockquote>
-<p>Javascript 就是只开启了一个柜台</p>
-</blockquote>
-<ol>
-<li>注册事件（addEventListener)</li>
-</ol>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>神书推荐</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ES6 规范详解、ESNext 规范</title>
     <url>/2021/04/28/ES6%20%E8%A7%84%E8%8C%83%E8%AF%A6%E8%A7%A3%E3%80%81ESNext%20%E8%A7%84%E8%8C%83/</url>
     <content><![CDATA[<h2 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h2><p>var、const、let、function<br>let 变量提升、作用域</p>
@@ -74,6 +48,143 @@
       </categories>
       <tags>
         <tag>重学前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaScript忍者秘籍第2版-笔记</title>
+    <url>/2021/05/18/JavaScript%E5%BF%8D%E8%80%85%E7%A7%98%E7%B1%8D%E7%AC%AC2%E7%89%88-%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="一些特性"><a href="#一些特性" class="headerlink" title="一些特性"></a>一些特性</h2><ul>
+<li>生成器</li>
+<li>Promise</li>
+<li>代理</li>
+<li>高级数组方法</li>
+<li>Map</li>
+<li>正则表达式</li>
+<li>模块</li>
+</ul>
+<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><blockquote>
+<p>Javascript 就是只开启了一个柜台</p>
+</blockquote>
+<ol>
+<li>注册事件（addEventListener)</li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>神书推荐</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello Hexo</title>
+    <url>/2016/02/14/hello-world/</url>
+    <content><![CDATA[<p>博客换上Hexo主题</p>
+<hr>
+<h2 id="很久以前"><a href="#很久以前" class="headerlink" title="很久以前"></a>很久以前</h2><a id="more"></a>
+<h3 id="就被它的这个"><a href="#就被它的这个" class="headerlink" title="就被它的这个"></a>就被它的这个</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">试试代码</span><br></pre></td></tr></table></figure>
+<p>1001001111100101010110</p>
+<blockquote>
+<p>试试区块 这是一个区块</p>
+</blockquote>
+<p><em>这是斜体文字</em><br><strong>这是加粗的文字</strong></p>
+<p><font size="4">我是变大的字</font></p>
+<p><font color="green">我是有颜色字</font><br><img src="/images/module/exports.png" alt><br><code>代码字</code><br><a href="https://mp.weixin.qq.com/debug/wxadoc/dev/framework/performance/tips.html" target="_blank" rel="noopener">这是个链接</a></p>
+<h3 id="文章目录吸引了"><a href="#文章目录吸引了" class="headerlink" title="文章目录吸引了"></a>文章目录吸引了</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">console.log(<span class="string">'hello world'</span>);</span><br></pre></td></tr></table></figure>
+<p>列表？</p>
+<ol>
+<li>Red</li>
+<li>Green</li>
+<li>Blue</li>
+</ol>
+<ul>
+<li>a</li>
+<li>b</li>
+<li>c</li>
+</ul>
+<p>表格<br>| 左对齐 | 右对齐 | 居中对齐 |<br>| :—–| —-: | :—-: |<br>| 单元格 | 单元格 | 单元格 |<br>| 单元格 | 单元格 | 单元格 |</p>
+<h3 id="今天终于能够换来试试"><a href="#今天终于能够换来试试" class="headerlink" title="今天终于能够换来试试"></a>今天终于能够换来试试</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$(<span class="string">'#life'</span>).html(<span class="string">'希望每个月能更一篇，以此为鉴'</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="表示好兴奋"><a href="#表示好兴奋" class="headerlink" title="表示好兴奋"></a>表示好兴奋</h3><p>大家提提意见博客能有什么改造的地方</p>
+<p>上标<sup>TM</sup><br>下标<sub>i</sub></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">bye</span></span>()&#123;<span class="built_in">return</span> <span class="string">"恭喜你获得阅读我的第一篇博客成就！"</span>&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>文章</category>
+      </categories>
+      <tags>
+        <tag>第一次</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用hooks的一些小感想</title>
+    <url>/2022/01/14/hooks/</url>
+    <content><![CDATA[<blockquote>
+<p>这里文章说的都是hooks<sup>react</sup></p>
+</blockquote>
+<h3 id="那什么是hooks"><a href="#那什么是hooks" class="headerlink" title="那什么是hooks"></a>那什么是hooks</h3><p>故名思义 <code>Hooks</code> 译为钩子，<code>Hooks</code> 就是在函数组件内，负责钩进外部功能的函数。</p>
+<p>(说了又好像没说)</p>
+<h3 id="有什么爽的👌"><a href="#有什么爽的👌" class="headerlink" title="有什么爽的👌"></a>有什么爽的👌</h3><ul>
+<li>函数组件原地飞升</li>
+<li>不用管this了</li>
+<li>生命周期也不用记那么多了</li>
+</ul>
+<p>开始结束的生命周期可以写在一起，代码更漂亮了</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'开波'</span>)</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'结束'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,[])</span><br><span class="line"><span class="comment">// ps.空数组就是只进入一次</span></span><br></pre></td></tr></table></figure>
+<p>props的值的变化，xx值的变化都能放在一起监听</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'无论是数组还是对象，数据多深都能进（后来才发现也不是多深都能啦），这不比vue的watch爽？'</span>)</span><br><span class="line">  <span class="comment">// 那么useEffect是怎样监听数据变化的呢</span></span><br><span class="line">  <span class="comment">// 它和useLayoutEffect又有什么区别呢</span></span><br><span class="line">  <span class="comment">// 这要从hooks的基础概念链表说起，请往下看</span></span><br><span class="line">&#125;,[props.a,b])</span><br></pre></td></tr></table></figure>
+<p>通过看useEffect的源码，我们不难发现</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 通过看源码我们得知</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; prevDeps.length &amp;&amp; i &lt; nextDeps.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (is(nextDeps[i], prevDeps[i])) &#123;</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 我们知道它的对比方法是</span></span><br><span class="line"><span class="comment">// 其中里面的is是这个</span></span><br><span class="line"><span class="keyword">import</span> is <span class="keyword">from</span> <span class="string">'shared/objectIs'</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">is</span>(<span class="params">x: any, y: any</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    (x === y &amp;&amp; (x !== <span class="number">0</span> || <span class="number">1</span> / x === <span class="number">1</span> / y)) || (x !== x &amp;&amp; y !== y) <span class="comment">// eslint-disable-line no-self-compare</span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> objectIs: <span class="function">(<span class="params">x: any, y: any</span>) =&gt;</span> boolean =</span><br><span class="line">  <span class="keyword">typeof</span> <span class="built_in">Object</span>.is === <span class="string">'function'</span> ? <span class="built_in">Object</span>.is : is;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> objectIs;</span><br></pre></td></tr></table></figure>
+<p>所以其实它就是用<code>Object.is</code>做比较</p>
+<blockquote>
+<p>有需要做深比较的可以用<code>ahooks</code>的<code>useDeepCompareEffect</code>，用法与 useEffect 一致，但 deps 通过 lodash 的<code>isEqual</code>进行深比较。</p>
+</blockquote>
+<ul>
+<li>代码复用更高</li>
+</ul>
+<h3 id="吐槽一下"><a href="#吐槽一下" class="headerlink" title="吐槽一下"></a>吐槽一下</h3><h4 id="闭包陷阱"><a href="#闭包陷阱" class="headerlink" title="闭包陷阱"></a>闭包陷阱</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;useEffect, useState&#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = useState(<span class="number">0</span>)</span><br><span class="line">  useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      setCount(count + <span class="number">1</span>)</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">  &#125;, [])</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">       &lt;p&gt;count=&#123;count&#125;&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>大家可能会一直期待着数字的变化，但它就偏不，一直保持着1</p>
+<p>事情为什么会发展成这样，那就要从底层的渲染开始说起</p>
+<blockquote>
+<p>初次渲染-&gt;执行APP-&gt;usestate设置count为初始0-&gt;1秒后state改变-&gt;视图更新-&gt;按照fiber链表执行hooks-&gt;useEffect deps 不变-&gt;然后1秒后的count始终都是0+1</p>
+</blockquote>
+<p>解决办法：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 有细心的网友可能会发现，网上其他地方可能会建议在useEffect的deps上加上count</span></span><br><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    setCount(count + <span class="number">1</span>)</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;, [count])</span><br><span class="line"><span class="comment">// 这样确实能拿到最新的count</span></span><br><span class="line"><span class="comment">// ❌但是这里喔不建议这样写</span></span><br><span class="line"><span class="comment">// 因为你想想，每次count的更新它都会重新进去建一个新的定时器</span></span><br><span class="line"><span class="comment">// 以后画面就会很鬼畜</span></span><br></pre></td></tr></table></figure>
+<p>建议版本方法</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    setCount(<span class="function"><span class="params">res</span>=&gt;</span>(res+<span class="number">1</span>))</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;, [])</span><br><span class="line"><span class="comment">// setCount本身可以传方法，本来就是最新的值</span></span><br></pre></td></tr></table></figure>
+<p>高级版本ref大法</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//简单来说就是利用useRef返回的是同一个对象，指向同一片内存</span></span><br><span class="line"><span class="keyword">let</span> ref_ = useRef(<span class="number">1</span>)</span><br><span class="line">ref_.current++</span><br><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  setInterval(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(ref.current) <span class="comment">// 3</span></span><br><span class="line">  &#125;, <span class="number">1000</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="不能用判断或者随机函数"><a href="#不能用判断或者随机函数" class="headerlink" title="不能用判断或者随机函数"></a>不能用判断或者随机函数</h4><p>举个🌰</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">Math</span>.random() &gt; <span class="number">0.5</span>) &#123;</span><br><span class="line">  useState(<span class="string">'first'</span>)</span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">let</span> showSex = <span class="literal">true</span></span><br><span class="line"><span class="keyword">if</span>(showSex)&#123;</span><br><span class="line">    <span class="keyword">const</span> [ sex, setSex ] = useState(<span class="string">'男'</span>);</span><br><span class="line">    showSex = <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上的行为都是打咩的</p>
+<p>原因是hooks的数据管理是用链表管理的，所以数据不能一时有一时没</p>
+<p>举个不太恰当的例子，就像</p>
+<blockquote>
+<ul>
+<li>数组[0]代表useState(‘A’)</li>
+<li>数组[1]代表useState(‘B)</li>
+<li>现在你突然把’A’删掉了，那就变成数组[0]代表useState(‘B’)了</li>
+<li>那么你就不是你了，他也不是他了</li>
+</ul>
+</blockquote>
+<h4 id="useCallBack-还是-useMemo"><a href="#useCallBack-还是-useMemo" class="headerlink" title="useCallBack 还是 useMemo"></a>useCallBack 还是 useMemo</h4><p>仅仅 <code>依赖数据</code> 发生变化, 才会重新计算结果，说是为了性能优化，起到缓存的作用，</p>
+<p>这里说一个面试常问的<code>useCallBack</code> 和 <code>useMemo</code> 有什么区别？</p>
+<p>网上各种解析长篇大论的，一句话其实就是</p>
+<blockquote>
+<p>useCallback 缓存钩子函数，useMemo 缓存返回值（计算结果）[当然useMemo也可以传入函数]。</p>
+</blockquote>
+<p>这个时候，有好奇宝贝就会问了,那用这个会多那么多代码量，有什么用呢</p>
+<p>答案是：性能优化，这里就要涉及到更深层的react的渲染原理了，”比较更新！！”,react每次渲染的时候，它都把值和函数重新计算渲染，这里就会消耗点内存了，用上那2玩意，其实就是告诉react，我们没有变化，帮我存起来，不用再比较了</p>
+<p>那么有些姓杠的小朋友，这时候就不耐烦了，站起来问道：为什么react不帮我们自动做这些优化呢，我就想静静地写代码，为什么还要考虑该不该包个<code>useCallBack</code></p>
+<p>问得好，这里顺便@一下官方团队，希望相关单位能密切关注这个问题</p>
+<p>还会有些害羞的小朋友会嘀咕着，为什么class组件的时候就不需要注意这些呢</p>
+<p>个人鄙见：新旧版本的渲染方法其实差不多的，我觉得前端深入研究性能优化是没有前途的，框架或者浏览器，一次小小的版本更新，可能效果就远远胜过了你多少个日日夜夜的辛勤付出了。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>hooks需好，但要小心使用</p>
+]]></content>
+      <categories>
+        <category>知识总结</category>
+      </categories>
+      <tags>
+        <tag>文章</tag>
       </tags>
   </entry>
   <entry>
@@ -155,45 +266,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello Hexo</title>
-    <url>/2016/02/14/hello-world/</url>
-    <content><![CDATA[<p>博客换上Hexo主题</p>
-<hr>
-<h2 id="很久以前"><a href="#很久以前" class="headerlink" title="很久以前"></a>很久以前</h2><a id="more"></a>
-<h3 id="就被它的这个"><a href="#就被它的这个" class="headerlink" title="就被它的这个"></a>就被它的这个</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">试试代码</span><br></pre></td></tr></table></figure>
-<p>1001001111100101010110</p>
-<blockquote>
-<p>试试区块 这是一个区块</p>
-</blockquote>
-<p><em>这是斜体文字</em><br><strong>这是加粗的文字</strong></p>
-<p><font size="4">我是变大的字</font></p>
-<p><font color="green">我是有颜色字</font><br><img src="/images/module/exports.png" alt><br><code>代码字</code><br><a href="https://mp.weixin.qq.com/debug/wxadoc/dev/framework/performance/tips.html" target="_blank" rel="noopener">这是个链接</a></p>
-<h3 id="文章目录吸引了"><a href="#文章目录吸引了" class="headerlink" title="文章目录吸引了"></a>文章目录吸引了</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">console.log(<span class="string">'hello world'</span>);</span><br></pre></td></tr></table></figure>
-<p>列表？</p>
-<ol>
-<li>Red</li>
-<li>Green</li>
-<li>Blue</li>
-</ol>
-<ul>
-<li>a</li>
-<li>b</li>
-<li>c</li>
-</ul>
-<p>表格<br>| 左对齐 | 右对齐 | 居中对齐 |<br>| :—–| —-: | :—-: |<br>| 单元格 | 单元格 | 单元格 |<br>| 单元格 | 单元格 | 单元格 |</p>
-<h3 id="今天终于能够换来试试"><a href="#今天终于能够换来试试" class="headerlink" title="今天终于能够换来试试"></a>今天终于能够换来试试</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$(<span class="string">'#life'</span>).html(<span class="string">'希望每个月能更一篇，以此为鉴'</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="表示好兴奋"><a href="#表示好兴奋" class="headerlink" title="表示好兴奋"></a>表示好兴奋</h3><p>大家提提意见博客能有什么改造的地方</p>
-<p>上标<sup>TM</sup><br>下标<sub>i</sub></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">bye</span></span>()&#123;<span class="built_in">return</span> <span class="string">"恭喜你获得阅读我的第一篇博客成就！"</span>&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>文章</category>
-      </categories>
-      <tags>
-        <tag>第一次</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Github Actions, yes! + docker, yes yes!</title>
     <url>/2020/01/18/git-actions/</url>
     <content><![CDATA[<p>最近点开了一下Github Actions的技能树，在说真香之前，不得不说一下我踩过的这些前置任务的坑。找到这篇文章看的朋友大概也知道Github Actions是Github上的持续集成服务，它允许你在一些节点上（如提交代码，特定时间等）触发一些操作。这里我们实现自动部署应用到自己的服务器。<br><img src="/images/gitactions/bg2019091201.jpg" alt></p>
@@ -240,6 +312,18 @@
       </tags>
   </entry>
   <entry>
+    <title>JS的变量提升了解一下？</title>
+    <url>/2018/03/14/js-var/</url>
+    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var 100</span><br><span class="line">//等等，去喝杯咖啡再写</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>JS填坑</tag>
+        <tag>填坑</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>怎样更改组件库的图标？</title>
     <url>/2019/03/14/icon-change/</url>
     <content><![CDATA[<p>想必很多前端现在都是用别人的组件库，ant-design、element-ui或者vant等，那么当组件上的icon和我们美丽动人的UI小姐姐画出的UI稿不一样的时候，你们会怎么做呢？<br><a id="more"></a></p>
@@ -269,18 +353,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JS的变量提升了解一下？</title>
-    <url>/2018/03/14/js-var/</url>
-    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var 100</span><br><span class="line">//等等，去喝杯咖啡再写</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>填坑</tag>
-        <tag>JS填坑</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>1.10乘100为什么不等于110</title>
     <url>/2017/02/14/js-note/</url>
     <content><![CDATA[<h2 id="事情的起因"><a href="#事情的起因" class="headerlink" title="事情的起因"></a>事情的起因</h2><p>要从今天的微信支付调试说起，众所周知微信支付的接口，要求传入的金额数值是按分为单位的，所以都必须是大于0的整数。<br><a id="more"></a><br>&emsp;&emsp;所以我们一般业务的实际金额都要做乘以100的处理，例如某大妈刚在市场买了1.10元的菜，她摸了摸口袋，看了一眼诚实憨厚的大叔，已经麻利地帮她打包好菜，实在不忍心说出自己今天忘记带钱包。<br>&emsp;&emsp;大叔正打算把菜递给大妈之际，看到大妈尾头紧皱，已经失去平时要把1.10元的菜讲价到1.00元的风韵神采，便意识到事情并不简单，便默默从下方抽屉中抽出一个微信二维码递给她。<br>&emsp;&emsp;大妈心中暗喜，迅速拔出他儿子刚为她买的最新款红米手机，熟练地扫过二维码，也没有要讲价到1.00元的意思了，麻利地在微信上输入1.10元的金额，点击立即支付，输入过密码。。。<br>&emsp;&emsp;“参数错误：你输入的金额格式不正确”，看着手机弹出的提示弹窗，大妈狠狠咬了牙，又重复了一遍上述的支付动作，“参数错误：你输入的金额格式不正确”。这时大妈崩溃的用着恳求可怜的眼神看着大叔，大叔也一面无奈地轻轻将打包好的菜微微收了过来一下，空气突然安静地凝固起来。</p>
@@ -301,8 +373,8 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>填坑</tag>
         <tag>JS填坑</tag>
+        <tag>填坑</tag>
       </tags>
   </entry>
   <entry>
@@ -553,6 +625,25 @@
       </tags>
   </entry>
   <entry>
+    <title>完成的项目，持续更新</title>
+    <url>/2018/08/14/project/</url>
+    <content><![CDATA[<p>目标：写过的代码加起来能绕地球一圈</p>
+<h2 id="那是梦开始的地方"><a href="#那是梦开始的地方" class="headerlink" title="那是梦开始的地方"></a>那是梦开始的地方</h2><a id="more"></a>
+<h3 id="第一个小程序，IoT项目"><a href="#第一个小程序，IoT项目" class="headerlink" title="第一个小程序，IoT项目"></a>第一个小程序，IoT项目</h3><p><img src="/images/project/iot_user.jpg" alt><br>IoT安装端账号：az1 密码：123456<br><img src="/images/project/iot_install.jpg" alt><br>IoT售后端账号：wx1 密码：123456<br><img src="/images/project/iot_wx.jpg" alt></p>
+<h3 id="车仔网小程序"><a href="#车仔网小程序" class="headerlink" title="车仔网小程序"></a>车仔网小程序</h3><p><img src="/images/project/chezi.png" alt></p>
+<h3 id="男士理容预约小程序"><a href="#男士理容预约小程序" class="headerlink" title="男士理容预约小程序"></a>男士理容预约小程序</h3><p><img src="/images/project/harroman.jpg" alt></p>
+<h3 id="vue搭建的手机商城"><a href="#vue搭建的手机商城" class="headerlink" title="vue搭建的手机商城"></a>vue搭建的手机商城</h3><p><img src="/images/project/shilianmobile.png" alt></p>
+<h3 id="飞冰Ice后台demo"><a href="#飞冰Ice后台demo" class="headerlink" title="飞冰Ice后台demo"></a>飞冰Ice后台demo</h3><p><a href="http://hospital.pppppxt.cc" target="_blank" rel="noopener">demo链接,点我,点我</a><br>管理员账户：admin;医生账号：doctor 密码都是：123456</p>
+<h3 id="某题库测试系统前端demo"><a href="#某题库测试系统前端demo" class="headerlink" title="某题库测试系统前端demo"></a>某题库测试系统前端demo</h3><p><a href="http://wuweiquan.pppppxt.cc" target="_blank" rel="noopener">点我,点我</a><br>sn码随便输入即可</p>
+]]></content>
+      <categories>
+        <category>项目</category>
+      </categories>
+      <tags>
+        <tag>案例</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>程序员的数学</title>
     <url>/2023/10/29/math/</url>
     <content><![CDATA[<h2 id="空间换时间"><a href="#空间换时间" class="headerlink" title="空间换时间"></a>空间换时间</h2><p>建立变量存数据</p>
@@ -662,128 +753,8 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>填坑</tag>
         <tag>JS填坑</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用hooks的一些小感想</title>
-    <url>/2022/01/14/hooks/</url>
-    <content><![CDATA[<blockquote>
-<p>这里文章说的都是hooks<sup>react</sup></p>
-</blockquote>
-<h3 id="那什么是hooks"><a href="#那什么是hooks" class="headerlink" title="那什么是hooks"></a>那什么是hooks</h3><p>故名思义 <code>Hooks</code> 译为钩子，<code>Hooks</code> 就是在函数组件内，负责钩进外部功能的函数。</p>
-<p>(说了又好像没说)</p>
-<h3 id="有什么爽的👌"><a href="#有什么爽的👌" class="headerlink" title="有什么爽的👌"></a>有什么爽的👌</h3><ul>
-<li>函数组件原地飞升</li>
-<li>不用管this了</li>
-<li>生命周期也不用记那么多了</li>
-</ul>
-<p>开始结束的生命周期可以写在一起，代码更漂亮了</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'开波'</span>)</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'结束'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,[])</span><br><span class="line"><span class="comment">// ps.空数组就是只进入一次</span></span><br></pre></td></tr></table></figure>
-<p>props的值的变化，xx值的变化都能放在一起监听</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'无论是数组还是对象，数据多深都能进（后来才发现也不是多深都能啦），这不比vue的watch爽？'</span>)</span><br><span class="line">  <span class="comment">// 那么useEffect是怎样监听数据变化的呢</span></span><br><span class="line">  <span class="comment">// 它和useLayoutEffect又有什么区别呢</span></span><br><span class="line">  <span class="comment">// 这要从hooks的基础概念链表说起，请往下看</span></span><br><span class="line">&#125;,[props.a,b])</span><br></pre></td></tr></table></figure>
-<p>通过看useEffect的源码，我们不难发现</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 通过看源码我们得知</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; prevDeps.length &amp;&amp; i &lt; nextDeps.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (is(nextDeps[i], prevDeps[i])) &#123;</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 我们知道它的对比方法是</span></span><br><span class="line"><span class="comment">// 其中里面的is是这个</span></span><br><span class="line"><span class="keyword">import</span> is <span class="keyword">from</span> <span class="string">'shared/objectIs'</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">is</span>(<span class="params">x: any, y: any</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    (x === y &amp;&amp; (x !== <span class="number">0</span> || <span class="number">1</span> / x === <span class="number">1</span> / y)) || (x !== x &amp;&amp; y !== y) <span class="comment">// eslint-disable-line no-self-compare</span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> objectIs: <span class="function">(<span class="params">x: any, y: any</span>) =&gt;</span> boolean =</span><br><span class="line">  <span class="keyword">typeof</span> <span class="built_in">Object</span>.is === <span class="string">'function'</span> ? <span class="built_in">Object</span>.is : is;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> objectIs;</span><br></pre></td></tr></table></figure>
-<p>所以其实它就是用<code>Object.is</code>做比较</p>
-<blockquote>
-<p>有需要做深比较的可以用<code>ahooks</code>的<code>useDeepCompareEffect</code>，用法与 useEffect 一致，但 deps 通过 lodash 的<code>isEqual</code>进行深比较。</p>
-</blockquote>
-<ul>
-<li>代码复用更高</li>
-</ul>
-<h3 id="吐槽一下"><a href="#吐槽一下" class="headerlink" title="吐槽一下"></a>吐槽一下</h3><h4 id="闭包陷阱"><a href="#闭包陷阱" class="headerlink" title="闭包陷阱"></a>闭包陷阱</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;useEffect, useState&#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = useState(<span class="number">0</span>)</span><br><span class="line">  useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      setCount(count + <span class="number">1</span>)</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">  &#125;, [])</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">       &lt;p&gt;count=&#123;count&#125;&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
-<p>大家可能会一直期待着数字的变化，但它就偏不，一直保持着1</p>
-<p>事情为什么会发展成这样，那就要从底层的渲染开始说起</p>
-<blockquote>
-<p>初次渲染-&gt;执行APP-&gt;usestate设置count为初始0-&gt;1秒后state改变-&gt;视图更新-&gt;按照fiber链表执行hooks-&gt;useEffect deps 不变-&gt;然后1秒后的count始终都是0+1</p>
-</blockquote>
-<p>解决办法：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 有细心的网友可能会发现，网上其他地方可能会建议在useEffect的deps上加上count</span></span><br><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    setCount(count + <span class="number">1</span>)</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;, [count])</span><br><span class="line"><span class="comment">// 这样确实能拿到最新的count</span></span><br><span class="line"><span class="comment">// ❌但是这里喔不建议这样写</span></span><br><span class="line"><span class="comment">// 因为你想想，每次count的更新它都会重新进去建一个新的定时器</span></span><br><span class="line"><span class="comment">// 以后画面就会很鬼畜</span></span><br></pre></td></tr></table></figure>
-<p>建议版本方法</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    setCount(<span class="function"><span class="params">res</span>=&gt;</span>(res+<span class="number">1</span>))</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;, [])</span><br><span class="line"><span class="comment">// setCount本身可以传方法，本来就是最新的值</span></span><br></pre></td></tr></table></figure>
-<p>高级版本ref大法</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//简单来说就是利用useRef返回的是同一个对象，指向同一片内存</span></span><br><span class="line"><span class="keyword">let</span> ref_ = useRef(<span class="number">1</span>)</span><br><span class="line">ref_.current++</span><br><span class="line">useEffect(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  setInterval(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(ref.current) <span class="comment">// 3</span></span><br><span class="line">  &#125;, <span class="number">1000</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h4 id="不能用判断或者随机函数"><a href="#不能用判断或者随机函数" class="headerlink" title="不能用判断或者随机函数"></a>不能用判断或者随机函数</h4><p>举个🌰</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">Math</span>.random() &gt; <span class="number">0.5</span>) &#123;</span><br><span class="line">  useState(<span class="string">'first'</span>)</span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">let</span> showSex = <span class="literal">true</span></span><br><span class="line"><span class="keyword">if</span>(showSex)&#123;</span><br><span class="line">    <span class="keyword">const</span> [ sex, setSex ] = useState(<span class="string">'男'</span>);</span><br><span class="line">    showSex = <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以上的行为都是打咩的</p>
-<p>原因是hooks的数据管理是用链表管理的，所以数据不能一时有一时没</p>
-<p>举个不太恰当的例子，就像</p>
-<blockquote>
-<ul>
-<li>数组[0]代表useState(‘A’)</li>
-<li>数组[1]代表useState(‘B)</li>
-<li>现在你突然把’A’删掉了，那就变成数组[0]代表useState(‘B’)了</li>
-<li>那么你就不是你了，他也不是他了</li>
-</ul>
-</blockquote>
-<h4 id="useCallBack-还是-useMemo"><a href="#useCallBack-还是-useMemo" class="headerlink" title="useCallBack 还是 useMemo"></a>useCallBack 还是 useMemo</h4><p>仅仅 <code>依赖数据</code> 发生变化, 才会重新计算结果，说是为了性能优化，起到缓存的作用，</p>
-<p>这里说一个面试常问的<code>useCallBack</code> 和 <code>useMemo</code> 有什么区别？</p>
-<p>网上各种解析长篇大论的，一句话其实就是</p>
-<blockquote>
-<p>useCallback 缓存钩子函数，useMemo 缓存返回值（计算结果）[当然useMemo也可以传入函数]。</p>
-</blockquote>
-<p>这个时候，有好奇宝贝就会问了,那用这个会多那么多代码量，有什么用呢</p>
-<p>答案是：性能优化，这里就要涉及到更深层的react的渲染原理了，”比较更新！！”,react每次渲染的时候，它都把值和函数重新计算渲染，这里就会消耗点内存了，用上那2玩意，其实就是告诉react，我们没有变化，帮我存起来，不用再比较了</p>
-<p>那么有些姓杠的小朋友，这时候就不耐烦了，站起来问道：为什么react不帮我们自动做这些优化呢，我就想静静地写代码，为什么还要考虑该不该包个<code>useCallBack</code></p>
-<p>问得好，这里顺便@一下官方团队，希望相关单位能密切关注这个问题</p>
-<p>还会有些害羞的小朋友会嘀咕着，为什么class组件的时候就不需要注意这些呢</p>
-<p>个人鄙见：新旧版本的渲染方法其实差不多的，我觉得前端深入研究性能优化是没有前途的，框架或者浏览器，一次小小的版本更新，可能效果就远远胜过了你多少个日日夜夜的辛勤付出了。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>hooks需好，但要小心使用</p>
-]]></content>
-      <categories>
-        <category>知识总结</category>
-      </categories>
-      <tags>
-        <tag>文章</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>react核心</title>
-    <url>/2021/06/21/react/</url>
-    <content><![CDATA[<h2 id="react-的fiber"><a href="#react-的fiber" class="headerlink" title="react 的fiber"></a>react 的fiber</h2><p>有5个优先级的等级</p>
-<ul>
-<li>Immediate</li>
-<li>UserBlocking</li>
-<li>Normal</li>
-<li>Low</li>
-<li>Idle</li>
-</ul>
-<h2 id="高阶组件"><a href="#高阶组件" class="headerlink" title="高阶组件"></a>高阶组件</h2><h3 id="怎么写一个高阶组件？"><a href="#怎么写一个高阶组件？" class="headerlink" title="怎么写一个高阶组件？"></a>怎么写一个高阶组件？</h3><ol>
-<li>普通方式</li>
-<li>装饰器</li>
-<li>多个高阶组件组合</li>
-</ol>
-<h3 id="高阶组件-1"><a href="#高阶组件-1" class="headerlink" title="高阶组件"></a>高阶组件</h3><ol>
-<li><p>属性代理</p>
-<p>1、操作props<br>2、操作ref</p>
-</li>
-<li><p>继续/劫持</p>
-</li>
-</ol>
-<h2 id="什么是react-hooks-优势"><a href="#什么是react-hooks-优势" class="headerlink" title="什么是react hooks?优势"></a>什么是react hooks?优势</h2><p>useState<br>useEffect<br>useMemo</p>
-<h2 id="react-hooks-有什么优势"><a href="#react-hooks-有什么优势" class="headerlink" title="react hooks 有什么优势"></a>react hooks 有什么优势</h2><h3 id="class-的缺点"><a href="#class-的缺点" class="headerlink" title="class 的缺点"></a>class 的缺点</h3><ol>
-<li>组件间的状态逻辑很难复用</li>
-<li>复杂业务的有状态组件会越来越复杂</li>
-<li>监听和定时器的操作，被分散在多个区域</li>
-</ol>
-<p>不要在render里写bind</p>
-<h3 id="hooks-的优点"><a href="#hooks-的优点" class="headerlink" title="hooks 的优点"></a>hooks 的优点</h3><ol>
-<li>利于业务逻辑的封装和拆分，可以自由自定义hooks(自己封装的用到了react hooks的公共逻辑)<br>useEffect(()=&gt;{})</li>
-<li>可以在无需修改组件结构的情况下，复用状态逻辑</li>
-<li>定时器、监听等等都被聚合到同一块代码下</li>
-</ol>
-<h3 id="hooks使用注意事项"><a href="#hooks使用注意事项" class="headerlink" title="hooks使用注意事项"></a>hooks使用注意事项</h3><ol>
-<li>不能在循环判断里用<br>索引问题</li>
-<li>只能在 React 的函数组件中调⽤ Hook，不要在其他 JavaScript 函数中调⽤</li>
-<li>自定义的hook怎样操作组件</li>
-</ol>
-<h2 id="经验总结"><a href="#经验总结" class="headerlink" title="经验总结"></a>经验总结</h2>]]></content>
-      <categories>
-        <category>知识总结</category>
-      </categories>
-      <tags>
-        <tag>重学前端</tag>
+        <tag>填坑</tag>
       </tags>
   </entry>
   <entry>
@@ -833,35 +804,51 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>填坑</tag>
         <tag>JS填坑</tag>
+        <tag>填坑</tag>
       </tags>
   </entry>
   <entry>
-    <title>完成的项目，持续更新</title>
-    <url>/2018/08/14/project/</url>
-    <content><![CDATA[<p>目标：写过的代码加起来能绕地球一圈</p>
-<h2 id="那是梦开始的地方"><a href="#那是梦开始的地方" class="headerlink" title="那是梦开始的地方"></a>那是梦开始的地方</h2><a id="more"></a>
-<h3 id="第一个小程序，IoT项目"><a href="#第一个小程序，IoT项目" class="headerlink" title="第一个小程序，IoT项目"></a>第一个小程序，IoT项目</h3><p><img src="/images/project/iot_user.jpg" alt><br>IoT安装端账号：az1 密码：123456<br><img src="/images/project/iot_install.jpg" alt><br>IoT售后端账号：wx1 密码：123456<br><img src="/images/project/iot_wx.jpg" alt></p>
-<h3 id="车仔网小程序"><a href="#车仔网小程序" class="headerlink" title="车仔网小程序"></a>车仔网小程序</h3><p><img src="/images/project/chezi.png" alt></p>
-<h3 id="男士理容预约小程序"><a href="#男士理容预约小程序" class="headerlink" title="男士理容预约小程序"></a>男士理容预约小程序</h3><p><img src="/images/project/harroman.jpg" alt></p>
-<h3 id="vue搭建的手机商城"><a href="#vue搭建的手机商城" class="headerlink" title="vue搭建的手机商城"></a>vue搭建的手机商城</h3><p><img src="/images/project/shilianmobile.png" alt></p>
-<h3 id="飞冰Ice后台demo"><a href="#飞冰Ice后台demo" class="headerlink" title="飞冰Ice后台demo"></a>飞冰Ice后台demo</h3><p><a href="http://hospital.pppppxt.cc" target="_blank" rel="noopener">demo链接,点我,点我</a><br>管理员账户：admin;医生账号：doctor 密码都是：123456</p>
-<h3 id="某题库测试系统前端demo"><a href="#某题库测试系统前端demo" class="headerlink" title="某题库测试系统前端demo"></a>某题库测试系统前端demo</h3><p><a href="http://wuweiquan.pppppxt.cc" target="_blank" rel="noopener">点我,点我</a><br>sn码随便输入即可</p>
-]]></content>
-      <categories>
-        <category>项目</category>
-      </categories>
-      <tags>
-        <tag>案例</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>this/闭包/作用域</title>
-    <url>/2021/05/02/this-%E5%BF%85%E5%8C%85-%E4%BD%9C%E7%94%A8%E5%9F%9F/</url>
-    <content><![CDATA[<p>bind可以传基本类型，只会绑定一次</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br><span class="line">fn.bind(<span class="number">1</span>).bind(<span class="number">2</span>)() <span class="comment">// Number &#123;1&#125;</span></span><br></pre></td></tr></table></figure>
-]]></content>
+    <title>react核心</title>
+    <url>/2021/06/21/react/</url>
+    <content><![CDATA[<h2 id="react-的fiber"><a href="#react-的fiber" class="headerlink" title="react 的fiber"></a>react 的fiber</h2><p>有5个优先级的等级</p>
+<ul>
+<li>Immediate</li>
+<li>UserBlocking</li>
+<li>Normal</li>
+<li>Low</li>
+<li>Idle</li>
+</ul>
+<h2 id="高阶组件"><a href="#高阶组件" class="headerlink" title="高阶组件"></a>高阶组件</h2><h3 id="怎么写一个高阶组件？"><a href="#怎么写一个高阶组件？" class="headerlink" title="怎么写一个高阶组件？"></a>怎么写一个高阶组件？</h3><ol>
+<li>普通方式</li>
+<li>装饰器</li>
+<li>多个高阶组件组合</li>
+</ol>
+<h3 id="高阶组件-1"><a href="#高阶组件-1" class="headerlink" title="高阶组件"></a>高阶组件</h3><ol>
+<li><p>属性代理</p>
+<p>1、操作props<br>2、操作ref</p>
+</li>
+<li><p>继续/劫持</p>
+</li>
+</ol>
+<h2 id="什么是react-hooks-优势"><a href="#什么是react-hooks-优势" class="headerlink" title="什么是react hooks?优势"></a>什么是react hooks?优势</h2><p>useState<br>useEffect<br>useMemo</p>
+<h2 id="react-hooks-有什么优势"><a href="#react-hooks-有什么优势" class="headerlink" title="react hooks 有什么优势"></a>react hooks 有什么优势</h2><h3 id="class-的缺点"><a href="#class-的缺点" class="headerlink" title="class 的缺点"></a>class 的缺点</h3><ol>
+<li>组件间的状态逻辑很难复用</li>
+<li>复杂业务的有状态组件会越来越复杂</li>
+<li>监听和定时器的操作，被分散在多个区域</li>
+</ol>
+<p>不要在render里写bind</p>
+<h3 id="hooks-的优点"><a href="#hooks-的优点" class="headerlink" title="hooks 的优点"></a>hooks 的优点</h3><ol>
+<li>利于业务逻辑的封装和拆分，可以自由自定义hooks(自己封装的用到了react hooks的公共逻辑)<br>useEffect(()=&gt;{})</li>
+<li>可以在无需修改组件结构的情况下，复用状态逻辑</li>
+<li>定时器、监听等等都被聚合到同一块代码下</li>
+</ol>
+<h3 id="hooks使用注意事项"><a href="#hooks使用注意事项" class="headerlink" title="hooks使用注意事项"></a>hooks使用注意事项</h3><ol>
+<li>不能在循环判断里用<br>索引问题</li>
+<li>只能在 React 的函数组件中调⽤ Hook，不要在其他 JavaScript 函数中调⽤</li>
+<li>自定义的hook怎样操作组件</li>
+</ol>
+<h2 id="经验总结"><a href="#经验总结" class="headerlink" title="经验总结"></a>经验总结</h2>]]></content>
       <categories>
         <category>知识总结</category>
       </categories>
@@ -983,29 +970,16 @@
       </tags>
   </entry>
   <entry>
-    <title>TypeScript学习笔记</title>
-    <url>/2019/05/19/typescript-note/</url>
-    <content><![CDATA[<h1 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>‘TypeScript’-顾名思义，就是有Type的Script<br><a id="more"></a></p>
-<hr>
-<p>那么它和没有Type的Script有什么不一样呢，例如某Java前缀的Script<br>举个例子：实际开发需求中我们要定义一个商品名称的变量为goodsName(<font color="red">ps:众所周知商品名称都必须是要字符串的</font>)<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// js中定义一个变量,先赋值一个字符串</span></span><br><span class="line"><span class="keyword">let</span> goodsName = <span class="string">'apple'</span> <span class="comment">// 很好，看起来都一起正常</span></span><br><span class="line"><span class="comment">// 然鹅，一位刚失恋的程序员哥哥，不小心把它改成一个数字（说笑，程序员哪会有女朋友）</span></span><br><span class="line">goodsName = <span class="number">520</span> <span class="comment">// 这时候程序也没有阻止小哥哥这种赤裸裸的示爱行为</span></span><br><span class="line"><span class="comment">// 甚至可以改成布尔值</span></span><br><span class="line">goodsName = <span class="literal">true</span></span><br><span class="line"><span class="comment">// -----------------</span></span><br><span class="line"><span class="comment">// 可以想想刚失恋的小哥哥，把这个变量提交给后端的接口</span></span><br><span class="line"><span class="comment">// 最后给产品发现了</span></span><br><span class="line"><span class="comment">// 后端调查发现是前端提交的数据类型错误</span></span><br><span class="line"><span class="comment">// 顺利摔锅给前端</span></span><br><span class="line"><span class="comment">// 从此小哥哥就步入了人生的低谷，情场事业双失😔</span></span><br></pre></td></tr></table></figure></p>
-<p>然而如果这时候这位程序员小哥哥用上了TypeScript<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 同上也先定义一个变量</span></span><br><span class="line"><span class="keyword">let</span> goodsName: string = <span class="string">'apple'</span> <span class="comment">// 看看有什么不同？没错，就是多了个string</span></span><br><span class="line">goodsName = <span class="number">520</span> <span class="comment">//这时候就会有一条红线在变量下方</span></span><br><span class="line"><span class="comment">// Error, number不是string类型</span></span><br><span class="line"><span class="comment">// -----------------</span></span><br><span class="line"><span class="comment">// 看到这条提示的红线，小哥哥也终于意识到了</span></span><br><span class="line"><span class="comment">// 他的爱情也像这条红线那样</span></span><br><span class="line"><span class="comment">// 已经到了高亮的结束边缘</span></span><br><span class="line"><span class="comment">// 最后小哥哥看着那条红线</span></span><br><span class="line"><span class="comment">// 突然对爱情重拾希望，然后不顾红线的错误提示，提交给后端</span></span><br><span class="line"><span class="comment">// 结局同上</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="一些踩过的坑"><a href="#一些踩过的坑" class="headerlink" title="一些踩过的坑"></a>一些踩过的坑</h2><h3 id="可选属性"><a href="#可选属性" class="headerlink" title="可选属性"></a>可选属性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface SquareConfig &#123;</span><br><span class="line">  color?: string;</span><br><span class="line">  width?: number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="任意数量的其它属性"><a href="#任意数量的其它属性" class="headerlink" title="任意数量的其它属性"></a>任意数量的其它属性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface SquareConfig &#123;</span><br><span class="line"> [propName: string]: any;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="只读属性"><a href="#只读属性" class="headerlink" title="只读属性"></a>只读属性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface Point &#123;</span><br><span class="line">    <span class="built_in">readonly</span> x: number;</span><br><span class="line">    <span class="built_in">readonly</span> y: number;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> p1: Point = &#123; x: 10, y: 20 &#125;;</span><br><span class="line">p1.x = 5; // error!</span><br></pre></td></tr></table></figure>
-<h3 id="函数类型"><a href="#函数类型" class="headerlink" title="函数类型"></a>函数类型</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//方法1</span><br><span class="line"><span class="keyword">function</span> add(x: number, y: number): number &#123;</span><br><span class="line">    <span class="built_in">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//方法2</span><br><span class="line"><span class="built_in">let</span> myAdd = <span class="keyword">function</span>(x: number, y: number): number &#123; <span class="built_in">return</span> x + y; &#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="把类当做接口使用"><a href="#把类当做接口使用" class="headerlink" title="把类当做接口使用"></a>把类当做接口使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">class Point &#123;</span><br><span class="line">    x: number;</span><br><span class="line">    y: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface Point3d extends Point &#123;</span><br><span class="line">    z: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> point3d: Point3d = &#123;x: 1, y: 2, z: 3&#125;;</span><br></pre></td></tr></table></figure>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
-<li>提示真的很爽</li>
-<li>会增加写类型的时间</li>
-<li>大型项目来说上面花的时间是值得的，后期维护时间会变少</li>
-</ol>
+    <title>this/闭包/作用域</title>
+    <url>/2021/05/02/this-%E5%BF%85%E5%8C%85-%E4%BD%9C%E7%94%A8%E5%9F%9F/</url>
+    <content><![CDATA[<p>bind可以传基本类型，只会绑定一次</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br><span class="line">fn.bind(<span class="number">1</span>).bind(<span class="number">2</span>)() <span class="comment">// Number &#123;1&#125;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>学习笔记</category>
+        <category>知识总结</category>
       </categories>
       <tags>
-        <tag>填坑</tag>
-        <tag>JS填坑</tag>
+        <tag>重学前端</tag>
       </tags>
   </entry>
   <entry>
@@ -1069,39 +1043,29 @@
       </tags>
   </entry>
   <entry>
-    <title>webpack</title>
-    <url>/2021/05/29/webpack/</url>
-    <content><![CDATA[<h3 id="我们常说的Module是什么"><a href="#我们常说的Module是什么" class="headerlink" title="我们常说的Module是什么"></a>我们常说的Module是什么</h3><p>webpack支持 ESModule, CommonJS, AMD, Assests</p>
-<h3 id="如何表达各种依赖关系？"><a href="#如何表达各种依赖关系？" class="headerlink" title="如何表达各种依赖关系？"></a>如何表达各种依赖关系？</h3><h3 id="我们常说的chunk和bundle的区别是什么？（important！）"><a href="#我们常说的chunk和bundle的区别是什么？（important！）" class="headerlink" title="我们常说的chunk和bundle的区别是什么？（important！）"></a>我们常说的chunk和bundle的区别是什么？（important！）</h3><ol>
-<li><p>Chunk<br>是Webpack打包过程中Modules的集合，是<code>打包过程</code>中的概念。<br>Webpack的打包是从⼀个⼊⼝模块开始，⼊⼝模块引⽤其他模块，模块再引⽤模块。<br>Webpack通过引⽤关系逐个打包模块，这些module就形成了⼀个Chunk。<br>当然如果有多个⼊⼝模块，可能会产出多条打包路径，每条路径都会形成⼀个Chunk。</p>
-</li>
-<li><p>bundle<br>Bundle是我们最终输出的⼀个或多个打包好的⽂件</p>
-</li>
-<li><p>Chunk 和 Bundle 的关系?<br>大多数情况，一个chunk一个bundle</p>
-</li>
-</ol>
-<h3 id="Plugin-和-Loader-分别做什么？怎样工作的？"><a href="#Plugin-和-Loader-分别做什么？怎样工作的？" class="headerlink" title="Plugin 和 Loader 分别做什么？怎样工作的？"></a>Plugin 和 Loader 分别做什么？怎样工作的？</h3><ol>
-<li>Loader<br>模块转换器，将非js模块转化为webpack能识别的</li>
-<li>Plugin<br>扩展插件,webpack各个阶段都会广播出对应的事件</li>
-<li><p>Compiler<br>对象，也可以理解为webpack的实例</p>
-</li>
-<li><p>Compliation<br>模块资源</p>
-</li>
-</ol>
-<h3 id="简单描述一下打包过程"><a href="#简单描述一下打包过程" class="headerlink" title="简单描述一下打包过程"></a>简单描述一下打包过程</h3><ol>
-<li>初始化参数：shell webpack.config.js</li>
-<li>开始编译</li>
-<li>确定入口</li>
-<li>编译模块</li>
-<li>完成模块编译</li>
-<li>输出资源</li>
+    <title>TypeScript学习笔记</title>
+    <url>/2019/05/19/typescript-note/</url>
+    <content><![CDATA[<h1 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>‘TypeScript’-顾名思义，就是有Type的Script<br><a id="more"></a></p>
+<hr>
+<p>那么它和没有Type的Script有什么不一样呢，例如某Java前缀的Script<br>举个例子：实际开发需求中我们要定义一个商品名称的变量为goodsName(<font color="red">ps:众所周知商品名称都必须是要字符串的</font>)<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// js中定义一个变量,先赋值一个字符串</span></span><br><span class="line"><span class="keyword">let</span> goodsName = <span class="string">'apple'</span> <span class="comment">// 很好，看起来都一起正常</span></span><br><span class="line"><span class="comment">// 然鹅，一位刚失恋的程序员哥哥，不小心把它改成一个数字（说笑，程序员哪会有女朋友）</span></span><br><span class="line">goodsName = <span class="number">520</span> <span class="comment">// 这时候程序也没有阻止小哥哥这种赤裸裸的示爱行为</span></span><br><span class="line"><span class="comment">// 甚至可以改成布尔值</span></span><br><span class="line">goodsName = <span class="literal">true</span></span><br><span class="line"><span class="comment">// -----------------</span></span><br><span class="line"><span class="comment">// 可以想想刚失恋的小哥哥，把这个变量提交给后端的接口</span></span><br><span class="line"><span class="comment">// 最后给产品发现了</span></span><br><span class="line"><span class="comment">// 后端调查发现是前端提交的数据类型错误</span></span><br><span class="line"><span class="comment">// 顺利摔锅给前端</span></span><br><span class="line"><span class="comment">// 从此小哥哥就步入了人生的低谷，情场事业双失😔</span></span><br></pre></td></tr></table></figure></p>
+<p>然而如果这时候这位程序员小哥哥用上了TypeScript<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 同上也先定义一个变量</span></span><br><span class="line"><span class="keyword">let</span> goodsName: string = <span class="string">'apple'</span> <span class="comment">// 看看有什么不同？没错，就是多了个string</span></span><br><span class="line">goodsName = <span class="number">520</span> <span class="comment">//这时候就会有一条红线在变量下方</span></span><br><span class="line"><span class="comment">// Error, number不是string类型</span></span><br><span class="line"><span class="comment">// -----------------</span></span><br><span class="line"><span class="comment">// 看到这条提示的红线，小哥哥也终于意识到了</span></span><br><span class="line"><span class="comment">// 他的爱情也像这条红线那样</span></span><br><span class="line"><span class="comment">// 已经到了高亮的结束边缘</span></span><br><span class="line"><span class="comment">// 最后小哥哥看着那条红线</span></span><br><span class="line"><span class="comment">// 突然对爱情重拾希望，然后不顾红线的错误提示，提交给后端</span></span><br><span class="line"><span class="comment">// 结局同上</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="一些踩过的坑"><a href="#一些踩过的坑" class="headerlink" title="一些踩过的坑"></a>一些踩过的坑</h2><h3 id="可选属性"><a href="#可选属性" class="headerlink" title="可选属性"></a>可选属性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface SquareConfig &#123;</span><br><span class="line">  color?: string;</span><br><span class="line">  width?: number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="任意数量的其它属性"><a href="#任意数量的其它属性" class="headerlink" title="任意数量的其它属性"></a>任意数量的其它属性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface SquareConfig &#123;</span><br><span class="line"> [propName: string]: any;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="只读属性"><a href="#只读属性" class="headerlink" title="只读属性"></a>只读属性</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface Point &#123;</span><br><span class="line">    <span class="built_in">readonly</span> x: number;</span><br><span class="line">    <span class="built_in">readonly</span> y: number;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> p1: Point = &#123; x: 10, y: 20 &#125;;</span><br><span class="line">p1.x = 5; // error!</span><br></pre></td></tr></table></figure>
+<h3 id="函数类型"><a href="#函数类型" class="headerlink" title="函数类型"></a>函数类型</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//方法1</span><br><span class="line"><span class="keyword">function</span> add(x: number, y: number): number &#123;</span><br><span class="line">    <span class="built_in">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//方法2</span><br><span class="line"><span class="built_in">let</span> myAdd = <span class="keyword">function</span>(x: number, y: number): number &#123; <span class="built_in">return</span> x + y; &#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="把类当做接口使用"><a href="#把类当做接口使用" class="headerlink" title="把类当做接口使用"></a>把类当做接口使用</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">class Point &#123;</span><br><span class="line">    x: number;</span><br><span class="line">    y: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface Point3d extends Point &#123;</span><br><span class="line">    z: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> point3d: Point3d = &#123;x: 1, y: 2, z: 3&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
+<li>提示真的很爽</li>
+<li>会增加写类型的时间</li>
+<li>大型项目来说上面花的时间是值得的，后期维护时间会变少</li>
 </ol>
 ]]></content>
       <categories>
-        <category>知识总结</category>
+        <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>重学前端</tag>
+        <tag>JS填坑</tag>
+        <tag>填坑</tag>
       </tags>
   </entry>
   <entry>
@@ -1130,6 +1094,42 @@
     <url>/2021/04/18/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E5%8E%9F%E5%9E%8B%E9%93%BE-%E7%BB%A7%E6%89%BF/</url>
     <content><![CDATA[<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><h2 id="寄生组合式继承"><a href="#寄生组合式继承" class="headerlink" title="寄生组合式继承"></a>寄生组合式继承</h2><h2 id="类数组转换成数组"><a href="#类数组转换成数组" class="headerlink" title="类数组转换成数组"></a>类数组转换成数组</h2><p> 1.[…arguments].slice()<br> 2.Array.prototype.slice.apply(arguments)<br> 3.Array.from(arguments).slice()</p>
 <h3 id="鸡生蛋"><a href="#鸡生蛋" class="headerlink" title="鸡生蛋"></a>鸡生蛋</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Function</span>.__proto__ === <span class="built_in">Function</span>.prototype</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>知识总结</category>
+      </categories>
+      <tags>
+        <tag>重学前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>webpack</title>
+    <url>/2021/05/29/webpack/</url>
+    <content><![CDATA[<h3 id="我们常说的Module是什么"><a href="#我们常说的Module是什么" class="headerlink" title="我们常说的Module是什么"></a>我们常说的Module是什么</h3><p>webpack支持 ESModule, CommonJS, AMD, Assests</p>
+<h3 id="如何表达各种依赖关系？"><a href="#如何表达各种依赖关系？" class="headerlink" title="如何表达各种依赖关系？"></a>如何表达各种依赖关系？</h3><h3 id="我们常说的chunk和bundle的区别是什么？（important！）"><a href="#我们常说的chunk和bundle的区别是什么？（important！）" class="headerlink" title="我们常说的chunk和bundle的区别是什么？（important！）"></a>我们常说的chunk和bundle的区别是什么？（important！）</h3><ol>
+<li><p>Chunk<br>是Webpack打包过程中Modules的集合，是<code>打包过程</code>中的概念。<br>Webpack的打包是从⼀个⼊⼝模块开始，⼊⼝模块引⽤其他模块，模块再引⽤模块。<br>Webpack通过引⽤关系逐个打包模块，这些module就形成了⼀个Chunk。<br>当然如果有多个⼊⼝模块，可能会产出多条打包路径，每条路径都会形成⼀个Chunk。</p>
+</li>
+<li><p>bundle<br>Bundle是我们最终输出的⼀个或多个打包好的⽂件</p>
+</li>
+<li><p>Chunk 和 Bundle 的关系?<br>大多数情况，一个chunk一个bundle</p>
+</li>
+</ol>
+<h3 id="Plugin-和-Loader-分别做什么？怎样工作的？"><a href="#Plugin-和-Loader-分别做什么？怎样工作的？" class="headerlink" title="Plugin 和 Loader 分别做什么？怎样工作的？"></a>Plugin 和 Loader 分别做什么？怎样工作的？</h3><ol>
+<li>Loader<br>模块转换器，将非js模块转化为webpack能识别的</li>
+<li>Plugin<br>扩展插件,webpack各个阶段都会广播出对应的事件</li>
+<li><p>Compiler<br>对象，也可以理解为webpack的实例</p>
+</li>
+<li><p>Compliation<br>模块资源</p>
+</li>
+</ol>
+<h3 id="简单描述一下打包过程"><a href="#简单描述一下打包过程" class="headerlink" title="简单描述一下打包过程"></a>简单描述一下打包过程</h3><ol>
+<li>初始化参数：shell webpack.config.js</li>
+<li>开始编译</li>
+<li>确定入口</li>
+<li>编译模块</li>
+<li>完成模块编译</li>
+<li>输出资源</li>
+</ol>
 ]]></content>
       <categories>
         <category>知识总结</category>
